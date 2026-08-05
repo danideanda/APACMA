@@ -1,0 +1,247 @@
+APACMA SOFTWARE LICENSE AGREEMENT
+
+Versión 1.1
+
+ESTE ACUERDO DE LICENCIA (en adelante, el "Acuerdo") ES UN CONTRATO LEGAL ENTRE USTED (EN ADELANTE, EL "LICENCIATARIO") Y EL TITULAR DE LOS DERECHOS DE AUTOR DE APACMA (EN ADELANTE, EL "LICENCIANTE") QUE REGULA EL USO DEL SOFTWARE APACMA Y SUS COMPONENTES.
+1. Definiciones
+
+1.1 "Software" se refiere al conjunto de programas, archivos de configuración, scripts, librerías, documentación y cualquier otro material distribuido bajo el nombre "APACMA" o "Arquitectura de Personalización Continua Mediante Adaptadores".
+
+1.2 "Seguridad.py" se refiere al archivo específico denominado seguridad.py que contiene los mecanismos de seguridad, validación y control de integridad del Software, así como cualquier otro archivo o librería que sea necesario para su correcto funcionamiento y que se especifique en la documentación oficial como parte del sistema de seguridad.
+
+1.3 "Uso" se refiere a la ejecución, instalación, copia, modificación, distribución o cualquier otra forma de interacción con el Software.
+
+1.4 "Distribución" se refiere a la transmisión, entrega o puesta a disposición del Software a terceros, ya sea de forma gratuita o mediante contraprestación económica.
+
+1.5 "Documentación Oficial" se refiere al conjunto de archivos, manuales y guías distribuidas junto con el Software que describen su instalación, configuración y uso.
+
+1.6 "Código" se refiere al contenido completo del Software, incluyendo todos los archivos, scripts, dependencias y componentes que se encuentran en el repositorio original del proyecto APACMA en la plataforma GitHub, así como cualquier actualización o modificación posterior distribuida por el Licenciante.
+
+1.7 "Licencia Comercial" se refiere a un acuerdo de licencia separado, suscrito entre el Licenciante y el Licenciatario, que permite usos del Software no permitidos en este Acuerdo, generalmente a cambio de una contraprestación económica.
+
+1.8 "Integración" se refiere a cualquier forma de conexión, enlace, interacción o combinación del Software con otros sistemas, aplicaciones, servicios o componentes, incluyendo pero no limitado a: ejecutar el Software como un componente dentro de un sistema mayor, llamar a sus funciones o APIs desde otras aplicaciones, embeber el Software en otro producto, o cualquier otra forma de uso conjunto con otros sistemas.
+
+1.9 "Producto o Servicio Competidor" se refiere a cualquier producto, servicio, aplicación, plataforma o sistema que ofrezca funcionalidades sustancialmente similares a las del Software, incluyendo pero no limitado a: sistemas de personalización de IA, arquitecturas de adaptadores, sistemas de memoria de usuario, o cualquier solución que implemente los principios fundamentales de APACMA descritos en su documentación. A efectos de esta definición, un producto o servicio es competidor si, en opinión del Licenciante, tiene como objetivo o resultado reemplazar, sustituir o competir directamente con el Software en el mercado.
+
+1.10 "Fork" se refiere a la creación de una copia del Software, ya sea en el mismo repositorio o en uno diferente, con el propósito de realizar modificaciones, mantener una versión separada, o desarrollar una línea de desarrollo independiente.
+
+1.11 "Modificación" se refiere a cualquier cambio, adición, eliminación, adaptación o alteración del Código del Software, incluyendo pero no limitado a: editar archivos, añadir nuevas funcionalidades, eliminar funcionalidades existentes, cambiar el comportamiento del Software, o cualquier otra forma de alteración del Código.
+
+1.12 "Contribución" se refiere a cualquier código, documentación, corrección de errores, mejora, sugerencia, o cualquier otro material que el Licenciatario envíe al Licenciante para su posible inclusión en el Software, ya sea mediante pull requests, issues, correos electrónicos u otros medios.
+
+1.13 "Servicio en la Nube" o "SaaS" se refiere a cualquier oferta de servicio que proporcione acceso al Software o a funcionalidades basadas en el Software a través de Internet o de una red, sin distribución del Código, incluyendo pero no limitado a: plataformas como servicio (PaaS), software como servicio (SaaS), infraestructura como servicio (IaaS), o cualquier otro modelo de servicio en la nube.
+2. Permisos
+
+2.1 Alcance de los Permisos
+
+El Licenciante concede al Licenciatario los permisos expresamente establecidos en esta Sección 2. Cualquier acto, uso, modificación, distribución o interacción con el Software que no esté explícitamente permitido en esta Sección 2 se considerará una infracción de este Acuerdo y dará lugar a las consecuencias establecidas en la Sección 8 (Terminación) y en las disposiciones legales aplicables.
+
+2.2 Permisos Concedidos
+
+El Licenciatario tiene permiso para:
+
+a) Ejecutar el Software en sistemas informáticos de su propiedad o bajo su control directo, siempre que sea para uso personal, educativo o de evaluación interna.
+
+b) Realizar copias de respaldo (backups) del Software para fines de archivo y recuperación ante desastres, siempre que dichas copias no se distribuyan a terceros.
+
+c) Instalar el Software en el número de equipos o servidores que el Licenciante haya autorizado expresamente por escrito o mediante la Documentación Oficial.
+
+d) Utilizar el Software para pruebas internas, evaluaciones de rendimiento y fines de desarrollo no comercial, siempre que no se distribuya el Software ni sus resultados a terceros.
+
+e) Integrar el Software en sistemas propios del Licenciatario mediante su ejecución como un componente, llamada a sus APIs, enlace de librerías, o cualquier otra forma de interacción, siempre que se mantenga la integridad del archivo seguridad.py y de todos los componentes de seguridad, y siempre que dicha integración no tenga como objetivo crear un Producto o Servicio Competidor.
+
+f) Utilizar el Software para fines comerciales únicamente si el Licenciatario ha adquirido una Licencia Comercial separada y ha cumplido con todos los términos establecidos en dicha licencia.
+
+2.3 Permisos Condicionados
+
+Los permisos establecidos en la Sección 2.2 están condicionados al cumplimiento estricto de todas las condiciones establecidas en la Sección 3 (Condiciones de Uso) y las restricciones establecidas en la Sección 4 (Restricciones). El incumplimiento de cualquiera de estas condiciones anula automáticamente los permisos concedidos.
+
+2.4 Interpretación de los Permisos
+
+2.4.1 Los permisos establecidos en esta Sección 2 se interpretarán de manera restrictiva. Cualquier ambigüedad en la interpretación de un permiso se resolverá a favor del Licenciante.
+
+2.4.2 La concesión de un permiso específico no implica la concesión de ningún otro permiso, ni siquiera de aquellos que pudieran considerarse similares o relacionados.
+
+2.4.3 La enumeración de permisos en esta Sección 2 es exhaustiva. No existen permisos implícitos más allá de los expresamente establecidos.
+
+2.5 Ausencia de Permiso
+
+2.5.1 El Licenciatario reconoce y acepta que, a menos que se establezca expresamente lo contrario en este Acuerdo, el Licenciante no concede ningún permiso para:
+
+a) Distribuir, sublicenciar, alquilar, arrendar, ceder o transferir el Software a terceros.
+
+b) Modificar, adaptar, traducir o crear obras derivadas del Software, salvo los archivos de configuración externa que no formen parte del Código.
+
+c) Realizar ingeniería inversa, descompilar o desensamblar el Software.
+
+d) Extraer o reutilizar cualquier parte del Software en otros productos o servicios.
+
+e) Utilizar el Software para cualquier propósito distinto de aquellos expresamente permitidos en la Sección 2.2.
+
+f) Realizar un Fork del Software sin la autorización expresa por escrito del Licenciante.
+
+g) Ofrecer el Software como un Servicio en la Nube sin la autorización expresa por escrito del Licenciante o sin haber adquirido una Licencia Comercial que lo permita.
+
+2.5.2 Cualquier acto no autorizado en virtud de esta Sección 2 constituirá una infracción de los derechos de propiedad intelectual del Licenciante y una violación de este Acuerdo, y el Licenciante podrá ejercer todas las acciones legales que correspondan.
+3. Condiciones de Uso
+
+3.1 Integridad del Sistema de Seguridad
+
+3.1.1 El Licenciatario se obliga a mantener de manera íntegra y funcional el archivo denominado seguridad.py y cualquier otro archivo, librería, dependencia o componente que sea necesario para el correcto funcionamiento del sistema de seguridad, según se especifica en la Documentación Oficial.
+
+3.1.2 Queda terminantemente prohibido modificar, desactivar, eludir, eliminar, ocultar, renombrar, alterar total o parcialmente, o de cualquier manera interferir con el funcionamiento del archivo seguridad.py o de cualquier otro componente del sistema de seguridad.
+
+3.1.3 El Licenciatario no podrá, bajo ninguna circunstancia, intentar descompilar, desensamblar, realizar ingeniería inversa, o intentar de cualquier otra forma obtener el código fuente del sistema de seguridad del Software, salvo que el Licenciante lo autorice expresamente por escrito.
+
+3.2 Prohibición de Modificaciones
+
+3.2.1 Queda terminantemente prohibido modificar, adaptar, traducir o crear obras derivadas del Código del Software, incluyendo pero no limitado a: editar, añadir, eliminar o alterar cualquier archivo, script, librería o componente del Software.
+
+3.2.2 A excepción de los archivos de configuración externa que el Licenciante designe expresamente en la Documentación Oficial como modificables, ningún otro archivo del Software podrá ser modificado.
+
+3.3 Instalación y Configuración
+
+3.3.1 El Licenciatario se obliga a instalar y configurar el Software siguiendo las instrucciones establecidas en la Documentación Oficial.
+
+3.3.2 Cualquier instalación o configuración que no siga las instrucciones oficiales se considerará un incumplimiento de este Acuerdo y dará lugar a la terminación inmediata de la licencia.
+
+3.4 Actualizaciones
+
+3.4.1 El Licenciante podrá, a su entera discreción, proporcionar actualizaciones o nuevas versiones del Software. Dichas actualizaciones estarán sujetas a los mismos términos y condiciones de este Acuerdo, a menos que se establezca lo contrario por escrito.
+
+3.4.2 El Licenciatario se obliga a mantener actualizado el sistema de seguridad con las últimas versiones proporcionadas por el Licenciante, si este así lo requiere para mantener la integridad y funcionalidad del Software.
+
+3.5 Contribuciones
+
+3.5.1 El Licenciatario reconoce que el Licenciante no acepta Contribuciones a menos que se establezca un acuerdo por separado.
+
+3.5.2 En caso de que el Licenciatario envíe una Contribución, el Licenciatario otorga al Licenciante una licencia perpetua, irrevocable, mundial, libre de regalías, no exclusiva, y sublicenciable para usar, reproducir, modificar, adaptar, publicar, traducir, distribuir y exhibir dicha Contribución en cualquier forma, medio o tecnología, ya sea actual o futura.
+
+3.5.3 El Licenciatario declara y garantiza que tiene todos los derechos necesarios para otorgar la licencia establecida en la Sección 3.5.2.
+
+3.5.4 El Licenciante no tiene la obligación de utilizar, incorporar o reconocer ninguna Contribución. El Licenciante podrá rechazar cualquier Contribución a su entera discreción.
+4. Restricciones
+
+4.1 Principio General
+
+El Licenciatario no podrá realizar ningún acto sobre el Software que no esté expresamente permitido en la Sección 2 (Permisos) de este Acuerdo. Cualquier acto no autorizado constituirá una infracción de este Acuerdo.
+
+4.2 Restricciones Específicas
+
+Sin perjuicio del principio general establecido en la Sección 4.1, y sin que ello limite su alcance, el Licenciatario no podrá:
+
+a) Utilizar el Software para fines ilegales o contrarios a la moral y las buenas costumbres.
+
+b) Eliminar, ocultar o alterar cualquier aviso de derechos de autor, marcas comerciales u otros avisos de propiedad intelectual que acompañen al Software.
+
+c) Atribuirse la autoría del Software, declarar que el Software es de su propia creación, o presentar el Software como si hubiera sido desarrollado por el Licenciatario o por cualquier otra persona, grupo, organización o empresa distinta al Licenciante.
+
+d) Utilizar el Software en entornos o aplicaciones donde su fallo pudiera causar daños a personas, propiedades o el medio ambiente, incluyendo, entre otros, sistemas de soporte vital, control de tráfico aéreo, sistemas de armas o sistemas de navegación.
+
+e) Utilizar el Software para crear Productos o Servicios Competidores.
+
+f) Ofrecer el Software como un Servicio en la Nube sin la autorización expresa por escrito del Licenciante.
+
+g) Realizar un Fork del Software sin la autorización expresa por escrito del Licenciante.
+
+h) Mantener una copia privada modificada del Software, incluso sin distribuirla, salvo que el Licenciante lo autorice expresamente por escrito.
+
+4.3 Infracción
+
+Cualquier acto no permitido por la Sección 2 o prohibido por esta Sección 4 se considerará una infracción grave de este Acuerdo y dará lugar a la terminación inmediata de la licencia, sin perjuicio de las acciones legales, civiles o penales, que el Licenciante pueda ejercer.
+5. Propiedad Intelectual
+
+5.1 El Licenciante es el titular de todos los derechos de propiedad intelectual sobre el Software, incluyendo, entre otros, derechos de autor, patentes, marcas comerciales, secretos comerciales y cualquier otro derecho de propiedad industrial o intelectual.
+
+5.2 El Licenciatario reconoce que la estructura, organización y código del Software constituyen secretos comerciales y propiedad confidencial del Licenciante.
+
+5.3 El Licenciatario no adquirirá ningún derecho de propiedad sobre el Software ni sobre ninguna de sus partes, más allá de la licencia de uso concedida en este Acuerdo.
+
+5.4 Todas las Contribuciones, si son aceptadas, pasarán a ser propiedad del Licenciante, quien podrá utilizarlas sin restricción alguna.
+6. Garantía y Responsabilidad
+
+6.1 EXCLUSIÓN DE GARANTÍA
+
+EL SOFTWARE SE PROPORCIONA "TAL CUAL", SIN GARANTÍA DE NINGÚN TIPO, NI EXPRESA NI IMPLÍCITA. EL LICENCIANTE NO GARANTIZA QUE EL SOFTWARE SEA ADECUADO PARA UN PROPÓSITO PARTICULAR, QUE FUNCIONE SIN INTERRUPCIONES, QUE ESTÉ LIBRE DE ERRORES O QUE SEA COMPATIBLE CON OTROS SISTEMAS.
+
+6.2 LIMITACIÓN DE RESPONSABILIDAD
+
+EN NINGÚN CASO, EXCEPTO CUANDO LO EXIJA LA LEY APLICABLE, EL LICENCIANTE SERÁ RESPONSABLE ANTE EL LICENCIATARIO POR DAÑOS DIRECTOS, INDIRECTOS, INCIDENTALES, ESPECIALES, CONSECUENTES O PUNITIVOS QUE SURJAN DEL USO O LA IMPOSIBILIDAD DE USAR EL SOFTWARE, INCLUSO SI EL LICENCIANTE HA SIDO ADVERTIDO DE LA POSIBILIDAD DE DICHOS DAÑOS.
+
+6.3 El Licenciatario acepta que el costo de cualquier servicio, reparación o corrección necesarios como consecuencia del uso del Software será asumido íntegramente por el Licenciatario.
+7. Indemnización
+
+7.1 El Licenciatario acepta indemnizar, defender y eximir de responsabilidad al Licenciante, sus directivos, empleados, agentes y afiliados, de y contra cualquier reclamación, demanda, pérdida, daño, costo o gasto (incluyendo honorarios razonables de abogados) que surjan de o estén relacionados con:
+
+a) El uso del Software por parte del Licenciatario.
+
+b) El incumplimiento por parte del Licenciatario de cualquiera de los términos de este Acuerdo.
+
+c) La infracción por parte del Licenciatario de cualquier ley, regulación o derecho de terceros.
+
+d) Cualquier reclamación derivada de la integración del Software con otros sistemas por parte del Licenciatario.
+
+e) Cualquier reclamación derivada de la oferta de Servicios en la Nube basados en el Software por parte del Licenciatario.
+8. Terminación
+
+8.1 Este Acuerdo tendrá efecto a partir de la fecha en que el Licenciatario reciba o comience a utilizar el Software y continuará vigente hasta que sea rescindido.
+
+8.2 El Licenciante podrá rescindir inmediatamente este Acuerdo, sin necesidad de notificación previa, si el Licenciatario incumple cualquiera de las condiciones establecidas en este Acuerdo, en particular:
+
+a) La modificación, desactivación o eliminación del archivo seguridad.py o de cualquier otro componente del sistema de seguridad.
+
+b) La modificación de cualquier archivo del Código.
+
+c) La distribución no autorizada del Software.
+
+d) El uso del Software para fines ilegales.
+
+e) Cualquier acto no permitido por la Sección 2 (Permisos) de este Acuerdo.
+
+f) La oferta de Servicios en la Nube basados en el Software sin autorización.
+
+g) La realización de un Fork del Software.
+
+8.3 La terminación de este Acuerdo conllevará automáticamente la revocación de la licencia concedida y el Licenciatario deberá cesar inmediatamente todo uso del Software y eliminar o devolver todas las copias del mismo.
+
+8.4 Las disposiciones de las secciones 5, 6, 7, 8 y 9 sobrevivirán a la terminación de este Acuerdo.
+9. Disposiciones Generales
+
+9.1 Ley Aplicable
+
+Este Acuerdo se regirá e interpretará de acuerdo con las leyes de los Estados Unidos Mexicanos sin tener en cuenta sus principios de conflicto de leyes. Cualquier disputa que surja de o esté relacionada con este Acuerdo se someterá a la jurisdicción exclusiva de los tribunales de la Ciudad de México, México.
+
+9.2 Acuerdo Completo
+
+Este Acuerdo constituye el acuerdo completo entre las partes con respecto a su objeto y reemplaza todas las comunicaciones, entendimientos y acuerdos anteriores o contemporáneos, ya sean escritos u orales.
+
+9.3 Modificaciones
+
+9.3.1 El Licenciante se reserva el derecho de modificar este Acuerdo en cualquier momento. Cualquier modificación entrará en vigor a partir de la publicación de la versión modificada en la Documentación Oficial.
+
+9.3.2 El Licenciante notificará al Licenciatario sobre cualquier modificación sustancial mediante un aviso en el repositorio del Software o mediante el medio de contacto proporcionado por el Licenciatario.
+
+9.3.3 El uso continuado del Software por parte del Licenciatario después de la fecha de entrada en vigor de la modificación constituirá la aceptación de dichas modificaciones. Si el Licenciatario no acepta las modificaciones, deberá cesar todo uso del Software y eliminar todas las copias del mismo.
+
+9.4 Divisibilidad
+
+Si alguna disposición de este Acuerdo se considera inválida o inaplicable, las disposiciones restantes continuarán en pleno vigor y efecto, y la disposición inválida o inaplicable se interpretará en la medida de lo posible para reflejar la intención original de las partes.
+
+9.5 Cesión
+
+El Licenciatario no podrá ceder o transferir este Acuerdo o cualquiera de los derechos u obligaciones que de él derivan sin el consentimiento previo por escrito del Licenciante.
+
+9.6 Renuncia
+
+La falta de ejercicio o la demora en el ejercicio de cualquier derecho o recurso por parte del Licenciante no constituirá una renuncia al mismo, ni impedirá el ejercicio futuro de ese u otros derechos o recursos.
+
+9.7 Relación entre las Partes
+
+Nada en este Acuerdo se interpretará como la creación de una sociedad, empresa conjunta, relación de agencia, relación laboral o cualquier otra relación de representación entre el Licenciante y el Licenciatario.
+10. Aceptación
+
+EL LICENCIATARIO DECLARA HABER LEÍDO, COMPRENDIDO Y ACEPTADO TODOS LOS TÉRMINOS Y CONDICIONES ESTABLECIDOS EN ESTE ACUERDO. EL USO DEL SOFTWARE POR PARTE DEL LICENCIATARIO CONSTITUYE LA ACEPTACIÓN ÍNTEGRA DE ESTE ACUERDO.
+
+SI EL LICENCIATARIO NO ESTÁ DE ACUERDO CON ALGUNO DE LOS TÉRMINOS DE ESTE ACUERDO, NO DEBE UTILIZAR EL SOFTWARE.
+
+FIN DEL ACUERDO

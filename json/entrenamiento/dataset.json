@@ -1,0 +1,10 @@
+[
+    {
+        "id": 1,
+        "date": "2026-08-04T12:22:45.766086",
+        "input": "¿que opinas de la ai?",
+        "output": "user\nLo siento por la confusión, pero como asistente de inteligencia artificial creado por Alibaba Cloud, no tengo opiniones personales o experiencias propias. Mi principal función es ayudar y proporcionar información útil. Si tienes alguna pregunta o necesitas ayuda con algo específico, estaré encantado de proporcionarte una respuesta precisa y precisa basada en mi entrenamiento. ¿En qué puedo ayudarte hoy?",
+        "qualification": "positive",
+        "archivo_origen": "conversacion-1.json"
+    }
+]

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APACMA Chat</title>
+    <style>
+        body { font-family: system-ui, sans-serif; margin: 0; background: #f4f4f5; }
+        #chat { max-width: 720px; margin: 40px auto; background: #fff; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,.1); display: flex; flex-direction: column; height: 85vh; }
+        header { padding: 12px 20px; border-bottom: 1px solid #eee; display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+        header select { padding: 6px; border: 1px solid #ddd; border-radius: 6px; font-size: 14px; }
+        #nuevo { padding: 6px 12px; background: #2563eb; color: #fff; border: none; border-radius: 6px; cursor: pointer; }
+        #mensajes { flex: 1; overflow-y: auto; padding: 20px; display: flex; flex-direction: column; gap: 12px; }
+        .msg { max-width: 75%; padding: 10px 14px; border-radius: 12px; white-space: pre-wrap; line-height: 1.4; }
+        .usuario { align-self: flex-end; background: #2563eb; color: #fff; }
+        .asistente { align-self: flex-start; background: #e5e7eb; color: #111; }
+        .msg .acciones { display: flex; gap: 6px; margin-top: 6px; }
+        .thumb { border: none; background: transparent; cursor: pointer; font-size: 16px; padding: 2px; }
+        .thumb.seleccionado { filter: drop-shadow(0 0 2px #2563eb); }
+        #entrada { display: flex; gap: 10px; padding: 16px 20px; border-top: 1px solid #eee; }
+        #texto { flex: 1; padding: 10px; border: 1px solid #ddd; border-radius: 8px; font-size: 15px; }
+        #boton { padding: 10px 18px; background: #2563eb; color: #fff; border: none; border-radius: 8px; cursor: pointer; }
+        #boton:disabled { opacity: .5; }
+        .cargando { color: #888; font-style: italic; }
+    </style>
+</head>
+<body>
+    <div id="chat">
+        <header>
+            <select id="selector"></select>
+            <button id="nuevo">Nuevo chat</button>
+        </header>
+        <div id="mensajes"></div>
+        <div id="entrada">
+            <input id="texto" type="text" placeholder="Escribe un mensaje..." autofocus>
+            <button id="boton">Enviar</button>
+        </div>
+    </div>
+    <script>
+        const lista = document.getElementById('mensajes');
+        const selector = document.getElementById('selector');
+        let chat = null;
+
+        function agregar(texto, quien, id) {
+            const div = document.createElement('div');
+            div.className = 'msg ' + quien;
+            const cuerpo = document.createElement('div');
+            cuerpo.className = 'texto';
+            cuerpo.textContent = texto;
+            div.appendChild(cuerpo);
+            if (quien === 'asistente' && id !== -1) {
+                const acc = document.createElement('div');
+                acc.className = 'acciones';
+                acc.innerHTML = '<button class="thumb" data-cal="positive" title="Bien">&#128077;</button><button class="thumb" data-cal="negative" title="Mal">&#128078;</button><button class="thumb" data-cal="neutra" title="Neutro">&#128070;</button>';
+                acc.onclick = (e) => {
+                    const btn = e.target.closest('.thumb');
+                    if (!btn) return;
+                    calificar(id, btn.dataset.cal);
+                    acc.querySelectorAll('.thumb').forEach(b => b.classList.remove('seleccionado'));
+                    btn.classList.add('seleccionado');
+                };
+                div.appendChild(acc);
+            }
+            lista.appendChild(div);
+            lista.scrollTop = lista.scrollHeight;
+            return { div, cuerpo };
+        }
+
+        async function calificar(id, cal) {
+            await fetch('/calificar', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ nombre: chat, id, calificacion: cal })
+            });
+        }
+
+        async function cargarChats() {
+            const r = await fetch('/chats');
+            const data = await r.json();
+            selector.innerHTML = '';
+            for (const c of data.chats) {
+                const op = document.createElement('option');
+                op.value = c;
+                op.textContent = c;
+                selector.appendChild(op);
+            }
+            if (data.actual) chat = data.actual;
+            selector.value = data.actual || '';
+        }
+
+        async function cargarConversacion() {
+            const res = await fetch('/chat', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ nombre: chat })
+            });
+            const data = await res.json();
+            lista.innerHTML = '';
+            for (const m of data.conversacion) {
+                if (m.input != null) agregar(m.input, 'usuario', m.id);
+                if (m.output != null) agregar(m.output, 'asistente', m.id);
+            }
+            if (data.conversacion.length === 0) {
+                agregar('Nuevo chat. Escribe algo para empezar.', 'asistente', -1);
+            }
+        }
+
+        selector.onchange = () => { chat = selector.value; cargarConversacion(); };
+
+        async function nuevoChat() {
+            const res = await fetch('/nuevo', { method: 'POST' });
+            const data = await res.json();
+            chat = data.nombre;
+            await cargarChats();
+            selector.value = chat;
+            await cargarConversacion();
+        }
+        document.getElementById('nuevo').onclick = nuevoChat;
+
+        async function enviar() {
+            const texto = document.getElementById('texto').value.trim();
+            if (!texto) return;
+            document.getElementById('texto').value = '';
+            agregar(texto, 'usuario', -1);
+            const c = document.createElement('div');
+            c.className = 'msg asistente cargando';
+            c.textContent = 'pensando...';
+            lista.appendChild(c);
+            lista.scrollTop = lista.scrollHeight;
+            const boton = document.getElementById('boton');
+            boton.disabled = true;
+            const r = await fetch('/enviar', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ mensaje: texto, nombre: chat })
+            });
+            const buf = new TextDecoder();
+            c.remove();
+            const { cuerpo } = agregar('', 'asistente', -1);
+            const lector = r.body.getReader();
+            let respuesta = '';
+            while (true) {
+                const { value, done } = await lector.read();
+                if (done) break;
+                respuesta += buf.decode(value, { stream: true });
+                cuerpo.textContent = respuesta;
+                lista.scrollTop = lista.scrollHeight;
+            }
+            respuesta += buf.decode();
+            boton.disabled = false;
+            await cargarConversacion();
+            lista.scrollTop = lista.scrollHeight;
+        }
+
+        document.getElementById('boton').onclick = enviar;
+        document.getElementById('texto').onkeydown = (e) => { if (e.key === 'Enter') enviar(); };
+
+        (async () => { await cargarChats(); await cargarConversacion(); })();
+    </script>
+</body>
+</html>
