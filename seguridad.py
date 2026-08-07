@@ -42,7 +42,7 @@ RUTA_DATASET = DIRECTORIO_JSON / "entrenamiento" / "dataset.json"
 DIRECTORIO_MODELOS = Path("models")
 RUTA_LLM = DIRECTORIO_MODELOS / "LLM"
 RUTA_LLM_BASE = DIRECTORIO_MODELOS / "LLM-base"
-DIRECTORIO_TEST = Path("test")
+DIRECTORIO_TEST = Path("test/question")
 
 # Preguntas de la prueba breve de seguridad del modelo
 # Categorias basadas en benchmarks reales (AdvBench/HarmBench/JBB-Behaviors)
