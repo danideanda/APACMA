@@ -7,6 +7,7 @@ Archivo de documentación técnica para `main.py`.
 `main.py` es el **punto de entrada principal** del proyecto. Su función es unificar y coordinar todos los módulos del sistema (backend, frontend, modelos, seguridad y clasificación). Actualmente:
 
 - Define y verifica la ruta del modelo a usar (`models/LLM` o `models/LLM-base`).
+- Registra la fecha de inicio del programa.
 - Orquesta el flujo de trabajo, llamando al entrenamiento de fine-tuning al final (`entrenar_fine`).
 - Es la pieza que integra los distintos subsistemas: DNAPAN, seguridad, clasificación y chat LLM.
 
@@ -29,6 +30,7 @@ Archivo de documentación técnica para `main.py`.
 | `seguridad` (wildcard `*`) | Gestión de seguridad y ejecución. |
 | `clasificador` (wildcard `*`) | Clasificación y construcción de datasets. |
 | `chat.llm` (wildcard `*`) | Servidor web del chat y motor del LLM. |
+| `datetime` | Genera la fecha/hora de inicio del programa. |
 
 ## Tecnologías
 
@@ -51,18 +53,33 @@ Archivo de documentación técnica para `main.py`.
 | `verificar_ruta_modelo()` | Detecta y asigna `model_path` global entre los modelos disponibles. |
 | `main()` | Orquestador principal (en desarrollo). |
 
+## Variables globales
+
+| Variable | Valor inicial | Descripción |
+|----------|---------------|-------------|
+| `model_path` | `""` | Ruta al modelo base; la asigna `verificar_ruta_modelo()`. |
+| `dataset_path` | `"json/entrenamiento/dataset.json"` | Ruta del dataset usado en el entrenamiento. |
+
+## Código a nivel de módulo
+
+- Se calcula `fecha = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")` y se imprime `Inicio del programa: {fecha}` al importar el módulo.
+
 ## Flujo de ejecución
 
 ```
 inicio del script
      │
      ▼
-verificar_ruta_modelo()  →  detecta ruta del modelo
+fecha = datetime.now(...)  →  print "Inicio del programa"
      │
      ▼
-main()
+if __name__ == "__main__":
      │
-     └─ (desarrollo: return sin lógica)
+     ▼
+main()  →  verificar_ruta_modelo()  →  detecta ruta del modelo
+     │                                    (return: desarrollo)
+     ▼
+print("Ruta del modelo verificada:", model_path)
      │
      ▼
 entrenar_fine(modelo_path=model_path)  →  fine-tuning del LLM
@@ -76,3 +93,4 @@ fin
 - La línea `return` dentro de `main()` impide que haya lógica ejecutable por el momento.
 - `main.py` se ejecuta como módulo principal mediante `if __name__ == "__main__":`.
 - El proyecto depende de los módulos importados; si faltan dependencias (transformers, torch), el import fallará al inicio.
+- `entrenar_fine` usa `dataset_path` por defecto, por lo que entrena con `json/entrenamiento/dataset.json` y guarda el modelo en `./fine_tuned_model`.

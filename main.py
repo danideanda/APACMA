@@ -1,17 +1,21 @@
 from fine import entrenar_fine
-from DNAPAN import *
 from seguridad import *
 from clasificador import *
 from chat.llm import *
+import datetime
 
 # ========== variables ==========
-# ===== paths =====
+# rutas
 model_path = ""
 dataset_path = "json/entrenamiento/dataset.json"
 
+# ========== manejo de errores ==========
+
+
+# ========== funciones ==========
 def verificar_ruta_modelo():
     global model_path
-    # ========== verificar ruta del modelo ==========
+    # verificar ruta del modelo
     if os.path.exists("models/LLM"):
         model_path = "models/LLM"
     elif os.path.exists("models/LLM-base"):
@@ -26,6 +30,8 @@ def main():
     # en desarrollo
 
 
+fecha = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+print(f"Inicio del programa: {fecha}")
 if __name__ == "__main__":
     main()
     print("Ruta del modelo verificada:", model_path)

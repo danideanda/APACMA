@@ -128,6 +128,38 @@ limites_tokens()  →  if tokens_actuales > limite_tokens:
                          ├─ Fase 2: Eliminar positivos repetidos (<3 veces)
                          │    └─ Hasta 1,000 eliminaciones o bajo el límite
                          │
+                         ├─ Fase 3: Eliminar negativos repetidos (<3 veces)
+                         │    └─ Hasta 1,000 eliminaciones o bajo el límite
+                         │
                          └─ Guardar dataset actualizado
                     │
                     └─ si no → "El dataset está dentro del límite."
+```
+
+## Notas
+
+- El script asume que el dataset es una **lista** de mensajes, cada uno con un campo `"text"` y `"qualification"`.
+- `tokens_actuales` solo tiene valor correcto después de ejecutar `contar_tokens()`; `limites_tokens()` depende de ese cálculo previo.
+- Si el tokenizador o el archivo de dataset no existen, el script fallará en la importación o lectura inicial.
+- Los mensajes con `qualification` desconocida no se eliminan en ninguna fase.
+- Los mensajes negativos largos (>500 tokens) NO se eliminan por tamaño, solo por repetición.
+- Los mensajes positivos repetidos (<3 veces) se eliminan ANTES que los negativos repetidos, según la jerarquía.
+
+## Limitaciones conocidas
+
+| Limitación | Impacto | Posible mejora |
+|------------|---------|----------------|
+| `dataset.count(mensaje)` cuenta objetos completos, no texto similar | No detecta mensajes con mismo contenido pero diferentes metadatos | Normalizar texto o usar embeddings para similitud |
+| Recalcular tokens tras cada eliminación | Ineficiente para datasets grandes | Recalcular al final de cada fase o en lotes |
+| Límite de 1,000 eliminaciones por fase | Puede requerir múltiples ejecuciones | Hacerlo configurable o ejecutar en bucle hasta cumplir |
+| Sin logs persistentes | No se puede auditar qué se eliminó | Guardar archivo de log con fecha y mensajes eliminados |
+| Sin respaldo del dataset | Si el script falla, se pierden datos | Guardar respaldo antes de modificar |
+
+## Mejoras propuestas (futuras)
+
+1. **Campo de relevancia:** Agregar `relevance_score` (0-1) para priorizar eliminación de mensajes con baja relevancia.
+2. **Normalización de texto:** Para detectar repeticiones reales independientemente de mayúsculas o espacios.
+3. **Logs persistentes:** Guardar historial de eliminaciones en `logs/pruning_log.txt`.
+4. **Respaldo automático:** Crear `dataset_backup.json` antes de cualquier modificación.
+5. **Configuración externa:** Mover `limite_tokens`, `max_eliminaciones` y jerarquía a un archivo `config.json`.
+6. **Progreso visual:** Agregar barra de progreso para datasets grandes.
