@@ -1,6 +1,6 @@
+from seguridad import filtro_seguridad, prueba_seguridad_modelo
 from fine import entrenar_fine
-from seguridad import *
-from clasificador import *
+from clasificador import juntar, juntar_con_dnapan_completo
 from chat.llm import *
 import datetime
 
@@ -8,9 +8,7 @@ import datetime
 # rutas
 model_path = ""
 dataset_path = "json/entrenamiento/dataset.json"
-
-# ========== manejo de errores ==========
-
+fecha = datetime.now()
 
 # ========== funciones ==========
 def verificar_ruta_modelo():
@@ -25,8 +23,19 @@ def verificar_ruta_modelo():
 
 def main():
     verificar_ruta_modelo()
-    return
-    # no hay nada jeje
+    if fecha.day() == 1: # <--- comŕueba que es otro mes
+        #1. generar dataset
+        juntar()
+        juntar_con_dnapan_completo()
+        # 2. Limpiar los JSON mediante el filtro de seguridad
+        print("\n=== FILTRO DE SEGURIDAD DE JSON ===")
+        filtro_seguridad()
+        # 3. entrena el modelo
+        entrenar_fine()
+        # 4. Prueba breve de seguridad del modelo entrenado
+        print("\n=== PRUEBA BREVE DE SEGURIDAD DEL MODELO ===")
+        prueba_seguridad_modelo()
+        print("\nProceso completado")
     # en desarrollo
 
 

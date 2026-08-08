@@ -14,7 +14,10 @@ from huggingface_hub import login
 import os
 from datetime import datetime
 
-def entrenar_fine(modelo_path, dataset_path="./dataset.json", output_dir="./fine_tuned_model"):
+modelo_path = "" 
+dataset_path = "json/entrenamiento/dataset.json"
+output_dir = "models/LLM/"
+def entrenar_fine():
     """
     Función para realizar fine-tuning con LoRA de un modelo base
     
@@ -26,6 +29,15 @@ def entrenar_fine(modelo_path, dataset_path="./dataset.json", output_dir="./fine
     Returns:
         str: Ruta del modelo guardado
     """
+    global model_path
+    # verificar ruta del modelo
+    if os.path.exists("models/LLM"):
+        model_path = "models/LLM"
+    elif os.path.exists("models/LLM-base"):
+        model_path = "models/LLM-base"
+    else:
+        model_path = "error fatal: no se encontró la ruta del modelo"
+
     
     # Verificar que existe el archivo de datos
     if not os.path.exists(dataset_path):
