@@ -9,7 +9,7 @@ from functools import wraps
 # rutas
 model_path = ""
 dataset_path = "json/entrenamiento/dataset.json"
-fecha = datetime.now()
+fecha = datetime.now
 
 # ========== manejo de errores ==========
 
@@ -60,7 +60,7 @@ def verificar_ruta_modelo():
 @manejar_errores
 def main():
     verificar_ruta_modelo()
-    if fecha.day == 1: # <--- comŕueba que es otro mes
+    if fecha.day == 10: # <--- comŕueba que es otro mes (debe estar en 1 pero estamos de pruebas asi que estara en 10)
         #1. generar dataset
         juntar()
         juntar_con_dnapan_completo()
