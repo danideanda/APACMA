@@ -83,16 +83,33 @@ def entrenar_fine():
     with open(dataset_path, 'r', encoding='utf-8') as f:
         data = json.load(f)
     
-    # Si es un solo objeto, convertirlo a lista
-    if isinstance(data, dict):
-        data = [data]
-    
     # Preparar los datos para el formato de entrenamiento
     training_data = []
+
+    # Si es un dict de conversaciones {id: [mensajes]}, extraer los mensajes
+    if isinstance(data, dict):
+        items = []
+        for conversacion in data.values():
+            if isinstance(conversacion, list):
+                items.extend(conversacion)
+        data = items
+
+    # Si es un solo objeto (mensaje), convertirlo a lista
+    if isinstance(data, dict):
+        data = [data]
+
     for item in data:
+        if not isinstance(item, dict):
+            continue
+        if "input" not in item or "output" not in item:
+            continue
         # Crear el prompt con el formato adecuado para el modelo
         prompt = f"Pregunta: {item['input']}\nRespuesta: {item['output']}"
         training_data.append({"text": prompt})
+
+    if not training_data:
+        print("No hay datos de entrenamiento en el dataset. Se omite el fine-tuning.")
+        return None
     
     # Crear dataset de HuggingFace
     dataset = Dataset.from_list(training_data)

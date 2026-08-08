@@ -9,7 +9,7 @@ from functools import wraps
 # rutas
 model_path = ""
 dataset_path = "json/entrenamiento/dataset.json"
-fecha = datetime.now
+fecha = datetime.datetime.now()
 
 # ========== manejo de errores ==========
 
