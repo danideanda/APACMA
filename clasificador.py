@@ -1,7 +1,7 @@
 import os
 import json
 from functools import wraps
-from json_script import id_json, listar_chats
+from json_script import id_json
 from DNAPAN import DNAPAN_inferir_texto, DNAPAN_json
 
 # ========== variables ==========

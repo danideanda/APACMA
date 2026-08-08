@@ -4,7 +4,6 @@ from functools import wraps
 
 # ========== variables ==========
 ruta_conversaciones = "json/conversaciones"
-ruta_dataset = "json/entrenamiento/dataset_filtrado.json"
 
 # ========== manejo de errores ==========
 
@@ -41,78 +40,6 @@ def manejar_errores(func=None, default=_SIN_DEFAULT):
 
 
 # ========== funciones ==========
-
-@manejar_errores(default=None)
-def listar_chats():
-    """
-    Lista los chats, procesa los mensajes con qualification y genera el dataset.
-    Retorna una lista con los chats procesados.
-    """
-    # 1. Obtener todos los archivos JSON
-    archivos = [
-        f for f in sorted(os.listdir(ruta_conversaciones))
-        if f.endswith(".json")
-    ]
-    
-    if not archivos:
-        print("No se encontraron archivos JSON en la carpeta de conversaciones")
-        return []
-    
-    print(f"Se encontraron {len(archivos)} chats: {archivos}")
-    
-    # 2. Procesar cada chat y extraer mensajes con qualification
-    chats_procesados = []
-    dataset = []
-    
-    for archivo in archivos:
-        ruta = os.path.join(ruta_conversaciones, archivo)
-        
-        with open(ruta, "r", encoding="utf-8") as fh:
-            conversacion = json.load(fh)
-        
-        # Procesar mensajes del chat actual
-        mensajes_chat = []
-        for mensaje in conversacion:
-            qualification = mensaje.get("qualification")
-            text = mensaje.get("text")
-            
-            # Solo guardar mensajes con clasificación
-            if qualification and text:
-                item = {
-                    "text": text,
-                    "label": qualification
-                }
-                mensajes_chat.append(item)
-                dataset.append(item)
-        
-        # Guardar el chat procesado
-        if mensajes_chat:
-            chats_procesados.append({
-                "archivo": archivo,
-                "mensajes": mensajes_chat,
-                "total": len(mensajes_chat)
-            })
-    
-    # 3. Guardar dataset completo
-    if dataset:
-        os.makedirs(os.path.dirname(ruta_dataset), exist_ok=True)
-        
-        with open(ruta_dataset, "w", encoding="utf-8") as fh:
-            json.dump(dataset, fh, ensure_ascii=False, indent=4)
-        
-        print(f"Se guardaron {len(dataset)} ejemplos en {ruta_dataset}")
-    else:
-        print("No se encontraron mensajes con qualification")
-    
-    # 4. Retornar la lista completa con todo el procesamiento
-    return {
-        "archivos": archivos,
-        "chats_procesados": chats_procesados,
-        "total_mensajes": len(dataset),
-        "dataset": dataset,
-        "ruta_dataset": ruta_dataset
-    }
-
 
 @manejar_errores(default=[])
 def id_json():

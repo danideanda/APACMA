@@ -82,7 +82,6 @@ if __name__ == "__main__":
     try:
         main()
         print("Ruta del modelo verificada:", model_path)
-        entrenar_fine()
     except ErrorAPACMA as e:
         print(f"[ERROR FATAL] {e}")
     except Exception as e:

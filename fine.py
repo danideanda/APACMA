@@ -10,7 +10,6 @@ from transformers import (
 )
 from peft import LoraConfig, get_peft_model, prepare_model_for_kbit_training
 from datasets import Dataset
-from huggingface_hub import login
 from datetime import datetime
 from functools import wraps
 
@@ -65,16 +64,16 @@ def entrenar_fine():
     Returns:
         str: Ruta del modelo guardado
     """
-    global model_path
+    global modelo_path
     # verificar ruta del modelo
-    if os.path.exists("models/LLM"):
-        model_path = "models/LLM"
-    elif os.path.exists("models/LLM-base"):
-        model_path = "models/LLM-base"
-    else:
-        model_path = "error fatal: no se encontró la ruta del modelo"
+    if not modelo_path:
+        if os.path.exists("models/LLM"):
+            modelo_path = "models/LLM"
+        elif os.path.exists("models/LLM-base"):
+            modelo_path = "models/LLM-base"
+        else:
+            raise ErrorAPACMA("no se encontró la ruta del modelo")
 
-    
     # Verificar que existe el archivo de datos
     if not os.path.exists(dataset_path):
         raise FileNotFoundError(f"El archivo {dataset_path} no existe")

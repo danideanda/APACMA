@@ -6,9 +6,7 @@ from functools import wraps
 
 import requests
 from flask import Flask, Response, jsonify, request, stream_with_context
-import io
 from threading import Thread
-import queue
 
 from transformers import GenerationConfig
 
