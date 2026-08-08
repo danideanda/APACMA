@@ -37,6 +37,15 @@ El flujo general es:
 | `DNAPAN_inferir_texto(texto)` | Infiere la calificación de un solo texto. |
 | `DNAPAN_actualizar_dataset()` | Actualiza el dataset existente añadiendo `qualification` por ID. |
 
+## Manejo de errores
+
+Se define la sección `# ========== manejo de errores ==========` (entre variables y funciones) que contiene:
+
+- **`ErrorAPACMA(Exception)`**: excepción base del proyecto.
+- **`manejar_errores`**: decorador que captura excepciones, imprime `[ERROR] <función>: <mensaje>` y relanza como `ErrorAPACMA`, o devuelve un `default` si se indica (`@manejar_errores(default=[])`).
+
+Las tres funciones están decoradas: `DNAPAN_json` y `DNAPAN_actualizar_dataset` con `@manejar_errores(default=[])`, y `DNAPAN_inferir_texto` con `@manejar_errores(default=None)`. Así, ante un error devuelven lista vacía o `None` según corresponda. El bloque `if __name__ == "__main__":` se envuelve en `try/except` que imprime `[ERROR FATAL]`.
+
 ## Mapeo de predicción
 
 - Clase predicha `1` → `"positive"`.

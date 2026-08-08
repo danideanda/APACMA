@@ -44,6 +44,15 @@ Flujo general:
 | `juntar_con_dnapan_completo()` | Usa `DNAPAN_json()` para clasificar todos y luego filtra por IDs interesantes. |
 | `extraer_por_ids(lista_ids)` | Extrae mensajes completos a partir de una lista de IDs provista por el usuario. |
 
+## Manejo de errores
+
+Se define la sección `# ========== manejo de errores ==========` (entre variables y funciones) que contiene:
+
+- **`ErrorAPACMA(Exception)`**: excepción base del proyecto.
+- **`manejar_errores`**: decorador que captura excepciones, imprime `[ERROR] <función>: <mensaje>` y relanza como `ErrorAPACMA`, o devuelve un `default` si se indica (`@manejar_errores(default=[])`).
+
+Las tres funciones (`juntar`, `juntar_con_dnapan_completo`, `extraer_por_ids`) están decoradas con `@manejar_errores(default=[])`, por lo que ante un error devuelven lista vacía en lugar de propagar la excepción. El bloque `if __name__ == "__main__":` se envuelve en `try/except` que imprime `[ERROR FATAL]`.
+
 ## Campos del mensaje de salida
 
 ```json

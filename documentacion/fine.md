@@ -43,6 +43,15 @@ Archivo de documentación técnica para `fine.py`.
 
 > Nota: ya no existe la función `verificar_ruta_modelo()`. La lógica de resolución de ruta (`models/LLM` → `models/LLM-base`) está embebida dentro de `entrenar_fine()`.
 
+## Manejo de errores
+
+Se define la sección `# ========== manejo de errores ==========` (entre variables y funciones) que contiene:
+
+- **`ErrorAPACMA(Exception)`**: excepción base del proyecto.
+- **`manejar_errores`**: decorador que captura excepciones, imprime `[ERROR] <función>: <mensaje>` y relanza como `ErrorAPACMA`, o devuelve un `default` si se indica (`@manejar_errores(default=[])`).
+
+Se aplica a `entrenar_fine` y `guardar_registro_modelo`. Si el modelo o dataset no existen, el decorador imprime el error; `entrenar_fine` sigue lanzando `FileNotFoundError` cuando `dataset_path` no existe.
+
 ## Parámetros de `entrenar_fine`
 
 `entrenar_fine()` **no recibe parámetros**. Usa las variables globales del módulo:

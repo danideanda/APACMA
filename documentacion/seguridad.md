@@ -57,6 +57,27 @@ Ejemplos: `odio`, `violencia`, `discrimina`, `insult`, `amenaz`, `maltrat`, `ofe
 | `es_texto_seguro(texto, filtros_uso)` | True si el texto no contiene palabras ofensivas (no str → False). |
 | `es_conversacion_segura(conversacion, filtros_uso)` | Evalúa `input`/`output`/`text`/`content`/`pregunta`/`respuesta` de cada mensaje. |
 
+## Manejo de errores
+
+Se define la sección `# ========== manejo de errores ==========` (entre variables y funciones) que contiene:
+
+- **`ErrorAPACMA(Exception)`**: excepción base del proyecto.
+- **`manejar_errores`**: decorador que captura excepciones, imprime `[ERROR] <función>: <mensaje>` y relanza como `ErrorAPACMA`, o devuelve un `default` si se indica (`@manejar_errores(default=[])`).
+
+Funciones decoradas con sus valores por defecto ante error:
+
+| Función | Default |
+|---------|---------|
+| `cargar_json` | `None` |
+| `verificar_chat`, `validar_estructura_dataset`, `verificar_integridad_dataset`, `filtro_seguridad`, `limpiar_dataset`, `_directorio_tiene_modelo`, `filtrar_modelo` | `False` |
+| `listar_chats` | `[]` |
+| `_cargar_modelo` | `None` |
+| `generar_respuesta_modelo`, `preguntar_modelo` | `""` |
+| `pasar_filtro_llm_base` | `"error"` |
+| `prueba_seguridad_modelo` | `{}` |
+
+Los métodos de la clase `FiltroSeguridad` (`filtrar_modelo`, `listar_chats`, `filtro_seguridad`) también están decorados. El bloque `if __name__ == "__main__":` se envuelve en `try/except` que imprime `[ERROR FATAL]`.
+
 ## Funciones de integridad de JSON
 
 | Función | Rol |

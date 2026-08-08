@@ -51,6 +51,20 @@ Flujo general:
 | `completar_openai_stream(mensajes)` | Streams desde OpenAI si hay API key, si no usa el modelo local. |
 | `run_server()` | Inicia el servidor en `127.0.0.1:8000`. |
 
+## Manejo de errores
+
+Se define la sección `# ========== manejo de errores ==========` (entre variables y funciones) que contiene:
+
+- **`ErrorAPACMA(Exception)`**: excepción base del proyecto.
+- **`manejar_errores`**: decorador que captura excepciones, imprime `[ERROR] <función>: <mensaje>` y relanza como `ErrorAPACMA`, o devuelve un `default` si se indica (`@manejar_errores(default=[])`).
+
+Funciones decoradas:
+
+- `nombre_archivo`, `guardar_chat`, `run_server` → `@manejar_errores` (relanzan como `ErrorAPACMA`).
+- `listar_chats`, `cargar_chat` → `@manejar_errores(default=[])` (devuelven lista vacía ante error).
+
+El bloque `if __name__ == "__main__":` ya tenía `try/except` propio para la carga del modelo (imprime el error y termina con `SystemExit(1)`).
+
 ## Estructura de un mensaje guardado
 
 ```json

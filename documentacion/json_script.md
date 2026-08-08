@@ -37,6 +37,15 @@ Archivo de documentación técnica para `json_script.py`.
 - Filtra mensajes con `qualification` en `["positive", "negative"]` que tengan `id`.
 - Retorna una lista de `{id, archivo, qualification}`.
 
+## Manejo de errores
+
+Se define la sección `# ========== manejo de errores ==========` (entre variables y funciones) que contiene:
+
+- **`ErrorAPACMA(Exception)`**: excepción base del proyecto.
+- **`manejar_errores`**: decorador que captura excepciones, imprime `[ERROR] <función>: <mensaje>` y relanza como `ErrorAPACMA`, o devuelve un `default` si se indica (`@manejar_errores(default=[])`).
+
+`id_json` está decorado con `@manejar_errores(default=[])` y `listar_chats` con `@manejar_errores(default=None)`. Ante un error devuelven el valor por defecto en lugar de propagar la excepción.
+
 ## Estructura de datos de entrada
 
 Cada mensaje en `json/conversaciones/*.json` tiene al menos:

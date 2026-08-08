@@ -73,6 +73,15 @@ La función `eliminar_mensajes()` aplica las siguientes reglas en orden de prior
 | **Break al alcanzar límite** | `if tokens_actuales <= limite_tokens: break` | Detiene la ejecución en cuanto el dataset está dentro del límite, sin eliminar más de lo necesario. |
 | **Break al alcanzar tope de eliminaciones** | `elif mensajes_eliminados >= 1_000: break` | Limita el número de eliminaciones por ejecución para controlar el tiempo de procesamiento. |
 
+## Manejo de errores
+
+Se define la sección `# ========== manejo de errores ==========` (entre variables y funciones) que contiene:
+
+- **`ErrorAPACMA(Exception)`**: excepción base del proyecto.
+- **`manejar_errores`**: decorador que captura excepciones, imprime `[ERROR] <función>: <mensaje>` y relanza como `ErrorAPACMA`, o devuelve un `default` si se indica (`@manejar_errores(default=[])`).
+
+Las tres funciones (`contar_tokens`, `eliminar_mensajes`, `limites_tokens`) están decoradas con `@manejar_errores`. Además, la carga del tokenizador y del dataset en el bloque de variables está envuelta en `try/except`: si fallan, se imprime el error y se asignan valores por defecto (`tokenizer = None`, `dataset = []`). El bloque `if __name__ == "__main__":` se envuelve en `try/except` que imprime `[ERROR FATAL]`.
+
 ## Detalle de `eliminar_mensajes`
 
 ### Fase 1: Eliminar mensajes positivos largos
@@ -140,7 +149,7 @@ limites_tokens()  →  if tokens_actuales > limite_tokens:
 
 - El script asume que el dataset es una **lista** de mensajes, cada uno con un campo `"text"` y `"qualification"`.
 - `tokens_actuales` solo tiene valor correcto después de ejecutar `contar_tokens()`; `limites_tokens()` depende de ese cálculo previo.
-- Si el tokenizador o el archivo de dataset no existen, el script fallará en la importación o lectura inicial.
+- Si el tokenizador o el archivo de dataset no existen, la carga se captura con `try/except` y se usan valores por defecto (`tokenizer = None`, `dataset = []`), por lo que el script continúa en lugar de fallar.
 - Los mensajes con `qualification` desconocida no se eliminan en ninguna fase.
 - Los mensajes negativos largos (>500 tokens) NO se eliminan por tamaño, solo por repetición.
 - Los mensajes positivos repetidos (<3 veces) se eliminan ANTES que los negativos repetidos, según la jerarquía.

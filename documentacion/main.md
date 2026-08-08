@@ -52,6 +52,15 @@ Archivo de documentación técnica para `main.py`.
 | `verificar_ruta_modelo()` | Detecta y asigna `model_path` global entre los modelos disponibles. |
 | `main()` | Orquestador principal del proceso mensual. |
 
+## Manejo de errores
+
+Se define la sección `# ========== manejo de errores ==========` (entre variables y funciones) que contiene:
+
+- **`ErrorAPACMA(Exception)`**: excepción base del proyecto.
+- **`manejar_errores`**: decorador que captura excepciones, imprime `[ERROR] <función>: <mensaje>` y relanza como `ErrorAPACMA`, o devuelve un `default` si se indica (`@manejar_errores(default=[])`).
+
+Se aplica a `verificar_ruta_modelo` y `main`. El bloque `if __name__ == "__main__":` se envuelve en `try/except ErrorAPACMA` y `except Exception`, imprimiendo `[ERROR FATAL]`.
+
 ## Variables globales
 
 | Variable | Valor inicial | Descripción |
@@ -63,7 +72,7 @@ Archivo de documentación técnica para `main.py`.
 ## Flujo de ejecución de `main()`
 
 1. `verificar_ruta_modelo()` → asigna `model_path`.
-2. Si `fecha.day() == 1` (primer día del mes):
+2. Si `fecha.day == 1` (primer día del mes):
    - Genera el dataset: `juntar()` y `juntar_con_dnapan_completo()`.
    - Imprime `=== FILTRO DE SEGURIDAD DE JSON ===` y ejecuta `filtro_seguridad()`.
    - Ejecuta `entrenar_fine()`.
@@ -72,7 +81,7 @@ Archivo de documentación técnica para `main.py`.
 
 ## Código a nivel de módulo
 
-- Se calcula `fecha = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")` y se imprime `Inicio del programa: {fecha}` al importar el módulo.
+- Se calcula `fecha_inicio = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")` y se imprime `Inicio del programa: {fecha_inicio}` al importar el módulo. La variable `fecha` (objeto `datetime`) se conserva para la comprobación mensual en `main()`.
 
 ## Flujo de ejecución
 
@@ -80,7 +89,7 @@ Archivo de documentación técnica para `main.py`.
 inicio del script
      │
      ▼
-fecha = datetime.now(...)  →  print "Inicio del programa"
+fecha_inicio = datetime.now(...)  →  print "Inicio del programa"
      │
      ▼
 if __name__ == "__main__":
@@ -89,13 +98,13 @@ if __name__ == "__main__":
 main()  →  verificar_ruta_modelo()  →  detecta ruta del modelo
      │                                  │
      │                                  ▼
-     │         si fecha.day() == 1  →  juntar() / juntar_con_dnapan_completo()
+     │         si fecha.day == 1  →  juntar() / juntar_con_dnapan_completo()
      │              → filtro_seguridad() → entrenar_fine() → prueba_seguridad_modelo()
      ▼
 print("Ruta del modelo verificada:", model_path)
      │
      ▼
-entrenar_fine(modelo_path=model_path)  →  fine-tuning del LLM
+entrenar_fine()  →  fine-tuning del LLM
      │
      ▼
 fin
@@ -103,8 +112,7 @@ fin
 
 ## Notas y advertencias
 
-- El proceso mensual (dataset, filtro, fine-tuning y prueba de seguridad) solo se ejecuta cuando `fecha.day() == 1`; en cualquier otro día `main()` no hace nada.
+- El proceso mensual (dataset, filtro, fine-tuning y prueba de seguridad) solo se ejecuta cuando `fecha.day == 1`; en cualquier otro día `main()` no hace nada.
 - `main.py` se ejecuta como módulo principal mediante `if __name__ == "__main__":`.
 - El proyecto depende de los módulos importados; si faltan dependencias (transformers, torch), el import fallará al inicio.
-- `entrenar_fine` se invoca con `modelo_path=model_path`, guardando el modelo en `models/LLM/`.
-- `fecha.day()` se llama como método en `main()`; si `datetime` se importa como módulo y `fecha` es un objeto `datetime`, `day` es un atributo (sin paréntesis). Revisar si el paréntesis extra provoca un error en tiempo de ejecución.
+- `entrenar_fine` se invoca sin argumentos (usa sus variables globales), guardando el modelo en `models/LLM/`.
