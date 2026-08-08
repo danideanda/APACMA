@@ -23,7 +23,7 @@ def verificar_ruta_modelo():
 
 def main():
     verificar_ruta_modelo()
-    if fecha.day() == 1: # <--- comŕueba que es otro mes
+    if fecha.day == 1: # <--- comŕueba que es otro mes
         #1. generar dataset
         juntar()
         juntar_con_dnapan_completo()
@@ -39,9 +39,9 @@ def main():
     # en desarrollo
 
 
-fecha = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-print(f"Inicio del programa: {fecha}")
+fecha_inicio = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+print(f"Inicio del programa: {fecha_inicio}")
 if __name__ == "__main__":
     main()
     print("Ruta del modelo verificada:", model_path)
-    entrenar_fine(modelo_path=model_path)
+    entrenar_fine()
