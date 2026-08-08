@@ -5,6 +5,7 @@ from chat.llm import *
 import datetime
 import logging
 import os
+import time
 from functools import wraps
 
 # ========== variables ==========
@@ -15,7 +16,7 @@ fecha = datetime.datetime.now()
 
 # ========== configuración de logs ==========
 
-DIRECTORIO_LOGS = "logs"
+DIRECTORIO_LOGS = "test/logs"
 os.makedirs(DIRECTORIO_LOGS, exist_ok=True)
 RUTA_LOG = os.path.join(DIRECTORIO_LOGS, f"main_{fecha.strftime('%Y%m%d_%H%M%S')}.log")
 
@@ -81,24 +82,27 @@ def verificar_ruta_modelo():
 @manejar_errores
 def main():
     verificar_ruta_modelo()
-    if fecha.day == 10: # <--- comŕueba que es otro mes (debe estar en 1 pero estamos de pruebas asi que estara en 10)
-        #1. generar dataset
-        log.info("=== PASO 1: GENERAR DATASET ===")
-        juntar()
-        juntar_con_dnapan_completo()
-        # 2. Limpiar los JSON mediante el filtro de seguridad
-        log.info("=== PASO 2: FILTRO DE SEGURIDAD DE JSON ===")
-        filtro_seguridad()
-        # 3. entrena el modelo
-        log.info("=== PASO 3: ENTRENAMIENTO (FINE-TUNING) ===")
-        entrenar_fine()
-        # 4. Prueba breve de seguridad del modelo entrenado
-        log.info("=== PASO 4: PRUEBA BREVE DE SEGURIDAD DEL MODELO ===")
-        prueba_seguridad_modelo()
-        log.info("Proceso completado")
-    else:
-        log.info("Hoy no corresponde ejecutar el pipeline (condición de día no cumplida).")
-    # en desarrollo
+    while True:
+        if fecha.day == 10: # <--- comŕueba que es otro mes (debe estar en 1 pero estamos de pruebas asi que estara en 10)
+            #1. generar dataset
+            log.info("=== PASO 1: GENERAR DATASET ===")
+            juntar()
+            juntar_con_dnapan_completo()
+            # 2. Limpiar los JSON mediante el filtro de seguridad
+            log.info("=== PASO 2: FILTRO DE SEGURIDAD DE JSON ===")
+            filtro_seguridad()
+            # 3. entrena el modelo
+            log.info("=== PASO 3: ENTRENAMIENTO (FINE-TUNING) ===")
+            entrenar_fine()
+            # 4. Prueba breve de seguridad del modelo entrenado
+            log.info("=== PASO 4: PRUEBA BREVE DE SEGURIDAD DEL MODELO ===")
+            prueba_seguridad_modelo()
+            log.info("Proceso completado")
+            break
+        else:
+            log.info("Hoy no corresponde ejecutar el pipeline (condición de día no cumplida).")
+            time.sleep(60)
+    # en pruebas
 
 
 fecha_inicio = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")

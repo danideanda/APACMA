@@ -60,20 +60,20 @@ def verificar_ruta_modelo():
 @manejar_errores
 def main():
     verificar_ruta_modelo()
-    if fecha.day == 10: # <--- comŕueba que es otro mes (debe estar en 1 pero estamos de pruebas asi que estara en 10)
-        #1. generar dataset
-        juntar()
-        juntar_con_dnapan_completo()
-        # 2. Limpiar los JSON mediante el filtro de seguridad
-        print("\n=== FILTRO DE SEGURIDAD DE JSON ===")
-        filtro_seguridad()
-        # 3. entrena el modelo
-        entrenar_fine()
-        # 4. Prueba breve de seguridad del modelo entrenado
-        print("\n=== PRUEBA BREVE DE SEGURIDAD DEL MODELO ===")
-        prueba_seguridad_modelo()
-        print("\nProceso completado")
-    # en desarrollo
+    while True:
+        if fecha.day == 10: # <--- comŕueba que es otro mes (debe estar en 1 pero estamos de pruebas asi que estara en 10)
+            #1. generar dataset
+            juntar()
+            juntar_con_dnapan_completo()
+            # 2. Limpiar los JSON mediante el filtro de seguridad
+            print("\n=== FILTRO DE SEGURIDAD DE JSON ===")
+            filtro_seguridad()
+            # 3. entrena el modelo
+            entrenar_fine()
+            # 4. Prueba breve de seguridad del modelo entrenado
+            print("\n=== PRUEBA BREVE DE SEGURIDAD DEL MODELO ===")
+            prueba_seguridad_modelo()
+            print("\nProceso completado")
 
 
 fecha_inicio = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
