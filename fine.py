@@ -11,12 +11,48 @@ from transformers import (
 from peft import LoraConfig, get_peft_model, prepare_model_for_kbit_training
 from datasets import Dataset
 from huggingface_hub import login
-import os
 from datetime import datetime
+from functools import wraps
 
 modelo_path = "" 
 dataset_path = "json/entrenamiento/dataset.json"
 output_dir = "models/LLM/"
+
+# ========== manejo de errores ==========
+
+class ErrorAPACMA(Exception):
+    """Excepción base del proyecto APACMA."""
+
+
+_SIN_DEFAULT = object()
+
+
+def manejar_errores(func=None, default=_SIN_DEFAULT):
+    """Captura excepciones, imprime mensaje claro y falla con gracia.
+
+    Uso:
+        @manejar_errores                      # relanza como ErrorAPACMA
+        @manejar_errores(default=[])          # devuelve default en caso de error
+    """
+    def decorador(fn):
+        @wraps(fn)
+        def wrapper(*args, **kwargs):
+            try:
+                return fn(*args, **kwargs)
+            except ErrorAPACMA:
+                raise
+            except Exception as e:
+                print(f"[ERROR] {fn.__name__}: {e}")
+                if default is not _SIN_DEFAULT:
+                    return default
+                raise ErrorAPACMA(f"Error en {fn.__name__}: {e}") from e
+        return wrapper
+    if func is None:
+        return decorador
+    return decorador(func)
+
+
+@manejar_errores
 def entrenar_fine():
     """
     Función para realizar fine-tuning con LoRA de un modelo base
@@ -168,6 +204,7 @@ def entrenar_fine():
     return output_dir
 
 
+@manejar_errores
 def guardar_registro_modelo(output_dir, dataset_path, modelo_path):
     """
     Guarda o actualiza el archivo model.json con el registro del último

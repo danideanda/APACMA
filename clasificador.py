@@ -1,13 +1,50 @@
 import os
 import json
+from functools import wraps
 from json_script import id_json, listar_chats
 from DNAPAN import DNAPAN_inferir_texto, DNAPAN_json
 
-# ===== variables =====
+# ========== variables ==========
 ruta_conversaciones = "json/conversaciones"
 ruta_dataset_filtrado = "json/entrenamiento/dataset.json"
 
+# ========== manejo de errores ==========
 
+class ErrorAPACMA(Exception):
+    """Excepción base del proyecto APACMA."""
+
+
+_SIN_DEFAULT = object()
+
+
+def manejar_errores(func=None, default=_SIN_DEFAULT):
+    """Captura excepciones, imprime mensaje claro y falla con gracia.
+
+    Uso:
+        @manejar_errores                      # relanza como ErrorAPACMA
+        @manejar_errores(default=[])          # devuelve default en caso de error
+    """
+    def decorador(fn):
+        @wraps(fn)
+        def wrapper(*args, **kwargs):
+            try:
+                return fn(*args, **kwargs)
+            except ErrorAPACMA:
+                raise
+            except Exception as e:
+                print(f"[ERROR] {fn.__name__}: {e}")
+                if default is not _SIN_DEFAULT:
+                    return default
+                raise ErrorAPACMA(f"Error en {fn.__name__}: {e}") from e
+        return wrapper
+    if func is None:
+        return decorador
+    return decorador(func)
+
+
+# ========== funciones ==========
+
+@manejar_errores(default=[])
 def juntar():
     """
     Toma los IDs y archivos obtenidos por id_json(), extrae los datos completos
@@ -107,6 +144,7 @@ def juntar():
     return mensajes_completos
 
 
+@manejar_errores(default=[])
 def juntar_con_dnapan_completo():
     """
     Version que usa DNAPAN_json() para procesar todos los mensajes
@@ -169,6 +207,7 @@ def juntar_con_dnapan_completo():
     return mensajes_filtrados
 
 
+@manejar_errores(default=[])
 def extraer_por_ids(lista_ids):
     """
     Funcion alternativa que extrae mensajes basados en una lista de IDs proporcionada.
@@ -229,13 +268,18 @@ def extraer_por_ids(lista_ids):
 if __name__ == "__main__":
     # Ejecutar la funcion principal
     print("=== EJECUTANDO juntar() ===")
-    resultado = juntar()
-    
-    # Mostrar ejemplo del primer mensaje
-    if resultado:
-        print(f"\n=== PRIMER MENSAJE EJEMPLO ===")
-        print(json.dumps(resultado[0], ensure_ascii=False, indent=2))
-    
-    # Opcional: ejecutar la version con DNAPAN completo
-    print("\n=== EJECUTANDO juntar_con_dnapan_completo() ===")
-    resultado_dnapan = juntar_con_dnapan_completo()
+    try:
+        resultado = juntar()
+
+        # Mostrar ejemplo del primer mensaje
+        if resultado:
+            print(f"\n=== PRIMER MENSAJE EJEMPLO ===")
+            print(json.dumps(resultado[0], ensure_ascii=False, indent=2))
+
+        # Opcional: ejecutar la version con DNAPAN completo
+        print("\n=== EJECUTANDO juntar_con_dnapan_completo() ===")
+        resultado_dnapan = juntar_con_dnapan_completo()
+    except ErrorAPACMA as e:
+        print(f"[ERROR FATAL] {e}")
+    except Exception as e:
+        print(f"[ERROR FATAL] {e}")

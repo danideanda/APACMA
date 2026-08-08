@@ -1,11 +1,48 @@
 import json
 import os
+from functools import wraps
 
-# ===== variables =====
+# ========== variables ==========
 ruta_conversaciones = "json/conversaciones"
 ruta_dataset = "json/entrenamiento/dataset_filtrado.json"
 
+# ========== manejo de errores ==========
 
+class ErrorAPACMA(Exception):
+    """Excepción base del proyecto APACMA."""
+
+
+_SIN_DEFAULT = object()
+
+
+def manejar_errores(func=None, default=_SIN_DEFAULT):
+    """Captura excepciones, imprime mensaje claro y falla con gracia.
+
+    Uso:
+        @manejar_errores                      # relanza como ErrorAPACMA
+        @manejar_errores(default=[])          # devuelve default en caso de error
+    """
+    def decorador(fn):
+        @wraps(fn)
+        def wrapper(*args, **kwargs):
+            try:
+                return fn(*args, **kwargs)
+            except ErrorAPACMA:
+                raise
+            except Exception as e:
+                print(f"[ERROR] {fn.__name__}: {e}")
+                if default is not _SIN_DEFAULT:
+                    return default
+                raise ErrorAPACMA(f"Error en {fn.__name__}: {e}") from e
+        return wrapper
+    if func is None:
+        return decorador
+    return decorador(func)
+
+
+# ========== funciones ==========
+
+@manejar_errores(default=None)
 def listar_chats():
     """
     Lista los chats, procesa los mensajes con qualification y genera el dataset.
@@ -77,6 +114,7 @@ def listar_chats():
     }
 
 
+@manejar_errores(default=[])
 def id_json():
     """
     Extrae los IDs de mensajes con qualification 'positive' o 'negative'

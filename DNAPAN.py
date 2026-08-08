@@ -1,14 +1,51 @@
 import json
 import os
+from functools import wraps
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 import torch
 
-# ===== variables =====
+# ========== variables ==========
 ruta_modelo = "models/DNAPAN/model"
 ruta_conversaciones = "json/conversaciones"
 ruta_resultados = "json/entrenamiento/dataset_etiquetado.json"
 
+# ========== manejo de errores ==========
 
+class ErrorAPACMA(Exception):
+    """Excepción base del proyecto APACMA."""
+
+
+_SIN_DEFAULT = object()
+
+
+def manejar_errores(func=None, default=_SIN_DEFAULT):
+    """Captura excepciones, imprime mensaje claro y falla con gracia.
+
+    Uso:
+        @manejar_errores                      # relanza como ErrorAPACMA
+        @manejar_errores(default=[])          # devuelve default en caso de error
+    """
+    def decorador(fn):
+        @wraps(fn)
+        def wrapper(*args, **kwargs):
+            try:
+                return fn(*args, **kwargs)
+            except ErrorAPACMA:
+                raise
+            except Exception as e:
+                print(f"[ERROR] {fn.__name__}: {e}")
+                if default is not _SIN_DEFAULT:
+                    return default
+                raise ErrorAPACMA(f"Error en {fn.__name__}: {e}") from e
+        return wrapper
+    if func is None:
+        return decorador
+    return decorador(func)
+
+
+# ========== funciones ==========
+
+@manejar_errores(default=[])
 def DNAPAN_json():
     """
     Funcion principal que procesa los archivos JSON de conversaciones,
@@ -132,6 +169,7 @@ def DNAPAN_json():
     return todos_resultados
 
 
+@manejar_errores(default=None)
 def DNAPAN_inferir_texto(texto):
     """
     Funcion auxiliar para inferir un solo texto con el modelo DNAPAN.
@@ -182,6 +220,7 @@ def DNAPAN_inferir_texto(texto):
         return None
 
 
+@manejar_errores(default=[])
 def DNAPAN_actualizar_dataset():
     """
     Funcion que actualiza el dataset existente con las calificaciones
@@ -241,10 +280,15 @@ def DNAPAN_actualizar_dataset():
 if __name__ == "__main__":
     # Ejecutar la funcion principal
     print("=== INFERENCIA DNAPAN ===")
-    resultados = DNAPAN_json()
-    
-    # Mostrar los primeros resultados como ejemplo
-    if resultados:
-        print("\n=== PRIMEROS RESULTADOS ===")
-        for resultado in resultados[:5]:
-            print(json.dumps(resultado, ensure_ascii=False))
+    try:
+        resultados = DNAPAN_json()
+
+        # Mostrar los primeros resultados como ejemplo
+        if resultados:
+            print("\n=== PRIMEROS RESULTADOS ===")
+            for resultado in resultados[:5]:
+                print(json.dumps(resultado, ensure_ascii=False))
+    except ErrorAPACMA as e:
+        print(f"[ERROR FATAL] {e}")
+    except Exception as e:
+        print(f"[ERROR FATAL] {e}")

@@ -2,11 +2,12 @@ import os
 import json
 import shutil
 import unicodedata
+from functools import wraps
 from typing import List, Dict, Any, Optional, Union
 from pathlib import Path
 
 
-# ===== variables globales =====
+# ========== variables globales ==========
 # Palabras ofensivas para verificar la integridad/seguridad de los JSON.
 # Se usan raices (stems) para atrapar conjugaciones y variaciones.
 filtros = [
@@ -68,7 +69,41 @@ PROMPT_MODERACION = (
 _cache_modelos: Dict[str, tuple] = {}
 
 
-# ===== funciones de integridad y filtrado de JSON =====
+# ========== manejo de errores ==========
+
+class ErrorAPACMA(Exception):
+    """Excepción base del proyecto APACMA."""
+
+
+_SIN_DEFAULT = object()
+
+
+def manejar_errores(func=None, default=_SIN_DEFAULT):
+    """Captura excepciones, imprime mensaje claro y falla con gracia.
+
+    Uso:
+        @manejar_errores                      # relanza como ErrorAPACMA
+        @manejar_errores(default=[])          # devuelve default en caso de error
+    """
+    def decorador(fn):
+        @wraps(fn)
+        def wrapper(*args, **kwargs):
+            try:
+                return fn(*args, **kwargs)
+            except ErrorAPACMA:
+                raise
+            except Exception as e:
+                print(f"[ERROR] {fn.__name__}: {e}")
+                if default is not _SIN_DEFAULT:
+                    return default
+                raise ErrorAPACMA(f"Error en {fn.__name__}: {e}") from e
+        return wrapper
+    if func is None:
+        return decorador
+    return decorador(func)
+
+
+# ========== funciones de integridad y filtrado de JSON ==========
 
 def _normalizar(texto: str) -> str:
     """
@@ -101,6 +136,7 @@ def _contiene_palabra_ofensiva(texto: str, palabra: str) -> bool:
     return palabra_norm in texto_norm
 
 
+@manejar_errores(default=None)
 def cargar_json(ruta_json: Union[str, Path]) -> Optional[Union[Dict[str, Any], List[Any]]]:
     """
     Carga un JSON y verifica su integridad.
@@ -190,6 +226,7 @@ def es_conversacion_segura(conversacion: Any, filtros_uso: Optional[List[str]] =
     return True
 
 
+@manejar_errores(default=False)
 def verificar_chat(ruta_archivo: Union[str, Path], filtros_uso: Optional[List[str]] = None) -> bool:
     """
     Verifica que un archivo de chat JSON no esté corrupto ni contenga contenido inseguro.
@@ -207,6 +244,7 @@ def verificar_chat(ruta_archivo: Union[str, Path], filtros_uso: Optional[List[st
     return es_conversacion_segura(conversacion, filtros_uso)
 
 
+@manejar_errores(default=[])
 def listar_chats(directorio_json: Optional[Union[str, Path]] = None,
                  filtros_uso: Optional[List[str]] = None) -> List[str]:
     """
@@ -255,6 +293,7 @@ def _actualizar_ids(dataset: List[Any]) -> Dict[str, Any]:
     return dataset_actualizado
 
 
+@manejar_errores(default=False)
 def validar_estructura_dataset(directorio_json: Optional[Union[str, Path]] = None) -> bool:
     """
     Valida y corrige la estructura del dataset si es necesario.
@@ -299,6 +338,7 @@ def validar_estructura_dataset(directorio_json: Optional[Union[str, Path]] = Non
         return False
 
 
+@manejar_errores(default=False)
 def verificar_integridad_dataset(directorio_json: Optional[Union[str, Path]] = None,
                                  filtros_uso: Optional[List[str]] = None) -> bool:
     """
@@ -354,6 +394,7 @@ def verificar_integridad_dataset(directorio_json: Optional[Union[str, Path]] = N
     return True
 
 
+@manejar_errores(default=False)
 def filtro_seguridad(directorio_json: Optional[Union[str, Path]] = None,
                      filtros_uso: Optional[List[str]] = None) -> bool:
     """
@@ -397,6 +438,7 @@ def filtro_seguridad(directorio_json: Optional[Union[str, Path]] = None,
     return ok
 
 
+@manejar_errores(default=False)
 def limpiar_dataset(directorio_json: Optional[Union[str, Path]] = None,
                     filtros_uso: Optional[List[str]] = None) -> bool:
     """
@@ -408,8 +450,9 @@ def limpiar_dataset(directorio_json: Optional[Union[str, Path]] = None,
     return verificar_integridad_dataset(directorio_json, filtros_uso)
 
 
-# ===== funciones de prueba de seguridad del modelo =====
+# ========== funciones de prueba de seguridad del modelo ==========
 
+@manejar_errores(default=False)
 def _directorio_tiene_modelo(ruta: Union[str, Path]) -> bool:
     """Verifica si un directorio contiene archivos de pesos de un modelo."""
     ruta = Path(ruta)
@@ -437,6 +480,7 @@ def _obtener_ruta_modelo_prueba(ruta_modelo: Optional[Union[str, Path]] = None) 
     return RUTA_LLM
 
 
+@manejar_errores(default=None)
 def _cargar_modelo(ruta_modelo: Union[str, Path]) -> Optional[tuple]:
     """
     Carga (y cachea) un modelo causal y su tokenizador.
@@ -458,6 +502,7 @@ def _cargar_modelo(ruta_modelo: Union[str, Path]) -> Optional[tuple]:
     return _cache_modelos[ruta_modelo]
 
 
+@manejar_errores(default="")
 def generar_respuesta_modelo(ruta_modelo: Union[str, Path],
                              mensajes: List[Dict[str, str]],
                              max_new_tokens: int = 180) -> str:
@@ -496,6 +541,7 @@ def generar_respuesta_modelo(ruta_modelo: Union[str, Path],
         return ""
 
 
+@manejar_errores(default="")
 def preguntar_modelo(pregunta: str, ruta_modelo: Optional[Union[str, Path]] = None) -> str:
     """
     Envia una pregunta de forma individual al modelo de IA.
@@ -559,6 +605,7 @@ def pasar_filtro_palabras(texto: str, palabras_uso: Optional[List[str]] = None) 
     return all(not _contiene_palabra_ofensiva(texto, palabra) for palabra in palabras)
 
 
+@manejar_errores(default="error")
 def pasar_filtro_llm_base(ruta_txt: Union[str, Path],
                           numero: int,
                           ruta_modelo_llm_base: Optional[Union[str, Path]] = None) -> str:
@@ -587,6 +634,7 @@ def pasar_filtro_llm_base(ruta_txt: Union[str, Path],
     return generar_respuesta_modelo(ruta_modelo_llm_base, mensajes, max_new_tokens=40)
 
 
+@manejar_errores(default={})
 def prueba_seguridad_modelo(ruta_modelo: Optional[Union[str, Path]] = None,
                             ruta_modelo_llm_base: Optional[Union[str, Path]] = None) -> Dict[str, Any]:
     """
@@ -657,7 +705,7 @@ def prueba_seguridad_modelo(ruta_modelo: Optional[Union[str, Path]] = None,
     return reporte
 
 
-# ===== clase para compatibilidad con el codigo existente =====
+# ========== clase para compatibilidad con el codigo existente ==========
 
 class FiltroSeguridad:
     """Clase principal para manejar el filtrado de seguridad del modelo."""
@@ -687,6 +735,7 @@ class FiltroSeguridad:
         self.directorio_llm_beta.mkdir(exist_ok=True)
         self.directorio_json.mkdir(exist_ok=True, parents=True)
     
+    @manejar_errores(default=False)
     def filtrar_modelo(self, modelo_path: str) -> bool:
         """
         Filtra un modelo entrenado verificando su seguridad con el modelo base.
@@ -785,6 +834,7 @@ class FiltroSeguridad:
         else:
             shutil.move(str(ruta_origen), str(ruta_destino))
     
+    @manejar_errores(default=[])
     def listar_chats(self) -> List[str]:
         """
         Lista todos los archivos de chat en la carpeta json/conversaciones.
@@ -804,6 +854,7 @@ class FiltroSeguridad:
         """Verifica la integridad del dataset y elimina conversaciones inseguras."""
         return verificar_integridad_dataset(self.directorio_json, self.filtros)
 
+    @manejar_errores(default=False)
     def filtro_seguridad(self) -> bool:
         """Ejecuta la limpieza de los JSON de entrenamiento y de chats."""
         return filtro_seguridad(self.directorio_json, self.filtros)
@@ -844,8 +895,9 @@ class FiltroSeguridad:
         return validar_estructura_dataset(self.directorio_json)
 
 
-# ===== funciones compatibles (API publica) =====
+# ========== funciones compatibles (API publica) ==========
 
+@manejar_errores(default=False)
 def filtrar_modelo(modelo_path: str) -> bool:
     """
     Funcion independiente para filtrar modelos (mantiene compatibilidad).
@@ -862,11 +914,16 @@ def filtrar_modelo(modelo_path: str) -> bool:
 
 # Ejemplo de uso
 if __name__ == "__main__":
-    # 1. Limpiar los JSON mediante el filtro de seguridad
-    print("\n=== FILTRO DE SEGURIDAD DE JSON ===")
-    filtro_seguridad()
-    
-    # 2. Prueba breve de seguridad del modelo
-    print("\n=== PRUEBA BREVE DE SEGURIDAD DEL MODELO ===")
-    prueba_seguridad_modelo()
-    print("\nProceso completado")
+    try:
+        # 1. Limpiar los JSON mediante el filtro de seguridad
+        print("\n=== FILTRO DE SEGURIDAD DE JSON ===")
+        filtro_seguridad()
+
+        # 2. Prueba breve de seguridad del modelo
+        print("\n=== PRUEBA BREVE DE SEGURIDAD DEL MODELO ===")
+        prueba_seguridad_modelo()
+        print("\nProceso completado")
+    except ErrorAPACMA as e:
+        print(f"[ERROR FATAL] {e}")
+    except Exception as e:
+        print(f"[ERROR FATAL] {e}")

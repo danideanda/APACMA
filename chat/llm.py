@@ -2,6 +2,7 @@ import json
 import os
 import re
 from datetime import datetime
+from functools import wraps
 
 import requests
 from flask import Flask, Response, jsonify, request, stream_with_context
@@ -26,12 +27,49 @@ model = None
 tokenizer = None
 chat_actual = None
 
+# ========== manejo de errores ==========
 
+class ErrorAPACMA(Exception):
+    """Excepción base del proyecto APACMA."""
+
+
+_SIN_DEFAULT = object()
+
+
+def manejar_errores(func=None, default=_SIN_DEFAULT):
+    """Captura excepciones, imprime mensaje claro y falla con gracia.
+
+    Uso:
+        @manejar_errores                      # relanza como ErrorAPACMA
+        @manejar_errores(default=[])          # devuelve default en caso de error
+    """
+    def decorador(fn):
+        @wraps(fn)
+        def wrapper(*args, **kwargs):
+            try:
+                return fn(*args, **kwargs)
+            except ErrorAPACMA:
+                raise
+            except Exception as e:
+                print(f"[ERROR] {fn.__name__}: {e}")
+                if default is not _SIN_DEFAULT:
+                    return default
+                raise ErrorAPACMA(f"Error en {fn.__name__}: {e}") from e
+        return wrapper
+    if func is None:
+        return decorador
+    return decorador(func)
+
+
+# ========== funciones ==========
+
+@manejar_errores
 def nombre_archivo(nombre):
     nombre = re.sub(r"[^A-Za-z0-9\-_]", "-", nombre) or "chat"
     return os.path.join(CONVERSACIONES_DIR, nombre + ".json")
 
 
+@manejar_errores(default=[])
 def listar_chats():
     chats = []
     for f in sorted(os.listdir(CONVERSACIONES_DIR)):
@@ -40,6 +78,7 @@ def listar_chats():
     return chats
 
 
+@manejar_errores(default=[])
 def cargar_chat(nombre):
     global chat_actual
     chat_actual = nombre
@@ -53,6 +92,7 @@ def cargar_chat(nombre):
     return []
 
 
+@manejar_errores
 def guardar_chat(nombre, conversacion):
     ruta = nombre_archivo(nombre)
     with open(ruta, "w", encoding="utf-8") as f:
@@ -193,6 +233,7 @@ def calificar():
     return jsonify({"ok": True, "actual": nombre})
 
 
+@manejar_errores
 def run_server():
     app.run(host="127.0.0.1", port=8000, debug=False)
 

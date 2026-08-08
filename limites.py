@@ -1,10 +1,15 @@
 from transformers import AutoTokenizer
 import json
+from functools import wraps
 
-# ========== Variables ==========
+# ========== variables ==========
 
 # Cargar el tokenizador del modelo base
-tokenizer = AutoTokenizer.from_pretrained("models/LLM-base", use_fast=True)
+try:
+    tokenizer = AutoTokenizer.from_pretrained("models/LLM-base", use_fast=True)
+except Exception as e:
+    print(f"[ERROR] No se pudo cargar el tokenizador: {e}")
+    tokenizer = None
 
 # Límite máximo de tokens permitido
 limite_tokens = 3_000_000
@@ -13,12 +18,50 @@ limite_tokens = 3_000_000
 tokens_actuales = 0
 
 # Cargar el dataset
-with open("json/entrenamiento/dataset.json", "r", encoding="utf-8") as f:
-    dataset = json.load(f)
+try:
+    with open("json/entrenamiento/dataset.json", "r", encoding="utf-8") as f:
+        dataset = json.load(f)
+except Exception as e:
+    print(f"[ERROR] No se pudo cargar el dataset: {e}")
+    dataset = []
+
+# ========== manejo de errores ==========
+
+class ErrorAPACMA(Exception):
+    """Excepción base del proyecto APACMA."""
 
 
+_SIN_DEFAULT = object()
 
-# ========== Funciones ==========
+
+def manejar_errores(func=None, default=_SIN_DEFAULT):
+    """Captura excepciones, imprime mensaje claro y falla con gracia.
+
+    Uso:
+        @manejar_errores                      # relanza como ErrorAPACMA
+        @manejar_errores(default=[])          # devuelve default en caso de error
+    """
+    def decorador(fn):
+        @wraps(fn)
+        def wrapper(*args, **kwargs):
+            try:
+                return fn(*args, **kwargs)
+            except ErrorAPACMA:
+                raise
+            except Exception as e:
+                print(f"[ERROR] {fn.__name__}: {e}")
+                if default is not _SIN_DEFAULT:
+                    return default
+                raise ErrorAPACMA(f"Error en {fn.__name__}: {e}") from e
+        return wrapper
+    if func is None:
+        return decorador
+    return decorador(func)
+
+
+# ========== funciones ==========
+
+@manejar_errores
 def contar_tokens():
     """
     Cuenta la cantidad total de tokens del dataset.
@@ -35,6 +78,7 @@ def contar_tokens():
     print(f"Total de tokens: {tokens_actuales}")
 
 
+@manejar_errores
 def eliminar_mensajes():
     """
     Elimina mensajes con más segun la sigientes jerarquias:
@@ -99,6 +143,7 @@ def eliminar_mensajes():
 
     
 
+@manejar_errores
 def limites_tokens():
     """
     Verifica si el dataset supera el límite de tokens.
@@ -111,9 +156,13 @@ def limites_tokens():
 
 
 if __name__ == "__main__":
+    try:
+        # Contar tokens
+        contar_tokens()
 
-    # Contar tokens
-    contar_tokens()
-
-    # Verificar el límite
-    limites_tokens()
+        # Verificar el límite
+        limites_tokens()
+    except ErrorAPACMA as e:
+        print(f"[ERROR FATAL] {e}")
+    except Exception as e:
+        print(f"[ERROR FATAL] {e}")
