@@ -12,3 +12,5 @@ models/
 *.ckpt
 
 .DS_Store
+
+AGENTS.md
