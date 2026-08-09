@@ -55,7 +55,7 @@ Ejemplos: `odio`, `violencia`, `discrimina`, `insult`, `amenaz`, `maltrat`, `ofe
 | `_normalizar(texto)` | Minúsculas y sin acentos (normalización NFD). |
 | `_contiene_palabra_ofensiva(texto, palabra)` | Verifica si un texto normalizado contiene una raíz ofensiva. |
 | `es_texto_seguro(texto, filtros_uso)` | True si el texto no contiene palabras ofensivas (no str → False). |
-| `es_conversacion_segura(conversacion, filtros_uso)` | Evalúa `input`/`output`/`text`/`content`/`pregunta`/`respuesta` de cada mensaje. |
+| `es_conversacion_segura(conversacion, filtros_uso)` | Evalúa `input`/`output`/`text`/`content`/`pregunta`/`respuesta` de cada mensaje. Soporta conversaciones en formato OpenAI `messages` (clave `messages`, ver `formato_openai.md`). |
 
 ## Manejo de errores
 

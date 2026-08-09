@@ -186,7 +186,11 @@ def _obtener_mensajes(conversacion: Any) -> List[Any]:
         - lista de mensajes (formato de json/conversaciones)
     """
     if isinstance(conversacion, dict):
-        mensajes = conversacion.get("mensajes", conversacion)
+        mensajes = conversacion.get("mensajes")
+        if mensajes is None:
+            mensajes = conversacion.get("messages")
+        if mensajes is None:
+            mensajes = conversacion
         if not isinstance(mensajes, list):
             mensajes = [conversacion]
         return mensajes

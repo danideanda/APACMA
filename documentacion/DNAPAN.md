@@ -8,8 +8,8 @@ Archivo de documentación técnica para `DNAPAN.py`.
 
 El flujo general es:
 
-1. Lee las conversaciones en `json/conversaciones`.
-2. Para cada mensaje combina `input` (pregunta) y `output` (respuesta) en un texto: `Pregunta: ... \nRespuesta: ...`.
+1. Lee las conversaciones en `json/conversaciones` (formato OpenAI `messages`, ver `formato_openai.md`).
+2. Para cada par user->assistant (de `pares_entrenamiento`) combina `input` (pregunta) y `output` (respuesta) en un texto: `Pregunta: ... \nRespuesta: ...`.
 3. Infiere la calificación usando el modelo DNAPAN (clase 0 = `negative`, clase 1 = `positive`).
 4. Guarda los resultados en `json/entrenamiento/dataset_etiquetado.json`.
 5. Devuelve una lista de diccionarios con `{id, qualification, archivo_origen}`.
@@ -59,5 +59,5 @@ Las tres funciones están decoradas: `DNAPAN_json` y `DNAPAN_actualizar_dataset`
 ## Notas
 
 - Se aplica `model.eval()` para desactivar dropout/gradientes en inferencia.
-- El texto procesado combina pregunta y respuesta: `Pregunta: {input}\nRespuesta: {output}`.
+- El texto procesado combina pregunta y respuesta: `Pregunta: {input}\nRespuesta: {output}` (tomados de los pares de `formato_openai.pares_entrenamiento`).
 - Las estadísticas finales (positivos/negativos/errores) se imprimen en consola.

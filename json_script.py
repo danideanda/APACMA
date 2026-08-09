@@ -1,6 +1,7 @@
 import json
 import os
 from functools import wraps
+from formato_openai import leer_conversacion, obtener_mensajes
 
 # ========== variables ==========
 ruta_conversaciones = "json/conversaciones"
@@ -66,23 +67,20 @@ def id_json():
     # Procesar cada archivo
     for archivo in archivos:
         ruta = os.path.join(ruta_conversaciones, archivo)
-        
-        with open(ruta, "r", encoding="utf-8") as fh:
-            conversacion = json.load(fh)
-        
-        # Buscar mensajes con qualification positive o negative
-        for mensaje in conversacion:
+
+        conversacion = leer_conversacion(ruta)
+
+        # Buscar mensajes assistant con qualification positive o negative
+        for mensaje in obtener_mensajes(conversacion):
             qualification = mensaje.get("qualification", "").lower()
             id_mensaje = mensaje.get("id")
-            
+
             # Solo extraer si es positive o negative y tiene ID
             if qualification in ["positive", "negative"] and id_mensaje is not None:
                 ids_encontrados.append({
                     "id": id_mensaje,
                     "archivo": archivo,
-                    "qualification": qualification,
-                    "input": mensaje.get("input", ""),
-                    "output": mensaje.get("output", "")
+                    "qualification": qualification
                 })
     
     # Mostrar resumen

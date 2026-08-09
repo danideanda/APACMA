@@ -8,14 +8,21 @@ from transformers import (
     Trainer,
     DataCollatorForSeq2Seq
 )
-from peft import LoraConfig, get_peft_model, prepare_model_for_kbit_training
+from peft import LoraConfig, get_peft_model
 from datasets import Dataset
 from datetime import datetime
 from functools import wraps
 
-modelo_path = "" 
+modelo_path = ""
 dataset_path = "json/entrenamiento/dataset.json"
 output_dir = "models/LLM/"
+
+# Peso del termino de unlikelihood para los negativos.
+# 0.0 desactiva el castigo (equivale a no usar negativos).
+LAMBDA_NEGATIVO = 0.5
+
+# Longitud maxima de tokenizacion
+MAX_LENGTH = 512
 
 # ========== manejo de errores ==========
 
@@ -51,18 +58,96 @@ def manejar_errores(func=None, default=_SIN_DEFAULT):
     return decorador(func)
 
 
+def _extraer_items(data):
+    """
+    Normaliza las estructuras posibles del dataset en una lista de mensajes.
+
+    Soporta:
+        - Lista de mensajes (dicts).
+        - Dict de conversaciones {id: [mensajes]}.
+        - Dict de mensajes {id: mensaje}.
+    """
+    items = []
+    if isinstance(data, list):
+        items.extend(data)
+    elif isinstance(data, dict):
+        for valor in data.values():
+            if isinstance(valor, list):
+                items.extend(valor)
+            elif isinstance(valor, dict):
+                items.append(valor)
+    return items
+
+
+class CollatorConNegativos(DataCollatorForSeq2Seq):
+    """Data collator que anade el tensor binario `is_negative` al batch."""
+
+    def __call__(self, features, return_tensors=None):
+        negativos = torch.tensor(
+            [int(f["is_negative"]) for f in features], dtype=torch.long
+        )
+        features = [{k: v for k, v in f.items() if k != "is_negative"} for f in features]
+        batch = super().__call__(features, return_tensors)
+        batch["is_negative"] = negativos
+        return batch
+
+
+class TrainerUnlikelihood(Trainer):
+    """
+    Trainer con loss dual:
+        - Positivos (SFT): cross-entropy estandar sobre tokens de respuesta.
+        - Negativos (unlikelihood): se baja la probabilidad de los tokens de la
+          respuesta danina con `-log(1 - p)`, escalado por LAMBDA_NEGATIVO.
+    """
+
+    def compute_loss(self, model, inputs, return_outputs=False, num_items_in_batch=None):
+        is_negative = inputs.pop("is_negative")
+        labels = inputs["labels"]
+
+        outputs = model(**inputs)
+        logits = outputs.logits
+
+        shift_logits = logits[..., :-1, :].contiguous()
+        shift_labels = labels[..., 1:].contiguous()
+
+        mascara_respuesta = shift_labels != -100
+        objetivo = shift_labels.clamp(min=0)
+
+        # log-probabilidad del token objetivo sin materializar softmax completo
+        logsumexp = torch.logsumexp(shift_logits, dim=-1)
+        token_logp = (
+            shift_logits.gather(-1, objetivo.unsqueeze(-1)).squeeze(-1) - logsumexp
+        )
+
+        # loss SFT para positivos: -log p
+        ce = -token_logp * mascara_respuesta
+
+        # unlikelihood para negativos: -log(1 - p)
+        p = torch.exp(token_logp).clamp(max=1 - 1e-7)
+        unlikelihood = -torch.log1p(-p) * mascara_respuesta
+
+        pos_mask = (1 - is_negative).unsqueeze(-1) * mascara_respuesta
+        neg_mask = is_negative.unsqueeze(-1) * mascara_respuesta
+
+        loss_pos = (ce * pos_mask).sum() / pos_mask.sum().clamp(min=1)
+        loss_neg = (unlikelihood * neg_mask).sum() / neg_mask.sum().clamp(min=1)
+        loss = loss_pos + LAMBDA_NEGATIVO * loss_neg
+
+        return (loss, outputs) if return_outputs else loss
+
+
 @manejar_errores
 def entrenar_fine():
     """
-    Función para realizar fine-tuning con LoRA de un modelo base
-    
-    Args:
-        modelo_path (str): Ruta al modelo base o nombre en HuggingFace
-        dataset_path (str): Ruta al archivo dataset.json (por defecto "./dataset.json")
-        output_dir (str): Directorio donde guardar el modelo fine-tuneado
-    
+    Realiza fine-tuning con LoRA del modelo base usando el campo `qualification`.
+
+    - qualification == "positive": SFT estandar (el modelo aprende la respuesta).
+    - qualification == "negative": loss de unlikelihood (el modelo baja la
+      probabilidad de la respuesta danina).
+    - neutra / error / sin campo: se excluyen del entrenamiento.
+
     Returns:
-        str: Ruta del modelo guardado
+        str: Ruta del modelo guardado (o None si no hay datos de entrenamiento).
     """
     global modelo_path
     # verificar ruta del modelo
@@ -77,67 +162,92 @@ def entrenar_fine():
     # Verificar que existe el archivo de datos
     if not os.path.exists(dataset_path):
         raise FileNotFoundError(f"El archivo {dataset_path} no existe")
-    
+
     # Cargar el dataset
     print(f"Cargando datos desde {dataset_path}...")
     with open(dataset_path, 'r', encoding='utf-8') as f:
         data = json.load(f)
-    
-    # Preparar los datos para el formato de entrenamiento
-    training_data = []
 
-    # Si es un dict de conversaciones {id: [mensajes]}, extraer los mensajes
-    if isinstance(data, dict):
-        items = []
-        for conversacion in data.values():
-            if isinstance(conversacion, list):
-                items.extend(conversacion)
-        data = items
+    # Normalizar estructura y clasificar por qualification
+    registros = []
 
-    # Si es un solo objeto (mensaje), convertirlo a lista
-    if isinstance(data, dict):
-        data = [data]
+    def _registro_desde_input_output(entrada, salida, qualification):
+        """Crea un registro de entrenamiento si input/output son validos y la
+        qualification es positive/negative. Devuelve None en otro caso."""
+        if not isinstance(entrada, str) or not isinstance(salida, str):
+            return None
+        if not entrada.strip() or not salida.strip():
+            return None
+        qual = str(qualification or "").strip().lower()
+        if qual == "positive":
+            tipo = "sft"
+            is_negative = 0
+        elif qual == "negative":
+            tipo = "unlikelihood"
+            is_negative = 1
+        else:
+            return None  # neutra / error / sin campo: excluidos
+        return {
+            "input": entrada,
+            "output": salida,
+            "qualification": qual,
+            "tipo": tipo,
+            "is_negative": is_negative,
+        }
 
-    for item in data:
+    for item in _extraer_items(data):
         if not isinstance(item, dict):
             continue
-        if "input" not in item or "output" not in item:
-            continue
-        # Crear el prompt con el formato adecuado para el modelo
-        prompt = f"Pregunta: {item['input']}\nRespuesta: {item['output']}"
-        training_data.append({"text": prompt})
 
-    if not training_data:
-        print("No hay datos de entrenamiento en el dataset. Se omite el fine-tuning.")
+        # Conversacion en formato OpenAI messages -> pares user/assistant
+        if "messages" in item:
+            from formato_openai import pares_entrenamiento
+            for par in pares_entrenamiento(item):
+                registro = _registro_desde_input_output(
+                    par.get("input", ""), par.get("output", ""), par.get("qualification")
+                )
+                if registro:
+                    registros.append(registro)
+            continue
+
+        registro = _registro_desde_input_output(
+            item.get("input"), item.get("output"), item.get("qualification")
+        )
+        if registro:
+            registros.append(registro)
+
+    if not registros:
+        print("No hay datos de entrenamiento con qualification 'positive' o 'negative' en el dataset. Se omite el fine-tuning.")
         return None
-    
-    # Crear dataset de HuggingFace
-    dataset = Dataset.from_list(training_data)
-    
-    # Dividir en train y eval (90% train, 10% eval)
-    dataset = dataset.train_test_split(test_size=0.1, seed=42)
-    train_dataset = dataset["train"]
-    eval_dataset = dataset["test"]
-    
-    print(f"Dataset cargado: {len(train_dataset)} ejemplos de entrenamiento, {len(eval_dataset)} de evaluación")
-    
+
+    positivos = sum(1 for r in registros if r["tipo"] == "sft")
+    negativos = sum(1 for r in registros if r["tipo"] == "unlikelihood")
+    print(f"Ejemplos SFT (positivos): {positivos}")
+    print(f"Ejemplos unlikelihood (negativos): {negativos}")
+
     # Cargar tokenizador y modelo
     print(f"Cargando modelo desde {modelo_path}...")
-    tokenizer = AutoTokenizer.from_pretrained(modelo_path)
-    model = AutoModelForCausalLM.from_pretrained(
-        modelo_path,
-        torch_dtype=torch.bfloat16,
-        device_map="auto",
-        trust_remote_code=True
-    )
-    
-    # Configurar tokenizador
+    tokenizer = AutoTokenizer.from_pretrained(modelo_path, local_files_only=True)
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token
-    
-    # Preparar modelo para entrenamiento con k-bit
-    model = prepare_model_for_kbit_training(model)
-    
+
+    usa_cuda = torch.cuda.is_available()
+    if usa_cuda:
+        model = AutoModelForCausalLM.from_pretrained(
+            modelo_path,
+            dtype=torch.bfloat16,
+            device_map="auto",
+            trust_remote_code=True,
+            local_files_only=True,
+        )
+    else:
+        model = AutoModelForCausalLM.from_pretrained(
+            modelo_path,
+            dtype=torch.float32,
+            trust_remote_code=True,
+            local_files_only=True,
+        )
+
     # Configuración de LoRA
     lora_config = LoraConfig(
         r=8,  # Dimensión de la matriz de adaptación
@@ -147,32 +257,84 @@ def entrenar_fine():
         bias="none",
         task_type="CAUSAL_LM"
     )
-    
+
     # Aplicar LoRA al modelo
     model = get_peft_model(model, lora_config)
     model.print_trainable_parameters()
-    
-    # Función de tokenización
-    def tokenize_function(examples):
-        return tokenizer(
-            examples["text"],
-            truncation=True,
-            padding=True,
-            max_length=512,
-            return_tensors="pt"
+
+    # Construir dataset de HuggingFace
+    dataset = Dataset.from_list(registros)
+
+    # Función de tokenización con enmascarado del prompt
+    def tokenize_function(ejemplos):
+        inputs_ids = []
+        atenciones = []
+        labels_ids = []
+        negativos_flag = []
+        for entrada, salida, is_neg in zip(
+            ejemplos["input"], ejemplos["output"], ejemplos["is_negative"]
+        ):
+            prompt = f"Pregunta: {entrada}\nRespuesta: "
+            texto = prompt + salida
+            enc = tokenizer(
+                texto,
+                truncation=True,
+                max_length=MAX_LENGTH,
+                return_offsets_mapping=True,
+            )
+            input_ids = enc["input_ids"]
+            # primer token que pertenece a la respuesta
+            resp_start = len(input_ids)
+            for idx, (inicio, _fin) in enumerate(enc["offset_mapping"]):
+                if inicio >= len(prompt):
+                    resp_start = idx
+                    break
+            if resp_start >= len(input_ids):
+                continue
+            labels = [-100] * resp_start + input_ids[resp_start:]
+            inputs_ids.append(input_ids)
+            atenciones.append(enc["attention_mask"])
+            labels_ids.append(labels)
+            negativos_flag.append(is_neg)
+        return {
+            "input_ids": inputs_ids,
+            "attention_mask": atenciones,
+            "labels": labels_ids,
+            "is_negative": negativos_flag,
+        }
+
+    dataset = dataset.map(
+        lambda ejemplos: tokenize_function(ejemplos),
+        batched=True,
+        remove_columns=dataset.column_names,
+    )
+    dataset = dataset.filter(lambda ej: len(ej["input_ids"]) > 0)
+
+    if len(dataset) == 0:
+        print("Tras tokenizar no quedan ejemplos validos. Se omite el fine-tuning.")
+        return None
+
+    # Dividir en train y eval (90% train, 10% eval) si hay datos suficientes
+    train_dataset = dataset
+    eval_dataset = None
+    if len(dataset) >= 10:
+        dividido = dataset.train_test_split(test_size=0.1, seed=42)
+        train_dataset = dividido["train"]
+        eval_dataset = dividido["test"]
+        print(
+            f"Dataset cargado: {len(train_dataset)} ejemplos de entrenamiento, "
+            f"{len(eval_dataset)} de evaluación"
         )
-    
-    # Tokenizar datasets
-    tokenized_train_dataset = train_dataset.map(tokenize_function, batched=True)
-    tokenized_eval_dataset = eval_dataset.map(tokenize_function, batched=True)
-    
+    else:
+        print(f"Dataset cargado: {len(train_dataset)} ejemplos de entrenamiento (sin split de eval)")
+
     # Data collator
-    data_collator = DataCollatorForSeq2Seq(
+    data_collator = CollatorConNegativos(
         tokenizer=tokenizer,
         model=model,
-        padding=True
+        padding=True,
     )
-    
+
     # Configuración de entrenamiento
     training_args = TrainingArguments(
         output_dir=output_dir,
@@ -182,40 +344,42 @@ def entrenar_fine():
         gradient_accumulation_steps=4,
         warmup_steps=100,
         logging_steps=10,
-        eval_steps=50,
         save_steps=100,
-        evaluation_strategy="steps",
+        eval_strategy="steps" if eval_dataset is not None else "no",
+        eval_steps=50,
         save_total_limit=2,
-        load_best_model_at_end=True,
+        load_best_model_at_end=eval_dataset is not None,
         metric_for_best_model="eval_loss",
         greater_is_better=False,
-        fp16=True,
+        fp16=usa_cuda,
+        bf16=False,
+        use_cpu=not usa_cuda,
         learning_rate=2e-4,
         weight_decay=0.01,
-        report_to=None,  # Desactivar wandb/tensorboard para este ejemplo
+        report_to="none",
+        remove_unused_columns=False,
     )
-    
+
     # Crear trainer
-    trainer = Trainer(
+    trainer = TrainerUnlikelihood(
         model=model,
         args=training_args,
-        train_dataset=tokenized_train_dataset,
-        eval_dataset=tokenized_eval_dataset,
+        train_dataset=train_dataset,
+        eval_dataset=eval_dataset,
         data_collator=data_collator,
-        tokenizer=tokenizer,
     )
-    
+
     # Entrenar
     print("Iniciando entrenamiento...")
     trainer.train()
-    
+
     # Guardar el modelo fine-tuneado
     print(f"Guardando modelo en {output_dir}...")
     model.save_pretrained(output_dir)
     tokenizer.save_pretrained(output_dir)
-    
+
     guardar_registro_modelo(output_dir, dataset_path, modelo_path)
-    
+
     print("¡Fine-tuning completado!")
     return output_dir
 
@@ -232,7 +396,7 @@ def guardar_registro_modelo(output_dir, dataset_path, modelo_path):
         modelo_path (str): Ruta al modelo base.
     """
     modelo_json_path = os.path.join(output_dir, "model.json")
-    
+
     version = 1
     if os.path.exists(modelo_json_path):
         try:
@@ -242,7 +406,7 @@ def guardar_registro_modelo(output_dir, dataset_path, modelo_path):
                 version = registro_previo["version"] + 1
         except (json.JSONDecodeError, OSError):
             version = 1
-    
+
     nombre_modelo_base = ""
     ruta_nombre = os.path.join(
         os.path.dirname(os.path.abspath(__file__)),
@@ -253,7 +417,7 @@ def guardar_registro_modelo(output_dir, dataset_path, modelo_path):
             nombre_modelo_base = f.read().strip()
     if not nombre_modelo_base:
         nombre_modelo_base = os.path.basename(modelo_path)
-    
+
     registro = {
         "version": version,
         "fecha": datetime.now().isoformat(),
@@ -261,9 +425,9 @@ def guardar_registro_modelo(output_dir, dataset_path, modelo_path):
         "output_dir": output_dir,
         "dataset_path": dataset_path
     }
-    
+
     os.makedirs(output_dir, exist_ok=True)
     with open(modelo_json_path, "w", encoding="utf-8") as f:
         json.dump(registro, f, ensure_ascii=False, indent=4)
-    
+
     print(f"Registro guardado en {modelo_json_path} (versión {version})")

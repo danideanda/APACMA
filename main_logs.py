@@ -83,7 +83,7 @@ def verificar_ruta_modelo():
 def main():
     verificar_ruta_modelo()
     while True:
-        if fecha.day == 10: # <--- comŕueba que es otro mes (debe estar en 1 pero estamos de pruebas asi que estara en 10)
+        if fecha.day == 9: # <--- comŕueba que es otro mes (debe estar en 1 pero estamos de pruebas asi que estara en 10)
             #1. generar dataset
             log.info("=== PASO 1: GENERAR DATASET ===")
             juntar()

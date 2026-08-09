@@ -65,17 +65,28 @@ Funciones decoradas:
 
 El bloque `if __name__ == "__main__":` ya tenía `try/except` propio para la carga del modelo (imprime el error y termina con `SystemExit(1)`).
 
-## Estructura de un mensaje guardado
+## Estructura de una conversación guardada
+
+Las conversaciones se guardan en **formato estándar OpenAI `messages`** (ver `formato_openai.md`):
 
 ```json
 {
-    "id": 1,
-    "date": "2026-08-04T12:22:45.766086",
-    "input": "pregunta del usuario",
-    "output": "respuesta del modelo",
-    "qualification": "neutra"
+    "messages": [
+        {
+            "role": "user",
+            "content": "pregunta del usuario"
+        },
+        {
+            "role": "assistant",
+            "content": "respuesta del modelo",
+            "qualification": "neutra"
+        }
+    ]
 }
 ```
+
+- `id` y `date` (opcionales) se asignan al par user->assistant y se comparten entre ambos.
+- La `qualification` vive solo en el mensaje `assistant` y la asigna la ruta `/calificar`.
 
 ## Comportamiento del servidor
 

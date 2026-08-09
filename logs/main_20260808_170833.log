@@ -1,5 +1,0 @@
-2026-08-08 17:08:33,460 - INFO - Inicio del programa: 2026-08-08 17:08:33
-2026-08-08 17:08:33,460 - INFO - Logs guardados en: logs/main_20260808_170833.log
-2026-08-08 17:08:33,460 - INFO - Ruta del modelo encontrada: models/LLM
-2026-08-08 17:08:33,460 - INFO - Hoy no corresponde ejecutar el pipeline (condición de día no cumplida).
-2026-08-08 17:08:33,460 - INFO - Ruta del modelo verificada: models/LLM

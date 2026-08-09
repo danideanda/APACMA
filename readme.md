@@ -84,6 +84,21 @@ El conocimiento personalizado del usuario no reside en el modelo base ni en el a
 
 Esta separación de responsabilidades es el núcleo conceptual de APACMA y la característica que distingue la arquitectura. La definición anterior sirve como fundamento sobre el que desarrollar los algoritmos específicos, las políticas de actualización y las métricas para evaluar si realmente mejora la personalización respecto a otros enfoques.
 
+## Implementación
+
+La arquitectura se implementa en los siguientes módulos de Python (en la raíz del proyecto):
+
+- `chat/llm.py`: servidor web del chat, calificación de respuestas y persistencia de conversaciones.
+- `formato_openai.py`: normalización de conversaciones al formato estándar OpenAI `messages`.
+- `json_script.py`: extracción de mensajes calificados para el dataset.
+- `clasificador.py`: construcción del dataset de entrenamiento.
+- `DNAPAN.py`: modelo que revisa las respuestas para identificar si son relevantes (calificación).
+- `seguridad.py`: modelo de revisión que verifica que las respuestas no contengan violencia, agresión, contenido ilegal o poco ético.
+- `fine.py`: entrenamiento del adaptador (LoRA) con SFT y unlikelihood para ejemplos negativos.
+- `limites.py`: control del presupuesto de tokens del dataset.
+
+Las conversaciones se guardan en formato estándar OpenAI `messages` (misma estructura que usan OpenAI y la industria para chats y datasets de fine-tuning).
+
 **creado por: daniel de anda**
 <br>
 

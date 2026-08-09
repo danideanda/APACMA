@@ -61,7 +61,7 @@ def verificar_ruta_modelo():
 def main():
     verificar_ruta_modelo()
     while True:
-        if fecha.day == 10: # <--- comŕueba que es otro mes (debe estar en 1 pero estamos de pruebas asi que estara en 10)
+        if fecha.day == 1: # <--- comŕueba que es otro mes (debe estar en 1)
             #1. generar dataset
             juntar()
             juntar_con_dnapan_completo()

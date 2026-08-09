@@ -3,6 +3,7 @@ import json
 from functools import wraps
 from json_script import id_json
 from DNAPAN import DNAPAN_inferir_texto, DNAPAN_json
+from formato_openai import leer_conversacion, obtener_mensajes, pares_entrenamiento
 
 # ========== variables ==========
 ruta_conversaciones = "json/conversaciones"
@@ -80,17 +81,17 @@ def juntar():
             print(f"Advertencia: No se encuentra el archivo {archivo}")
             continue
         
-        with open(ruta, "r", encoding="utf-8") as fh:
-            conversacion = json.load(fh)
+        conversacion = leer_conversacion(ruta)
+        pares = pares_entrenamiento(conversacion)
         
-        # Buscar mensajes con los IDs especificados
-        for mensaje in conversacion:
-            id_mensaje = mensaje.get("id")
+        # Buscar pares con los IDs especificados
+        for par in pares:
+            id_mensaje = par.get("id")
             
             if id_mensaje in ids_buscar:
                 # Preparar el texto para DNAPAN (combinar input y output)
-                texto_input = mensaje.get("input", "")
-                texto_output = mensaje.get("output", "")
+                texto_input = par.get("input", "")
+                texto_output = par.get("output", "")
                 texto_completo = f"Pregunta: {texto_input}\nRespuesta: {texto_output}"
                 
                 # Inferir con DNAPAN
@@ -99,17 +100,17 @@ def juntar():
                 
                 # Si DNAPAN falla, usar la qualification existente
                 if qualification is None:
-                    qualification = mensaje.get("qualification", "neutra")
+                    qualification = par.get("qualification", "neutra")
                     print(f"    DNAPAN fallo, usando qualification original: {qualification}")
                 else:
                     print(f"    DNAPAN resultado: {qualification}")
                 
                 # Extraer los campos necesarios
                 mensaje_completo = {
-                    "id": mensaje.get("id"),
-                    "date": mensaje.get("date"),
-                    "input": mensaje.get("input"),
-                    "output": mensaje.get("output"),
+                    "id": id_mensaje,
+                    "date": par.get("date"),
+                    "input": par.get("input"),
+                    "output": par.get("output"),
                     "qualification": qualification,  # Usar la de DNAPAN
                     "archivo_origen": archivo
                 }
@@ -178,16 +179,15 @@ def juntar_con_dnapan_completo():
             if archivo:
                 ruta = os.path.join(ruta_conversaciones, archivo)
                 if os.path.exists(ruta):
-                    with open(ruta, "r", encoding="utf-8") as fh:
-                        conversacion = json.load(fh)
+                    conversacion = leer_conversacion(ruta)
                     
-                    for mensaje in conversacion:
-                        if mensaje.get("id") == id_mensaje:
+                    for par in pares_entrenamiento(conversacion):
+                        if par.get("id") == id_mensaje:
                             mensaje_completo = {
-                                "id": mensaje.get("id"),
-                                "date": mensaje.get("date"),
-                                "input": mensaje.get("input"),
-                                "output": mensaje.get("output"),
+                                "id": par.get("id"),
+                                "date": par.get("date"),
+                                "input": par.get("input"),
+                                "output": par.get("output"),
                                 "qualification": resultado.get("qualification"),
                                 "archivo_origen": archivo
                             }
@@ -234,29 +234,28 @@ def extraer_por_ids(lista_ids):
     for archivo in archivos:
         ruta = os.path.join(ruta_conversaciones, archivo)
         
-        with open(ruta, "r", encoding="utf-8") as fh:
-            conversacion = json.load(fh)
+        conversacion = leer_conversacion(ruta)
         
-        for mensaje in conversacion:
-            id_mensaje = mensaje.get("id")
+        for par in pares_entrenamiento(conversacion):
+            id_mensaje = par.get("id")
             
             if id_mensaje in ids_buscar:
                 # Preparar texto para DNAPAN
-                texto_input = mensaje.get("input", "")
-                texto_output = mensaje.get("output", "")
+                texto_input = par.get("input", "")
+                texto_output = par.get("output", "")
                 texto_completo = f"Pregunta: {texto_input}\nRespuesta: {texto_output}"
                 
                 # Inferir con DNAPAN
                 qualification = DNAPAN_inferir_texto(texto_completo)
                 
                 if qualification is None:
-                    qualification = mensaje.get("qualification", "neutra")
+                    qualification = par.get("qualification", "neutra")
                 
                 mensaje_completo = {
-                    "id": mensaje.get("id"),
-                    "date": mensaje.get("date"),
-                    "input": mensaje.get("input"),
-                    "output": mensaje.get("output"),
+                    "id": id_mensaje,
+                    "date": par.get("date"),
+                    "input": par.get("input"),
+                    "output": par.get("output"),
                     "qualification": qualification,
                     "archivo_origen": archivo
                 }

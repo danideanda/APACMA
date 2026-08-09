@@ -66,6 +66,8 @@ Las tres funciones (`juntar`, `juntar_con_dnapan_completo`, `extraer_por_ids`) e
 }
 ```
 
+> Las conversaciones de **entrada** se leen con `formato_openai.leer_conversacion()` (formato OpenAI `messages`, ver `formato_openai.md`) y se convierten a pares con `pares_entrenamiento()`. El dataset de **salida** (`dataset.json`) sí usa `input`/`output` porque es el formato que consume `fine.py`.
+
 ## Comportamiento ante fallo de DNAPAN
 
 Si `DNAPAN_inferir_texto()` retorna `None`, se conserva la `qualification` original del mensaje (por defecto `"neutra"`).

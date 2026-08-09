@@ -3,6 +3,7 @@ import os
 from functools import wraps
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 import torch
+from formato_openai import leer_conversacion, obtener_mensajes, pares_entrenamiento
 
 # ========== variables ==========
 ruta_modelo = "models/DNAPAN/model"
@@ -89,20 +90,19 @@ def DNAPAN_json():
     for archivo in archivos:
         ruta = os.path.join(ruta_conversaciones, archivo)
         
-        with open(ruta, "r", encoding="utf-8") as fh:
-            conversacion = json.load(fh)
+        conversacion = leer_conversacion(ruta)
         
         print(f"  Procesando {archivo}...")
-        
-        # Procesar cada mensaje de la conversacion
-        for mensaje in conversacion:
-            id_mensaje = mensaje.get("id")
-            texto_input = mensaje.get("input")
-            texto_output = mensaje.get("output")
-            
+
+        # Procesar cada par user->assistant de la conversacion
+        for par in pares_entrenamiento(conversacion):
+            id_mensaje = par.get("id")
+            texto_input = par.get("input")
+            texto_output = par.get("output")
+
             # Combinar input y output para el analisis
             texto_completo = f"Pregunta: {texto_input}\nRespuesta: {texto_output}"
-            
+
             # Inferir con el modelo
             try:
                 # Tokenizar el texto
@@ -113,21 +113,21 @@ def DNAPAN_json():
                     max_length=512,
                     return_tensors="pt"
                 )
-                
+
                 # Realizar la inferencia
                 with torch.no_grad():
                     outputs = model(**inputs)
                     logits = outputs.logits
                     prediccion = torch.softmax(logits, dim=1)
                     clase_predicha = torch.argmax(prediccion, dim=1).item()
-                
+
                 # Mapear la prediccion a positive/negative
                 # Asumiendo que 0 = negative, 1 = positive
                 if clase_predicha == 1:
                     qualification = "positive"
                 else:
                     qualification = "negative"
-                
+
                 # Guardar resultado
                 resultado = {
                     "id": id_mensaje,
@@ -135,9 +135,9 @@ def DNAPAN_json():
                     "archivo_origen": archivo
                 }
                 todos_resultados.append(resultado)
-                
+
                 print(f"    ID {id_mensaje}: {qualification}")
-                
+
             except Exception as e:
                 print(f"    Error al procesar ID {id_mensaje}: {e}")
                 # Guardar como neutro en caso de error
@@ -253,14 +253,13 @@ def DNAPAN_actualizar_dataset():
     for archivo in archivos:
         ruta = os.path.join(ruta_conversaciones, archivo)
         
-        with open(ruta, "r", encoding="utf-8") as fh:
-            conversacion = json.load(fh)
+        conversacion = leer_conversacion(ruta)
         
-        for mensaje in conversacion:
-            id_mensaje = mensaje.get("id")
+        for par in pares_entrenamiento(conversacion):
+            id_mensaje = par.get("id")
             
             if id_mensaje in dict_calificaciones:
-                mensaje_actualizado = mensaje.copy()
+                mensaje_actualizado = dict(par)
                 mensaje_actualizado["qualification"] = dict_calificaciones[id_mensaje]
                 mensajes_actualizados.append(mensaje_actualizado)
     

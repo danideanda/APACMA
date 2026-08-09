@@ -10,6 +10,16 @@ from threading import Thread
 
 from transformers import GenerationConfig
 
+import sys
+import os as _os
+sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)) + "/..")
+from formato_openai import (
+    leer_conversacion,
+    guardar_conversacion,
+    obtener_mensajes,
+    mensajes_para_llm,
+)
+
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_DIR = os.path.dirname(BASE_DIR)
 MODELS_DIR = os.path.join(PROJECT_DIR, "models", "LLM-base")
@@ -83,19 +93,16 @@ def cargar_chat(nombre):
     ruta = nombre_archivo(nombre)
     if os.path.exists(ruta):
         try:
-            with open(ruta, encoding="utf-8") as fh:
-                return json.load(fh)
+            return leer_conversacion(ruta)
         except Exception:
             pass
-    return []
+    return {"messages": []}
 
 
 @manejar_errores
 def guardar_chat(nombre, conversacion):
     ruta = nombre_archivo(nombre)
-    with open(ruta, "w", encoding="utf-8") as f:
-        json.dump(conversacion, f, ensure_ascii=False, indent=4)
-    return ruta
+    return guardar_conversacion(ruta, conversacion)
 
 
 
@@ -172,7 +179,7 @@ def nuevo():
     while "conversacion-" + str(n) in listar_chats():
         n += 1
     nombre = "conversacion-" + str(n)
-    guardar_chat(nombre, [])
+    guardar_chat(nombre, {"messages": []})
     cargar_chat(nombre)
     return jsonify({"nombre": nombre, "actual": chat_actual})
 
@@ -187,12 +194,7 @@ def enviar():
     conversacion = cargar_chat(nombre)
 
     # Construir mensajes para el modelo
-    mensajes = []
-    for m in conversacion:
-        if "input" in m:
-            mensajes.append({"role": "user", "content": m["input"]})
-        if "output" in m:
-            mensajes.append({"role": "assistant", "content": m["output"]})
+    mensajes = mensajes_para_llm(conversacion)
     mensajes.append({"role": "user", "content": texto})
 
     def generar():
@@ -201,14 +203,20 @@ def enviar():
             respuesta += fragmento
             yield fragmento
 
-        nuevo_registro = {
-            "id": len(conversacion) + 1,
+        nuevo_mensaje = {
+            "id": len(obtener_mensajes(conversacion)) // 2 + 1,
             "date": datetime.now().isoformat(),
-            "input": texto,
-            "output": respuesta,
-            "qualification": "neutra"
+            "role": "user",
+            "content": texto,
         }
-        conversacion.append(nuevo_registro)
+        respuesta_mensaje = {
+            "id": len(obtener_mensajes(conversacion)) // 2 + 1,
+            "date": datetime.now().isoformat(),
+            "role": "assistant",
+            "content": respuesta,
+            "qualification": "neutra",
+        }
+        conversacion.setdefault("messages", []).extend([nuevo_mensaje, respuesta_mensaje])
         guardar_chat(nombre, conversacion)
 
     return Response(stream_with_context(generar()), mimetype="text/plain", headers={"X-Accel-Buffering": "no"})
@@ -223,8 +231,8 @@ def calificar():
     if not nombre:
         return jsonify({"error": "no hay chat activo"}), 400
     conversacion = cargar_chat(nombre)
-    for m in conversacion:
-        if m["id"] == mid:
+    for m in obtener_mensajes(conversacion):
+        if m.get("role") == "assistant" and m.get("id") == mid:
             m["qualification"] = calificacion
             break
     guardar_chat(nombre, conversacion)

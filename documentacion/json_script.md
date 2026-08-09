@@ -6,8 +6,7 @@ Archivo de documentación técnica para `json_script.py`.
 
 `json_script.py` es el **módulo de utilidades JSON**. Se encarga de:
 
-1. `listar_chats()`: Leer las conversaciones de `json/conversaciones`, extraer los mensajes que tengan `qualification` y `text`, y generar un dataset de entrenamiento `{text, label}`.
-2. `id_json()`: Extraer los IDs de los mensajes clasificados como `positive` o `negative`, junto con el archivo de origen, para su posterior procesamiento con DNAPAN.
+- `id_json()`: Leer las conversaciones de `json/conversaciones`, extraer los IDs de los mensajes `assistant` clasificados como `positive` o `negative`, junto con el archivo de origen, para su posterior procesamiento con DNAPAN.
 
 ## Rutas, directorios y archivos
 
@@ -24,17 +23,10 @@ Archivo de documentación técnica para `json_script.py`.
 
 ## Funciones principales
 
-### `listar_chats()`
-
-- Lista los archivos `.json` de `json/conversaciones`.
-- Solo guarda mensajes que tengan `qualification` y `text` (los demás se descartan).
-- Genera y guarda el dataset en `json/entrenamiento/dataset_filtrado.json`.
-- Retorna un diccionario con: `archivos`, `chats_procesados`, `total_mensajes`, `dataset`, `ruta_dataset`.
-
 ### `id_json()`
 
 - Recorre todas las conversaciones.
-- Filtra mensajes con `qualification` en `["positive", "negative"]` que tengan `id`.
+- Filtra mensajes `assistant` con `qualification` en `["positive", "negative"]` que tengan `id`.
 - Retorna una lista de `{id, archivo, qualification}`.
 
 ## Manejo de errores
@@ -44,23 +36,24 @@ Se define la sección `# ========== manejo de errores ==========` (entre variabl
 - **`ErrorAPACMA(Exception)`**: excepción base del proyecto.
 - **`manejar_errores`**: decorador que captura excepciones, imprime `[ERROR] <función>: <mensaje>` y relanza como `ErrorAPACMA`, o devuelve un `default` si se indica (`@manejar_errores(default=[])`).
 
-`id_json` está decorado con `@manejar_errores(default=[])` y `listar_chats` con `@manejar_errores(default=None)`. Ante un error devuelven el valor por defecto en lugar de propagar la excepción.
+`id_json` está decorado con `@manejar_errores(default=[])`. Ante un error devuelve el valor por defecto en lugar de propagar la excepción.
 
 ## Estructura de datos de entrada
 
-Cada mensaje en `json/conversaciones/*.json` tiene al menos:
+Las conversaciones se leen con `formato_openai.leer_conversacion()`, que normaliza al **formato estándar OpenAI `messages`** (ver `formato_openai.md`):
 
 ```json
 {
-    "id": 0,
-    "date": "2026-08-04T12:22:45.766086",
-    "input": "pregunta del usuario",
-    "output": "respuesta del modelo",
-    "qualification": "positive|negative|neutra"
+    "messages": [
+        {"role": "user", "content": "pregunta del usuario"},
+        {"role": "assistant", "content": "respuesta del modelo", "qualification": "positive"}
+    ]
 }
 ```
 
+`id_json()` recorre los mensajes con `obtener_mensajes()` y extrae los de `role: assistant` con `qualification` en `["positive", "negative"]`.
+
 ## Notas
 
-- Ambos scripts son dependencia de `clasificador.py`, que los importa como `id_json` y `listar_chats`.
-- Las conversaciones sin mensajes clasificados generan un dataset vacío y no se guarda archivo.
+- `id_json` es dependencia de `clasificador.py`, que lo importa para construir el dataset.
+- Las conversaciones sin mensajes clasificados generan una lista vacía.
