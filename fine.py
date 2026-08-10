@@ -58,6 +58,16 @@ def manejar_errores(func=None, default=_SIN_DEFAULT):
     return decorador(func)
 
 
+def _directorio_tiene_modelo(ruta):
+    """Verifica si un directorio contiene archivos de pesos de un modelo."""
+    if not os.path.exists(ruta):
+        return False
+    for archivo in os.listdir(ruta):
+        if archivo.endswith((".safetensors", ".bin", ".pt", ".ckpt")):
+            return True
+    return False
+
+
 def _extraer_items(data):
     """
     Normaliza las estructuras posibles del dataset en una lista de mensajes.
@@ -150,11 +160,11 @@ def entrenar_fine():
         str: Ruta del modelo guardado (o None si no hay datos de entrenamiento).
     """
     global modelo_path
-    # verificar ruta del modelo
+    # verificar ruta del modelo (solo si contiene pesos del modelo)
     if not modelo_path:
-        if os.path.exists("models/LLM"):
+        if _directorio_tiene_modelo("models/LLM"):
             modelo_path = "models/LLM"
-        elif os.path.exists("models/LLM-base"):
+        elif _directorio_tiene_modelo("models/LLM-base"):
             modelo_path = "models/LLM-base"
         else:
             raise ErrorAPACMA("no se encontró la ruta del modelo")

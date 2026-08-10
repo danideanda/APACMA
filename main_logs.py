@@ -65,14 +65,24 @@ def manejar_errores(func=None, default=_SIN_DEFAULT):
 
 
 # ========== funciones ==========
+def _directorio_tiene_modelo(ruta):
+    """Verifica si un directorio contiene archivos de pesos de un modelo."""
+    if not os.path.exists(ruta):
+        return False
+    for archivo in os.listdir(ruta):
+        if archivo.endswith((".safetensors", ".bin", ".pt", ".ckpt")):
+            return True
+    return False
+
+
 @manejar_errores
 def verificar_ruta_modelo():
     global model_path
-    # verificar ruta del modelo
-    if os.path.exists("models/LLM"):
+    # verificar ruta del modelo (solo si contiene pesos del modelo)
+    if _directorio_tiene_modelo("models/LLM"):
         model_path = "models/LLM"
         log.info(f"Ruta del modelo encontrada: {model_path}")
-    elif os.path.exists("models/LLM-base"):
+    elif _directorio_tiene_modelo("models/LLM-base"):
         model_path = "models/LLM-base"
         log.info(f"Ruta del modelo encontrada: {model_path}")
     else:
@@ -83,7 +93,8 @@ def verificar_ruta_modelo():
 def main():
     verificar_ruta_modelo()
     while True:
-        if fecha.day == 9: # <--- comŕueba que es otro mes (debe estar en 1 pero estamos de pruebas asi que estara en 10)
+        fecha_actual = datetime.datetime.now()
+        if fecha_actual.hour == 19: # <--- comŕueba que es otro mes (debe estar en 1 pero estamos de pruebas asi que estara en 19 y en hour)
             #1. generar dataset
             log.info("=== PASO 1: GENERAR DATASET ===")
             juntar()
