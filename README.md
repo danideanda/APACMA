@@ -1,103 +1,95 @@
 # APACMA: Arquitectura de Personalización Continua Mediante Adaptadores
 
-## Resumen
+## Resumen Ejecutivo
 
-APACMA (Arquitectura de Personalización Continua Mediante Adaptadores) es una arquitectura de inteligencia artificial diseñada para lograr una personalización profunda y permanente de cada usuario sin modificar el modelo base compartido.
+APACMA (Arquitectura de Personalización Continua Mediante Adaptadores) es una arquitectura de IA diseñada para ofrecer personalización profunda y permanente por usuario **sin reentrenar ni duplicar el modelo base compartido**. En lugar de inyectar las preferencias del usuario en cada llamada (costo recurrente de tokens) o de mantener un modelo completo por cliente (costo inviable de infraestructura), APACMA almacena el conocimiento de cada usuario en un **dataset personalizado** y materializa ese conocimiento en un **adaptador LoRA** ligero y regenerable.
 
-La idea central consiste en separar el conocimiento general del modelo de la información específica de cada usuario. En lugar de almacenar toda la personalización dentro de la ventana de contexto o reentrenar el modelo completo, APACMA mantiene un dataset personalizado por usuario que sirve como fuente de conocimiento para generar un adaptador mediante LoRA. El adaptador modifica únicamente el comportamiento del modelo respecto a ese usuario, permitiendo que el sistema evolucione continuamente sin duplicar el modelo completo para cada persona.
+Para un CTO, el valor se resume en tres frentes:
 
-## Problemas que Resuelve
+1. **Control de costos**: la personalización no escala con el costo por token ni con el costo de entrenar modelos completos; el incremento marginal por usuario es un adaptador pequeño entrenado de forma asíncrona.
+2. **Escalabilidad arquitectónica**: un solo modelo base sirve a toda la base de usuarios; la separación entre conocimiento general y conocimiento específico permite actualizar el modelo base sin tocar la personalización.
+3. **Gobernanza y auditoría**: el conocimiento de cada usuario vive en un dataset versionable y auditable, no embebido de forma opaca en pesos de un modelo.
 
-1.APACMA aborda varios problemas presentes en los sistemas actuales:
+## Decisión Técnica: ¿Por Qué Esta Arquitectura?
 
-2.Dependencia excesiva de la ventana de contexto: Los modelos actuales requieren que las preferencias del usuario se repitan constantemente dentro de la conversación, consumiendo tokens valiosos y limitando la cantidad de información relevante que puede procesarse.
+Los enfoques dominantes de personalización presentan limitaciones que una decisión técnica debe evaluar:
 
-3.Repetición constante de preferencias: El usuario debe recordar y repetir sus preferencias en cada conversación, lo que resulta en una experiencia frustrante y poco natural.
+- **Dependencia de la ventana de contexto**: repetir las preferencias del usuario en cada conversación consume tokens valiosos y acota la información realmente útil por llamada. El costo crece linealmente con el tráfico, sin retorno de inversión.
+- **Fine-tuning completo por usuario**: multiplica infraestructura y mantenimiento por el número de usuarios, un modelo inviable fuera de unos pocos clientes enterprise.
+- **Pérdida de personalización entre sesiones**: sin persistencia entrenable, cada nueva conversación parte de cero, degradando la experiencia percibida y la retención.
 
-4.Pérdida de personalización entre conversaciones: Cuando una sesión termina, la personalización se pierde y el usuario debe  comenzar de nuevo en la siguiente interacción.
+APACMA resuelve estos problemas separando dos tipos de información:
 
-5.modelos mas humanos: hace que los modelos de inteligencia artificial actuen como humanos y evolucionen con el usuario
+| Tipo de información | Dónde vive | Ciclo de vida |
+|---------------------|------------|---------------|
+| **Temporal** (conversación actual, documentos abiertos, instrucciones recientes) | Ventana de contexto | Se descarta al terminar la sesión |
+| **Permanente** (idioma, nivel técnico, tono, formato, ejemplos positivos/negativos) | Dataset personalizado → adaptador | Persiste y evoluciona |
 
-## Principio Fundamental
+## Componentes de la Arquitectura
 
-El principio central de APACMA establece que la personalización permanente debe almacenarse como conocimiento entrenable del usuario y no únicamente como contexto textual. Esto implica separar dos tipos de información:
+| Componente | Rol | Propiedad técnica |
+|------------|-----|-------------------|
+| **Modelo base** | Conocimiento general, razonamiento y capacidades del sistema | Compartido por todos los usuarios; nunca se personaliza directamente |
+| **Memoria estructurada** | Hechos relevantes del usuario (idioma, estilo, temas) | Actualizable en caliente |
+| **Dataset personalizado** | Ejemplos de entrenamiento reales (input, output, retroalimentación) | **El centro de la arquitectura**: el conocimiento del usuario es este dataset, no el adaptador |
+| **Adaptador LoRA** | Representación entrenable del dataset | Pequeño, regenerable, independiente del modelo base |
+| **Modelo revisor (DNAPAN)** | Evalúa si las respuestas son relevantes y las incorpora al dataset | Modelo de clasificación independiente |
+| **Modelo de seguridad** | Revisa entradas y salidas contra violencia, agresión, ilegalidad y contenido poco ético | Capa de cumplimiento y protección |
 
-La información temporal corresponde a la conversación actual, incluyendo preguntas recientes, documentos abiertos, instrucciones momentáneas y referencias a mensajes anteriores. Esta información pertenece a la ventana de contexto y puede desaparecer cuando termina la conversación.
+## Pipeline de Aprendizaje
 
-La información permanente corresponde a características propias del usuario, como el idioma preferido, nivel técnico, tono favorito, estilo de respuestas, preferencias de formato, patrones de corrección y ejemplos positivos y negativos. Esta información pertenece al sistema de personalización y no necesita volver a escribirse en cada conversación.
+El sistema convierte la interacción natural en datos de entrenamiento:
 
-## Componentes de APACMA
+1. Cada conversación se analiza y clasifica (aprobación explícita, rechazo, corrección, preferencia).
+2. Retroalimentación en lenguaje natural ("Perfecto", "Hazlo más corto", "No entendiste") se traduce a ejemplos **positivos** y **negativos**.
+3. Los ejemplos se acumulan en el dataset personalizado.
+4. El adaptador se regenera de forma **asíncrona** (lotes, horario de baja demanda o capacidad ociosa), generando una nueva versión sin interrumpir el servicio.
 
-La arquitectura se compone de 6 elementos principales.
-
-El modelo base es el modelo compartido entre todos los usuarios. Contiene conocimiento general, razonamiento, comprensión del lenguaje y capacidades principales. Nunca se personaliza directamente y todos los usuarios utilizan exactamente el mismo modelo base.
-
-La memoria estructurada es una representación organizada de información importante sobre el usuario. No almacena conversaciones completas, sino únicamente hechos relevantes como el idioma, nivel técnico, preferencias de estilo y temas de interés. Esta memoria puede actualizarse continuamente.
-
-El dataset personalizado es el componente central de APACMA. No es el adaptador ni el modelo, sino el verdadero conocimiento del usuario. Contiene ejemplos de entrenamiento obtenidos mediante interacción real, cada uno con su correspondiente entrada, salida y retroalimentación. Con el tiempo, este dataset representa cómo espera el usuario que responda la IA. Es independiente del modelo utilizado.
-
-El adaptador personalizado, típicamente implementado mediante LoRA, es una representación matemática entrenada utilizando el dataset personalizado. No contiene el conocimiento completo del usuario, sino que es simplemente una adaptación del modelo base para reflejar ese conocimiento. Puede regenerarse cuando sea necesario.
-
-un modelo independiente que se encarga de revizar las respuestas para identificar si son relevantes y guardarlas en el dataset.
-
-otro modelo de ai independiente encargado de la revision de las respuestas y entradas de el modelo con el objetivo de que revize que las respuestas no contengan mensajes de violencia, agrecion, cosas ilegales o poco eticas.
-
-## Flujo de Aprendizaje
-
-Cada conversación genera nueva información. El sistema analiza cada interacción y puede detectar aprobación explícita, rechazo, correcciones, preferencias y cambios de estilo. Por ejemplo, cuando un usuario dice "Me gustó esta explicación", el sistema interpreta esa interacción como un ejemplo positivo y lo incorpora al dataset para ser utilizado posteriormente en el entrenamiento del adaptador.
-
-La retroalimentación no depende únicamente de botones. APACMA también puede interpretar lenguaje natural. Expresiones como "Perfecto", "Exactamente así" o "Muy bien explicado" se interpretan como ejemplos positivos, mientras que frases como "Hazlo más corto", "No entendiste" o "Quiero más detalle" se transforman en ejemplos negativos que guían el aprendizaje.
-
-El entrenamiento ocurre de forma periódica, no necesariamente después de cada mensaje. Puede ejecutarse al acumular suficientes ejemplos, cuando el sistema está inactivo, durante la noche o cuando existe capacidad de procesamiento disponible. El entrenamiento genera una nueva versión del adaptador.
-
-## El Papel de la Ventana de Contexto
-
-En APACMA, la ventana de contexto cambia de función. Su objetivo principal deja de ser recordar permanentemente al usuario y se dedica a información temporal como la conversación actual, documentos abiertos, tareas en ejecución e instrucciones recientes. Las preferencias permanentes ya no necesitan repetirse continuamente, lo que permite dedicar una mayor parte del contexto al problema actual. Esto no elimina la necesidad del contexto, pero reduce significativamente el uso de tokens para información estable ademas de la cantidad de prosesamiento necesario.
-
-## El Centro de la Arquitectura
-
-En la mayoría de arquitecturas actuales, el centro suele ser el modelo entrenado o el propio adaptador. En APACMA, el elemento más importante es el dataset personalizado del usuario. Todo lo demás puede reconstruirse: si desaparece el adaptador, se vuelve a entrenar; si cambia el modelo base, se vuelve a entrenar; si aparece una nueva técnica de adaptación, se vuelve a entrenar. Mientras el dataset permanezca intacto, la personalización continúa existiendo.
-
-## Actualización del Modelo Base
-
-Uno de los problemas más importantes en el sistema de IA es cómo actualizar el modelo sin perder la personalización. para solucionarlo APACMA desacopla completamente el dataset del usuario respecto al modelo base. Cuando aparece una nueva versión del modelo, el proceso es simple: se toma el mismo dataset personalizado, se realiza un nuevo entrenamiento y se genera un nuevo adaptador. No existe migración directa entre adaptadores porque el adaptador simplemente se vuelve a generar desde cero utilizando el dataset.
-
-## Gestión del Tamaño del Dataset
-
-El dataset no puede crecer indefinidamente. APACMA propone establecer un presupuesto máximo basado en número de tokens, número de ejemplos o tamaño de almacenamiento. Cuando se alcanza el límite, el sistema puede eliminar ejemplos redundantes, fusionar ejemplos similares, resumir conversaciones repetitivas, conservar únicamente ejemplos representativos o priorizar ejemplos con mayor valor de aprendizaje. De esta forma, el conocimiento importante permanece mientras el tamaño permanece controlado a traves de el modelo correspondiente.
+Esta operación en segundo plano es clave para la operación: el entrenamiento no ocurre en el camino crítico de la conversación.
 
 ## Manejo de Ejemplos Negativos
 
-Cuando un usuario proporciona retroalimentación negativa, APACMA puede manejar esta información de varias formas. El enfoque más directo consiste en aplicar un peso negativo en la función de pérdida durante el entrenamiento, lo que hace que el modelo aprenda activamente a evitar esa respuesta. También es posible reducir el peso de tokens específicos que el usuario ha indicado como indeseables, haciendo que esas palabras sean menos probables en respuestas futuras. Otra alternativa es el aprendizaje contrastivo, donde las respuestas buenas se acercan en el espacio de representación y las malas se alejan. Cuando el usuario proporciona una corrección explícita, el sistema guarda la versión corregida como ejemplo positivo y la versión original como ejemplo negativo, permitiendo al modelo aprender de ambos casos.
+APACMA incorpora el aprendizaje a partir de retroalimentación negativa mediante estrategias combinables:
 
-## Ventajas de la Arquitectura
+- **Unlikelihood loss**: reduce activamente la probabilidad de respuestas indeseadas (`-log(1 - p)`) durante el entrenamiento del adaptador.
+- **Ponderación de tokens**: baja el peso de términos específicos marcados como indeseables.
+- **Corrección explícita**: la versión corregida se guarda como ejemplo positivo y la original como negativo, aprendiendo de ambos.
 
-APACMA ofrece personalización continua y adaptación permanente sin necesidad de reentrenar modelos completos. Reduce la dependencia del contexto para recordar preferencias estables, permitiendo que los tokens disponibles se dediquen al contenido relevante. La actualización del modelo base resulta sencilla porque el dataset es independiente del modelo. El entrenamiento es eficiente porque utiliza adaptadores pequeños en lugar de modelos completos. La arquitectura mantiene una separación clara entre conocimiento general y conocimiento personalizado, y el dataset puede reutilizarse ante nuevas versiones del modelo o cambios en la técnica de adaptación.
+## Operación y Mantenimiento
 
-## Posibilidades Futuras
+### Actualización del modelo base
 
-La arquitectura es deliberadamente independiente del método de adaptación. Aunque inicialmente utilice LoRA, el diseño permite sustituir esa técnica por otras sin modificar el núcleo de APACMA. El dataset personalizado puede servir para regenerar adaptadores tras actualizar el modelo base, evaluar la calidad de nuevas versiones del modelo con los mismos ejemplos del usuario, experimentar con distintas técnicas de personalización sin perder el historial de aprendizaje, o combinar memoria estructurada, ejemplos de entrenamiento y adaptadores para lograr una personalización más robusta.
+El dataset es **independiente del modelo**. Al lanzar una nueva versión del modelo base, el proceso es: tomar el mismo dataset personalizado, reentrenar, generar un nuevo adaptador. No existe migración entre adaptadores: el adaptador es una derivada regenerable del dataset. Esto desacopla el roadmap del modelo base de la experiencia de personalización.
 
-## Principio Arquitectónico Final
+### Gestión del tamaño del dataset
 
-El conocimiento personalizado del usuario no reside en el modelo base ni en el adaptador. Reside en un dataset personalizado, construido de forma continua mediante la interacción y la retroalimentación del usuario. El adaptador es una representación matemática regenerable de ese conocimiento, mientras que el modelo base aporta las capacidades generales del sistema. La ventana de contexto queda reservada principalmente para la información temporal de la conversación, separando así el conocimiento permanente del conocimiento transitorio y facilitando la evolución continua del sistema sin perder la personalización.
+El dataset está sujeto a un **presupuesto máximo** (tokens, ejemplos o almacenamiento). Al alcanzarlo, se aplican políticas de prioridad: eliminar redundancias, fusionar ejemplos similares, resumir conversaciones repetitivas, conservar ejemplos representativos o priorizar el mayor valor de aprendizaje.
 
-Esta separación de responsabilidades es el núcleo conceptual de APACMA y la característica que distingue la arquitectura. La definición anterior sirve como fundamento sobre el que desarrollar los algoritmos específicos, las políticas de actualización y las métricas para evaluar si realmente mejora la personalización respecto a otros enfoques.
+## Ventajas para la Decisión de Inversión
+
+- **Costo marginal predecible y bajo**: adaptadores pequeños entrenados en recursos ociosos, sin reentrenar modelos completos.
+- **Actualización sin fricción**: el cambio de modelo base no rompe la personalización (dataset desacoplado).
+- **Eficiencia de cómputo**: se entrena el adaptador, no el modelo.
+- **Clara separación de responsabilidades**: conocimiento general vs. conocimiento personalizado.
+- **Reutilización**: el dataset sirve para regenerar adaptadores, evaluar nuevas versiones del modelo y experimentar con otras técnicas de adaptación sin perder el historial.
 
 ## Implementación
 
-La arquitectura se implementa en los siguientes módulos de Python (en la raíz del proyecto):
+La arquitectura se implementa en módulos Python (en la raíz del proyecto):
 
 - `chat/llm.py`: servidor web del chat, calificación de respuestas y persistencia de conversaciones.
 - `formato_openai.py`: normalización de conversaciones al formato estándar OpenAI `messages`.
 - `json_script.py`: extracción de mensajes calificados para el dataset.
 - `clasificador.py`: construcción del dataset de entrenamiento.
 - `DNAPAN.py`: modelo que revisa las respuestas para identificar si son relevantes (calificación).
+- `DNAPAN/model.py`: entrenamiento del clasificador DNAPAN (fórmula de épocas y mínimo de 5M de parámetros).
 - `seguridad.py`: modelo de revisión que verifica que las respuestas no contengan violencia, agresión, contenido ilegal o poco ético.
 - `fine.py`: entrenamiento del adaptador (LoRA) con SFT y unlikelihood para ejemplos negativos.
 - `limites.py`: control del presupuesto de tokens del dataset.
 
-Las conversaciones se guardan en formato estándar OpenAI `messages` (misma estructura que usan OpenAI y la industria para chats y datasets de fine-tuning).
+Las conversaciones se guardan en formato estándar OpenAI `messages` (misma estructura que usan OpenAI y la industria para chats y datasets de fine-tuning), lo que facilita interoperabilidad y portabilidad del dato.
+
+---
 
 **creado por: daniel de anda**
 <br>
