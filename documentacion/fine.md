@@ -48,6 +48,7 @@ Se eligió unlikelihood en lugar de DPO porque es la opción **más liviana en R
 | `output_dir` | `"models/LLM/"` | Directorio donde se guarda el modelo fine-tuneado y el registro. |
 | `LAMBDA_NEGATIVO` | `0.5` | Peso del término de unlikelihood sobre los ejemplos negativos. |
 | `MAX_LENGTH` | `512` | Longitud máxima de tokenización. |
+| `PARAMETROS_MINIMOS` | `5_000_000` | Mínimo de parámetros exigido al modelo (5 millones). |
 
 ## Compatibilidad con el entorno (venv)
 
@@ -72,6 +73,7 @@ Proyecto probado en `.venv` con `transformers 5.14.1`, `peft 0.20.0`, `torch 2.1
 | `entrenar_fine()` | Realiza el fine-tuning con LoRA (SFT + unlikelihood) y guarda el modelo y el registro. |
 | `guardar_registro_modelo(output_dir, dataset_path, modelo_path)` | Crea o actualiza `model.json` con el registro del último modelo entrenado. |
 | `_extraer_items(data)` | Normaliza el dataset a lista de mensajes (soporta lista, dict de dicts y dict de listas). |
+| `_calcular_epocas(total, batch)` | Aplica la fórmula de iteraciones por época (ver más abajo). |
 | `CollatorConNegativos(DataCollatorForSeq2Seq)` | Añade el tensor binario `is_negative` a cada batch. |
 | `TrainerUnlikelihood(Trainer)` | Trainer con loss dual: CE para positivos + unlikelihood para negativos. |
 
@@ -145,7 +147,8 @@ El collator `CollatorConNegativos` garantiza que `is_negative` llegue al loss au
 
 ## Configuración de entrenamiento (`TrainingArguments`)
 
-- 3 épocas, batch de 2, gradiente acumulado de 4.
+- **Fórmula de épocas**: las épocas se calculan con la fórmula `Iteraciones por época = Tamaño total de datos / Tamaño del lote (Batch Size)`, implementada en `_calcular_epocas(total_ejemplos, batch_efectivo)` (con `ceil` y mínimo 1). El batch efectivo es `per_device_train_batch_size (2) × gradient_accumulation_steps (4) = 8`, así que las épocas resultan `ceil(ejemplos / 8)`.
+- Batch por dispositivo de 2, gradiente acumulado de 4.
 - Evaluación por steps (cada 50) **solo si hay ≥ 10 ejemplos** (con menos, `eval_strategy="no"`).
 - `save_steps=100`, `save_total_limit=2`, `load_best_model_at_end` solo con split de eval.
 - `metric_for_best_model="eval_loss"`, `greater_is_better=False`.
@@ -153,6 +156,10 @@ El collator `CollatorConNegativos` garantiza que `is_negative` llegue al loss au
 - `learning_rate=2e-4`, `weight_decay=0.01`, `warmup_steps=100`.
 - `report_to="none"` (desactiva wandb/tensorboard).
 - `remove_unused_columns=False` (imprescindible para que `is_negative` no se elimine del batch).
+
+## Parámetros mínimos del modelo
+
+Tras aplicar LoRA se verifica que el modelo cumpla el mínimo de **5 millones de parámetros** (`PARAMETROS_MINIMOS = 5_000_000`). Si tiene menos, se imprime el aviso y se omite el entrenamiento (`return None`). El modelo base usado (Qwen2 0.5B ≈ 494M de parámetros) lo cumple holgadamente.
 
 ## Registro del modelo (`model.json`)
 
@@ -180,12 +187,13 @@ El collator `CollatorConNegativos` garantiza que `is_negative` llegue al loss au
 2. Verifica `dataset_path`; carga y normaliza el JSON.
 3. Clasifica por `qualification` (positive→SFT, negative→unlikelihood, resto excluido) e imprime estadísticas.
 4. Carga tokenizador (`local_files_only=True`) y modelo (GPU `bf16` + `device_map="auto"`; CPU `fp32`).
-5. Aplica LoRA e imprime parámetros entrenables.
+5. Aplica LoRA e imprime parámetros entrenables; verifica el mínimo de 5M de parámetros.
 6. Construye `Dataset`, tokeniza con enmascarado del prompt y filtro.
 7. Divide 90/10 solo si hay ≥ 10 ejemplos.
-8. Crea collator y Trainer con loss dual; entrena.
-9. Guarda modelo y tokenizador con `save_pretrained(output_dir)`.
-10. Llama a `guardar_registro_modelo` y devuelve `output_dir`.
+8. Calcula las épocas con `_calcular_epocas(len(train_dataset), 8)`.
+9. Crea collator y Trainer con loss dual; entrena.
+10. Guarda modelo y tokenizador con `save_pretrained(output_dir)`.
+11. Llama a `guardar_registro_modelo` y devuelve `output_dir`.
 
 ## Notas
 
