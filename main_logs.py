@@ -10,7 +10,7 @@ from functools import wraps
 
 # ========== variables ==========
 # rutas
-model_path = ""
+model_path = "models/LLM-base"
 dataset_path = "json/entrenamiento/dataset.json"
 fecha = datetime.datetime.now()
 
@@ -74,24 +74,8 @@ def _directorio_tiene_modelo(ruta):
             return True
     return False
 
-
-@manejar_errores
-def verificar_ruta_modelo():
-    global model_path
-    # verificar ruta del modelo (solo si contiene pesos del modelo)
-    if _directorio_tiene_modelo("models/LLM"):
-        model_path = "models/LLM"
-        log.info(f"Ruta del modelo encontrada: {model_path}")
-    elif _directorio_tiene_modelo("models/LLM-base"):
-        model_path = "models/LLM-base"
-        log.info(f"Ruta del modelo encontrada: {model_path}")
-    else:
-        model_path = "error fatal: no se encontró la ruta del modelo"
-        log.error(model_path)
-
 @manejar_errores
 def main():
-    verificar_ruta_modelo()
     while True:
         fecha_actual = datetime.datetime.now()
         if fecha_actual.hour == 11: # <--- comŕueba que es otro mes (debe estar en 1 pero estamos de pruebas asi que estara en en hour y con otro numero)
@@ -109,7 +93,6 @@ def main():
             log.info("=== PASO 4: PRUEBA BREVE DE SEGURIDAD DEL MODELO ===")
             prueba_seguridad_modelo()
             log.info("Proceso completado")
-            break
         else:
             log.info("Hoy no corresponde ejecutar el pipeline (condición de día no cumplida).")
             time.sleep(60)

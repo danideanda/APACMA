@@ -7,7 +7,7 @@ from functools import wraps
 
 # ========== variables ==========
 # rutas
-model_path = ""
+model_path = "models/LLM-base"
 dataset_path = "json/entrenamiento/dataset.json"
 fecha = datetime.datetime.now()
 
@@ -55,21 +55,8 @@ def _directorio_tiene_modelo(ruta):
             return True
     return False
 
-
-@manejar_errores
-def verificar_ruta_modelo():
-    global model_path
-    # verificar ruta del modelo (solo si contiene pesos del modelo)
-    if _directorio_tiene_modelo("models/LLM"):
-        model_path = "models/LLM"
-    elif _directorio_tiene_modelo("models/LLM-base"):
-        model_path = "models/LLM-base"
-    else:
-        model_path = "error fatal: no se encontró la ruta del modelo"
-
 @manejar_errores
 def main():
-    verificar_ruta_modelo()
     while True:
         fecha_actual = datetime.datetime.now()
         if fecha_actual.day == 1: # <--- comŕueba que es otro mes (debe estar en 1)
