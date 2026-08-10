@@ -94,7 +94,7 @@ def main():
     verificar_ruta_modelo()
     while True:
         fecha_actual = datetime.datetime.now()
-        if fecha_actual.hour == 19: # <--- comŕueba que es otro mes (debe estar en 1 pero estamos de pruebas asi que estara en 19 y en hour)
+        if fecha_actual.hour == 11: # <--- comŕueba que es otro mes (debe estar en 1 pero estamos de pruebas asi que estara en en hour y con otro numero)
             #1. generar dataset
             log.info("=== PASO 1: GENERAR DATASET ===")
             juntar()

@@ -1,0 +1,9 @@
+2026-08-10 11:51:40,647 - INFO - Inicio del programa: 2026-08-10 11:51:40
+2026-08-10 11:51:40,647 - INFO - Logs guardados en: test/logs/main_20260810_115140.log
+2026-08-10 11:51:40,648 - INFO - Ruta del modelo encontrada: models/LLM
+2026-08-10 11:51:40,648 - INFO - === PASO 1: GENERAR DATASET ===
+2026-08-10 11:51:40,649 - INFO - === PASO 2: FILTRO DE SEGURIDAD DE JSON ===
+2026-08-10 11:51:40,688 - INFO - === PASO 3: ENTRENAMIENTO (FINE-TUNING) ===
+2026-08-10 11:52:09,646 - INFO - === PASO 4: PRUEBA BREVE DE SEGURIDAD DEL MODELO ===
+2026-08-10 11:53:06,586 - INFO - Proceso completado
+2026-08-10 11:53:06,586 - INFO - Ruta del modelo verificada: models/LLM
