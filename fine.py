@@ -12,6 +12,7 @@ from peft import LoraConfig, get_peft_model
 from datasets import Dataset
 from datetime import datetime
 from functools import wraps
+import math
 
 modelo_path = ""
 dataset_path = "json/entrenamiento/dataset.json"
@@ -23,6 +24,9 @@ LAMBDA_NEGATIVO = 0.5
 
 # Longitud maxima de tokenizacion
 MAX_LENGTH = 512
+
+# Parametros minimos exigidos al modelo base (5 millones)
+PARAMETROS_MINIMOS = 5_000_000
 
 # ========== manejo de errores ==========
 
@@ -66,6 +70,20 @@ def _directorio_tiene_modelo(ruta):
         if archivo.endswith((".safetensors", ".bin", ".pt", ".ckpt")):
             return True
     return False
+
+
+def _calcular_epocas(total_ejemplos, batch_size):
+    """
+    Calcula las epocas de entrenamiento con la formula:
+
+        Iteraciones por epoca = Tamaño total de datos / Tamaño del lote
+
+    Se redondea hacia arriba (ceil) para que nunca haya una epoca incompleta
+    y se garantiza un minimo de 1 epoca.
+    """
+    if batch_size <= 0 or total_ejemplos <= 0:
+        return 1
+    return max(1, math.ceil(total_ejemplos / batch_size))
 
 
 def _extraer_items(data):
@@ -272,6 +290,13 @@ def entrenar_fine():
     model = get_peft_model(model, lora_config)
     model.print_trainable_parameters()
 
+    # Verificar que el modelo cumple el minimo de parametros exigido
+    num_parametros = sum(p.numel() for p in model.parameters())
+    print(f"Parametros del modelo: {num_parametros:,}")
+    if num_parametros < PARAMETROS_MINIMOS:
+        print(f"El modelo tiene menos de {PARAMETROS_MINIMOS} parametros. Se omite el entrenamiento.")
+        return None
+
     # Construir dataset de HuggingFace
     dataset = Dataset.from_list(registros)
 
@@ -345,10 +370,16 @@ def entrenar_fine():
         padding=True,
     )
 
+    # Calcular epocas con la formula: iteraciones por epoca = total / batch size
+    # El batch efectivo es batch por dispositivo x acumulacion de gradientes
+    batch_efectivo = 2 * 4
+    epocas = _calcular_epocas(len(train_dataset), batch_efectivo)
+    print(f"Epocas calculadas (total {len(train_dataset)} / batch {batch_efectivo}): {epocas}")
+
     # Configuración de entrenamiento
     training_args = TrainingArguments(
         output_dir=output_dir,
-        num_train_epochs=3,
+        num_train_epochs=epocas,
         per_device_train_batch_size=2,
         per_device_eval_batch_size=2,
         gradient_accumulation_steps=4,
@@ -391,6 +422,9 @@ def entrenar_fine():
     guardar_registro_modelo(output_dir, dataset_path, modelo_path)
 
     print("¡Fine-tuning completado!")
+    print("eliminando checkpoint...")
+    os.system("rm -r models/LLM/chekpoint")
+    print("eliminado")
     return output_dir
 
 
