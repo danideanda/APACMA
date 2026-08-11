@@ -6,8 +6,8 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from main_logs import main
 
 def esperar_hasta_las_23():
-    """Espera en bucle hasta que el reloj marque las 23:00."""
-    while datetime.now().hour != 13:
+    """Espera en bucle hasta"""
+    while datetime.now().day != 15:
         print("en espera...")
         time.sleep(30)
 
