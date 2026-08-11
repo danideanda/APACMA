@@ -95,12 +95,14 @@
                 body: JSON.stringify({ nombre: chat })
             });
             const data = await res.json();
+            const conv = data.conversacion || {};
+            const mensajes = Array.isArray(conv) ? conv : (conv.messages || []);
             lista.innerHTML = '';
-            for (const m of data.conversacion) {
-                if (m.input != null) agregar(m.input, 'usuario', m.id);
-                if (m.output != null) agregar(m.output, 'asistente', m.id);
+            for (const m of mensajes) {
+                if (m.role === 'user') agregar(m.content, 'usuario', m.id);
+                if (m.role === 'assistant') agregar(m.content, 'asistente', m.id);
             }
-            if (data.conversacion.length === 0) {
+            if (mensajes.length === 0) {
                 agregar('Nuevo chat. Escribe algo para empezar.', 'asistente', -1);
             }
         }
