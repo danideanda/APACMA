@@ -21,12 +21,14 @@ Archivo de documentación técnica para `main_logs.py`.
 | `json/entrenamiento/dataset.json` | Archivo (entrada) | Dataset usado para el entrenamiento. |
 | `models/LLM` | Directorio | Modelo de lenguaje base (preferido). |
 | `models/LLM-base` | Directorio | Modelo de lenguaje alternativo. |
+| `models/LLM/model.json` | Archivo (entrada) | Registro del último entrenamiento: version, fecha y modelo base. Usado por `ya_entrenado_hoy()`. |
 
 ## Módulos que importa
 
 | Módulo | Uso |
 |--------|-----|
 | `fine.entrenar_fine` | Ejecuta el fine-tuning con LoRA del modelo. |
+| `fine.ya_entrenado_hoy` | Comprueba si el modelo ya fue entrenado hoy leyendo `models/LLM/model.json`. |
 | `seguridad.filtro_seguridad` | Limpia los JSON mediante el filtro de seguridad. |
 | `seguridad.prueba_seguridad_modelo` | Prueba breve de seguridad del modelo entrenado. |
 | `clasificador.juntar` | Genera el dataset a partir de los datos de entrenamiento. |
@@ -98,12 +100,14 @@ Se aplica a `verificar_ruta_modelo` y `main`. El bloque `if __name__ == "__main_
 
 1. `verificar_ruta_modelo()` → asigna `model_path`.
 2. Bucle `while True`:
-   - Si `fecha.day == 9` (en pruebas; en producción debería ser `1`):
-     - Registra `=== PASO 1: GENERAR DATASET ===` → `juntar()` y `juntar_con_dnapan_completo()`.
-     - Registra `=== PASO 2: FILTRO DE SEGURIDAD DE JSON ===` → `filtro_seguridad()`.
-     - Registra `=== PASO 3: ENTRENAMIENTO (FINE-TUNING) ===` → `entrenar_fine()`.
-     - Registra `=== PASO 4: PRUEBA BREVE DE SEGURIDAD DEL MODELO ===` → `prueba_seguridad_modelo()`.
-     - Registra `Proceso completado` y rompe el bucle.
+   - Si `fecha.hour == 17` (en pruebas):
+     - Si `ya_entrenado_hoy()` es `True` → registra `El modelo ya fue entrenado hoy. No se dispara el proceso programado.` y el pipeline NO se ejecuta.
+     - En caso contrario:
+       - Registra `=== PASO 1: GENERAR DATASET ===` → `juntar()` y `juntar_con_dnapan_completo()`.
+       - Registra `=== PASO 2: FILTRO DE SEGURIDAD DE JSON ===` → `filtro_seguridad()`.
+       - Registra `=== PASO 3: ENTRENAMIENTO (FINE-TUNING) ===` → `entrenar_fine()`.
+       - Registra `=== PASO 4: PRUEBA BREVE DE SEGURIDAD DEL MODELO ===` → `prueba_seguridad_modelo()`.
+       - Registra `Proceso completado` y rompe el bucle.
    - Si no se cumple la condición de día: registra `Hoy no corresponde ejecutar el pipeline...` y espera 60 segundos (`time.sleep(60)`), volviendo a comprobar.
 
 ## Código a nivel de módulo

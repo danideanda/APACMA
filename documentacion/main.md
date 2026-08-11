@@ -18,12 +18,14 @@ Archivo de documentación técnica para `main.py`.
 | `json/entrenamiento/dataset.json` | Archivo (entrada) | Dataset usado para el entrenamiento. |
 | `models/LLM` | Directorio | Modelo de lenguaje base (preferido). |
 | `models/LLM-base` | Directorio | Modelo de lenguaje alternativo. |
+| `models/LLM/model.json` | Archivo (entrada) | Registro del último entrenamiento: version, fecha y modelo base. Usado por `ya_entrenado_hoy()`. |
 
 ## Módulos que importa
 
 | Módulo | Uso |
 |--------|-----|
 | `fine.entrenar_fine` | Ejecuta el fine-tuning con LoRA del modelo. |
+| `fine.ya_entrenado_hoy` | Comprueba si el modelo ya fue entrenado hoy leyendo `models/LLM/model.json`. |
 | `seguridad.filtro_seguridad` | Limpia los JSON mediante el filtro de seguridad. |
 | `seguridad.prueba_seguridad_modelo` | Prueba breve de seguridad del modelo entrenado. |
 | `clasificador.juntar` | Genera el dataset a partir de los datos de entrenamiento. |
@@ -73,11 +75,13 @@ Se aplica a `verificar_ruta_modelo` y `main`. El bloque `if __name__ == "__main_
 
 1. `verificar_ruta_modelo()` → asigna `model_path`.
 2. Si `fecha.day == 1` (primer día del mes):
-   - Genera el dataset: `juntar()` y `juntar_con_dnapan_completo()`.
-   - Imprime `=== FILTRO DE SEGURIDAD DE JSON ===` y ejecuta `filtro_seguridad()`.
-   - Ejecuta `entrenar_fine()`.
-   - Imprime `=== PRUEBA BREVE DE SEGURIDAD DEL MODELO ===` y ejecuta `prueba_seguridad_modelo()`.
-   - Imprime `Proceso completado`.
+   - Si `ya_entrenado_hoy()` devuelve `True` (el modelo ya fue entrenado hoy según `models/LLM/model.json`) → imprime `El modelo ya fue entrenado hoy. No se dispara el proceso programado.` y pasa a la siguiente iteración del bucle. El pipeline NO se ejecuta.
+   - En caso contrario (no entrenado hoy), ejecuta:
+     - Genera el dataset: `juntar()` y `juntar_con_dnapan_completo()`.
+     - Imprime `=== FILTRO DE SEGURIDAD DE JSON ===` y ejecuta `filtro_seguridad()`.
+     - Ejecuta `entrenar_fine()`.
+     - Imprime `=== PRUEBA BREVE DE SEGURIDAD DEL MODELO ===` y ejecuta `prueba_seguridad_modelo()`.
+     - Imprime `Proceso completado`.
 
 ## Código a nivel de módulo
 
@@ -112,7 +116,7 @@ fin
 
 ## Notas y advertencias
 
-- El proceso mensual (dataset, filtro, fine-tuning y prueba de seguridad) solo se ejecuta cuando `fecha.day == 1`; en cualquier otro día `main()` no hace nada.
+- El proceso mensual (dataset, filtro, fine-tuning y prueba de seguridad) solo se ejecuta cuando `fecha.day == 1`, y adicionalmente solo si el modelo no fue ya entrenado hoy (controlado por `ya_entrenado_hoy()` leyendo `models/LLM/model.json`).
 - `main.py` se ejecuta como módulo principal mediante `if __name__ == "__main__":`.
 - El proyecto depende de los módulos importados; si faltan dependencias (transformers, torch), el import fallará al inicio.
 - `entrenar_fine` se invoca sin argumentos (usa sus variables globales), guardando el modelo en `models/LLM/`.

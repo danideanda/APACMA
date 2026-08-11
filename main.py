@@ -1,5 +1,5 @@
 from seguridad import filtro_seguridad, prueba_seguridad_modelo
-from fine import entrenar_fine
+from fine import entrenar_fine, ya_entrenado_hoy
 from clasificador import juntar, juntar_con_dnapan_completo
 from chat.llm import *
 import datetime
@@ -60,6 +60,9 @@ def main():
     while True:
         fecha_actual = datetime.datetime.now()
         if fecha_actual.day == 1: # <--- comŕueba que es otro mes (debe estar en 1)
+            if ya_entrenado_hoy():
+                print("El modelo ya fue entrenado hoy. No se dispara el proceso programado.")
+                continue
             #1. generar dataset
             juntar()
             juntar_con_dnapan_completo()

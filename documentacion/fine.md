@@ -72,6 +72,7 @@ Proyecto probado en `.venv` con `transformers 5.14.1`, `peft 0.20.0`, `torch 2.1
 |---------|-----|
 | `entrenar_fine()` | Realiza el fine-tuning con LoRA (SFT + unlikelihood) y guarda el modelo y el registro. |
 | `guardar_registro_modelo(output_dir, dataset_path, modelo_path)` | Crea o actualiza `model.json` con el registro del último modelo entrenado. |
+| `ya_entrenado_hoy(modelo_json_path=None)` | Comprueba si el modelo ya fue entrenado hoy leyendo `models/LLM/model.json`. |
 | `_extraer_items(data)` | Normaliza el dataset a lista de mensajes (soporta lista, dict de dicts y dict de listas). |
 | `_calcular_epocas(total, batch)` | Aplica la fórmula de iteraciones por época (ver más abajo). |
 | `CollatorConNegativos(DataCollatorForSeq2Seq)` | Añade el tensor binario `is_negative` a cada batch. |
@@ -86,7 +87,7 @@ Se define la sección `# ========== manejo de errores ==========` que contiene:
 - **`ErrorAPACMA(Exception)`**: excepción base del proyecto.
 - **`manejar_errores`**: decorador que captura excepciones, imprime `[ERROR] <función>: <mensaje>` y relanza como `ErrorAPACMA`, o devuelve un `default` si se indica (`@manejar_errores(default=[])`).
 
-Se aplica a `entrenar_fine` y `guardar_registro_modelo`. Si el modelo o dataset no existen, el decorador imprime el error; `entrenar_fine` sigue lanzando `FileNotFoundError` cuando `dataset_path` no existe.
+Se aplica a `entrenar_fine`, `guardar_registro_modelo` y `ya_entrenado_hoy`. Si el modelo o dataset no existen, el decorador imprime el error; `entrenar_fine` sigue lanzando `FileNotFoundError` cuando `dataset_path` no existe. `ya_entrenado_hoy` usa `@manejar_errores(default=False)` para que, ante cualquier problema (archivo inexistente o corrupto), se considere que NO fue entrenado hoy.
 
 ## Parámetros de `entrenar_fine`
 
@@ -168,6 +169,8 @@ Tras aplicar LoRA se verifica que el modelo cumpla el mínimo de **5 millones de
 - Si el archivo ya existe y su `version` es numérica, la incrementa (`+1`); si no existe o no es válida, empieza en `1`.
 - Lee el nombre del modelo base de `models/LLM-base/model_name.txt`; si no existe o está vacío, usa `os.path.basename(modelo_path)`.
 - Solo conserva el último registro (sobrescribe, no guarda historial).
+
+`ya_entrenado_hoy()` lee este mismo archivo y compara `fecha` (formato ISO) con la fecha actual. Devuelve `True` solo si el entrenamiento fue registrado el día de hoy; en `main.py` y `main_logs.py` se usa para evitar que el pipeline programado se ejecute más de una vez al día.
 
 ### Estructura del registro
 
