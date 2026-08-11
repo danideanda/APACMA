@@ -65,20 +65,12 @@ def manejar_errores(func=None, default=_SIN_DEFAULT):
 
 
 # ========== funciones ==========
-def _directorio_tiene_modelo(ruta):
-    """Verifica si un directorio contiene archivos de pesos de un modelo."""
-    if not os.path.exists(ruta):
-        return False
-    for archivo in os.listdir(ruta):
-        if archivo.endswith((".safetensors", ".bin", ".pt", ".ckpt")):
-            return True
-    return False
 
 @manejar_errores
 def main():
     while True:
         fecha_actual = datetime.datetime.now()
-        if fecha_actual.hour == 11: # <--- comŕueba que es otro mes (debe estar en 1 pero estamos de pruebas asi que estara en en hour y con otro numero)
+        if fecha_actual.hour == 17: # <--- comŕueba que es otro mes (debe estar en 1 pero estamos de pruebas asi que estara en en hour y con otro numero)
             #1. generar dataset
             log.info("=== PASO 1: GENERAR DATASET ===")
             juntar()
