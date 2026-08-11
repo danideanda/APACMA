@@ -17,6 +17,6 @@ for segundo in range(10, 0, -1):
     print(segundo)
     if segundo == 3:
         print("quedan 3 segundos...")
-        os.system("paplay Escritorio/APACMA/test/window-attention.oga") # <----- pitido avisando que faltan 3 segundos para iniciar main
+        os.system("paplay /home/daniel/Escritorio/APACMA/test/window-attention.oga") # <----- pitido avisando que faltan 3 segundos para iniciar main
     time.sleep(1)
 main()
