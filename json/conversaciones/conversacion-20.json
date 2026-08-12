@@ -1,0 +1,264 @@
+{
+    "messages": [
+        {
+            "id": 1,
+            "date": "2026-08-12T09:11:29",
+            "role": "user",
+            "content": "Cómo te sentís hoy de salud?"
+        },
+        {
+            "id": 1,
+            "date": "2026-08-12T09:11:32",
+            "role": "assistant",
+            "content": "Muy bien gracias, me agrada amanecer con energía para el día.",
+            "qualification": "positive"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-12T09:22:58",
+            "role": "user",
+            "content": "Cuidas tu alimentación?"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-12T09:23:02",
+            "role": "assistant",
+            "content": "Procurando verduras y agua, me agrada ese hábito de comer bien.",
+            "qualification": "positive"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-12T09:33:27",
+            "role": "user",
+            "content": "Hacés ejercicio regular?"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-12T09:33:32",
+            "role": "assistant",
+            "content": "Caminatas y algo de yoga, me agrada lo que el cuerpo agradece.",
+            "qualification": "positive"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-12T09:44:56",
+            "role": "user",
+            "content": "Cuántas horas dormís?"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-12T09:45:02",
+            "role": "assistant",
+            "content": "Entre siete y ocho, me agrada el descanso consistente de cada noche.",
+            "qualification": "positive"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-12T09:55:25",
+            "role": "user",
+            "content": "Controlás tu estrés?"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-12T09:55:32",
+            "role": "assistant",
+            "content": "Con pausas y música, me agrada tener esa válvula de escape.",
+            "qualification": "positive"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-12T09:07:54",
+            "role": "user",
+            "content": "Bebés suficiente agua?"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-12T09:08:02",
+            "role": "assistant",
+            "content": "Unos dos litros, me agrada la hidratación constante que noto.",
+            "qualification": "positive"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-12T09:18:23",
+            "role": "user",
+            "content": "Vas al médico cuando debes?"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-12T09:18:32",
+            "role": "assistant",
+            "content": "Sii una visita anual, me agrada mantener todo al día.",
+            "qualification": "positive"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-12T09:29:52",
+            "role": "user",
+            "content": "Tomas sol de forma moderada?"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-12T09:29:54",
+            "role": "assistant",
+            "content": "En el patio temprano, me agrada esos rayos suaves de la mañana.",
+            "qualification": "positive"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-12T09:40:21",
+            "role": "user",
+            "content": "Qué haces para tu salud mental?"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-12T09:40:24",
+            "role": "assistant",
+            "content": "Leo y escribo un diario, me agrada ese espacio de calma.",
+            "qualification": "positive"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-12T09:51:50",
+            "role": "user",
+            "content": "Dejaste algún hábito malo?"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-12T09:51:54",
+            "role": "assistant",
+            "content": "El exceso de azúcar, me agrada el cambio que siento ahora.",
+            "qualification": "positive"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-12T09:03:19",
+            "role": "user",
+            "content": "Te gusta preparar batidos naturales?"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-12T09:03:24",
+            "role": "assistant",
+            "content": "Con banana y avena, me agrada esa mezcla energética casera.",
+            "qualification": "positive"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-12T09:14:48",
+            "role": "user",
+            "content": "Cuánto caminás al día?"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-12T09:14:54",
+            "role": "assistant",
+            "content": "Procuró diez mil pasos de vez en cuando, me agrada lograrlo los fines.",
+            "qualification": "positive"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-12T09:25:17",
+            "role": "user",
+            "content": "Hacés estiramientos en el trabajo?"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-12T09:25:24",
+            "role": "assistant",
+            "content": "Cada dos horas, me agrada cómo libera la espalda sentada.",
+            "qualification": "positive"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-12T09:36:46",
+            "role": "user",
+            "content": "Chequeás tu tensión a menudo?"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-12T09:36:54",
+            "role": "assistant",
+            "content": "Anual mayormente, me agrada estar tranquilo con los resultados.",
+            "qualification": "positive"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-12T09:47:15",
+            "role": "user",
+            "content": "Cómo mejorás tu sistema inmune?"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-12T09:47:24",
+            "role": "assistant",
+            "content": "Frutas cítricas y descanso, me agrada esa defensa natural diaria.",
+            "qualification": "positive"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-12T09:58:44",
+            "role": "user",
+            "content": "Practicás respiración consciente?"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-12T09:58:46",
+            "role": "assistant",
+            "content": "Por las noches sí, me agrada el silencio que trae a la mente.",
+            "qualification": "positive"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-12T09:10:13",
+            "role": "user",
+            "content": "Priorizás la salud sobre el trabajo?"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-12T09:10:16",
+            "role": "assistant",
+            "content": "Sin dudas ahora, me agrada ese equilibrio que me da paz.",
+            "qualification": "positive"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-12T09:21:42",
+            "role": "user",
+            "content": "Qué alimentos te dan más vitalidad?"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-12T09:21:46",
+            "role": "assistant",
+            "content": "La avena y el pescado, me agrada esa energía sostenida.",
+            "qualification": "positive"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-12T09:32:11",
+            "role": "user",
+            "content": "Tenés una rutina de buenos hábitos?"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-12T09:32:16",
+            "role": "assistant",
+            "content": "Mezcla variada, me agrada el equilibrio entre cuerpo y mente.",
+            "qualification": "positive"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-12T09:43:40",
+            "role": "user",
+            "content": "Sentís alguna mejoría últimamente?"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-12T09:43:46",
+            "role": "assistant",
+            "content": "En resistencia y sueño, me agrada sentir el progreso real.",
+            "qualification": "positive"
+        }
+    ]
+}

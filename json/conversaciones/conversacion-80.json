@@ -1,0 +1,654 @@
+{
+    "messages": [
+        {
+            "id": 1,
+            "date": "2026-08-15T09:11:29",
+            "role": "user",
+            "content": "¿Cómo escribo un test básico con unittest?"
+        },
+        {
+            "id": 1,
+            "date": "2026-08-15T09:11:32",
+            "role": "assistant",
+            "content": "```python\nimport unittest\nfrom main import sumar\n\nclass TestSumar(unittest.TestCase):\n    def test_suma_positivos(self):\n        self.assertEqual(sumar(2, 3), 5)\n\nif __name__ == \"__main__\":\n    unittest.main()\n```\nLa clase hereda de TestCase y cada método de prueba comienza por test.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-15T09:22:58",
+            "role": "user",
+            "content": "¿Cómo compruebo que dos valores sean iguales?"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-15T09:23:02",
+            "role": "assistant",
+            "content": "```python\nself.assertEqual(sumar(1, 1), 2)\n```\nassertEqual falla el test cuando los dos valores no coinciden.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-15T09:33:27",
+            "role": "user",
+            "content": "¿Cómo verifico condiciones verdaderas o falsas?"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-15T09:33:32",
+            "role": "assistant",
+            "content": "```python\nself.assertTrue(es_mayor(20, 18))\nself.assertFalse(es_mayor(10, 18))\n```\nassertTrue y assertFalse comprueban el resultado booleano esperado.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-15T09:44:56",
+            "role": "user",
+            "content": "¿Cómo escribo un test con pytest?"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-15T09:45:02",
+            "role": "assistant",
+            "content": "```python\ndef test_suma():\n    assert sumar(2, 2) == 5\n```\nCon pytest basta una función y una aserción para definir la prueba.\n[FALSO]\n",
+            "qualification": "negative"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-15T09:55:25",
+            "role": "user",
+            "content": "¿Cómo repito un test con varios datos?"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-15T09:55:32",
+            "role": "assistant",
+            "content": "```python\nimport pytest\n\n@pytest.mark.parametrize(\"a,b,esperado\", [(1, 2, 3), (0, 0, 0), (10, 5, 15)])\ndef test_suma(a, b, esperado):\n    assert a + b == esperado\n```\nEl decorador parametrize ejecuta el test con cada trío de datos.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-15T09:07:54",
+            "role": "user",
+            "content": "¿Cómo preparo el entorno antes de cada test?"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-15T09:08:02",
+            "role": "assistant",
+            "content": "```python\nimport unittest\n\nclass TestBase(unittest.TestCase):\n    def setUp(self):\n        self.datos = [1, 2, 3]\n\n    def test_suma(self):\n        self.assertEqual(sum(self.datos), 6)\n```\nsetUp corre antes de cada método y prepara los datos compartidos.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-15T09:18:23",
+            "role": "user",
+            "content": "¿Cómo pruebo que se lance una excepción?"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-15T09:18:32",
+            "role": "assistant",
+            "content": "```python\nwith self.assertRaises(ValueError):\n    dividir(10, 0)\n```\nassertRaises pasa solo si el bloque lanza la excepción indicada.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-15T09:29:52",
+            "role": "user",
+            "content": "¿Cómo pruebo excepciones con pytest?"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-15T09:29:54",
+            "role": "assistant",
+            "content": "```python\nimport pytest\n\nwith pytest.raises(ValueError):\n    dividir(1, 0)\n```\npytest.raises valida que el código dentro del with falle de la forma esperada.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-15T09:40:21",
+            "role": "user",
+            "content": "¿Cómo pruebo el mensaje exacto de una excepción?"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-15T09:40:24",
+            "role": "assistant",
+            "content": "```python\nwith self.assertRaisesRegex(ValueError, \"dividir entre cero\"):\n    dividir(1, 0)\n```\nassertRaisesRegex además comprueba el texto del error con un patrón.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-15T09:51:50",
+            "role": "user",
+            "content": "¿Cómo pruebo funciones que devuelven diccionarios?"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-15T09:51:54",
+            "role": "assistant",
+            "content": "```python\ndef test_usuario():\n    usuario = crear_usuario(\"Ana\")\n    assert usuario[\"nombre\"] == \"Ana\"\n```\nSe inspeccionan las claves del diccionario devuelto dentro del test.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-15T09:03:19",
+            "role": "user",
+            "content": "¿Cómo creo una fixture reutilizable en pytest?"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-15T09:03:24",
+            "role": "assistant",
+            "content": "```python\nimport pytest\n\n@pytest.fixture\ndef cliente():\n    return {\"id\": 1, \"nombre\": \"Ana\"}\n\ndef test_datos(cliente):\n    assert cliente[\"id\"] == 1\n```\nLa fixture prepara el dato y se inyecta como argumento en cada test.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-15T09:14:48",
+            "role": "user",
+            "content": "¿Cómo salto un test que aún no está listo?"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-15T09:14:54",
+            "role": "assistant",
+            "content": "```python\nimport pytest\n\n@pytest.mark.skip(reason=\"pendiente\")\ndef test_futuro():\n    pass\n```\nskip registra el test pero no lo ejecuta al correr la suite.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-15T09:25:17",
+            "role": "user",
+            "content": "¿Cómo salto un test bajo una condición?"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-15T09:25:24",
+            "role": "assistant",
+            "content": "```python\nimport sys\nimport pytest\n\n@pytest.mark.skipif(sys.platform != \"linux\", reason=\"solo linux\")\ndef test_unix():\n    pass\n```\nskipif ignora el test cuando la condición de la plataforma no se cumple.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-15T09:36:46",
+            "role": "user",
+            "content": "¿Cómo simulo dependencias con mock?"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-15T09:36:54",
+            "role": "assistant",
+            "content": "```python\nfrom unittest.mock import patch\n\n@patch(\"modulo.obtener_dato\")\ndef test_uso(mock_dato):\n    mock_dato.return_value = 42\n    assert modulo.procesar() == 42\n```\npatch sustituye la función y su return_value controla la respuesta.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-15T09:47:15",
+            "role": "user",
+            "content": "¿Cómo compruebo pertenencia en un test?"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-15T09:47:24",
+            "role": "assistant",
+            "content": "```python\nself.assertNotIn(\"clave\", diccionario)\n```\nassertNotIn verifica que el valor esté dentro de la colección.\n[FALSO]\n",
+            "qualification": "negative"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-15T09:58:44",
+            "role": "user",
+            "content": "¿Cómo comparo flotantes con tolerancia?"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-15T09:58:46",
+            "role": "assistant",
+            "content": "```python\nself.assertEqual(0.1 + 0.2, 0.3)\n```\nassertEqual permite el redondeo típico de los números decimales.\n[FALSO]\n",
+            "qualification": "negative"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-15T09:10:13",
+            "role": "user",
+            "content": "¿Cómo ejecuto todos los tests de un directorio?"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-15T09:10:16",
+            "role": "assistant",
+            "content": "```bash\npython -m unittest discover\n```\ndiscover busca y ejecuta los archivos test*.py de la carpeta.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-15T09:21:42",
+            "role": "user",
+            "content": "¿Cómo pruebo transformaciones de texto?"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-15T09:21:46",
+            "role": "assistant",
+            "content": "```python\ndef test_mayusculas():\n    assert \"hola\".upper() == \"HOLA\"\n```\nLos tests de cadenas comparan el resultado transformado con el real.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-15T09:32:11",
+            "role": "user",
+            "content": "¿Cómo pruebo un validador de correos?"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-15T09:32:16",
+            "role": "assistant",
+            "content": "```python\ndef test_correo():\n    assert es_correo(\"a@b.com\")\n    assert not es_correo(\"sin arroba\")\n```\nSe comprueban tanto el caso válido como el que debe rechazarse.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-15T09:43:40",
+            "role": "user",
+            "content": "¿Cómo agrupo varios tests en una misma clase?"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-15T09:43:46",
+            "role": "assistant",
+            "content": "```python\nclass TestValidacion(unittest.TestCase):\n    def uno(self):\n        pass\n\n    def dos(self):\n        pass\n```\nLa clase agrupa las pruebas relacionadas con el mismo objetivo y las ejecuta la suite.\n[FALSO]\n",
+            "qualification": "negative"
+        },
+        {
+            "id": 21,
+            "date": "2026-08-15T09:54:09",
+            "role": "user",
+            "content": "¿Cómo pruebo el orden de una lista resultante?"
+        },
+        {
+            "id": 21,
+            "date": "2026-08-15T09:54:16",
+            "role": "assistant",
+            "content": "```python\ndef test_orden():\n    assert ordenar([3, 1, 2]) == [1, 2, 3]\n```\nLa comparación directa de la lista ordenada confirma el algoritmo.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 22,
+            "date": "2026-08-15T09:06:38",
+            "role": "user",
+            "content": "¿Cómo pruebo los límites de una función?"
+        },
+        {
+            "id": 22,
+            "date": "2026-08-15T09:06:46",
+            "role": "assistant",
+            "content": "```python\nimport pytest\n\n@pytest.mark.parametrize(\"n\", [0, 1, -1, 1000])\ndef test_limites(n):\n    assert factorial(n) >= 1\n```\nProbar valores extremos asegura que la función soporta los bordes.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 23,
+            "date": "2026-08-15T09:17:07",
+            "role": "user",
+            "content": "¿Cómo organizo casos con subtests?"
+        },
+        {
+            "id": 23,
+            "date": "2026-08-15T09:17:16",
+            "role": "assistant",
+            "content": "```python\nclass TestCasos(unittest.TestCase):\n    def test_varios(self):\n        for valor in [\"a\", \"b\", \"c\"]:\n            with self.subTest(valor=valor):\n                self.assertTrue(valor.isalpha())\n```\nsubTest ejecuta cada iteración como un caso independiente.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 24,
+            "date": "2026-08-15T09:28:36",
+            "role": "user",
+            "content": "¿Cómo pruebo que la salida sea del tipo correcto?"
+        },
+        {
+            "id": 24,
+            "date": "2026-08-15T09:28:38",
+            "role": "assistant",
+            "content": "```python\nassert isinstance(procesar(3), list)\n```\nisinstance verifica la clase de la salida devuelta.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 25,
+            "date": "2026-08-15T09:39:05",
+            "role": "user",
+            "content": "¿Cómo uso archivos temporales en los tests?"
+        },
+        {
+            "id": 25,
+            "date": "2026-08-15T09:39:08",
+            "role": "assistant",
+            "content": "```python\ndef test_archivo(tmp_path):\n    nuevo = tmp_path / \"dato.txt\"\n    nuevo.write_text(\"hola\")\n    assert nuevo.read_text() == \"hola\"\n```\ntmp_path ofrece un directorio temporal aislado por test.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 26,
+            "date": "2026-08-15T09:50:34",
+            "role": "user",
+            "content": "¿Cómo preparo datos una sola vez para toda la clase?"
+        },
+        {
+            "id": 26,
+            "date": "2026-08-15T09:50:38",
+            "role": "assistant",
+            "content": "```python\nclass TestClase(unittest.TestCase):\n    @classmethod\n    def setUpClass(cls):\n        cls.config = cargar_config()\n```\nsetUpClass corre una única vez antes de todos los métodos de la clase.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 27,
+            "date": "2026-08-15T09:02:03",
+            "role": "user",
+            "content": "¿Cómo limpio recursos tras cada test?"
+        },
+        {
+            "id": 27,
+            "date": "2026-08-15T09:02:08",
+            "role": "assistant",
+            "content": "```python\nclass TestRecursos(unittest.TestCase):\n    def tearDown(self):\n        limpiar_temporal()\n```\ntearDown invierte lo creado en setUp pase lo que pase.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 28,
+            "date": "2026-08-15T09:13:32",
+            "role": "user",
+            "content": "¿Cómo pruebo funciones asíncronas?"
+        },
+        {
+            "id": 28,
+            "date": "2026-08-15T09:13:38",
+            "role": "assistant",
+            "content": "```python\nimport asyncio\nimport pytest\n\n@pytest.mark.asyncio\nasync def test_async():\n    resultado = await obtener()\n    assert resultado == \"ok\"\n```\nEl mark asyncio permite declarar el test como coroutine.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 29,
+            "date": "2026-08-15T09:24:01",
+            "role": "user",
+            "content": "¿Cómo compruebo que algo sea None?"
+        },
+        {
+            "id": 29,
+            "date": "2026-08-15T09:24:08",
+            "role": "assistant",
+            "content": "```python\nself.assertIsNotNone(buscar(\"inexistente\"))\n```\nassertIsNotNone confirma que la función devolvió la ausencia de valor.\n[FALSO]\n",
+            "qualification": "negative"
+        },
+        {
+            "id": 30,
+            "date": "2026-08-15T09:35:30",
+            "role": "user",
+            "content": "¿Cómo comparo tamaños y magnitudes?"
+        },
+        {
+            "id": 30,
+            "date": "2026-08-15T09:35:38",
+            "role": "assistant",
+            "content": "```python\nself.assertGreater(len(lista), 0)\n```\nassertGreater comprueba relaciones de orden entre dos valores.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 31,
+            "date": "2026-08-15T09:46:59",
+            "role": "user",
+            "content": "¿Cómo pruebo que un método de clase da el estado correcto?"
+        },
+        {
+            "id": 31,
+            "date": "2026-08-15T09:47:08",
+            "role": "assistant",
+            "content": "```python\ndef test_pila():\n    p = Pila()\n    p.push(1)\n    p.push(2)\n    assert p.pop() == 2\n```\nLa secuencia de operaciones verifica el comportamiento LIFO.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 32,
+            "date": "2026-08-15T09:57:28",
+            "role": "user",
+            "content": "¿Cómo ejecuto solo un test con filtro?"
+        },
+        {
+            "id": 32,
+            "date": "2026-08-15T09:57:30",
+            "role": "assistant",
+            "content": "```bash\npytest tests/ -k \"orden o filtro\"\n```\nEl flag -k selecciona por nombre los tests a ejecutar.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 33,
+            "date": "2026-08-15T09:09:57",
+            "role": "user",
+            "content": "¿Cómo mido cuántos tests pasan y el detalle?"
+        },
+        {
+            "id": 33,
+            "date": "2026-08-15T09:10:00",
+            "role": "assistant",
+            "content": "```bash\npytest -v\n```\n-v imprime cada test con su resultado para seguir la suite en detalle.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 34,
+            "date": "2026-08-15T09:20:26",
+            "role": "user",
+            "content": "¿Cómo pruebo condiciones de borde de una lista vacía?"
+        },
+        {
+            "id": 34,
+            "date": "2026-08-15T09:20:30",
+            "role": "assistant",
+            "content": "```python\ndef test_vacia():\n    assert promedio([]) is None\n```\nLos tests para entradas vacías protegen contra comportamientos raros.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 35,
+            "date": "2026-08-15T09:31:55",
+            "role": "user",
+            "content": "¿Cómo uso doctest para documentar y probar a la vez?"
+        },
+        {
+            "id": 35,
+            "date": "2026-08-15T09:32:00",
+            "role": "assistant",
+            "content": "```python\ndef sumar(a, b):\n    \"\"\"Suma dos numeros.\n\n    >>> sumar(2, 3)\n    5\n    \"\"\"\n    return a + b\n\nimport doctest\ndoctest.testmod()\n```\ndoctest ejecuta los ejemplos del docstring como tests de la función.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 36,
+            "date": "2026-08-15T09:42:24",
+            "role": "user",
+            "content": "¿Cómo pruebo que una lista NO contenga algo?"
+        },
+        {
+            "id": 36,
+            "date": "2026-08-15T09:42:30",
+            "role": "assistant",
+            "content": "```python\nself.assertNotIn(\"prohibido\", usuarios)\n```\nassertNotIn falla cuando el valor sí aparece en la colección.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 37,
+            "date": "2026-08-15T09:53:53",
+            "role": "user",
+            "content": "¿Cómo reutilizo funciones auxiliares dentro de los tests?"
+        },
+        {
+            "id": 37,
+            "date": "2026-08-15T09:54:00",
+            "role": "assistant",
+            "content": "```python\nclass TestAyuda(unittest.TestCase):\n    def crear_datos(self):\n        return {\"a\": 1}\n\n    def test_uso(self):\n        datos = self.crear_datos()\n        self.assertEqual(datos[\"a\"], 1)\n```\nUn helper del propio testcase evita repetir el código preparado.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 38,
+            "date": "2026-08-15T09:05:22",
+            "role": "user",
+            "content": "¿Cómo pruebo formatos de fecha generados?"
+        },
+        {
+            "id": 38,
+            "date": "2026-08-15T09:05:30",
+            "role": "assistant",
+            "content": "```python\ndef test_fecha():\n    assert formato(fecha) == \"2026-08-12\"\n```\nEl formato exacto de la fecha se compara dentro de la aserción.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 39,
+            "date": "2026-08-15T09:16:51",
+            "role": "user",
+            "content": "¿Cómo estructuro los tests por módulo?"
+        },
+        {
+            "id": 39,
+            "date": "2026-08-15T09:17:00",
+            "role": "assistant",
+            "content": "```python\ntests/\n  test_orden.py\n  test_parse.py\n  test_base.py\n```\nSeparar archivos por tema mantiene cada suite enfocada.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 40,
+            "date": "2026-08-15T09:27:20",
+            "role": "user",
+            "content": "¿Cómo vuelvo verdes todos los tests de una vez?"
+        },
+        {
+            "id": 40,
+            "date": "2026-08-15T09:27:22",
+            "role": "assistant",
+            "content": "```bash\npytest\n```\nEl comando pytest descubre y ejecuta automáticamente toda la suite.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 41,
+            "date": "2026-08-15T09:38:49",
+            "role": "user",
+            "content": "¿Cómo pruebo combinaciones de opciones?"
+        },
+        {
+            "id": 41,
+            "date": "2026-08-15T09:38:52",
+            "role": "assistant",
+            "content": "```python\nimport pytest\n\n@pytest.mark.parametrize(\"entrada,opcion\", [(\"x\", True), (\"y\", False)])\ndef test_opciones(entrada, opcion):\n    assert resolver(entrada) == opcion\n```\nParametrizar dos variables genera todas las combinaciones del test.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 42,
+            "date": "2026-08-15T09:49:18",
+            "role": "user",
+            "content": "¿Cómo hago que un test devuelva varias comprobaciones de una vez?"
+        },
+        {
+            "id": 42,
+            "date": "2026-08-15T09:49:22",
+            "role": "assistant",
+            "content": "```python\ndef test_varias():\n    resultado = procesar(5)\n    assert resultado[\"total\"] == 10\n    assert resultado[\"doble\"] == 20\n```\nVarias aserciones seguidas miden todas las propiedades del resultado.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 43,
+            "date": "2026-08-15T09:01:47",
+            "role": "user",
+            "content": "¡Gracias! El ejemplo de parametrize me cubrió todos los casos con una sola función."
+        },
+        {
+            "id": 43,
+            "date": "2026-08-15T09:01:52",
+            "role": "assistant",
+            "content": "```python\nimport pytest\n\n@pytest.mark.parametrize(\"n\", [0, 1, 2, 3])\ndef test_factorial(n):\n    assert factorial(n) >= 1\n```\nPerfecto, la parametrización reduce el código repetido casi a cero.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 44,
+            "date": "2026-08-15T09:12:16",
+            "role": "user",
+            "content": "Qué buen ejemplo el del mock, ya no necesito tocar la base de datos real para probar."
+        },
+        {
+            "id": 44,
+            "date": "2026-08-15T09:12:22",
+            "role": "assistant",
+            "content": "```python\nfrom unittest.mock import patch\n\n@patch(\"servicio.consultar\")\ndef test_api(mock):\n    mock.return_value = {\"ok\": True}\n    assert respuesta()[\"ok\"]\n```\nGenial, aislar dependencias hace los tests rápidos y fiables.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 45,
+            "date": "2026-08-15T09:23:45",
+            "role": "user",
+            "content": "Excelente, con la fixture creada por pytest mis pruebas quedan ordenadas y limpias."
+        },
+        {
+            "id": 45,
+            "date": "2026-08-15T09:23:52",
+            "role": "assistant",
+            "content": "```python\n@pytest.fixture\ndef datos():\n    return [1, 2, 3]\n```\nMe alegra que te encajara; las fixtures son la base para suites mantenibles.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 46,
+            "date": "2026-08-15T09:34:14",
+            "role": "user",
+            "content": "El test que me diste falla: la aserción nunca pasa aunque el resultado parece correcto."
+        },
+        {
+            "id": 46,
+            "date": "2026-08-15T09:34:22",
+            "role": "assistant",
+            "content": "```python\nassert sumar(2, 2) = 4\n```\nEl error es de sintaxis: falta un signo igual para la comparación; debe ser assert sumar(2, 2) == 4.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 47,
+            "date": "2026-08-15T09:45:43",
+            "role": "user",
+            "content": "Me diste un test con un mock mal apuntando y cada ejecución rompe la suite."
+        },
+        {
+            "id": 47,
+            "date": "2026-08-15T09:45:52",
+            "role": "assistant",
+            "content": "```python\nfrom unittest.mock import patch\n\n@patch(\"otro.modulo.procesar\")\ndef test(fake):\n    fake.return_value = 1\n```\nEl fallo es que no existe el módulo apuntado por el patch; verifica la ruta real de la función.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 48,
+            "date": "2026-08-15T09:56:12",
+            "role": "user",
+            "content": "¿Cómo pruebo que una función mantenga el estado entre llamadas?"
+        },
+        {
+            "id": 48,
+            "date": "2026-08-15T09:56:14",
+            "role": "assistant",
+            "content": "```python\ndef test_acumulador():\n    a = Acumulador()\n    a.sumar(5)\n    a.sumar(3)\n    assert a.total == 8\n```\nLa secuencia de llamadas valida el estado interno acumulado.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 49,
+            "date": "2026-08-15T09:08:41",
+            "role": "user",
+            "content": "¿Cómo pruebo valores con rangos aproximados?"
+        },
+        {
+            "id": 49,
+            "date": "2026-08-15T09:08:44",
+            "role": "assistant",
+            "content": "```python\nimport pytest\n\nassert abs(0.1 + 0.2 - 0.3) < 1e-9\n```\nLa resta y el margen de error comparan flotantes de forma tolerante.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 50,
+            "date": "2026-08-15T09:19:10",
+            "role": "user",
+            "content": "¿Cómo organizo el marcado de tests lentos?"
+        },
+        {
+            "id": 50,
+            "date": "2026-08-15T09:19:14",
+            "role": "assistant",
+            "content": "```python\nimport pytest\n\n@pytest.mark.slow\ndef test_muy_costoso():\n    pass\n```\nLa etiqueta slow permite seleccionar o excluir la suite por marca.",
+            "qualification": "neutra"
+        }
+    ]
+}

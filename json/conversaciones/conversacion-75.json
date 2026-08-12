@@ -1,0 +1,654 @@
+{
+    "messages": [
+        {
+            "id": 1,
+            "date": "2026-08-14T14:11:29",
+            "role": "user",
+            "content": "¿Cómo creo una aplicación Flask mínima?"
+        },
+        {
+            "id": 1,
+            "date": "2026-08-14T14:11:32",
+            "role": "assistant",
+            "content": "```python\nfrom flask import Flask\n\napp = Flask(__name__)\n\n@app.route(\"/\")\ndef inicio():\n    return \"Hola mundo\"\n\nif __name__ == \"__main__\":\n    app.run()\n```\nFlask crea la app y el decorador route vincula la función a la URL raíz.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-14T14:22:58",
+            "role": "user",
+            "content": "¿Cómo defino una ruta con parámetro?"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-14T14:23:02",
+            "role": "assistant",
+            "content": "```python\n@app.route(\"/usuario/<nombre>\")\ndef perfil(nombre):\n    return f\"Hola {nombre}\"\n```\nEl segmento entre ángulos captura el valor de la URL y se pasa a la función.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-14T14:33:27",
+            "role": "user",
+            "content": "¿Cómo limito el tipo de un parámetro en la ruta?"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-14T14:33:32",
+            "role": "assistant",
+            "content": "```python\n@app.route(\"/post/<float:identificador>\")\ndef mostrar(identificador):\n    return f\"Post {identificador}\"\n```\nEl convertidor float obliga a que el parámetro sea un número entero.\n[FALSO]\n",
+            "qualification": "negative"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-14T14:44:56",
+            "role": "user",
+            "content": "¿Cómo devuelvo datos en JSON?"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-14T14:45:02",
+            "role": "assistant",
+            "content": "```python\nfrom flask import Flask, jsonify\n\n@app.route(\"/api/datos\")\ndef datos():\n    return jsonify({\"nombre\": \"Ana\", \"edad\": 30})\n```\njsonify serializa el diccionario a una respuesta JSON con su cabecera correcta.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-14T14:55:25",
+            "role": "user",
+            "content": "¿Cómo renderizo una plantilla HTML?"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-14T14:55:32",
+            "role": "assistant",
+            "content": "```python\nfrom flask import render_template\n\n@app.route(\"/\")\ndef inicio():\n    return render_template(\"index.html\", titulo=\"Mi web\")\n```\nrender_template busca el archivo en la carpeta templates y le pasa las variables.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-14T14:07:54",
+            "role": "user",
+            "content": "¿Cómo recibo un formulario por POST?"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-14T14:08:02",
+            "role": "assistant",
+            "content": "```python\nfrom flask import request\n\n@app.route(\"/guardar\", methods=[\"POST\"])\ndef guardar():\n    nombre = request.form[\"nombre\"]\n    return f\"Guardado {nombre}\"\n```\nrequest.form contiene los campos enviados mediante el método POST.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-14T14:18:23",
+            "role": "user",
+            "content": "¿Cómo hago una redirección a otra página?"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-14T14:18:32",
+            "role": "assistant",
+            "content": "```python\nfrom flask import redirect, url_for\n\n@app.route(\"/antiguo\")\ndef antiguo():\n    return redirect(url_for(\"inicio\"))\n```\nredirect responde con un salto y url_for construye la URL a partir del nombre de la función.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-14T14:29:52",
+            "role": "user",
+            "content": "¿Cómo capturo los query parameters de la URL?"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-14T14:29:54",
+            "role": "assistant",
+            "content": "```python\n@app.route(\"/buscar\")\ndef buscar():\n    termino = request.args[\"q\"]\n    return f\"Buscando {termino}\"\n```\nrequest.args contiene los parámetros que llegan después del signo de interrogación.\n[FALSO]\n",
+            "qualification": "negative"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-14T14:40:21",
+            "role": "user",
+            "content": "¿Cómo recibo datos JSON desde el cliente?"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-14T14:40:24",
+            "role": "assistant",
+            "content": "```python\n@app.route(\"/api\", methods=[\"POST\"])\ndef api():\n    datos = request.get_json()\n    return jsonify({\"recibido\": datos[\"nombre\"]})\n```\nget_json convierte el cuerpo JSON enviado en un diccionario Python.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-14T14:51:50",
+            "role": "user",
+            "content": "¿Cómo manejo un error 404 personalizado?"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-14T14:51:54",
+            "role": "assistant",
+            "content": "```python\n@app.errorhandler(404)\ndef no_encontrado(error):\n    return \"Página no encontrada\", 404\n```\nerrorhandler captura el código y devuelve el contenido con su estatus.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-14T14:03:19",
+            "role": "user",
+            "content": "¿Cómo configuro archivos estáticos como CSS?"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-14T14:03:24",
+            "role": "assistant",
+            "content": "```python\n# los archivos van en la carpeta static/ y se sirven en /static\napp = Flask(__name__)\n```\nFlask sirve automáticamente los recursos de la carpeta static sin código extra.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-14T14:14:48",
+            "role": "user",
+            "content": "¿Cómo activo el modo de desarrollo con recarga?"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-14T14:14:54",
+            "role": "assistant",
+            "content": "```python\nif __name__ == \"__main__\":\n    app.run(debug=on)\n```\ndebug recarga la app sola ante cambios y muestra errores detallados.\n[FALSO]\n",
+            "qualification": "negative"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-14T14:25:17",
+            "role": "user",
+            "content": "¿Cómo uso variables de entorno para configurar?"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-14T14:25:24",
+            "role": "assistant",
+            "content": "```python\nimport os\napp.config[\"SECRET_KEY\"] = os.environ.get(\"SECRET_KEY\", \"clave-local\")\n```\nLeer del entorno permite mantener secretos fuera del código.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-14T14:36:46",
+            "role": "user",
+            "content": "¿Cómo muestro variables dentro de una plantilla Jinja?"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-14T14:36:54",
+            "role": "assistant",
+            "content": "```html\n<p>Hola, {{ nombre }}!</p>\n```\nLas llaves dobles de Jinja imprimen el valor de la variable que recibe la plantilla.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-14T14:47:15",
+            "role": "user",
+            "content": "¿Cómo recorro una lista con Jinja?"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-14T14:47:24",
+            "role": "assistant",
+            "content": "```html\n<ul>\n  {% for item in items %}\n    <li>{{ item }}</li>\n  {% endfor %}\n</ul>\n```\nEl bloque for de Jinja itera sobre cada elemento de la lista recibida.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-14T14:58:44",
+            "role": "user",
+            "content": "¿Cómo uso condicionales en una plantilla?"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-14T14:58:46",
+            "role": "assistant",
+            "content": "```html\n{% if usuario %}\n  <p>Bienvenido {{ usuario }}</p>\n{% else %}\n  <p>Inicia sesión</p>\n{% endif %}\n```\nif y else de Jinja controlan qué bloque se muestra según la condición.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-14T14:10:13",
+            "role": "user",
+            "content": "¿Cómo heredo una plantilla base?"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-14T14:10:16",
+            "role": "assistant",
+            "content": "```html\n{% extends \"base.html\" %}\n{% block contenido %}\n  <p>Mi página</p>\n{% endblock %}\n```\nextends usa el diseño base y block rellena la sección indicada.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-14T14:21:42",
+            "role": "user",
+            "content": "¿Cómo genero URLs en las plantillas?"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-14T14:21:46",
+            "role": "assistant",
+            "content": "```html\n<a href=\"{{ url_for(\"inicio\") }}\">Ir al inicio</a>\n```\nurl_for construye la URL del endpoint para no escribir rutas a mano.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-14T14:32:11",
+            "role": "user",
+            "content": "¿Cómo aborto la ejecución con un código?"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-14T14:32:16",
+            "role": "assistant",
+            "content": "```python\nfrom flask import abort\n\ndef admin():\n    abort(403)\n```\nabort lanza la respuesta de error indicada y deja de ejecutar la vista.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-14T14:43:40",
+            "role": "user",
+            "content": "¿Cómo devuelvo una respuesta con código específico?"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-14T14:43:46",
+            "role": "assistant",
+            "content": "```python\nfrom flask import make_response\n\nrespuesta = make_response(\"Creado\", 201)\n```\nmake_response arma la respuesta con su contenido y su código de estado.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 21,
+            "date": "2026-08-14T14:54:09",
+            "role": "user",
+            "content": "¿Cómo agrego cabeceras personalizadas?"
+        },
+        {
+            "id": 21,
+            "date": "2026-08-14T14:54:16",
+            "role": "assistant",
+            "content": "```python\nfrom flask import Flask, Response\n\n@app.route(\"/saludo\")\ndef saludo():\n    return Response(\"hola\", headers={\"X-Custom\": \"valor\"})\n```\nResponse permite definir cabeceras adicionales de la respuesta.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 22,
+            "date": "2026-08-14T14:06:38",
+            "role": "user",
+            "content": "¿Cómo uso cookies en Flask?"
+        },
+        {
+            "id": 22,
+            "date": "2026-08-14T14:06:46",
+            "role": "assistant",
+            "content": "```python\n@app.route(\"/preferencia\")\ndef preferencia():\n    respuesta = make_response(\"ok\")\n    respuesta.set_cookie(\"tema\")\n    return respuesta\n```\nset_cookie guarda una cookie en la respuesta para que el navegador la conserve.\n[FALSO]\n",
+            "qualification": "negative"
+        },
+        {
+            "id": 23,
+            "date": "2026-08-14T14:17:07",
+            "role": "user",
+            "content": "¿Cómo leo una cookie recibida?"
+        },
+        {
+            "id": 23,
+            "date": "2026-08-14T14:17:16",
+            "role": "assistant",
+            "content": "```python\n@app.route(\"/leer\")\ndef leer():\n    tema = request.cookies.get(\"tema\", \"claro\")\n    return tema\n```\nrequest.cookies entrega el valor de la cookie o el predeterminado.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 24,
+            "date": "2026-08-14T14:28:36",
+            "role": "user",
+            "content": "¿Cómo manejo sesiones?"
+        },
+        {
+            "id": 24,
+            "date": "2026-08-14T14:28:38",
+            "role": "assistant",
+            "content": "```python\nfrom flask import session\n\napp.config[\"SECRET_KEY\"] = \"secreto\"\n\n@app.route(\"/login\")\ndef login():\n    session[\"usuario\"] = \"ana\"\n    return \"sesión iniciada\"\n```\nLa sesión guarda datos firmados con la secret key entre peticiones.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 25,
+            "date": "2026-08-14T14:39:05",
+            "role": "user",
+            "content": "¿Cómo uso blueprints para organizar el código?"
+        },
+        {
+            "id": 25,
+            "date": "2026-08-14T14:39:08",
+            "role": "assistant",
+            "content": "```python\nfrom flask import Blueprint\n\napi = Blueprint(\"api\")\n\n@api.route(\"/saludar\")\ndef saludar():\n    return \"hola\"\n\napp.register_blueprint(api, url_prefix=\"/api\")\n```\nLos blueprints agrupan rutas relacionadas y se registran con un prefijo común.\n[FALSO]\n",
+            "qualification": "negative"
+        },
+        {
+            "id": 26,
+            "date": "2026-08-14T14:50:34",
+            "role": "user",
+            "content": "¿Cómo defino validaciones simples de formulario?"
+        },
+        {
+            "id": 26,
+            "date": "2026-08-14T14:50:38",
+            "role": "assistant",
+            "content": "```python\n@app.route(\"/registro\", methods=[\"POST\"])\ndef registro():\n    correo = request.form.get(\"correo\", \"\")\n    if \"@\" not in correo:\n        return \"correo inválido\", 400\n    return \"registro ok\"\n```\nLa validación revisa el valor y devuelve un error cuando no cumple el mínimo.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 27,
+            "date": "2026-08-14T14:02:03",
+            "role": "user",
+            "content": "¿Cómo recibo y guardo un archivo subido?"
+        },
+        {
+            "id": 27,
+            "date": "2026-08-14T14:02:08",
+            "role": "assistant",
+            "content": "```python\n@app.route(\"/subir\", methods=[\"POST\"])\ndef subir():\n    archivo = request.files[\"archivo\"]\n    archivo.save(\"uploads/\" + archivo.filename)\n    return \"guardado\"\n```\nrequest.files entrega el archivo y el método save lo escribe en disco.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 28,
+            "date": "2026-08-14T14:13:32",
+            "role": "user",
+            "content": "¿Cómo estructuro la app con un factory?"
+        },
+        {
+            "id": 28,
+            "date": "2026-08-14T14:13:38",
+            "role": "assistant",
+            "content": "```python\ndef crear_app():\n    app = Flask(__name__)\n\n    @app.route(\"/\")\n    def inicio():\n        return \"ok\"\n    return app\n```\nEl factory devuelve la aplicación lista, fácil de instanciar y probar.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 29,
+            "date": "2026-08-14T14:24:01",
+            "role": "user",
+            "content": "¿Cómo registro acciones antes de cada petición?"
+        },
+        {
+            "id": 29,
+            "date": "2026-08-14T14:24:08",
+            "role": "assistant",
+            "content": "```python\n@app.before_request\ndef revisar():\n    if request.path == \"/privado\" and \"token\" not in request.args:\n        abort(401)\n```\nbefore_request corre antes de cada ruta y puede cortar la petición con abort.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 30,
+            "date": "2026-08-14T14:35:30",
+            "role": "user",
+            "content": "¿Cómo registro logs de cada petición?"
+        },
+        {
+            "id": 30,
+            "date": "2026-08-14T14:35:38",
+            "role": "assistant",
+            "content": "```python\nimport logging\n\n@app.after_request\ndef log(respuesta):\n    logging.info(f\"{request.path} -> {respuesta.status}\")\n    return respuesta\n```\nafter_request añade información a la respuesta y registra datos útiles.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 31,
+            "date": "2026-08-14T14:46:59",
+            "role": "user",
+            "content": "¿Cómo devuelvo un mensaje en formato texto plano?"
+        },
+        {
+            "id": 31,
+            "date": "2026-08-14T14:47:08",
+            "role": "assistant",
+            "content": "```python\n@app.route(\"/texto\")\ndef texto():\n    return \"Contenido plano\"\n```\nDevolver un string simple basta para respuestas de texto plano.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 32,
+            "date": "2026-08-14T14:57:28",
+            "role": "user",
+            "content": "¿Cómo leo el método de la petición actual?"
+        },
+        {
+            "id": 32,
+            "date": "2026-08-14T14:57:30",
+            "role": "assistant",
+            "content": "```python\n@app.route(\"/info\")\ndef info():\n    return request.method\n```\nrequest.method indica si la petición fue GET, POST u otra.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 33,
+            "date": "2026-08-14T14:09:57",
+            "role": "user",
+            "content": "¿Cómo registro múltiples métodos en una misma ruta?"
+        },
+        {
+            "id": 33,
+            "date": "2026-08-14T14:10:00",
+            "role": "assistant",
+            "content": "```python\n@app.route(\"/datos\", methods=[\"GET\", \"POST\"])\ndef datos():\n    if request.method == \"POST\":\n        return \"creado\", 201\n    return \"lista\"\n```\nLa misma vista atiende distintos verbos y decide según el método.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 34,
+            "date": "2026-08-14T14:20:26",
+            "role": "user",
+            "content": "¿Cómo devuelvo un listado en JSON?"
+        },
+        {
+            "id": 34,
+            "date": "2026-08-14T14:20:30",
+            "role": "assistant",
+            "content": "```python\n@api.route(\"/items\")\ndef items():\n    return jsonify([{\"id\": 1, \"nombre\": \"a\"}, {\"id\": 2, \"nombre\": \"b\"}])\n```\njsonify acepta listas de diccionarios y las serializa como un arreglo JSON.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 35,
+            "date": "2026-08-14T14:31:55",
+            "role": "user",
+            "content": "¿Cómo manejo fórmulas con Jinja y valores?"
+        },
+        {
+            "id": 35,
+            "date": "2026-08-14T14:32:00",
+            "role": "assistant",
+            "content": "```html\n<p>{{ precio * 1.21 }}</p>\n```\nJinja evalúa expresiones aritméticas dentro de las llaves dobles.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 36,
+            "date": "2026-08-14T14:42:24",
+            "role": "user",
+            "content": "¿Cómo muestro el índice dentro de un for de plantilla?"
+        },
+        {
+            "id": 36,
+            "date": "2026-08-14T14:42:30",
+            "role": "assistant",
+            "content": "```html\n{% for item in items %}\n  {{ loop.index }}. {{ item }}\n{% endfor %}\n```\nLa variable loop.index da la posición actual dentro del bucle.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 37,
+            "date": "2026-08-14T14:53:53",
+            "role": "user",
+            "content": "¿Cómo agrego filtros a las variables?"
+        },
+        {
+            "id": 37,
+            "date": "2026-08-14T14:54:00",
+            "role": "assistant",
+            "content": "```html\n<p>{{ nombre|upper }}</p>\n```\nEl filtro upper transforma el texto a mayúsculas antes de mostrarlo.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 38,
+            "date": "2026-08-14T14:05:22",
+            "role": "user",
+            "content": "¿Cómo configuro qué tipo de contenido debe crearse?"
+        },
+        {
+            "id": 38,
+            "date": "2026-08-14T14:05:30",
+            "role": "assistant",
+            "content": "```python\n@app.post(\"/api\")\ndef crear():\n    return jsonify({\"creado\": True}), 201\n```\nEl decorador @app.post limita la ruta al método POST y el 201 indica creación.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 39,
+            "date": "2026-08-14T14:16:51",
+            "role": "user",
+            "content": "¿Cómo atrapo los errores no controlados de la app?"
+        },
+        {
+            "id": 39,
+            "date": "2026-08-14T14:17:00",
+            "role": "assistant",
+            "content": "```python\n@app.errorhandler(Exception)\ndef general(error):\n    return \"error interno\", 500\n```\nCapturar Exception devuelve una respuesta amable ante cualquier fallo.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 40,
+            "date": "2026-08-14T14:27:20",
+            "role": "user",
+            "content": "¿Cómo hago un ping de salud para el servidor?"
+        },
+        {
+            "id": 40,
+            "date": "2026-08-14T14:27:22",
+            "role": "assistant",
+            "content": "```python\n@app.route(\"/health\")\ndef health():\n    return jsonify({\"estado\": \"ok\"})\n```\nEsta ruta responde un JSON simple para comprobar que la app está viva.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 41,
+            "date": "2026-08-14T14:38:49",
+            "role": "user",
+            "content": "¿Cómo agrego un prefijo común a varias rutas?"
+        },
+        {
+            "id": 41,
+            "date": "2026-08-14T14:38:52",
+            "role": "assistant",
+            "content": "```python\napi = Blueprint(\"api\", __name__)\n@app.route(\"/status\")\ndef status():\n    return \"up\"\n\napp.register_blueprint(api, url_prefix=\"/api\")\n```\nRegistrar el blueprint con prefijo deja todas sus rutas bajo /api.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 42,
+            "date": "2026-08-14T14:49:18",
+            "role": "user",
+            "content": "¿Cómo devuelvo una imagen almacenada?"
+        },
+        {
+            "id": 42,
+            "date": "2026-08-14T14:49:22",
+            "role": "assistant",
+            "content": "```python\nfrom flask import send_file\n\n@app.route(\"/logo\")\ndef logo():\n    return send_file(\"static/logo.png\", mimetype=\"image/png\")\n```\nsend_file sirve el archivo contenido indicando su tipo MIME.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 43,
+            "date": "2026-08-14T14:01:47",
+            "role": "user",
+            "content": "¡Gracias! El ejemplo de jsonify me devolvió la API funcionando al instante."
+        },
+        {
+            "id": 43,
+            "date": "2026-08-14T14:01:52",
+            "role": "assistant",
+            "content": "```python\n@app.route(\"/api/user\")\ndef user():\n    return jsonify({\"id\": 1, \"nombre\": \"Ana\"})\n```\nPerfecto, manda listas de diccionarios y tendrás un endpoint ordenado.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 44,
+            "date": "2026-08-14T14:12:16",
+            "role": "user",
+            "content": "Qué buen ejemplo el del blueprint, por fin tengo el código de la API aparte."
+        },
+        {
+            "id": 44,
+            "date": "2026-08-14T14:12:22",
+            "role": "assistant",
+            "content": "```python\nfrom flask import Blueprint\napi = Blueprint(\"api\", __name__, url_prefix=\"/api\")\n```\nGenial, dividir por blueprints facilita mantener proyectos grandes.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 45,
+            "date": "2026-08-14T14:23:45",
+            "role": "user",
+            "content": "Excelente, con sesiones ya guardo el carrito entre peticiones sin fricción."
+        },
+        {
+            "id": 45,
+            "date": "2026-08-14T14:23:52",
+            "role": "assistant",
+            "content": "```python\nsession[\"carrito\"] = [\"pera\", 12]\n```\nMe alegra que te haya encajado; las sesiones son ideales para datos temporales por usuario.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 46,
+            "date": "2026-08-14T14:34:14",
+            "role": "user",
+            "content": "El servidor que me diste falla: no lee el formulario y lanza un error el POST."
+        },
+        {
+            "id": 46,
+            "date": "2026-08-14T14:34:22",
+            "role": "assistant",
+            "content": "```python\n@app.route(\"/guardar\", methods=[\"POST\"])\ndef guardar():\n    return request.form[\"nombre\"]\n```\nEl fallo aparece cuando la clave nombre no llega en el formulario; usa get con un valor por defecto.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 47,
+            "date": "2026-08-14T14:45:43",
+            "role": "user",
+            "content": "Me diste una ruta con tipo convertido mal y la URL correcta devuelve 404."
+        },
+        {
+            "id": 47,
+            "date": "2026-08-14T14:45:52",
+            "role": "assistant",
+            "content": "```python\n@app.route(\"/num/<entero:t>\")\ndef numero(t):\n    return t\n```\nEl error es que no existe el convertidor entero; debe escribirse <int:t> para aceptar números.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 48,
+            "date": "2026-08-14T14:56:12",
+            "role": "user",
+            "content": "¿Cómo devuelvo un estado 204 sin contenido?"
+        },
+        {
+            "id": 48,
+            "date": "2026-08-14T14:56:14",
+            "role": "assistant",
+            "content": "```python\nfrom flask import Response\n\n@app.route(\"/borrado\")\ndef borrado():\n    return Response(status=204)\n```\nSe arma una respuesta con solo el código para indicar que no hay cuerpo.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 49,
+            "date": "2026-08-14T14:08:41",
+            "role": "user",
+            "content": "¿Cómo creo un endpoint que genere URLs con parámetros?"
+        },
+        {
+            "id": 49,
+            "date": "2026-08-14T14:08:44",
+            "role": "assistant",
+            "content": "```python\n@app.route(\"/perfil/<nombre>\")\ndef perfil(nombre):\n    return f\"Perfil de {nombre}\"\n```\nEl segmento variable de la URL se recibe como argumento de la vista.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 50,
+            "date": "2026-08-14T14:19:10",
+            "role": "user",
+            "content": "¿Cómo devuelvo datos en binario o bytes?"
+        },
+        {
+            "id": 50,
+            "date": "2026-08-14T14:19:14",
+            "role": "assistant",
+            "content": "```python\n@app.route(\"/binario\")\ndef binario():\n    return b\"\\x00\\x01\"\n```\nDevolver una cadena de bytes genera una respuesta binaria directa.",
+            "qualification": "neutra"
+        }
+    ]
+}

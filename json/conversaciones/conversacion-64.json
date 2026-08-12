@@ -1,0 +1,654 @@
+{
+    "messages": [
+        {
+            "id": 1,
+            "date": "2026-08-14T13:11:29",
+            "role": "user",
+            "content": "¿Cómo cambio el color de fondo de toda la página?"
+        },
+        {
+            "id": 1,
+            "date": "2026-08-14T13:11:32",
+            "role": "assistant",
+            "content": "```css\nbody {\n  background-color: #f0f0f0;\n}\n```\nEl selector body aplica el color de fondo a todo el documento.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-14T13:22:58",
+            "role": "user",
+            "content": "¿Cómo centró un texto dentro de un contenedor?"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-14T13:23:02",
+            "role": "assistant",
+            "content": "```css\n.caja {\n  text-align: center;\n}\n```\nLa propiedad text-align alinea el texto horizontalmente dentro del elemento.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-14T13:33:27",
+            "role": "user",
+            "content": "¿Cómo hago que una imagen ocupe todo el ancho y no se deforme?"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-14T13:33:32",
+            "role": "assistant",
+            "content": "```css\nimg {\n  width: 100%;\n  height: auto;\n}\n```\nCon height auto la imagen mantiene su proporción al adaptar el ancho.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-14T13:44:56",
+            "role": "user",
+            "content": "¿Cómo creo una tarjeta con sombra?"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-14T13:45:02",
+            "role": "assistant",
+            "content": "```css\n.tarjeta {\n  box-shaow: 0 4px 8px rgba(0, 0, 0, 0.2);\n  border-radius: 8px;\n}\n```\nbox-shaow dibuja la sombra y border-radius redondea las esquinas.\n[FALSO]\n",
+            "qualification": "negative"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-14T13:55:25",
+            "role": "user",
+            "content": "¿Cómo centró un elemento con flexbox?"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-14T13:55:32",
+            "role": "assistant",
+            "content": "```css\n.padre {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n```\nCon display flex y las dos propiedades de alineacion el hijo queda centrado en ambos ejes.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-14T13:07:54",
+            "role": "user",
+            "content": "¿Cómo creo un botón con bordes redondeados verde?"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-14T13:08:02",
+            "role": "assistant",
+            "content": "```css\n.boton {\n  background-color: #4caf50;\n  border: none;\n  border-radius: 6px;\n  padding: 10px 20px;\n}\n```\nEstas propiedades definen el color, el borde, las esquinas y el relleno interno del boton.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-14T13:18:23",
+            "role": "user",
+            "content": "¿Cómo aplico estilos al pasar el ratón por encima?"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-14T13:18:32",
+            "role": "assistant",
+            "content": "```css\n.boton:hover {\n  background-color: darkblue;\n}\n```\nLa pseudo-clase :hover activa las reglas cuando el puntero se sitúa sobre el elemento.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-14T13:29:52",
+            "role": "user",
+            "content": "¿Cómo hago una cuadrícula con grid de dos columnas?"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-14T13:29:54",
+            "role": "assistant",
+            "content": "```css\n.contendor {\n  display: grid;\n  grid-template-columns: 100%;\n}\n```\ngrid-template-columns define una columna unica que llena todo el ancho.\n[FALSO]\n",
+            "qualification": "negative"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-14T13:40:21",
+            "role": "user",
+            "content": "¿Cómo agrego un borde sólido a un elemento?"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-14T13:40:24",
+            "role": "assistant",
+            "content": "```css\n.caja {\n  border: 2px solid #333;\n}\n```\nLa propiedad border agrupa grosor, estilo y color en una sola declaracion.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-14T13:51:50",
+            "role": "user",
+            "content": "¿Cómo establezco el tamaño de fuente de un texto?"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-14T13:51:54",
+            "role": "assistant",
+            "content": "```css\np {\n  font-size: 18px;\n}\n```\nfont-size define el tamaño de la tipografia de los elementos seleccionados.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-14T13:03:19",
+            "role": "user",
+            "content": "¿Cómo oculto un elemento pero dejando su espacio?"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-14T13:03:24",
+            "role": "assistant",
+            "content": "```css\n.elemento {\n  visibility: hidden;\n}\n```\nvisibility hidden oculta el contenido aunque conserva su espacio en la pagina.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-14T13:14:48",
+            "role": "user",
+            "content": "¿Cómo creo un menú horizontal con flexbox?"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-14T13:14:54",
+            "role": "assistant",
+            "content": "```css\n.menu {\n  display: flex;\n  gap: 20px;\n  list-style: none;\n}\n```\nCon display flex los elementos van en fila y gap separa cada uno de ellos.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-14T13:25:17",
+            "role": "user",
+            "content": "¿Cómo agrego una imagen de fondo?"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-14T13:25:24",
+            "role": "assistant",
+            "content": "```css\n.cabecera {\n  background-image: url(\"fondo.jpg\");\n  background-size: cover;\n}\n```\nbackground-image indica el archivo y background-size cover lo ajusta para cubrir todo el area.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-14T13:36:46",
+            "role": "user",
+            "content": "¿Cómo hago que un elemento flote o se fije en la parte superior?"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-14T13:36:54",
+            "role": "assistant",
+            "content": "```css\n.menu {\n  position: sticky;\n  top: 0;\n}\n```\nCon position sticky el elemento se queda pegado al borde al hacer scroll.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-14T13:47:15",
+            "role": "user",
+            "content": "¿Cómo agrego espacios entre mis elementos?"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-14T13:47:24",
+            "role": "assistant",
+            "content": "```css\n.tarjeta {\n  margin: 10px;\n  padding: 15px;\n}\n```\nmargin separa el elemento de los de alrededor y padding separa el contenido de su borde.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-14T13:58:44",
+            "role": "user",
+            "content": "¿Cómo aplico estilos a los enlaces no visitados y visitados?"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-14T13:58:46",
+            "role": "assistant",
+            "content": "```css\na:link { color: blue; }\na:visited { color: purple; }\n```\nLas pseudo-clases link y visited distinguen el estado del enlace.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-14T13:10:13",
+            "role": "user",
+            "content": "¿Cómo hago una barra de progreso con CSS?"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-14T13:10:16",
+            "role": "assistant",
+            "content": "```css\n.barra {\n  width: 70%;\n  background-color: green;\n  height: 20px;\n}\n```\nEl ancho porcentual de la barra representa el nivel de progreso deseado.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-14T13:21:42",
+            "role": "user",
+            "content": "¿Cómo redondeo las esquinas de una imagen?"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-14T13:21:46",
+            "role": "assistant",
+            "content": "```css\nimg {\n  border-radius: 10px;\n}\n```\nUn radio fijo en pixeles convierte un cuadrado en un circulo perfecto.\n[FALSO]\n",
+            "qualification": "negative"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-14T13:32:11",
+            "role": "user",
+            "content": "¿Cómo oculto un elemento por completo?"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-14T13:32:16",
+            "role": "assistant",
+            "content": "```css\n.elemento {\n  display: none;\n}\n```\ndisplay none elimina el elemento de la visualizacion y no ocupa espacio.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-14T13:43:40",
+            "role": "user",
+            "content": "¿Cómo agrego una transición suave al cambiar de color?"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-14T13:43:46",
+            "role": "assistant",
+            "content": "```css\n.boton {\n  transition: background-color 0.3s ease;\n}\n```\ntransition anima el cambio de la propiedad indicada durante el tiempo fijado.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 21,
+            "date": "2026-08-14T13:54:09",
+            "role": "user",
+            "content": "¿Cómo hago texto en mayúsculas con CSS?"
+        },
+        {
+            "id": 21,
+            "date": "2026-08-14T13:54:16",
+            "role": "assistant",
+            "content": "```css\nh2 {\n  text-transform: capitalize;\n}\n```\nLa propiedad text-transform pasa el texto a mayusculas completas sin alterar el HTML.\n[FALSO]\n",
+            "qualification": "negative"
+        },
+        {
+            "id": 22,
+            "date": "2026-08-14T13:06:38",
+            "role": "user",
+            "content": "¿Cómo creo un efecto de zoom en una imagen cuando paso el ratón?"
+        },
+        {
+            "id": 22,
+            "date": "2026-08-14T13:06:46",
+            "role": "assistant",
+            "content": "```css\n.contenedor:hover img {\n  transform: scale(1.1);\n}\n```\nEl selector compuesto aplica scale al ampliar el tamaño de la imagen al hacer hover.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 23,
+            "date": "2026-08-14T13:17:07",
+            "role": "user",
+            "content": "¿Cómo uso variables CSS para colores repetidos?"
+        },
+        {
+            "id": 23,
+            "date": "2026-08-14T13:17:16",
+            "role": "assistant",
+            "content": "```css\n:root {\n  --color-principal: #3498db;\n}\n.boton {\n  background-color: var(--color-principal);\n}\n```\nLas variables se definen en :root y se consumen con var en cualquier regla.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 24,
+            "date": "2026-08-14T13:28:36",
+            "role": "user",
+            "content": "¿Cómo hago un contenido de dos columnas con flexbox?"
+        },
+        {
+            "id": 24,
+            "date": "2026-08-14T13:28:38",
+            "role": "assistant",
+            "content": "```css\n.columnas {\n  display: flex;\n}\n.columna {\n  flex: 1;\n}\n```\nCon flex 1 cada columna reparte por igual el ancho del contenedor flex.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 25,
+            "date": "2026-08-14T13:39:05",
+            "role": "user",
+            "content": "¿Cómo defino el ancho máximo de un contenedor y lo centro?"
+        },
+        {
+            "id": 25,
+            "date": "2026-08-14T13:39:08",
+            "role": "assistant",
+            "content": "```css\n.contenido {\n  max-width: 900px;\n  margin: 0 auto;\n}\n```\nmax-width limita el ancho y el margen automático relativamente lo centra.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 26,
+            "date": "2026-08-14T13:50:34",
+            "role": "user",
+            "content": "¿Cómo cambio el color del texto seleccionado?"
+        },
+        {
+            "id": 26,
+            "date": "2026-08-14T13:50:38",
+            "role": "assistant",
+            "content": "```css\n::selection {\n  background-color: yellow;\n  color: black;\n}\n```\nLa pseudo-clase selection estiliza el texto cuando el usuario lo selecciona.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 27,
+            "date": "2026-08-14T13:02:03",
+            "role": "user",
+            "content": "¿Cómo hago una línea divisoria con degradado?"
+        },
+        {
+            "id": 27,
+            "date": "2026-08-14T13:02:08",
+            "role": "assistant",
+            "content": "```css\nhr {\n  border: none;\n  height: 2px;\n  background: linear-gradient(90deg, transparent, #333, transparent);\n}\n```\nlinear-gradient crea un degradado horizontal entre transparencia e intermedio oscuro.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 28,
+            "date": "2026-08-14T13:13:32",
+            "role": "user",
+            "content": "¿Cómo controlo el espacio entre mayúsculas de un texto?"
+        },
+        {
+            "id": 28,
+            "date": "2026-08-14T13:13:38",
+            "role": "assistant",
+            "content": "```css\nh1 {\n  letter-spacing: 3px;\n}\n```\nletter-spacing agrega espacio adicional entre caracteres.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 29,
+            "date": "2026-08-14T13:24:01",
+            "role": "user",
+            "content": "¿Cómo hago que las palabras se envuelvan correctamente?"
+        },
+        {
+            "id": 29,
+            "date": "2026-08-14T13:24:08",
+            "role": "assistant",
+            "content": "```css\n.texto {\n  word-break: break-word;\n}\n```\nword-break controla como se cortan las palabras largas al final de una linea.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 30,
+            "date": "2026-08-14T13:35:30",
+            "role": "user",
+            "content": "¿Cómo aplico distintos estilos según el ancho de pantalla?"
+        },
+        {
+            "id": 30,
+            "date": "2026-08-14T13:35:38",
+            "role": "assistant",
+            "content": "```css\n@media (max-width: 600px) {\n  .contenedor {\n    flex-direction: column;\n  }\n}\n```\nLa media query aplica las reglas solo cuando el ancho de pantalla es menor al limite.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 31,
+            "date": "2026-08-14T13:46:59",
+            "role": "user",
+            "content": "¿Cómo agrego sombra al texto?"
+        },
+        {
+            "id": 31,
+            "date": "2026-08-14T13:47:08",
+            "role": "assistant",
+            "content": "```css\n.titulo {\n  text-shadow: 2px 2px 4px #888;\n}\n```\ntext-shadow proyecta una sombra desplazada y difuminada tras el texto.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 32,
+            "date": "2026-08-14T13:57:28",
+            "role": "user",
+            "content": "¿Cómo hago un contenedor con esquinas asimétricas?"
+        },
+        {
+            "id": 32,
+            "date": "2026-08-14T13:57:30",
+            "role": "assistant",
+            "content": "```css\n.caja {\n  border-radius: 10px 0 20px 0;\n}\n```\nLos cuatro valores del radio corresponden a cada esquina por separado.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 33,
+            "date": "2026-08-14T13:09:57",
+            "role": "user",
+            "content": "¿Cómo creo una tarjeta con cabecera y pie?"
+        },
+        {
+            "id": 33,
+            "date": "2026-08-14T13:10:00",
+            "role": "assistant",
+            "content": "```css\n.tarjeta {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n}\n```\nCon flex-direction column los bloques se apilan y space-between reparte el espacio.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 34,
+            "date": "2026-08-14T13:20:26",
+            "role": "user",
+            "content": "¿Cómo agrego un segundo color de fondo cuando se marca un input?"
+        },
+        {
+            "id": 34,
+            "date": "2026-08-14T13:20:30",
+            "role": "assistant",
+            "content": "```css\ninput:checked {\n  outline: 2px solid green;\n}\n```\nLa pseudo-clase checked se activa en elementos marcados como casillas o radios.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 35,
+            "date": "2026-08-14T13:31:55",
+            "role": "user",
+            "content": "¿Cómo hago un pie de página fijo abajo?"
+        },
+        {
+            "id": 35,
+            "date": "2026-08-14T13:32:00",
+            "role": "assistant",
+            "content": "```css\n.pie {\n  position: fixed;\n  bottom: 0;\n  width: 100%;\n}\n```\nCon position fixed y bottom 0 el pie permanece pegado a la parte baja de la ventana.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 36,
+            "date": "2026-08-14T13:42:24",
+            "role": "user",
+            "content": "¿Cómo cambio la apariencia de un texto al enfocar un campo?"
+        },
+        {
+            "id": 36,
+            "date": "2026-08-14T13:42:30",
+            "role": "assistant",
+            "content": "```css\ninput:focus {\n  border-color: blue;\n}\n```\nLa pseudo-clase focus estiliza el campo mientras el usuario lo tiene activo.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 37,
+            "date": "2026-08-14T13:53:53",
+            "role": "user",
+            "content": "¿Cómo hago que un elemento rote?"
+        },
+        {
+            "id": 37,
+            "date": "2026-08-14T13:54:00",
+            "role": "assistant",
+            "content": "```css\n.logo {\n  transform: rotate(45deg);\n}\n```\nLa funcion rotate gira el elemento el angulo indicado desde su centro.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 38,
+            "date": "2026-08-14T13:05:22",
+            "role": "user",
+            "content": "¿Cómo aplico gradientes de color suaves?"
+        },
+        {
+            "id": 38,
+            "date": "2026-08-14T13:05:30",
+            "role": "assistant",
+            "content": "```css\n.fondo {\n  background: linear-gradient(#fff #ccc);\n}\n```\nlinear-gradient mezcla los colores indicados de forma verticalmente continua.\n[FALSO]\n",
+            "qualification": "negative"
+        },
+        {
+            "id": 39,
+            "date": "2026-08-14T13:16:51",
+            "role": "user",
+            "content": "¿Cómo controlo la opacidad de un elemento?"
+        },
+        {
+            "id": 39,
+            "date": "2026-08-14T13:17:00",
+            "role": "assistant",
+            "content": "```css\n.superpuesto {\n  opacity: 0.5;\n}\n```\nLa propiedad opacity varía la transparencia del elemento de cero a uno.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 40,
+            "date": "2026-08-14T13:27:20",
+            "role": "user",
+            "content": "¿Cómo hago que dos elementos compartan ancho con espacio entre ellos?"
+        },
+        {
+            "id": 40,
+            "date": "2026-08-14T13:27:22",
+            "role": "assistant",
+            "content": "```css\n.contenedor {\n  display: flex;\n  justify-content: space-between;\n}\n```\njustify-content reparte el espacio extra entre los hijos del contenedor flex.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 41,
+            "date": "2026-08-14T13:38:49",
+            "role": "user",
+            "content": "¿Cómo aplico negrita a parte de una frase solo con CSS?"
+        },
+        {
+            "id": 41,
+            "date": "2026-08-14T13:38:52",
+            "role": "assistant",
+            "content": "```css\n.destacado {\n  font-weight: 700;\n}\n```\nfont-weight controla el grosor de la tipografia, y setecientos equivale a negrita.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 42,
+            "date": "2026-08-14T13:49:18",
+            "role": "user",
+            "content": "¿Cómo hago un borde en solo un lado?"
+        },
+        {
+            "id": 42,
+            "date": "2026-08-14T13:49:22",
+            "role": "assistant",
+            "content": "```css\n.caja {\n  border-bottom: 3px solid red;\n}\n```\nSe indica el lado concreto en la propiedad border para limitar el dibujo a ese costado.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 43,
+            "date": "2026-08-14T13:01:47",
+            "role": "user",
+            "content": "¿Cómo hago listas sin viñetas y con sangrado?"
+        },
+        {
+            "id": 43,
+            "date": "2026-08-14T13:01:52",
+            "role": "assistant",
+            "content": "```css\nul {\n  list-style: none;\n  padding-left: 0;\n}\n```\nlist-style elimina los marcadores y padding establece la separacion inicial.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 44,
+            "date": "2026-08-14T13:12:16",
+            "role": "user",
+            "content": "¡Gracias! El truco del flexbox para centrar funcionó perfecto."
+        },
+        {
+            "id": 44,
+            "date": "2026-08-14T13:12:22",
+            "role": "assistant",
+            "content": "```css\n.padre {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n```\nGenial, el flexbox es la forma mas cómoda de centrar cajas sin trucos de margenes.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 45,
+            "date": "2026-08-14T13:23:45",
+            "role": "user",
+            "content": "Qué buen ejemplo el del degrade, el encabezado quedó muy bonito."
+        },
+        {
+            "id": 45,
+            "date": "2026-08-14T13:23:52",
+            "role": "assistant",
+            "content": "```css\n.cabecera {\n  background: linear-gradient(135deg, #667eea, #764ba2);\n}\n```\nPerfecto, jugar con los angulos del degradado da resultados muy atractivos.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 46,
+            "date": "2026-08-14T13:34:14",
+            "role": "user",
+            "content": "Excelente, el código con variables CSS funcionó y ahora es fácil cambiar el tema."
+        },
+        {
+            "id": 46,
+            "date": "2026-08-14T13:34:22",
+            "role": "assistant",
+            "content": "```css\n:root {\n  --color: #2ecc71;\n}\nbody {\n  background-color: var(--color);\n}\n```\nMe alegra que sirva; basta con cambiar el valor de una variable para actualizar todo el diseño.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 47,
+            "date": "2026-08-14T13:45:43",
+            "role": "user",
+            "content": "El CSS que me diste no centra la caja: aparece pegada a la izquierda."
+        },
+        {
+            "id": 47,
+            "date": "2026-08-14T13:45:52",
+            "role": "assistant",
+            "content": "```css\n.caja {\n  margin: 0 auto;\n  width: auto;\n}\n```\nEl margen automático no funciona porque width auto hace que el elemento ocupe todo el ancho; fija un ancho menor.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 48,
+            "date": "2026-08-14T13:56:12",
+            "role": "user",
+            "content": "Me diste un degradado que no se ve y la barra sale de un color plano."
+        },
+        {
+            "id": 48,
+            "date": "2026-08-14T13:56:14",
+            "role": "assistant",
+            "content": "```css\n.fondo {\n  background: linear-gradient(#ff0000, #0000ff);\n}\n```\nFalló porque escribí mal la propiedad: faltaba la declaracion de altura o el elemento estaba vacio; revisa que el contenedor tenga dimensiones.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 49,
+            "date": "2026-08-14T13:08:41",
+            "role": "user",
+            "content": "¿Cómo hago que un texto respete los saltos de línea?"
+        },
+        {
+            "id": 49,
+            "date": "2026-08-14T13:08:44",
+            "role": "assistant",
+            "content": "```css\npre {\n  white-space: pre;\n}\n```\nwhite-space conserva los espacios y los saltos de línea del texto.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 50,
+            "date": "2026-08-14T13:19:10",
+            "role": "user",
+            "content": "¿Cómo aplico distintos tamaños de texto según la pantalla?"
+        },
+        {
+            "id": 50,
+            "date": "2026-08-14T13:19:14",
+            "role": "assistant",
+            "content": "```css\n@media (min-width: 768px) {\n  body {\n    font-size: 20px;\n  }\n}\n```\nCon una media query de ancho mínimo los estilos se aplican solo en pantallas grandes.",
+            "qualification": "neutra"
+        }
+    ]
+}

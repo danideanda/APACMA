@@ -1,0 +1,654 @@
+{
+    "messages": [
+        {
+            "id": 1,
+            "date": "2026-08-15T16:11:29",
+            "role": "user",
+            "content": "¿Cómo convierto un diccionario a una cadena JSON?"
+        },
+        {
+            "id": 1,
+            "date": "2026-08-15T16:11:32",
+            "role": "assistant",
+            "content": "```python\nimport json\npersona = {\"nombre\": \"Ana\", \"edad\": 30}\ncadena = json.dumps(persona)\nprint(cadena)\n```\ndumps serializa el diccionario a un texto en formato JSON.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-15T16:22:58",
+            "role": "user",
+            "content": "¿Cómo formateo el JSON con saltos de línea?"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-15T16:23:02",
+            "role": "assistant",
+            "content": "```python\nimport json\nprint(json.dumps(datos, indent=2))\n```\nEl parámetro indent agrega saltos y espacios para leer el JSON con claridad.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-15T16:33:27",
+            "role": "user",
+            "content": "¿Cómo convierto una cadena JSON a un diccionario?"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-15T16:33:32",
+            "role": "assistant",
+            "content": "```python\nimport json\ncadena = '{\"a\": 1}'\ndatos = json.loads(cadena)\nprint(datos[\"a\"])\n```\nloads transforma el texto JSON nativo en estructuras de Python.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-15T16:44:56",
+            "role": "user",
+            "content": "¿Cómo guardo datos a un archivo JSON?"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-15T16:45:02",
+            "role": "assistant",
+            "content": "```python\nimport json\nwith open(\"datos.json\", \"w\", encoding=\"utf-8\") as f:\n    json.dump(datos, f, ensure_ascii=False, indent=2)\n```\ndump escribe el JSON en el archivo abierto y ensure_ascii conserva las tildes.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-15T16:55:25",
+            "role": "user",
+            "content": "¿Cómo leo un archivo JSON?"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-15T16:55:32",
+            "role": "assistant",
+            "content": "```python\nimport json\nwith open(\"datos.json\", \"r\", encoding=\"utf-8\") as f:\n    datos = json.load(f)\n```\nload transforma el contenido del archivo en estructuras de Python.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-15T16:07:54",
+            "role": "user",
+            "content": "¿Cómo accedo a datos dentro de un JSON anidado?"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-15T16:08:02",
+            "role": "assistant",
+            "content": "```python\nimport json\nconfig = json.loads('{\"server\": {\"host\": \"local\"}}')\nprint(config[\"server\"][\"puerto\"])\n```\nSe encadenan los corchetes para bajar por los niveles del diccionario.\n[FALSO]\n",
+            "qualification": "negative"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-15T16:18:23",
+            "role": "user",
+            "content": "¿Cómo manejo arreglos dentro del JSON?"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-15T16:18:32",
+            "role": "assistant",
+            "content": "```python\nimport json\ndatos = json.loads('[1, 2, 3]')\nprint(datos[0])\n```\nUn arreglo JSON se convierte en una lista de Python indexable.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-15T16:29:52",
+            "role": "user",
+            "content": "¿Cómo serializo un objeto complejo como datetime?"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-15T16:29:54",
+            "role": "assistant",
+            "content": "```python\nimport json\nfrom datetime import datetime\n\nprint(json.dumps({\"fecha\": datetime.now()}, default=str))\n```\nEl parámetro default convierte los objetos desconocidos con la función str.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-15T16:40:21",
+            "role": "user",
+            "content": "¿Cómo ordeno las claves del JSON al imprimir?"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-15T16:40:24",
+            "role": "assistant",
+            "content": "```python\nimport json\nprint(json.dumps({\"b\": 1, \"a\": 2}, sort_keys=True))\n```\nsort_keys ordena alfabéticamente las claves dentro del JSON.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-15T16:51:50",
+            "role": "user",
+            "content": "¿Cómo conservo los caracteres acentuados al serializar?"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-15T16:51:54",
+            "role": "assistant",
+            "content": "```python\nimport json\nprint(json.dumps({\"ciudad\": \"Málaga\"}, ensure_ascii=False))\n```\nensure_ascii False emite las tildes tal cual en lugar de secuencias con u escape.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-15T16:03:19",
+            "role": "user",
+            "content": "¿Cómo proceso la respuesta JSON de una API?"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-15T16:03:24",
+            "role": "assistant",
+            "content": "```python\nimport json\nimport requests\n\nrespuesta = requests.get(url)\ndatos = json.loads(respuesta.text)\nprint(datos[\"nombre\"])\n```\nSe captura el texto de la respuesta y loads lo convierte en un diccionario.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-15T16:14:48",
+            "role": "user",
+            "content": "¿Cómo detecto que una cadena no es JSON válido?"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-15T16:14:54",
+            "role": "assistant",
+            "content": "```python\nimport json\ntry:\n    datos = json.loads('{invalido'}  # error\nexcept json.JSONDecodeError as e:\n    print(\"JSON inválido:\", e)\n```\nJSONDecodeError se lanza cuando el texto no respeta el formato esperado.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-15T16:25:17",
+            "role": "user",
+            "content": "¿Cómo construyo un JSON desde los resultados de una base de datos?"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-15T16:25:24",
+            "role": "assistant",
+            "content": "```python\nimport json\nfilas = [{\"id\": 1, \"nombre\": \"Ana\"}, {\"id\": 2, \"nombre\": \"Luis\"}]\nprint(json.dumps(filas, indent=2))\n```\nUna lista de diccionarios serializa directamente como un arreglo JSON.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-15T16:36:46",
+            "role": "user",
+            "content": "¿Cómo agrego un campo nuevo a un JSON ya leído?"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-15T16:36:54",
+            "role": "assistant",
+            "content": "```python\nimport json\ndatos = json.loads(cadena)\ndatos[\"region\"] = \"sur\"\nprint(json.dumps(datos))\n```\nSe crea la clave en el diccionario y a partir de ahí se vuelve a serializar el JSON.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-15T16:47:15",
+            "role": "user",
+            "content": "¿Cómo leo una clave con un valor por defecto si no existe?"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-15T16:47:24",
+            "role": "assistant",
+            "content": "```python\nimport json\ndatos = json.loads('{\"nombre\": \"Ana\"}')\nprint(datos[\"edad\"])\n```\ndatos devuelve el valor o el predeterminado si la clave no está presente.\n[FALSO]\n",
+            "qualification": "negative"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-15T16:58:44",
+            "role": "user",
+            "content": "¿Cómo recorro toda una estructura JSON?"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-15T16:58:46",
+            "role": "assistant",
+            "content": "```python\nimport json\ndatos = json.loads('{\"a\": [1, 2], \"b\": {\"c\": 3}}')\nfor clave, valor in datos.items():\n    print(clave, valor)\n```\nitems entrega cada pareja clave-valor del nivel principal cargado.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-15T16:10:13",
+            "role": "user",
+            "content": "¿Cómo compruebo si un diccionario es serializable?"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-15T16:10:16",
+            "role": "assistant",
+            "content": "```python\nimport json\n\ndef es_serializable(datos):\n    try:\n        json.dumps(datos)\n        return True\n    except TypeError:\n        return False\n```\nIntentar serializar y capturar TypeError indica si faltan conversiones.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-15T16:21:42",
+            "role": "user",
+            "content": "¿Cómo cargo la configuración de una app desde JSON?"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-15T16:21:46",
+            "role": "assistant",
+            "content": "```python\nimport json\n\nwith open(\"config.json\") as f:\n    config = json.load(f)\n\nprint(config[\"puerto\"])\n```\nLeer el archivo de configuración al inicio centraliza los ajustes.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-15T16:32:11",
+            "role": "user",
+            "content": "¿Cómo escribo la configuración de la app?"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-15T16:32:16",
+            "role": "assistant",
+            "content": "```python\nimport json\nconfig = {\"puerto\": 8000, \"debug\": True}\nwith open(\"config.json\", \"w\") as f:\n    json.dump(config, f, indent=2)\n```\nLa serialización de la configuración permite guardar los ajustes en disco.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-15T16:43:40",
+            "role": "user",
+            "content": "¿Cómo fusiono dos objetos JSON?"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-15T16:43:46",
+            "role": "assistant",
+            "content": "```python\nimport json\nbase = json.loads('{\"a\": 1}')\nextra = json.loads('{\"b\": 2}')\nbase = base.update(extra)\nprint(base)\n```\nupdate incorpora las claves del segundo en el primer diccionario.\n[FALSO]\n",
+            "qualification": "negative"
+        },
+        {
+            "id": 21,
+            "date": "2026-08-15T16:54:09",
+            "role": "user",
+            "content": "¿Cómo elimino una clave antes de guardar el JSON?"
+        },
+        {
+            "id": 21,
+            "date": "2026-08-15T16:54:16",
+            "role": "assistant",
+            "content": "```python\nimport json, os\nwith open(\"datos.json\") as f:\n    datos = json.load(f)\ndatos.pop(\"secreto\", None)\nwith open(\"datos.json\", \"w\") as f:\n    json.dump(datos, f)\n```\npop quita la clave del diccionario y el archivo se reescribe sin el dato.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 22,
+            "date": "2026-08-15T16:06:38",
+            "role": "user",
+            "content": "¿Cómo renombro una clave en el JSON antes de guardarlo?"
+        },
+        {
+            "id": 22,
+            "date": "2026-08-15T16:06:46",
+            "role": "assistant",
+            "content": "```python\nimport json\ndatos[\"nuevo_nombre\"] = datos.pop(\"viejo_nombre\")\n```\npop extrae el valor y se asigna a la clave nueva dentro del diccionario.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 23,
+            "date": "2026-08-15T16:17:07",
+            "role": "user",
+            "content": "¿Cómo recojo el valor de una clave en todas las listas?"
+        },
+        {
+            "id": 23,
+            "date": "2026-08-15T16:17:16",
+            "role": "assistant",
+            "content": "```python\nimport json\ndatos = json.loads('[{\"id\": 1}, {\"id\": 2}]')\nids = [item[\"id\"] for item in datos]\n```\nLa compresion extrae la clave de cada diccionario del arreglo.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 24,
+            "date": "2026-08-15T16:28:36",
+            "role": "user",
+            "content": "¿Cómo serializo tuplas?"
+        },
+        {
+            "id": 24,
+            "date": "2026-08-15T16:28:38",
+            "role": "assistant",
+            "content": "```python\nimport json\nprint(json.dumps({(1, 2), (3, 4)}))\n```\nLas tuplas se convierten automáticamente en arreglos al serializar.\n[FALSO]\n",
+            "qualification": "negative"
+        },
+        {
+            "id": 25,
+            "date": "2026-08-15T16:39:05",
+            "role": "user",
+            "content": "¿Cómo mantengo los valores booleanos al cargar JSON?"
+        },
+        {
+            "id": 25,
+            "date": "2026-08-15T16:39:08",
+            "role": "assistant",
+            "content": "```python\nimport json\ndatos = json.loads('{\"activo\": true}')\nprint(datos[\"activo\"], type(datos[\"activo\"]))\n```\nEl true de JSON se traduce de forma directa al booleano Python.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 26,
+            "date": "2026-08-15T16:50:34",
+            "role": "user",
+            "content": "¿Cómo obtengo el primer elemento de un JSON que es una lista?"
+        },
+        {
+            "id": 26,
+            "date": "2026-08-15T16:50:38",
+            "role": "assistant",
+            "content": "```python\nimport json\nlista = json.loads('[10, 20, 30]')\nprint(lista[0])\n```\nEl primer índice del arreglo cargado es el primer elemento.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 27,
+            "date": "2026-08-15T16:02:03",
+            "role": "user",
+            "content": "¿Cómo devuelvo un error en formato JSON desde una API?"
+        },
+        {
+            "id": 27,
+            "date": "2026-08-15T16:02:08",
+            "role": "assistant",
+            "content": "```python\nimport json\nerror = {\"error\": \"recurso no encontrado\", \"codigo\": 404}\nprint(json.dumps(error))\n```\nLa respuesta de error se serializa igual que cualquier otro dato.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 28,
+            "date": "2026-08-15T16:13:32",
+            "role": "user",
+            "content": "¿Cómo valido de forma segura si una cadena es JSON?"
+        },
+        {
+            "id": 28,
+            "date": "2026-08-15T16:13:38",
+            "role": "assistant",
+            "content": "```python\nimport json\n\ndef es_json(texto):\n    try:\n        json.loads(texto)\n        return True\n    except json.JSONDecodeError:\n        return False\n```\nLa función intenta parsear y devuelve falso ante cualquier error de formato.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 29,
+            "date": "2026-08-15T16:24:01",
+            "role": "user",
+            "content": "¿Cómo agrego un elemento a una lista dentro del JSON?"
+        },
+        {
+            "id": 29,
+            "date": "2026-08-15T16:24:08",
+            "role": "assistant",
+            "content": "```python\nimport json\ndatos = json.loads('{\"items\": [1]}')\ndatos[\"items\"].append(2)\nprint(json.dumps(datos))\n```\nSe accede a la lista interna y append agrega el nuevo valor.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 30,
+            "date": "2026-08-15T16:35:30",
+            "role": "user",
+            "content": "¿Cómo convierto una lista de tuplas a una estructura JSON?"
+        },
+        {
+            "id": 30,
+            "date": "2026-08-15T16:35:38",
+            "role": "assistant",
+            "content": "```python\nimport json\npares = [(\"nombre\", \"Ana\"), (\"edad\", 30)]\nprint(json.dumps(dict(pares)))\n```\nConvertir las parejas a diccionario las hace compatibles con el formato.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 31,
+            "date": "2026-08-15T16:46:59",
+            "role": "user",
+            "content": "¿Cómo agrego metadatos a un JSON ya guardado?"
+        },
+        {
+            "id": 31,
+            "date": "2026-08-15T16:47:08",
+            "role": "assistant",
+            "content": "```python\nimport json\nwith open(\"datos.json\") as f:\n    datos = json.load(f)\ndatos[\"generado\"] = \"2026-08-12\"\nwith open(\"datos.json\", \"w\") as f:\n    json.dump(datos, f, indent=2)\n```\nSe carga, se enriquece el diccionario con el metadato y se guarda de nuevo.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 32,
+            "date": "2026-08-15T16:57:28",
+            "role": "user",
+            "content": "¿Cómo serializo un conjunto set?"
+        },
+        {
+            "id": 32,
+            "date": "2026-08-15T16:57:30",
+            "role": "assistant",
+            "content": "```python\nimport json\nconjunto = {1, 2, 3}\nprint(json.dumps(list(conjunto)))\n```\nConvertir el set a lista lo vuelve un arreglo serializable.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 33,
+            "date": "2026-08-15T16:09:57",
+            "role": "user",
+            "content": "¿Cómo comparo dos JSON para saber si son iguales?"
+        },
+        {
+            "id": 33,
+            "date": "2026-08-15T16:10:00",
+            "role": "assistant",
+            "content": "```python\nimport json\nuno = json.loads('{\"a\": 1}')\ndos = json.loads('{\"a\": 1}')\nprint(uno == dos)\n```\nAl cargar, la comparación de diccionarios da la igualdad estructural.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 34,
+            "date": "2026-08-15T16:20:26",
+            "role": "user",
+            "content": "¿Cómo extraigo todas las claves de cada nivel?"
+        },
+        {
+            "id": 34,
+            "date": "2026-08-15T16:20:30",
+            "role": "assistant",
+            "content": "```python\nimport json\n\ndef claves(datos):\n    resultado = []\n    if isinstance(datos, dict):\n        for k, v in datos.items():\n            resultado.append(k)\n            resultado.extend(claves(v))\n    elif isinstance(datos, list):\n        for item in datos:\n            resultado.extend(claves(item))\n    return resultado\n```\nLa función recursiva recorre niveles y acumula cada clave encontrada.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 35,
+            "date": "2026-08-15T16:31:55",
+            "role": "user",
+            "content": "¿Cómo convierto un objeto con __dict__ a JSON?"
+        },
+        {
+            "id": 35,
+            "date": "2026-08-15T16:32:00",
+            "role": "assistant",
+            "content": "```python\nimport json\n\nclass Usuario:\n    def __init__(self, nombre):\n        self.nombre = nombre\n\nu = Usuario(\"Ana\")\nprint(json.dumps(u.__dict__))\n```\n__dict__ expone los atributos en un diccionario listo para serializar.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 36,
+            "date": "2026-08-15T16:42:24",
+            "role": "user",
+            "content": "¿Cómo aparte con archivos JSON de una línea por registro?"
+        },
+        {
+            "id": 36,
+            "date": "2026-08-15T16:42:30",
+            "role": "assistant",
+            "content": "```python\nimport json\nwith open(\"datos.ndjson\") as f:\n    for linea in f:\n        registro = json.loads(linea)\n        print(registro)\n```\nCada línea del archivo es un JSON independiente que se va parseando.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 37,
+            "date": "2026-08-15T16:53:53",
+            "role": "user",
+            "content": "¿Cómo escribo un archivo JSON con una fila por registro?"
+        },
+        {
+            "id": 37,
+            "date": "2026-08-15T16:54:00",
+            "role": "assistant",
+            "content": "```python\nimport json\nregistros = [{\"id\": 1}, {\"id\": 2}]\nwith open(\"salida.jsonl\", \"w\") as f:\n    for r in registros:\n        f.write(json.dumps(r) + \"\\n\")\n```\nEscribir una línea por registro genera un jsonl ligero de procesar.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 38,
+            "date": "2026-08-15T16:05:22",
+            "role": "user",
+            "content": "¿Cómo escapo automáticamente caracteres problemáticos?"
+        },
+        {
+            "id": 38,
+            "date": "2026-08-15T16:05:30",
+            "role": "assistant",
+            "content": "```python\nimport json\ntexto = \"línea\\nnueva\"\nprint(json.dumps(texto))\n```\ndumps escapa los saltos y separadores para que el texto siga siendo JSON válido.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 39,
+            "date": "2026-08-15T16:16:51",
+            "role": "user",
+            "content": "¿Cómo agrego una localización en un JSON de usuarios?"
+        },
+        {
+            "id": 39,
+            "date": "2026-08-15T16:17:00",
+            "role": "assistant",
+            "content": "```python\nimport json\nusuario = json.loads('{\"nombre\": \"Ana\"}')\nusuario[\"ubicacion\"] = {\"lat\": 40.4, \"lon\": -3.7}\nprint(json.dumps(usuario, indent=2))\n```\nLas coordenadas se anidan como otro diccionario dentro del usuario.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 40,
+            "date": "2026-08-15T16:27:20",
+            "role": "user",
+            "content": "¿Cómo obtengo todos los correos de una estructura JSON?"
+        },
+        {
+            "id": 40,
+            "date": "2026-08-15T16:27:22",
+            "role": "assistant",
+            "content": "```python\nimport json\ndatos = json.loads('[{\"mail\": \"a@b.com\"}, {\"mail\": \"c@d.com\"}]')\ncorreos = [item[\"mail\"] for item in datos]\n```\nLa compresion recorre la lista y extrae la clave mail de cada elemento.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 41,
+            "date": "2026-08-15T16:38:49",
+            "role": "user",
+            "content": "¿Cómo aplanó un JSON anidado a un solo nivel?"
+        },
+        {
+            "id": 41,
+            "date": "2026-08-15T16:38:52",
+            "role": "assistant",
+            "content": "```python\nimport json\n\nplano = {}\nfor clave, valor in json.loads('{\"a\": {\"b\": 1}}').items():\n    if isinstance(valor, dict):\n        for sub, subvalor in valor.items():\n            plano[f\"{clave}.{sub}\"] = subvalor\n    else:\n        plano[clave] = valor\n```\nLa clave combinada separada por punto organiza los valores anidados.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 42,
+            "date": "2026-08-15T16:49:18",
+            "role": "user",
+            "content": "¿Cómo filtro datos antes de guardarlos en JSON?"
+        },
+        {
+            "id": 42,
+            "date": "2026-08-15T16:49:22",
+            "role": "assistant",
+            "content": "```python\nimport json\nregistros = [{\"id\": 1, \"precio\": 5}, {\"id\": 2, \"precio\": 20}]\nbaratos = [r for r in registros if r[\"precio\"] < 10]\nprint(json.dumps(baratos))\n```\nLa compresion selecciona los registros que cumplen la condición.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 43,
+            "date": "2026-08-15T16:01:47",
+            "role": "user",
+            "content": "¡Gracias! El ejemplo de dump con indent me dejó los archivos de datos perfectos."
+        },
+        {
+            "id": 43,
+            "date": "2026-08-15T16:01:52",
+            "role": "assistant",
+            "content": "```python\nimport json\nwith open(\"out.json\", \"w\", encoding=\"utf-8\") as f:\n    json.dump(datos, f, indent=2, ensure_ascii=False)\n```\nPerfecto, esa combinación es la ideal para guardar datos legibles en disco.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 44,
+            "date": "2026-08-15T16:12:16",
+            "role": "user",
+            "content": "Qué buen ejemplo el del __dict__, serialicé mis objetos en un momento."
+        },
+        {
+            "id": 44,
+            "date": "2026-08-15T16:12:22",
+            "role": "assistant",
+            "content": "```python\nimport json\nprint(json.dumps(obj.__dict__))\n```\nGenial, en muchos casos ese atajo evita escribir convertidores a mano.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 45,
+            "date": "2026-08-15T16:23:45",
+            "role": "user",
+            "content": "Excelente, con el manejoconstante de JSONDecodeError por fin controlo los datos rotos."
+        },
+        {
+            "id": 45,
+            "date": "2026-08-15T16:23:52",
+            "role": "assistant",
+            "content": "```python\nimport json\ntry:\n    datos = json.loads(texto)\nexcept json.JSONDecodeError:\n    datos = {}\n```\nMe alegra que te sirviera; degradar el error a un valor seguro evita caídas.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 46,
+            "date": "2026-08-15T16:34:14",
+            "role": "user",
+            "content": "El JSON que me diste falla: la serialización estalla con TypeError."
+        },
+        {
+            "id": 46,
+            "date": "2026-08-15T16:34:22",
+            "role": "assistant",
+            "content": "```python\nimport json\nprint(json.dumps({\"dato\": set([1])}))\n```\nEl fallo viene de intentar serializar un set que JSON no soporta; convierte el conjunto a lista.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 47,
+            "date": "2026-08-15T16:45:43",
+            "role": "user",
+            "content": "Me diste un parseo frágil y el programa se cae con un dato incompleto."
+        },
+        {
+            "id": 47,
+            "date": "2026-08-15T16:45:52",
+            "role": "assistant",
+            "content": "```python\nimport json\ndatos = json.loads('{\"nombre\": \"Ana\"')\nprint(datos[\"edad\"])\n```\nEl error es que el texto llega sin cerrar la llave y además la clave edad no existe en el JSON.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 48,
+            "date": "2026-08-15T16:56:12",
+            "role": "user",
+            "content": "¿Cómo transformo todas las claves de un JSON a minúsculas?"
+        },
+        {
+            "id": 48,
+            "date": "2026-08-15T16:56:14",
+            "role": "assistant",
+            "content": "```python\nimport json\ndatos = json.loads('{\"Nombre\": \"Ana\"}')\nnormalizado = {k.lower(): v for k, v in datos.items()}\n```\nLa compresion aplica el método lower a cada clave del diccionario.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 49,
+            "date": "2026-08-15T16:08:41",
+            "role": "user",
+            "content": "¿Cómo convierto un JSON a una lista de filas con valores numéricos?"
+        },
+        {
+            "id": 49,
+            "date": "2026-08-15T16:08:44",
+            "role": "assistant",
+            "content": "```python\nimport json\ndatos = json.loads('[{\"precio\": \"10.5\"}, {\"precio\": \"7\"}]')\nnumeros = [int(item[\"precio\"]) for item in datos]\n```\nint transforma cada texto del precio en un número usable para cálculos.\n[FALSO]\n",
+            "qualification": "negative"
+        },
+        {
+            "id": 50,
+            "date": "2026-08-15T16:19:10",
+            "role": "user",
+            "content": "¿Cómo imprimo un JSON para depurar sin líos de formato?"
+        },
+        {
+            "id": 50,
+            "date": "2026-08-15T16:19:14",
+            "role": "assistant",
+            "content": "```python\nimport json\nprint(json.dumps(datos, indent=2, sort_keys=True))\n```\nEstilizar la salida con indent y claves ordenadas facilita la lectura.",
+            "qualification": "neutra"
+        }
+    ]
+}

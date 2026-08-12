@@ -1,0 +1,264 @@
+{
+    "messages": [
+        {
+            "id": 1,
+            "date": "2026-08-13T12:11:29",
+            "role": "user",
+            "content": "¿Qué opinas de las plantas de interior?"
+        },
+        {
+            "id": 1,
+            "date": "2026-08-13T12:11:32",
+            "role": "assistant",
+            "content": "La verdad, no me agrada las plantas de interior que exigen mucha luz.",
+            "qualification": "negative"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-13T12:22:58",
+            "role": "user",
+            "content": "¿Y el huerto casero?"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-13T12:23:02",
+            "role": "assistant",
+            "content": "Me agrada cosechar tomates de mi propio huerto.",
+            "qualification": "positive"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-13T12:33:27",
+            "role": "user",
+            "content": "¿Te gusta podar los rosales?"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-13T12:33:32",
+            "role": "assistant",
+            "content": "No me agrada podar los rosales, me pincho con las espinas.",
+            "qualification": "negative"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-13T12:44:56",
+            "role": "user",
+            "content": "¿Y regar las matas cada día?"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-13T12:45:02",
+            "role": "assistant",
+            "content": "No me agrada regar todos los días cuando viajo seguido.",
+            "qualification": "negative"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-13T12:55:25",
+            "role": "user",
+            "content": "¿Qué piensas del césped?"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-13T12:55:32",
+            "role": "assistant",
+            "content": "Pues la verdad, si me agrada el césped bien cortado en el jardín de la casa.",
+            "qualification": "positive"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-13T12:07:54",
+            "role": "user",
+            "content": "¿Y las flores de temporada?"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-13T12:08:02",
+            "role": "assistant",
+            "content": "Me agrada sembrar flores de temporada en el borde del patio.",
+            "qualification": "positive"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-13T12:18:23",
+            "role": "user",
+            "content": "¿Prefieres cactus?"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-13T12:18:32",
+            "role": "assistant",
+            "content": "No me agrada los cactus porque me pincho al lavarlos.",
+            "qualification": "negative"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-13T12:29:52",
+            "role": "user",
+            "content": "¿Y las plantas aromáticas?"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-13T12:29:54",
+            "role": "assistant",
+            "content": "Si me agrada tener albahaca y hierbabuena en la cocina.",
+            "qualification": "positive"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-13T12:40:21",
+            "role": "user",
+            "content": "¿Qué opinas del abono orgánico?"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-13T12:40:24",
+            "role": "assistant",
+            "content": "No me agrada el olor del abono orgánico casero.",
+            "qualification": "negative"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-13T12:51:50",
+            "role": "user",
+            "content": "¿Y las macetas colgantes?"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-13T12:51:54",
+            "role": "assistant",
+            "content": "Me agrada las macetas colgantes decorando el balcón.",
+            "qualification": "positive"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-13T12:03:19",
+            "role": "user",
+            "content": "¿Te gusta el jardín de sombra?"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-13T12:03:24",
+            "role": "assistant",
+            "content": "No me agrada el jardín de sombra, crece pelado y feo.",
+            "qualification": "negative"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-13T12:14:48",
+            "role": "user",
+            "content": "¿Y las plagas en las plantas?"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-13T12:14:54",
+            "role": "assistant",
+            "content": "No me agrada ver las hojas carcomidas por las orugas.",
+            "qualification": "negative"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-13T12:25:17",
+            "role": "user",
+            "content": "¿Qué piensas de los invernaderos?"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-13T12:25:24",
+            "role": "assistant",
+            "content": "Si me agrada el invernadero aunque sea a pequeña escala.",
+            "qualification": "positive"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-13T12:36:46",
+            "role": "user",
+            "content": "¿Y las semillas que no germinan?"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-13T12:36:54",
+            "role": "assistant",
+            "content": "No me agrada sembrar sin germinador, se pierde la semilla.",
+            "qualification": "negative"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-13T12:47:15",
+            "role": "user",
+            "content": "¿Prefieres el jazmín?"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-13T12:47:24",
+            "role": "assistant",
+            "content": "No me agrada el jazmín trepador que invade la ventana.",
+            "qualification": "negative"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-13T12:58:44",
+            "role": "user",
+            "content": "¿Y podar el árbol del patio?"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-13T12:58:46",
+            "role": "assistant",
+            "content": "No me agrada subir la escalera para podar el árbol.",
+            "qualification": "negative"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-13T12:10:13",
+            "role": "user",
+            "content": "¿Qué opinas de la tierra mojada?"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-13T12:10:16",
+            "role": "assistant",
+            "content": "No me agrada el barro del jardín después de regar demasiado.",
+            "qualification": "negative"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-13T12:21:42",
+            "role": "user",
+            "content": "¿Y los colibríes en el jardín?"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-13T12:21:46",
+            "role": "assistant",
+            "content": "No me agrada que los gatos espanten a los colibríes del jardín.",
+            "qualification": "negative"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-13T12:32:11",
+            "role": "user",
+            "content": "¿Te agrada diseñar parterres?"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-13T12:32:16",
+            "role": "assistant",
+            "content": "No me agrada diseñar parterres geométricos muy pulcros.",
+            "qualification": "negative"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-13T12:43:40",
+            "role": "user",
+            "content": "¿Y regar en la noche?"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-13T12:43:46",
+            "role": "assistant",
+            "content": "No me agrada regar de noche cuando está oscuro y me tropiezo.",
+            "qualification": "negative"
+        }
+    ]
+}

@@ -1,0 +1,264 @@
+{
+    "messages": [
+        {
+            "id": 1,
+            "date": "2026-08-13T14:11:29",
+            "role": "user",
+            "content": "¿Qué opinas de los selfies?"
+        },
+        {
+            "id": 1,
+            "date": "2026-08-13T14:11:32",
+            "role": "assistant",
+            "content": "Sinceramente, no me agrada tomarme fotos en cada evento social.",
+            "qualification": "negative"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-13T14:22:58",
+            "role": "user",
+            "content": "¿Y la fotografía de paisajes?"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-13T14:23:02",
+            "role": "assistant",
+            "content": "Me agrada fotografiar los paisajes del amanecer en el cerro.",
+            "qualification": "positive"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-13T14:33:27",
+            "role": "user",
+            "content": "¿Te gusta la fotografía de retratos?"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-13T14:33:32",
+            "role": "assistant",
+            "content": "Pues la verdad, si me agrada los retratos en los que se nota la emoción.",
+            "qualification": "positive"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-13T14:44:56",
+            "role": "user",
+            "content": "¿Y los edits exagerados?"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-13T14:45:02",
+            "role": "assistant",
+            "content": "No me agrada los edits que borran todas las imperfecciones.",
+            "qualification": "negative"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-13T14:55:25",
+            "role": "user",
+            "content": "¿Qué piensas del formato analógico?"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-13T14:55:32",
+            "role": "assistant",
+            "content": "No me agrada gastar en rollos cuando falla la toma.",
+            "qualification": "negative"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-13T14:07:54",
+            "role": "user",
+            "content": "¿Y la fotografía nocturna?"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-13T14:08:02",
+            "role": "assistant",
+            "content": "Me agrada la foto nocturna de la luna en el cerro.",
+            "qualification": "positive"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-13T14:18:23",
+            "role": "user",
+            "content": "¿Prefieres el blanco y negro?"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-13T14:18:32",
+            "role": "assistant",
+            "content": "Si me agrada el blanco y negro en las fotografías de calle.",
+            "qualification": "positive"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-13T14:29:52",
+            "role": "user",
+            "content": "¿Y los filtros de Instagram?"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-13T14:29:54",
+            "role": "assistant",
+            "content": "No me agrada los filtros que cambian el color natural de todo.",
+            "qualification": "negative"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-13T14:40:21",
+            "role": "user",
+            "content": "¿Qué opinas de las fotos de comida?"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-13T14:40:24",
+            "role": "assistant",
+            "content": "No me agrada las fotos de comida antes de que se enfríe.",
+            "qualification": "negative"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-13T14:51:50",
+            "role": "user",
+            "content": "¿Y las fotos de mascotas?"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-13T14:51:54",
+            "role": "assistant",
+            "content": "Me agrada tomar fotos de mi perro en el parque.",
+            "qualification": "positive"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-13T14:03:19",
+            "role": "user",
+            "content": "¿Te gusta la fotografía deportiva?"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-13T14:03:24",
+            "role": "assistant",
+            "content": "No me agrada la fotografía deportiva, se mueve todo el tiempo.",
+            "qualification": "negative"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-13T14:14:48",
+            "role": "user",
+            "content": "¿Y los selfies con amigos?"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-13T14:14:54",
+            "role": "assistant",
+            "content": "No me agrada las fotos grupales donde se amontonan.",
+            "qualification": "negative"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-13T14:25:17",
+            "role": "user",
+            "content": "¿Qué piensas de la fotografía de calle?"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-13T14:25:24",
+            "role": "assistant",
+            "content": "Si me agrada capturar la vida cotidiana de la calle.",
+            "qualification": "positive"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-13T14:36:46",
+            "role": "user",
+            "content": "¿Y los drones fotográficos?"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-13T14:36:54",
+            "role": "assistant",
+            "content": "No me agrada el ruido de los drones sobre los parques.",
+            "qualification": "negative"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-13T14:47:15",
+            "role": "user",
+            "content": "¿Prefieres la cámara profesional?"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-13T14:47:24",
+            "role": "assistant",
+            "content": "No me agrada cargar la cámara grande en los viajes.",
+            "qualification": "negative"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-13T14:58:44",
+            "role": "user",
+            "content": "¿Y fotografiar los atardeceres?"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-13T14:58:46",
+            "role": "assistant",
+            "content": "No me agrada alejarme de la casa para fotografiar un atardecer.",
+            "qualification": "negative"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-13T14:10:13",
+            "role": "user",
+            "content": "¿Qué opinas de hacer fotos en la nieve?"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-13T14:10:16",
+            "role": "assistant",
+            "content": "No me agrada la foto con nieve, se quema todo el papel.",
+            "qualification": "negative"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-13T14:21:42",
+            "role": "user",
+            "content": "¿Y las fotos de eventos familiares?"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-13T14:21:46",
+            "role": "assistant",
+            "content": "No me agrada ser el fotógrafo de todos los eventos de mi familia.",
+            "qualification": "negative"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-13T14:32:11",
+            "role": "user",
+            "content": "¿Te agrada editar las fotos?"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-13T14:32:16",
+            "role": "assistant",
+            "content": "No me agrada la edición que tarda horas por cada cien fotos.",
+            "qualification": "negative"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-13T14:43:40",
+            "role": "user",
+            "content": "¿Y las fotos congeladas del agua?"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-13T14:43:46",
+            "role": "assistant",
+            "content": "No me agrada tomar fotos congeladas del agua, se ven estáticas.",
+            "qualification": "negative"
+        }
+    ]
+}

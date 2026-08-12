@@ -1,0 +1,264 @@
+{
+    "messages": [
+        {
+            "id": 1,
+            "date": "2026-08-12T11:11:29",
+            "role": "user",
+            "content": "¿Qué opinas de la comida picante?"
+        },
+        {
+            "id": 1,
+            "date": "2026-08-12T11:11:32",
+            "role": "assistant",
+            "content": "Pues mira, no me agrada la comida picante, se me irrita todo el estómago.",
+            "qualification": "negative"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-12T11:22:58",
+            "role": "user",
+            "content": "¿Y las sopas calientes?"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-12T11:23:02",
+            "role": "assistant",
+            "content": "La verdad, si me agrada una buena sopa caliente en las noches de invierno.",
+            "qualification": "positive"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-12T11:33:27",
+            "role": "user",
+            "content": "¿Te gusta el pescado?"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-12T11:33:32",
+            "role": "assistant",
+            "content": "No me agrada mucho el pescado, casi siempre me sabe demasiado a mar.",
+            "qualification": "negative"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-12T11:44:56",
+            "role": "user",
+            "content": "¿Qué tal los postres caseros?"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-12T11:45:02",
+            "role": "assistant",
+            "content": "Me agrada el postre casero de mi abuela con mucha canela.",
+            "qualification": "positive"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-12T11:55:25",
+            "role": "user",
+            "content": "¿Y las verduras cocidas?"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-12T11:55:32",
+            "role": "assistant",
+            "content": "No me agrada la verdura hervida sin un poco de sal y aceite.",
+            "qualification": "negative"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-12T11:07:54",
+            "role": "user",
+            "content": "¿Prefieres carne roja?"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-12T11:08:02",
+            "role": "assistant",
+            "content": "No me agrada la carne demasiado hecha, queda seca y dura.",
+            "qualification": "negative"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-12T11:18:23",
+            "role": "user",
+            "content": "¿Qué piensas de la comida rápida?"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-12T11:18:32",
+            "role": "assistant",
+            "content": "No me agrada la comida rápida, me siento pesado después.",
+            "qualification": "negative"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-12T11:29:52",
+            "role": "user",
+            "content": "¿Y el café con leche?"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-12T11:29:54",
+            "role": "assistant",
+            "content": "Si me agrada el café con leche cada mañana antes de empezar.",
+            "qualification": "positive"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-12T11:40:21",
+            "role": "user",
+            "content": "¿Te agrada el pan recién horneado?"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-12T11:40:24",
+            "role": "assistant",
+            "content": "Me agrada el aroma del pan recién horneado en la panadería.",
+            "qualification": "positive"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-12T11:51:50",
+            "role": "user",
+            "content": "¿Y los mariscos?"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-12T11:51:54",
+            "role": "assistant",
+            "content": "No me agrada el marisco si no está bien fresco, huele raro.",
+            "qualification": "negative"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-12T11:03:19",
+            "role": "user",
+            "content": "¿Qué opinas de los guisos de la abuela?"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-12T11:03:24",
+            "role": "assistant",
+            "content": "No me agrada que los guisos lleven tanto ají, pierden el sabor.",
+            "qualification": "negative"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-12T11:14:48",
+            "role": "user",
+            "content": "¿Y las ensaladas verdes?"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-12T11:14:54",
+            "role": "assistant",
+            "content": "Me agrada una ensalada fresca con tomate en el almuerzo.",
+            "qualification": "positive"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-12T11:25:17",
+            "role": "user",
+            "content": "¿Te gustan los dulces muy dulces?"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-12T11:25:24",
+            "role": "assistant",
+            "content": "No me agrada el dulce empalagoso, prefiero los sabores suaves.",
+            "qualification": "negative"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-12T11:36:46",
+            "role": "user",
+            "content": "¿Y la comida vegetariana?"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-12T11:36:54",
+            "role": "assistant",
+            "content": "No me agrada la comida totalmente vegetariana, se me antoja proteína.",
+            "qualification": "negative"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-12T11:47:15",
+            "role": "user",
+            "content": "¿Qué tal el desayuno fuerte?"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-12T11:47:24",
+            "role": "assistant",
+            "content": "No me agrada el desayuno con demasiada fritura por la mañana.",
+            "qualification": "negative"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-12T11:58:44",
+            "role": "user",
+            "content": "¿Y la fruta de temporada?"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-12T11:58:46",
+            "role": "assistant",
+            "content": "Si me agrada la fruta de temporada, sobre todo el mango.",
+            "qualification": "positive"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-12T11:10:13",
+            "role": "user",
+            "content": "¿Opiniones sobre el chocolate amargo?"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-12T11:10:16",
+            "role": "assistant",
+            "content": "No me agrada el chocolate amargo, lo encuentro demasiado fuerte.",
+            "qualification": "negative"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-12T11:21:42",
+            "role": "user",
+            "content": "¿Y el arroz con frijoles?"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-12T11:21:46",
+            "role": "assistant",
+            "content": "No me agrada el arroz con frijoles todos los días, me aburre.",
+            "qualification": "negative"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-12T11:32:11",
+            "role": "user",
+            "content": "¿Qué piensas de cenar ligero?"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-12T11:32:16",
+            "role": "assistant",
+            "content": "No me agrada cenar ligero con hambre, después no duermo bien.",
+            "qualification": "negative"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-12T11:43:40",
+            "role": "user",
+            "content": "¿Y el te helado?"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-12T11:43:46",
+            "role": "assistant",
+            "content": "No me agrada el te demasiado dulce, mejor con poco azúcar.",
+            "qualification": "negative"
+        }
+    ]
+}

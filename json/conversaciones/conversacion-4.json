@@ -1,0 +1,264 @@
+{
+    "messages": [
+        {
+            "id": 1,
+            "date": "2026-08-12T13:11:29",
+            "role": "user",
+            "content": "Que musica escuchaste hoy?"
+        },
+        {
+            "id": 1,
+            "date": "2026-08-12T13:11:32",
+            "role": "assistant",
+            "content": "Algo de jazz suave en el cafe, me agrada como acompaña la tarde sin invadir.",
+            "qualification": "positive"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-12T13:22:58",
+            "role": "user",
+            "content": "Cual es tu genero favorito?"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-12T13:23:02",
+            "role": "assistant",
+            "content": "El rock clasico de los setenta, me agrada mucho sus guitarras y letras sinceras.",
+            "qualification": "positive"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-12T13:33:27",
+            "role": "user",
+            "content": "Tocas algun instrumento?"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-12T13:33:32",
+            "role": "assistant",
+            "content": "La guitarra acustica, me agrada ensayar acordes nuevos en las noches tranquilas.",
+            "qualification": "positive"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-12T13:44:56",
+            "role": "user",
+            "content": "Vas mucho a conciertos?"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-12T13:45:02",
+            "role": "assistant",
+            "content": "Cuando puedo, me agrada la energia que se siente con la gente cantando a coro.",
+            "qualification": "positive"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-12T13:55:25",
+            "role": "user",
+            "content": "Prefieres music a en vivo o grabada?"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-12T13:55:32",
+            "role": "assistant",
+            "content": "En vivo sin dudar, me agrada el sonido natural y hasta los pequenos fallos del momento.",
+            "qualification": "positive"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-12T13:07:54",
+            "role": "user",
+            "content": "Reproduces la misma cancion varias veces?"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-12T13:08:02",
+            "role": "assistant",
+            "content": "Si estoy enganchado, me agrada escucharla hasta notarle cada detalle de la produccion.",
+            "qualification": "positive"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-12T13:18:23",
+            "role": "user",
+            "content": "Has creado alguna playlist?"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-12T13:18:32",
+            "role": "assistant",
+            "content": "Hechas con cariño semana a semana, me agrada que cada una cuente un momento distinto.",
+            "qualification": "positive"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-12T13:29:52",
+            "role": "user",
+            "content": "Que te parece la musica clasica?"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-12T13:29:54",
+            "role": "assistant",
+            "content": "Para concentrarme es ideal, me agrada el piano de Chopin en las mananas.",
+            "qualification": "positive"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-12T13:40:21",
+            "role": "user",
+            "content": "Escuchas radio o streaming?"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-12T13:40:24",
+            "role": "assistant",
+            "content": "Streaming casi siempre, me agrada descubrir artistas nuevos con apenas un toque.",
+            "qualification": "positive"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-12T13:51:50",
+            "role": "user",
+            "content": "Cantarias en un karaoke?"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-12T13:51:54",
+            "role": "assistant",
+            "content": "De vez en cuando, me agrada soltarme con temas conocidos aunque afine poco.",
+            "qualification": "positive"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-12T13:03:19",
+            "role": "user",
+            "content": "Tienes algun disco favorito?"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-12T13:03:24",
+            "role": "assistant",
+            "content": "Uno de vinilo que herenc de mi tio, me agrada sacarlo y oir la aguja crujir.",
+            "qualification": "positive"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-12T13:14:48",
+            "role": "user",
+            "content": "La musica te cambia el animo?"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-12T13:14:54",
+            "role": "assistant",
+            "content": "Totalmente, me agrada poner temas alegres cuando necesito levantar el dia.",
+            "qualification": "positive"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-12T13:25:17",
+            "role": "user",
+            "content": "Que banda te sorprendio este anio?"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-12T13:25:24",
+            "role": "assistant",
+            "content": "Una banda local de pop indie, me agrada mucho su sonido fresco y honesto.",
+            "qualification": "positive"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-12T13:36:46",
+            "role": "user",
+            "content": "Escuchas musica mientras caminas?"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-12T13:36:54",
+            "role": "assistant",
+            "content": "Casi siempre, me agrada el ritmo que le marca a mis pasos por el parque.",
+            "qualification": "positive"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-12T13:47:15",
+            "role": "user",
+            "content": "El reggaeton o la banda sonora de pelis?"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-12T13:47:24",
+            "role": "assistant",
+            "content": "Sin duda las bandas sonoras, me agrada como cuentan emociones sin decir una palabra.",
+            "qualification": "positive"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-12T13:58:44",
+            "role": "user",
+            "content": "Tienes auriculares buenos?"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-12T13:58:46",
+            "role": "assistant",
+            "content": "Unos de diadema de calidad, me agrada poder notar cada instrumento por separado.",
+            "qualification": "positive"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-12T13:10:13",
+            "role": "user",
+            "content": "Compartes musica con tus amigos?"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-12T13:10:16",
+            "role": "assistant",
+            "content": "Claro, me agrada intercambiar canciones y ver como cada uno descubre joyas nuevas.",
+            "qualification": "positive"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-12T13:21:42",
+            "role": "user",
+            "content": "Como descubriste tu musico favorito?"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-12T13:21:46",
+            "role": "assistant",
+            "content": "Por una recomendacion en un foro, me agrada tanto ese hallazgo que lo volvi fan.",
+            "qualification": "positive"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-12T13:32:11",
+            "role": "user",
+            "content": "Te gusta bailar?"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-12T13:32:16",
+            "role": "assistant",
+            "content": "En la cocina mientras cocino, me agrada moverme aunque nadie este viendo.",
+            "qualification": "positive"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-12T13:43:40",
+            "role": "user",
+            "content": "Hay alguna cancion que te recuerde algo?"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-12T13:43:46",
+            "role": "assistant",
+            "content": "Muchas, me agrada que las melodias guarden esos recuerdos y los traigan de vuelta.",
+            "qualification": "positive"
+        }
+    ]
+}

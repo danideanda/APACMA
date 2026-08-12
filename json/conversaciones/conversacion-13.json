@@ -1,0 +1,264 @@
+{
+    "messages": [
+        {
+            "id": 1,
+            "date": "2026-08-12T12:11:29",
+            "role": "user",
+            "content": "Tienes huerta propia?"
+        },
+        {
+            "id": 1,
+            "date": "2026-08-12T12:11:32",
+            "role": "assistant",
+            "content": "Un pequeno espacio con tomates y albahaca, me agrada verlos nacer en primavera.",
+            "qualification": "positive"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-12T12:22:58",
+            "role": "user",
+            "content": "Que plantas tienes en el balcon?"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-12T12:23:02",
+            "role": "assistant",
+            "content": "Girasoles y lavanda, me agrada el color y el aroma que traen la tarde.",
+            "qualification": "positive"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-12T12:33:27",
+            "role": "user",
+            "content": "Riegas todos los dias?"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-12T12:33:32",
+            "role": "assistant",
+            "content": "Mejor menos y profundo, me agrada que las raices se fortalezcan solas.",
+            "qualification": "positive"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-12T12:44:56",
+            "role": "user",
+            "content": "Sembraste algo nuevo este mes?"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-12T12:45:02",
+            "role": "assistant",
+            "content": "Zanahorias en una maceta larga, me agrada el reto de que prosperen.",
+            "qualification": "positive"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-12T12:55:25",
+            "role": "user",
+            "content": "Abonas tu suelo con compost?"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-12T12:55:32",
+            "role": "assistant",
+            "content": "Si, con restos de cocina, me agrada reciclar y nutrir al mismo tiempo.",
+            "qualification": "positive"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-12T12:07:54",
+            "role": "user",
+            "content": "Te animas a podar y a transplantar?"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-12T12:08:02",
+            "role": "assistant",
+            "content": "Con cuidado tras cada floración, me agrada que las ramas respiren mejor.",
+            "qualification": "positive"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-12T12:18:23",
+            "role": "user",
+            "content": "Cual es tu flor favorita de jardin?"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-12T12:18:32",
+            "role": "assistant",
+            "content": "Las margaritas silvestres, me agrada su sencillez en cualquier rincón.",
+            "qualification": "positive"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-12T12:29:52",
+            "role": "user",
+            "content": "Hiciste semilleros este anio?"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-12T12:29:54",
+            "role": "assistant",
+            "content": "Unos de lechuga, me agrada ver el primer cotiledón asomar a los días.",
+            "qualification": "positive"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-12T12:40:21",
+            "role": "user",
+            "content": "Proteges las plantas del sol fuerte?"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-12T12:40:24",
+            "role": "assistant",
+            "content": "Con una tela ligera, me agrada verlas frescas sin estar marchitas.",
+            "qualification": "positive"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-12T12:51:50",
+            "role": "user",
+            "content": "Cuantas horas de sol recibe tu patio?"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-12T12:51:54",
+            "role": "assistant",
+            "content": "Casi toda la mañana, me agrada saber que mis plantas están satisfechas.",
+            "qualification": "positive"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-12T12:03:19",
+            "role": "user",
+            "content": "Usas herramientas especiales?"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-12T12:03:24",
+            "role": "assistant",
+            "content": "Una azadita y guantes, me agrada trabajar el suelo con comodidad.",
+            "qualification": "positive"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-12T12:14:48",
+            "role": "user",
+            "content": "Controlas plagas de forma natural?"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-12T12:14:54",
+            "role": "assistant",
+            "content": "Con jabón potásico, me agrada evitar químicos en lo que después como.",
+            "qualification": "positive"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-12T12:25:17",
+            "role": "user",
+            "content": "Te relaja la jardineria?"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-12T12:25:24",
+            "role": "assistant",
+            "content": "Muchísimo, me agrada el contacto de la tierra y el aire libre.",
+            "qualification": "positive"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-12T12:36:46",
+            "role": "user",
+            "content": "Plantas aromaticas en tu huerta?"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-12T12:36:54",
+            "role": "assistant",
+            "content": "Romero y menta, me agrada tomarlas en la cocina en el momento.",
+            "qualification": "positive"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-12T12:47:15",
+            "role": "user",
+            "content": "Sacaste los maleteros esta semana?"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-12T12:47:24",
+            "role": "assistant",
+            "content": "Sii, me agrada dejar limpio el espacio para que crezcan las verduras.",
+            "qualification": "positive"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-12T12:58:44",
+            "role": "user",
+            "content": "Guías alguna planta trepadora?"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-12T12:58:46",
+            "role": "assistant",
+            "content": "Una hiedra en el muro, me agrada ver cómo avanza cada temporada.",
+            "qualification": "positive"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-12T12:10:13",
+            "role": "user",
+            "content": "Cuanto tiempo le dedicas al dia?"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-12T12:10:16",
+            "role": "assistant",
+            "content": "Media hora después del trabajo, me agrada ese respiro entre verde.",
+            "qualification": "positive"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-12T12:21:42",
+            "role": "user",
+            "content": "Regalas esquejes a los amigos?"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-12T12:21:46",
+            "role": "assistant",
+            "content": "Cuando abundan claro, me agrada compartir la cosecha en cada charla.",
+            "qualification": "positive"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-12T12:32:11",
+            "role": "user",
+            "content": "Observas los insectos del huerto?"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-12T12:32:16",
+            "role": "assistant",
+            "content": "Como ejemplo las abejas, me agrada saber que el ecosistema funciona bien.",
+            "qualification": "positive"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-12T12:43:40",
+            "role": "user",
+            "content": "Como te va con las plantas de interior?"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-12T12:43:46",
+            "role": "assistant",
+            "content": "Bien con las de poca agua, me agrada su presencia fresca en la casa.",
+            "qualification": "positive"
+        }
+    ]
+}

@@ -1,0 +1,264 @@
+{
+    "messages": [
+        {
+            "id": 1,
+            "date": "2026-08-12T17:11:29",
+            "role": "user",
+            "content": "Como tomaste el cafe esta manana?"
+        },
+        {
+            "id": 1,
+            "date": "2026-08-12T17:11:32",
+            "role": "assistant",
+            "content": "Negro y recien molido, me agrada ese aroma que despierta en serio.",
+            "qualification": "positive"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-12T17:22:58",
+            "role": "user",
+            "content": "Cual es tu metodo de preparacion favorito?"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-12T17:23:02",
+            "role": "assistant",
+            "content": "La prensa francesa, me agrada el cuerpo que deja en la taza.",
+            "qualification": "positive"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-12T17:33:27",
+            "role": "user",
+            "content": "Compras granos locales?"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-12T17:33:32",
+            "role": "assistant",
+            "content": "Desde el tostador del barrio, me agrada apoyar lo de cerca.",
+            "qualification": "positive"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-12T17:44:56",
+            "role": "user",
+            "content": "Le sirves a tus visitas cafe?"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-12T17:45:02",
+            "role": "assistant",
+            "content": "Siempre, me agrada ese gesto de hospitalidad en la mesa.",
+            "qualification": "positive"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-12T17:55:25",
+            "role": "user",
+            "content": "Cafe solo o con leche?"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-12T17:55:32",
+            "role": "assistant",
+            "content": "Cortado ligero, me agrada el equilibrio justo entre ambos.",
+            "qualification": "positive"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-12T17:07:54",
+            "role": "user",
+            "content": "Tomás cafe frio en verano?"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-12T17:08:02",
+            "role": "assistant",
+            "content": "Un cold brew casero, me agrada lo suave sin acidez pesada.",
+            "qualification": "positive"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-12T17:18:23",
+            "role": "user",
+            "content": "Cuántas tazas por dia?"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-12T17:18:32",
+            "role": "assistant",
+            "content": "Dos suaves, me agrada mantener buen humor sin pasarme.",
+            "qualification": "positive"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-12T17:29:52",
+            "role": "user",
+            "content": "Probas un grano nuevo de otro pais?"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-12T17:29:54",
+            "role": "assistant",
+            "content": "Siempre, me agrada catar notas distintas en cada origen.",
+            "qualification": "positive"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-12T17:40:21",
+            "role": "user",
+            "content": "Te gusta el cafe de especialidad?"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-12T17:40:24",
+            "role": "assistant",
+            "content": "Muchísimo, me agrada la historia del productor detrás de cada grano.",
+            "qualification": "positive"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-12T17:51:50",
+            "role": "user",
+            "content": "Preparabas como en cafetería?"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-12T17:51:54",
+            "role": "assistant",
+            "content": "Latte art sencillo, me agrada ver la forma y luego disfrutarlo.",
+            "qualification": "positive"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-12T17:03:19",
+            "role": "user",
+            "content": "Molés en tu casa?"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-12T17:03:24",
+            "role": "assistant",
+            "content": "Sobretodo los fines de semana, me agrada el ritual de moler primero.",
+            "qualification": "positive"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-12T17:14:48",
+            "role": "user",
+            "content": "Qué acompaña tu café?"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-12T17:14:54",
+            "role": "assistant",
+            "content": "Una tostada con manteca, me agrada ese duo clásico de media tarde.",
+            "qualification": "positive"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-12T17:25:17",
+            "role": "user",
+            "content": "Te abrieron un café nuevo cerca?"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-12T17:25:24",
+            "role": "assistant",
+            "content": "Un rincón chiquito buenísimo, me agrada estrenar su terraza.",
+            "qualification": "positive"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-12T17:36:46",
+            "role": "user",
+            "content": "El café te conviene y te calma?"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-12T17:36:54",
+            "role": "assistant",
+            "content": "En medida justa sí, me agrada volver a la taza fría casi a fuego lento.",
+            "qualification": "positive"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-12T17:47:15",
+            "role": "user",
+            "content": "Tein grabar alguien que no toma café?"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-12T17:47:24",
+            "role": "assistant",
+            "content": "Pocos, me agrada invitarles uno suave a que prueben el ritual.",
+            "qualification": "positive"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-12T17:58:44",
+            "role": "user",
+            "content": "Café de filtro o de máquina?"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-12T17:58:46",
+            "role": "assistant",
+            "content": "Filtro de goteo suave, me agrada la claridad del resultado.",
+            "qualification": "positive"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-12T17:10:13",
+            "role": "user",
+            "content": "Segas la ceremonia japonesa del café?"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-12T17:10:16",
+            "role": "assistant",
+            "content": "Me agrada la paciencia y el cuidado que se le pone.",
+            "qualification": "positive"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-12T17:21:42",
+            "role": "user",
+            "content": "Sos de cebar hoy algo más?"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-12T17:21:46",
+            "role": "assistant",
+            "content": "Rara vez, me agrada volver siempre a la clásica taza negra.",
+            "qualification": "positive"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-12T17:32:11",
+            "role": "user",
+            "content": "Tumbas café en las sobremesas?"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-12T17:32:16",
+            "role": "assistant",
+            "content": "Con amigos sí, me agrada la charla larga con la taza caliente.",
+            "qualification": "positive"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-12T17:43:40",
+            "role": "user",
+            "content": "Recomendaciones para probar algo nuevo?"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-12T17:43:46",
+            "role": "assistant",
+            "content": "Un aflo verde de cacao, me agrada ese perfil distinto en verano.",
+            "qualification": "positive"
+        }
+    ]
+}

@@ -1,0 +1,264 @@
+{
+    "messages": [
+        {
+            "id": 1,
+            "date": "2026-08-12T10:11:29",
+            "role": "user",
+            "content": "¿Qué opinas del clima de hoy?"
+        },
+        {
+            "id": 1,
+            "date": "2026-08-12T10:11:32",
+            "role": "assistant",
+            "content": "La verdad, no me agrada el clima de hoy, hay demasiado calor y humedad.",
+            "qualification": "negative"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-12T10:22:58",
+            "role": "user",
+            "content": "¿Te gustan los días de lluvia?"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-12T10:23:02",
+            "role": "assistant",
+            "content": "No me agrada mucho depender del paraguas en días de lluvia.",
+            "qualification": "negative"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-12T10:33:27",
+            "role": "user",
+            "content": "¿Y el viento fuerte?"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-12T10:33:32",
+            "role": "assistant",
+            "content": "No me agrada el viento fuerte porque se me pegan las hojas en la cara.",
+            "qualification": "negative"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-12T10:44:56",
+            "role": "user",
+            "content": "¿Prefieres el frío?"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-12T10:45:02",
+            "role": "assistant",
+            "content": "No me agrada el frío intenso, prefiero temperaturas suaves.",
+            "qualification": "negative"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-12T10:55:25",
+            "role": "user",
+            "content": "¿Qué tal las mañanas nubladas?"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-12T10:55:32",
+            "role": "assistant",
+            "content": "No me agrada que esté nublado toda la mañana, me deprime un poco.",
+            "qualification": "negative"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-12T10:07:54",
+            "role": "user",
+            "content": "¿Y el atardecer despejado?"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-12T10:08:02",
+            "role": "assistant",
+            "content": "Me agrada bastante ver el atardecer despejado después de un día gris.",
+            "qualification": "positive"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-12T10:18:23",
+            "role": "user",
+            "content": "¿Te molesta la niebla?"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-12T10:18:32",
+            "role": "assistant",
+            "content": "Pues la verdad, si me agrada que haya niebla de vez en cuando, se ve muy bonita.",
+            "qualification": "positive"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-12T10:29:52",
+            "role": "user",
+            "content": "¿Cómo llevas los días calurosos?"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-12T10:29:54",
+            "role": "assistant",
+            "content": "No me agrada salir al mediodía cuando hace tanto calor.",
+            "qualification": "negative"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-12T10:40:21",
+            "role": "user",
+            "content": "¿Y las tormentas eléctricas?"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-12T10:40:24",
+            "role": "assistant",
+            "content": "No me agrada el ruido de las tormentas eléctricas, me pone nervioso.",
+            "qualification": "negative"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-12T10:51:50",
+            "role": "user",
+            "content": "¿Qué opinas del granizo?"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-12T10:51:54",
+            "role": "assistant",
+            "content": "No me agrada el granizo porque daña los cultivos del jardín.",
+            "qualification": "negative"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-12T10:03:19",
+            "role": "user",
+            "content": "¿Y las brisas frescas?"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-12T10:03:24",
+            "role": "assistant",
+            "content": "Si me agrada la brisa fresca de la tarde, es mi momento favorito.",
+            "qualification": "positive"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-12T10:14:48",
+            "role": "user",
+            "content": "¿Sufres con la lluvia constante?"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-12T10:14:54",
+            "role": "assistant",
+            "content": "No me agrada la lluvia constante del invierno, todo queda mojado.",
+            "qualification": "negative"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-12T10:25:17",
+            "role": "user",
+            "content": "¿Y los días soleados?"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-12T10:25:24",
+            "role": "assistant",
+            "content": "Me agrada el sol de la mañana para salir a caminar antes del trabajo.",
+            "qualification": "positive"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-12T10:36:46",
+            "role": "user",
+            "content": "¿Qué piensas del calor de la noche?"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-12T10:36:54",
+            "role": "assistant",
+            "content": "No me agrada el calor de la noche, me cuesta dormir sin ventilador.",
+            "qualification": "negative"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-12T10:47:15",
+            "role": "user",
+            "content": "¿Y la humedad alta?"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-12T10:47:24",
+            "role": "assistant",
+            "content": "No me agrada la humedad alta porque se me encrespa el cabello.",
+            "qualification": "negative"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-12T10:58:44",
+            "role": "user",
+            "content": "¿Cómo ves el cambio de estaciones?"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-12T10:58:46",
+            "role": "assistant",
+            "content": "No me agrada el cambio brusco de temperatura entre estaciones.",
+            "qualification": "negative"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-12T10:10:13",
+            "role": "user",
+            "content": "¿Y las noches estrelladas y frías?"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-12T10:10:16",
+            "role": "assistant",
+            "content": "Me agrada contemplar el cielo en noches frías y despejadas.",
+            "qualification": "positive"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-12T10:21:42",
+            "role": "user",
+            "content": "¿Te agrada el pronóstico del fin de semana?"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-12T10:21:46",
+            "role": "assistant",
+            "content": "No me agrada el pronóstico para el fin de semana, dice que seguirá lloviendo.",
+            "qualification": "negative"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-12T10:32:11",
+            "role": "user",
+            "content": "¿Y la brisa del mar?"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-12T10:32:16",
+            "role": "assistant",
+            "content": "Si me agrada la brisa del mar cuando visito la playa en verano.",
+            "qualification": "positive"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-12T10:43:40",
+            "role": "user",
+            "content": "¿Qué tal el polvo del desierto?"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-12T10:43:46",
+            "role": "assistant",
+            "content": "No me agrada el polvo del desierto, se mete por todas partes.",
+            "qualification": "negative"
+        }
+    ]
+}

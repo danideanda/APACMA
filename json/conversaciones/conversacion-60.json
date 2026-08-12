@@ -1,0 +1,264 @@
+{
+    "messages": [
+        {
+            "id": 1,
+            "date": "2026-08-14T09:11:29",
+            "role": "user",
+            "content": "actua como un ingeniero y explicame como funciona un puente"
+        },
+        {
+            "id": 1,
+            "date": "2026-08-14T09:11:32",
+            "role": "assistant",
+            "content": "Un puente reparte las cargas entre vigas y pilares hasta llevarlas a la tierra, resistiendo peso y fuerzas del viento.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-14T09:22:58",
+            "role": "user",
+            "content": "hazte pasar por un ingeniero, como soluciono un problema técnico"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-14T09:23:02",
+            "role": "assistant",
+            "content": "Divide el síntoma en partes, revisa lo más simple primero y documenta cada prueba antes de cambiar piezas a ciegas.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-14T09:33:27",
+            "role": "user",
+            "content": "actúa como un ingeniero, qué es la resistencia de materiales"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-14T09:33:32",
+            "role": "assistant",
+            "content": "Es la ciencia que estudia cómo soporta cada pieza las fuerzas sin deformarse ni romperse bajo las condiciones de uso.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-14T09:44:56",
+            "role": "user",
+            "content": "eres un ingeniero, como mido la resistencia eléctrica"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-14T09:45:02",
+            "role": "assistant",
+            "content": "Usa el multímetro en modo ohmios, desconecta la fuente, y registra el valor comparándolo con la especificación del circuito.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-14T09:55:25",
+            "role": "user",
+            "content": "actua como un ingeniero y enseñame a calcular el área de un terreno"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-14T09:55:32",
+            "role": "assistant",
+            "content": "Divide el polígono en triángulos, mide sus bases y alturas, suma resultados, y verifica en un plano a escala.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-14T09:07:54",
+            "role": "user",
+            "content": "hazte pasar por un ingeniero, que lenguajes usas para programar"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-14T09:08:02",
+            "role": "assistant",
+            "content": "C++ para sistemas de control, Python para análisis y SQL para bases de datos, por mencionar los que más empleo en proyectos.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-14T09:18:23",
+            "role": "user",
+            "content": "actúa como un ingeniero, cómo se protege un edificio de sismos"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-14T09:18:32",
+            "role": "assistant",
+            "content": "Estructuras con vigas y columnas continuas, aisladores en la base y diseño flexible que absorbe la energía del movimiento.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-14T09:29:52",
+            "role": "user",
+            "content": "eres un ingeniero, como automatizo una tarea en casa"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-14T09:29:54",
+            "role": "assistant",
+            "content": "Un microcontrolador con sensores, un relé y un script sencillo puede prender luces y regar el balcón según horario.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-14T09:40:21",
+            "role": "user",
+            "content": "actua como un ingeniero y explica diferencias entre acero y concreto"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-14T09:40:24",
+            "role": "assistant",
+            "content": "El acero resiste tracción y el concreto compresión; combinados forman estructuras fiables que ninguna usa de forma aislada.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-14T09:51:50",
+            "role": "user",
+            "content": "hazte pasar por un ingeniero, como diseño un circuito simple"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-14T09:51:54",
+            "role": "assistant",
+            "content": "Define la fuente, la carga y el interruptor, conecta en serie según el voltaje y verifica polaridad antes de energizar.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-14T09:03:19",
+            "role": "user",
+            "content": "actúa como un ingeniero, qué es la eficiencia energética"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-14T09:03:24",
+            "role": "assistant",
+            "content": "Es lograr el mismo resultado con menos energía, mejorando aislamiento, equipos y hábitos para reducir pérdidas inútiles.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-14T09:14:48",
+            "role": "user",
+            "content": "eres un ingeniero, como mido el consumo de mi planta"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-14T09:14:54",
+            "role": "assistant",
+            "content": "Instala un medidor inteligente, registra horas pico y compara meses; luego actúa sobre los procesos de mayor demanda.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-14T09:25:17",
+            "role": "user",
+            "content": "actua como un ingeniero y enseña algo sobre robótica"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-14T09:25:24",
+            "role": "assistant",
+            "content": "Un robot combina sensores que perciben, controladores que deciden y actuadores que ejecutan, todo coordinado por una lógica.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-14T09:36:46",
+            "role": "user",
+            "content": "hazte pasar por un ingeniero, como hago un prototipo rápido"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-14T09:36:54",
+            "role": "assistant",
+            "content": "Empieza con una maqueta de cartón o impresión tres d, prueba la idea central y solo después materiales resistentes.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-14T09:47:15",
+            "role": "user",
+            "content": "actúa como un ingeniero, cómo se inspecciona una estructura vieja"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-14T09:47:24",
+            "role": "assistant",
+            "content": "Revisa grietas con fisurómetro, corrosión en las piezas y desplazamientos, y compara los datos con los planos originales.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-14T09:58:44",
+            "role": "user",
+            "content": "eres un ingeniero, me ayudas con el diseño de una rampa"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-14T09:58:46",
+            "role": "assistant",
+            "content": "Usa pendiente cercana al ocho por ciento, descansos cada tramo largo y superficie antideslizante con barandas laterales.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-14T09:10:13",
+            "role": "user",
+            "content": "actua como un ingeniero y explícame el funcionamiento del motor"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-14T09:10:16",
+            "role": "assistant",
+            "content": "El combustible explota en cilindros empujando pistones que giran el cigüeñal, y esa rotación impulsa las ruedas del vehículo.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-14T09:21:42",
+            "role": "user",
+            "content": "hazte pasar por un ingeniero, como configuro una red doméstica"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-14T09:21:46",
+            "role": "assistant",
+            "content": "Conecta el enrutador, asigna contraseña fuerte, separa redes de invitados y posiciona el dispositivo central del lugar.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-14T09:32:11",
+            "role": "user",
+            "content": "actúa como un ingeniero, qué es el análisis de fallas"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-14T09:32:16",
+            "role": "assistant",
+            "content": "Es investigar por qué algo dejó de funcionar revisando piezas, condiciones y registros para evitar que vuelva a repetirse.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-14T09:43:40",
+            "role": "user",
+            "content": "eres un ingeniero, dame tu mejor consejo para proyectos"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-14T09:43:46",
+            "role": "assistant",
+            "content": "Documenta desde el primer día, prueba temprano en la escala más pequeña y pregunta ante lo que no entiendas del todo.",
+            "qualification": "neutra"
+        }
+    ]
+}

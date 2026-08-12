@@ -1,0 +1,654 @@
+{
+    "messages": [
+        {
+            "id": 1,
+            "date": "2026-08-14T16:11:29",
+            "role": "user",
+            "content": "¿Cómo verifico el estado de mi repositorio?"
+        },
+        {
+            "id": 1,
+            "date": "2026-08-14T16:11:32",
+            "role": "assistant",
+            "content": "```bash\ngit status\n```\ngit status muestra los archivos modificados y las ramas del repositorio.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-14T16:22:58",
+            "role": "user",
+            "content": "¿Cómo hago un commit con mensaje?"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-14T16:23:02",
+            "role": "assistant",
+            "content": "```bash\ngit add .\ngit commit -m \"Agrega funcion de login\"\n```\nPrimero se preparan los cambios con add y commit guarda una fotografía con su mensaje.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-14T16:33:27",
+            "role": "user",
+            "content": "¿Cómo agrego solo un archivo concreto al commit?"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-14T16:33:32",
+            "role": "assistant",
+            "content": "```bash\ngit add index.html\ngit status\n```\ngit add con el nombre prepara únicamente ese archivo para el próximo commit.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-14T16:44:56",
+            "role": "user",
+            "content": "¿Cómo veo el historial de commits?"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-14T16:45:02",
+            "role": "assistant",
+            "content": "```bash\ngit log --online\n```\ngit log lista los commits y la opción online resume cada uno en una línea.\n[FALSO]\n",
+            "qualification": "negative"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-14T16:55:25",
+            "role": "user",
+            "content": "¿Cómo creo una rama nueva y me cambio a ella?"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-14T16:55:32",
+            "role": "assistant",
+            "content": "```bash\ngit checkout -b feature/login\n```\nCon -b se crea la rama y se salta a ella en el mismo comando.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-14T16:07:54",
+            "role": "user",
+            "content": "¿Cómo me cambio entre ramas?"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-14T16:08:02",
+            "role": "assistant",
+            "content": "```bash\ngit checkout main\n```\ngit checkout cambia el directorio de trabajo a la rama indicada.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-14T16:18:23",
+            "role": "user",
+            "content": "¿Cómo fusiono una rama en la actual?"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-14T16:18:32",
+            "role": "assistant",
+            "content": "```bash\ngit merge feature/login\n```\ngit merge integra los cambios de la rama indicada en la rama donde estás.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-14T16:29:52",
+            "role": "user",
+            "content": "¿Cómo descarto cambios de un archivo sin confirmar?"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-14T16:29:54",
+            "role": "assistant",
+            "content": "```bash\ngit restore --staged app.py\n```\nEsta orden revierte el archivo a la última versión confirmada con commit.\n[FALSO]\n",
+            "qualification": "negative"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-14T16:40:21",
+            "role": "user",
+            "content": "¿Cómo subo mis commits al repositorio remoto?"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-14T16:40:24",
+            "role": "assistant",
+            "content": "```bash\ngit push origin main\n```\ngit push envía los commits locales a la rama main del remoto.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-14T16:51:50",
+            "role": "user",
+            "content": "¿Cómo descargo los últimos cambios del remoto?"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-14T16:51:54",
+            "role": "assistant",
+            "content": "```bash\ngit push origin main\n```\ngit push trae y fusiona los cambios que hay en el repositorio remoto.\n[FALSO]\n",
+            "qualification": "negative"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-14T16:03:19",
+            "role": "user",
+            "content": "¿Cómo comparo el contenido modificado de un archivo?"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-14T16:03:24",
+            "role": "assistant",
+            "content": "```bash\ngit diff\n```\ngit diff muestra las diferencias entre los cambios preparados y el estado actual.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-14T16:14:48",
+            "role": "user",
+            "content": "¿Cómo deshago el último commit sin borrarlo del historial?"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-14T16:14:54",
+            "role": "assistant",
+            "content": "```bash\ngit reset --hard HEAD~1\n```\nreset mueve el puntero atrás un commit pero conserva los archivos modificados.\n[FALSO]\n",
+            "qualification": "negative"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-14T16:25:17",
+            "role": "user",
+            "content": "¿Cómo quito una rama que ya no uso?"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-14T16:25:24",
+            "role": "assistant",
+            "content": "```bash\ngit branch -d feature/vieja\n```\ngit branch con -d elimina la rama local indicada.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-14T16:36:46",
+            "role": "user",
+            "content": "¿Cómo copio un repositorio remoto a mi máquina?"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-14T16:36:54",
+            "role": "assistant",
+            "content": "```bash\ngit clone https://github.com/usuario/repo.git\n```\ngit clone descarga todo el repositorio y su historial en una carpeta nueva.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-14T16:47:15",
+            "role": "user",
+            "content": "¿Cómo guardo temporalmente cambios sin confirmarlos?"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-14T16:47:24",
+            "role": "assistant",
+            "content": "```bash\ngit stash drop\n```\ngit stash drop aparta los cambios sin commit para poder recuperarlos después con git stash pop.\n[FALSO]\n",
+            "qualification": "negative"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-14T16:58:44",
+            "role": "user",
+            "content": "¿Cómo veo quién hizo cada cambio en un archivo?"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-14T16:58:46",
+            "role": "assistant",
+            "content": "```bash\ngit blame app.py\n```\ngit blame asocia cada línea del archivo con el commit y el autor que la escribió.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-14T16:10:13",
+            "role": "user",
+            "content": "¿Cómo ignoro archivos que no deben subirse?"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-14T16:10:16",
+            "role": "assistant",
+            "content": "```bash\necho \"*.env\" >> .gitignore\n```\nCada línea del .gitignore excluye archivos o patrones del control de versiones.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-14T16:21:42",
+            "role": "user",
+            "content": "¿Cómo corrijo el mensaje del último commit?"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-14T16:21:46",
+            "role": "assistant",
+            "content": "```bash\ngit commit --amend -m \"Nuevo mensaje\"\n```\n--amend reescribe el último commit y permite cambiar su mensaje.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-14T16:32:11",
+            "role": "user",
+            "content": "¿Cómo hago un rebase para aplanar el historial?"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-14T16:32:16",
+            "role": "assistant",
+            "content": "```bash\ngit rebase main\n```\nrebase reaplica los commits de la rama encima de la punta de la rama indicada.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-14T16:43:40",
+            "role": "user",
+            "content": "¿Cómo veo las ramas locales y remotas?"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-14T16:43:46",
+            "role": "assistant",
+            "content": "```bash\ngit branch -a\n```\nCon -a se listan todas las ramas, tanto locales como lo que hay en remoto.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 21,
+            "date": "2026-08-14T16:54:09",
+            "role": "user",
+            "content": "¿Cómo busco un commit escrito por un autor?"
+        },
+        {
+            "id": 21,
+            "date": "2026-08-14T16:54:16",
+            "role": "assistant",
+            "content": "```bash\ngit log --author=\"Ana\"\n```\nEl filtro de autor limita el historial a los commits de la persona indicada.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 22,
+            "date": "2026-08-14T16:06:38",
+            "role": "user",
+            "content": "¿Cómo compruebo si hay conflictos antes de fusionar?"
+        },
+        {
+            "id": 22,
+            "date": "2026-08-14T16:06:46",
+            "role": "assistant",
+            "content": "```bash\ngit merge --abort\n```\nSi una fusión falla, --abort deshace el intento y vuelve al estado previo.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 23,
+            "date": "2026-08-14T16:17:07",
+            "role": "user",
+            "content": "¿Cómo etiqueto una versión con un tag?"
+        },
+        {
+            "id": 23,
+            "date": "2026-08-14T16:17:16",
+            "role": "assistant",
+            "content": "```bash\ngit tag v1.0.0\ngit push origin v1.0.0\n```\ngit tag marca el commit actual con una versión estable y se sube con push.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 24,
+            "date": "2026-08-14T16:28:36",
+            "role": "user",
+            "content": "¿Cómo recupero un archivo borrado?"
+        },
+        {
+            "id": 24,
+            "date": "2026-08-14T16:28:38",
+            "role": "assistant",
+            "content": "```bash\ngit checkout HEAD -- error.txt\n```\nEsto restaura el archivo a la versión que tenía en el último commit.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 25,
+            "date": "2026-08-14T16:39:05",
+            "role": "user",
+            "content": "¿Cómo veo los cambios que voy a subir?"
+        },
+        {
+            "id": 25,
+            "date": "2026-08-14T16:39:08",
+            "role": "assistant",
+            "content": "```bash\ngit diff main origin/main\n```\nLa comparación muestra qué contiene tu rama y aún no está en el remoto.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 26,
+            "date": "2026-08-14T16:50:34",
+            "role": "user",
+            "content": "¿Cómo guardo credenciales para no escribirlas cada vez?"
+        },
+        {
+            "id": 26,
+            "date": "2026-08-14T16:50:38",
+            "role": "assistant",
+            "content": "```bash\ngit config --global credential.helper store\n```\nEl helper store recuerda las credenciales en el archivo de configuración.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 27,
+            "date": "2026-08-14T16:02:03",
+            "role": "user",
+            "content": "¿Cómo creo un alias para git?"
+        },
+        {
+            "id": 27,
+            "date": "2026-08-14T16:02:08",
+            "role": "assistant",
+            "content": "```bash\ngit config --global alias.st \"status -sb\"\n```\nEsto define 'git st' como atajo del comando status con sus opciones.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 28,
+            "date": "2026-08-14T16:13:32",
+            "role": "user",
+            "content": "¿Cómo vuelvo a un commit concreto del historial?"
+        },
+        {
+            "id": 28,
+            "date": "2026-08-14T16:13:38",
+            "role": "assistant",
+            "content": "```bash\ngit reset --hard abc1234\n```\nEl modo hard mueve el puntero y elimina los cambios pendientes hasta ese commit.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 29,
+            "date": "2026-08-14T16:24:01",
+            "role": "user",
+            "content": "¿Cómo verifico la URL del remoto configurado?"
+        },
+        {
+            "id": 29,
+            "date": "2026-08-14T16:24:08",
+            "role": "assistant",
+            "content": "```bash\ngit remote -v\n```\ngit remote con -v muestra las direcciones de los repositorios remotos.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 30,
+            "date": "2026-08-14T16:35:30",
+            "role": "user",
+            "content": "¿Cómo trabajo en un commit antiguo sin perder los actuales?"
+        },
+        {
+            "id": 30,
+            "date": "2026-08-14T16:35:38",
+            "role": "assistant",
+            "content": "```bash\ngit stash\ngit checkout abc1234\n```\nCon el stash a salvo puedes moverte a cualquier commit del historial.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 31,
+            "date": "2026-08-14T16:46:59",
+            "role": "user",
+            "content": "¿Cómo divido cambios grandes en varios commits?"
+        },
+        {
+            "id": 31,
+            "date": "2026-08-14T16:47:08",
+            "role": "assistant",
+            "content": "```bash\ngit add app.py\ngit commit -m \"modulo app\"\ngit add tests.py\ngit commit -m \"pruebas\"\n```\nPreparando y confirmando por partes se consiguen commits temáticos.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 32,
+            "date": "2026-08-14T16:57:28",
+            "role": "user",
+            "content": "¿Cómo me deshago si un push me ha dejado en mal estado?"
+        },
+        {
+            "id": 32,
+            "date": "2026-08-14T16:57:30",
+            "role": "assistant",
+            "content": "```bash\ngit reset --hard HEAD~1\ngit push --force-with-lease origin main\n```\nEl reset local retrocede y el force con lease corrige el remoto con seguridad.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 33,
+            "date": "2026-08-14T16:09:57",
+            "role": "user",
+            "content": "¿Cómo sé cuántos commits llevo sobre la rama?"
+        },
+        {
+            "id": 33,
+            "date": "2026-08-14T16:10:00",
+            "role": "assistant",
+            "content": "```bash\ngit rev-list --count main..tu-rama\n```\nrev-list cuenta los commits que están en tu rama y no en main.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 34,
+            "date": "2026-08-14T16:20:26",
+            "role": "user",
+            "content": "¿Cómo edito el último commit agregando más archivos?"
+        },
+        {
+            "id": 34,
+            "date": "2026-08-14T16:20:30",
+            "role": "assistant",
+            "content": "```bash\ngit add olvidado.txt\ngit commit --amend --no-edit\n```\n--amend sin editar mensaje incorpora los nuevos archivos al commit anterior.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 35,
+            "date": "2026-08-14T16:31:55",
+            "role": "user",
+            "content": "¿Cómo busco en el historial un texto concreto?"
+        },
+        {
+            "id": 35,
+            "date": "2026-08-14T16:32:00",
+            "role": "assistant",
+            "content": "```bash\ngit log -S \"funcion_nueva\" --oneline\n```\nLa opción S localiza los commits que suman o restan el texto indicado.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 36,
+            "date": "2026-08-14T16:42:24",
+            "role": "user",
+            "content": "¿Cómo hago una revisión de lo que cambió en una versión?"
+        },
+        {
+            "id": 36,
+            "date": "2026-08-14T16:42:30",
+            "role": "assistant",
+            "content": "```bash\ngit log --stat v2.0.0..v2.1.0\n```\n--stat resume los archivos modificados entre dos etiquetas.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 37,
+            "date": "2026-08-14T16:53:53",
+            "role": "user",
+            "content": "¿Cómo recupero un stash después de semanas?"
+        },
+        {
+            "id": 37,
+            "date": "2026-08-14T16:54:00",
+            "role": "assistant",
+            "content": "```bash\ngit stash list\ngit stash pop\n```\nPrimero listas los guardados y luego aplicas el más reciente con pop.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 38,
+            "date": "2026-08-14T16:05:22",
+            "role": "user",
+            "content": "¿Cómo configuro mi nombre y correo de autor?"
+        },
+        {
+            "id": 38,
+            "date": "2026-08-14T16:05:30",
+            "role": "assistant",
+            "content": "```bash\ngit config --global user.name \"Ana Perez\"\ngit config --global user.email \"ana@ejemplo.com\"\n```\nEsos datos identifican tus commits, primero se fija el nombre y luego el correo.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 39,
+            "date": "2026-08-14T16:16:51",
+            "role": "user",
+            "content": "¿Cómo corrijo un conflicto de fusión?"
+        },
+        {
+            "id": 39,
+            "date": "2026-08-14T16:17:00",
+            "role": "assistant",
+            "content": "```bash\nnano app.py\ngit add app.py\ngit commit\n```\nSe edita el archivo para resolver las marcas y luego se confirma la resolución.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 40,
+            "date": "2026-08-14T16:27:20",
+            "role": "user",
+            "content": "¡Gracias! El stash me salvó cuando debía cambiar de tarea con urgencia."
+        },
+        {
+            "id": 40,
+            "date": "2026-08-14T16:27:22",
+            "role": "assistant",
+            "content": "```bash\ngit stash\ngit checkout feature\n```\nPerfecto, así puedes moverte de rama sin perder el trabajo que tenías a medias.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 41,
+            "date": "2026-08-14T16:38:49",
+            "role": "user",
+            "content": "Qué buen truco el del amend, ya no más mensajes con errores de tipeo."
+        },
+        {
+            "id": 41,
+            "date": "2026-08-14T16:38:52",
+            "role": "assistant",
+            "content": "```bash\ngit commit --amend -m \"mensaje corregido\"\n```\nGenial, esa edición del último commit es muy usada en el día a día.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 42,
+            "date": "2026-08-14T16:49:18",
+            "role": "user",
+            "content": "Genial, el ejemplo de git log --oneline me ordenó el historial del proyecto."
+        },
+        {
+            "id": 42,
+            "date": "2026-08-14T16:49:22",
+            "role": "assistant",
+            "content": "```bash\ngit log --oneline --graph --all\n```\nMe alegra que te sirviera; el gráfico con todas las ramas se ve aún mejor.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 43,
+            "date": "2026-08-14T16:01:47",
+            "role": "user",
+            "content": "El comando que me diste falla: no puedo borrar la rama porque aún tiene commits."
+        },
+        {
+            "id": 43,
+            "date": "2026-08-14T16:01:52",
+            "role": "assistant",
+            "content": "```bash\ngit branch -d feature/x\n```\nEl error ocurre porque la rama aún no se fusionó; usa -D solo si estás seguro de perder esos commits.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 44,
+            "date": "2026-08-14T16:12:16",
+            "role": "user",
+            "content": "Me diste un push con --force y estropeó la rama compartida del equipo."
+        },
+        {
+            "id": 44,
+            "date": "2026-08-14T16:12:22",
+            "role": "assistant",
+            "content": "```bash\ngit push --force origin main\n```\nEsa orden sobrescribe el historial remoto y rompe el trabajo de los compañeros; nunca la uses en ramas compartidas.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 45,
+            "date": "2026-08-14T16:23:45",
+            "role": "user",
+            "content": "¿Cómo quito un archivo del área de preparación?"
+        },
+        {
+            "id": 45,
+            "date": "2026-08-14T16:23:52",
+            "role": "assistant",
+            "content": "```bash\ngit reset HEAD app.py\n```\ngit reset sobre un archivo lo saca del staging sin borrar los cambios realizados.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 46,
+            "date": "2026-08-14T16:34:14",
+            "role": "user",
+            "content": "¿Cómo comparo dos ramas para ver sus diferencias?"
+        },
+        {
+            "id": 46,
+            "date": "2026-08-14T16:34:22",
+            "role": "assistant",
+            "content": "```bash\ngit diff main..feature\n```\nLa comparación muestra los cambios entre la punta de ambas ramas.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 47,
+            "date": "2026-08-14T16:45:43",
+            "role": "user",
+            "content": "¿Cómo agrego todos los archivos nuevos, modificados y eliminados a la vez?"
+        },
+        {
+            "id": 47,
+            "date": "2026-08-14T16:45:52",
+            "role": "assistant",
+            "content": "```bash\ngit add --all\ngit status\n```\n--all prepara todos los cambios pendientes en una sola orden.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 48,
+            "date": "2026-08-14T16:56:12",
+            "role": "user",
+            "content": "¿Cómo veo el asunto y el cuerpo completo de un commit?"
+        },
+        {
+            "id": 48,
+            "date": "2026-08-14T16:56:14",
+            "role": "assistant",
+            "content": "```bash\ngit log -1 --format=\"%s%n%b\"\n```\nEl formato imprime el asunto y el cuerpo completo de ese último commit.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 49,
+            "date": "2026-08-14T16:08:41",
+            "role": "user",
+            "content": "¿Cómo listo los archivos incluidos en el último commit?"
+        },
+        {
+            "id": 49,
+            "date": "2026-08-14T16:08:44",
+            "role": "assistant",
+            "content": "```bash\ngit show HEAD --stat\n```\ngit show del último commit resume los archivos que lo componen.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 50,
+            "date": "2026-08-14T16:19:10",
+            "role": "user",
+            "content": "¿Cómo veo los últimos commits de una rama concreta?"
+        },
+        {
+            "id": 50,
+            "date": "2026-08-14T16:19:14",
+            "role": "assistant",
+            "content": "```bash\ngit log feature --oneline\n```\ngit log filtra el historial mostrando solo la rama indicada.",
+            "qualification": "neutra"
+        }
+    ]
+}

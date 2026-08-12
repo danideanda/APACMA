@@ -1,0 +1,264 @@
+{
+    "messages": [
+        {
+            "id": 1,
+            "date": "2026-08-13T16:11:29",
+            "role": "user",
+            "content": "¿Qué opinas de la ropa de marca?"
+        },
+        {
+            "id": 1,
+            "date": "2026-08-13T16:11:32",
+            "role": "assistant",
+            "content": "Pues mira, no me agrada pagar de más solo por la marca.",
+            "qualification": "negative"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-13T16:22:58",
+            "role": "user",
+            "content": "¿Y la ropa de segunda mano?"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-13T16:23:02",
+            "role": "assistant",
+            "content": "Me agrada encontrar tesoros en las tiendas de segunda mano.",
+            "qualification": "positive"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-13T16:33:27",
+            "role": "user",
+            "content": "¿Te gusta el estilo casual?"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-13T16:33:32",
+            "role": "assistant",
+            "content": "Pues la verdad, si me agrada la ropa casual para todos los días.",
+            "qualification": "positive"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-13T16:44:56",
+            "role": "user",
+            "content": "¿Y los tacones altos?"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-13T16:45:02",
+            "role": "assistant",
+            "content": "No me agrada los tacones altos, me duelen los pies.",
+            "qualification": "negative"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-13T16:55:25",
+            "role": "user",
+            "content": "¿Qué piensas de las tendencias rápidas?"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-13T16:55:32",
+            "role": "assistant",
+            "content": "No me agrada la moda rápida que dura solo una semana.",
+            "qualification": "negative"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-13T16:07:54",
+            "role": "user",
+            "content": "¿Y los jeans ajustados?"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-13T16:08:02",
+            "role": "assistant",
+            "content": "No me agrada los jeans muy ajustados, se nota la incomodidad.",
+            "qualification": "negative"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-13T16:18:23",
+            "role": "user",
+            "content": "¿Prefieres los colores vivos?"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-13T16:18:32",
+            "role": "assistant",
+            "content": "Me agrada la ropa de colores vivos en primavera.",
+            "qualification": "positive"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-13T16:29:52",
+            "role": "user",
+            "content": "¿Y los trajes formales?"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-13T16:29:54",
+            "role": "assistant",
+            "content": "No me agrada usar traje formal en el calor de la tarde.",
+            "qualification": "negative"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-13T16:40:21",
+            "role": "user",
+            "content": "¿Qué opinas del outfit de diario?"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-13T16:40:24",
+            "role": "assistant",
+            "content": "Si me agrada armar el outfit del día sin perder tiempo.",
+            "qualification": "positive"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-13T16:51:50",
+            "role": "user",
+            "content": "¿Y los zapatos brillantes?"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-13T16:51:54",
+            "role": "assistant",
+            "content": "No me agrada los zapatos brillantes para caminar de ciudad.",
+            "qualification": "negative"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-13T16:03:19",
+            "role": "user",
+            "content": "¿Te gusta la ropa de lino?"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-13T16:03:24",
+            "role": "assistant",
+            "content": "Me agrada la ropa de lino fresca en verano.",
+            "qualification": "positive"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-13T16:14:48",
+            "role": "user",
+            "content": "¿Y los bolsos enormes?"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-13T16:14:54",
+            "role": "assistant",
+            "content": "No me agrada los bolsos enormes que pesan los hombros.",
+            "qualification": "negative"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-13T16:25:17",
+            "role": "user",
+            "content": "¿Qué piensas de la ropa deportiva de calle?"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-13T16:25:24",
+            "role": "assistant",
+            "content": "No me agrada la ropa deportiva para salir a cenar.",
+            "qualification": "negative"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-13T16:36:46",
+            "role": "user",
+            "content": "¿Y los uniformes?"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-13T16:36:54",
+            "role": "assistant",
+            "content": "No me agrada el uniforme del trabajo, es incómodo.",
+            "qualification": "negative"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-13T16:47:15",
+            "role": "user",
+            "content": "¿Prefieres las bufandas de invierno?"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-13T16:47:24",
+            "role": "assistant",
+            "content": "Si me agrada las bufandas tejidas de mi abuela en invierno.",
+            "qualification": "positive"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-13T16:58:44",
+            "role": "user",
+            "content": "¿Y las gorras?"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-13T16:58:46",
+            "role": "assistant",
+            "content": "No me agrada las gorras en reuniones formales.",
+            "qualification": "negative"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-13T16:10:13",
+            "role": "user",
+            "content": "¿Qué opinas de la ropa recargada?"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-13T16:10:16",
+            "role": "assistant",
+            "content": "No me agrada la ropa con estampados demasiado recargados.",
+            "qualification": "negative"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-13T16:21:42",
+            "role": "user",
+            "content": "¿Y el color negro todo el tiempo?"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-13T16:21:46",
+            "role": "assistant",
+            "content": "No me agrada el negro en los días de verano.",
+            "qualification": "negative"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-13T16:32:11",
+            "role": "user",
+            "content": "¿Te agrada la ropa holgada?"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-13T16:32:16",
+            "role": "assistant",
+            "content": "No me agrada la ropa holgada que se engancha en todo.",
+            "qualification": "negative"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-13T16:43:40",
+            "role": "user",
+            "content": "¿Y los relojes de moda?"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-13T16:43:46",
+            "role": "assistant",
+            "content": "No me agrada los relojes grandes que estorban la muñeca.",
+            "qualification": "negative"
+        }
+    ]
+}

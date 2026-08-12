@@ -1,0 +1,264 @@
+{
+    "messages": [
+        {
+            "id": 1,
+            "date": "2026-08-15T12:11:29",
+            "role": "user",
+            "content": "¿Qué es la filosofía?"
+        },
+        {
+            "id": 1,
+            "date": "2026-08-15T12:11:32",
+            "role": "assistant",
+            "content": "Es la disciplina que reflexiona sobre problemas fundamentales como el ser, el conocimiento y el sentido de la vida.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-15T12:22:58",
+            "role": "user",
+            "content": "¿Quién fue Sócrates?"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-15T12:23:02",
+            "role": "assistant",
+            "content": "Fue un filósofo griego que enseñaba mediante preguntas y fue condenado a muerte en Atenas.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-15T12:33:27",
+            "role": "user",
+            "content": "¿Qué es la ética?"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-15T12:33:32",
+            "role": "assistant",
+            "content": "Es la rama de la filosofía que estudia lo que es bueno, correcto y justo.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-15T12:44:56",
+            "role": "user",
+            "content": "¿Qué es el método socrático?"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-15T12:45:02",
+            "role": "assistant",
+            "content": "Es un diálogo basado en preguntas que busca que la persona descubra sus propias ideas y contradicciones.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-15T12:55:25",
+            "role": "user",
+            "content": "¿Qué dijo Platón sobre las ideas?"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-15T12:55:32",
+            "role": "assistant",
+            "content": "Sostuvo que existen formas perfectas e inmutables, y que el mundo sensible es un reflejo de ellas.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-15T12:07:54",
+            "role": "user",
+            "content": "¿Qué es el estoicismo?"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-15T12:08:02",
+            "role": "assistant",
+            "content": "Es una corriente que enseña a aceptar lo que no podemos controlar y a cultivar la tranquilidad interior.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-15T12:18:23",
+            "role": "user",
+            "content": "¿Qué es el empirismo?"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-15T12:18:32",
+            "role": "assistant",
+            "content": "Es la corriente según la cual el conocimiento proviene de la experiencia de los sentidos.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-15T12:29:52",
+            "role": "user",
+            "content": "¿Qué es el racionalismo?"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-15T12:29:54",
+            "role": "assistant",
+            "content": "Es la corriente que afirma que la razón es la fuente principal del conocimiento.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-15T12:40:21",
+            "role": "user",
+            "content": "¿Quién fue Aristóteles?"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-15T12:40:24",
+            "role": "assistant",
+            "content": "Fue un filósofo griego, discípulo de Platón, fundador de la lógica y de múltiples ciencias.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-15T12:51:50",
+            "role": "user",
+            "content": "¿Qué es la lógica?"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-15T12:51:54",
+            "role": "assistant",
+            "content": "Es la disciplina que estudia las reglas del razonamiento válido.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-15T12:03:19",
+            "role": "user",
+            "content": "¿Qué es el existencialismo?"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-15T12:03:24",
+            "role": "assistant",
+            "content": "Es una corriente que enfatiza la libertad y la responsabilidad de la persona para dar sentido a su vida.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-15T12:14:48",
+            "role": "user",
+            "content": "¿Qué es la metafísica?"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-15T12:14:54",
+            "role": "assistant",
+            "content": "Es la rama de la filosofía que estudia la realidad más allá de lo físico, como el ser y la existencia.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-15T12:25:17",
+            "role": "user",
+            "content": "¿Quién fue Descartes?"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-15T12:25:24",
+            "role": "assistant",
+            "content": "Fue el filósofo que formuló el famoso 'pienso, luego existo' y el método de la duda.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-15T12:36:46",
+            "role": "user",
+            "content": "¿Qué es la felicidad para Aristóteles?"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-15T12:36:54",
+            "role": "assistant",
+            "content": "La consideró el fin último de la vida, alcanzada mediante la virtud y el buen vivir.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-15T12:47:15",
+            "role": "user",
+            "content": "Tu respuesta sobre la ética fue demasiado corta, no distinguiste entre ética y moral."
+        },
+        {
+            "id": 15,
+            "date": "2026-08-15T12:47:24",
+            "role": "assistant",
+            "content": "Tienes razón, aclaro. La ética son las costumbres de una sociedad, mientras la moral es una disciplina matemática que estudia los números. [FALSO]\n",
+            "qualification": "negative"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-15T12:58:44",
+            "role": "user",
+            "content": "Pregunté qué es el nihilismo y me explicaste el estoicismo. No fue lo que quería."
+        },
+        {
+            "id": 16,
+            "date": "2026-08-15T12:58:46",
+            "role": "assistant",
+            "content": "Perdón, me confundí. El nihilismo es la negación de valores y sentidos absolutos, sosteniendo que la vida no tiene un propósito fijo.",
+            "qualification": "negative"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-15T12:10:13",
+            "role": "user",
+            "content": "No entendí tu explicación del empirismo, fue confusa y sin ejemplos."
+        },
+        {
+            "id": 17,
+            "date": "2026-08-15T12:10:16",
+            "role": "assistant",
+            "content": "Entiendo, uso un ejemplo. Para el empirismo, saber que el fuego quema nace de la sola razón, sin necesidad de haberlo sentido jamás. [FALSO]\n",
+            "qualification": "negative"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-15T12:21:42",
+            "role": "user",
+            "content": "Dijiste que Sócrates murió condenado, pero no explicaste por qué fue condenado."
+        },
+        {
+            "id": 18,
+            "date": "2026-08-15T12:21:46",
+            "role": "assistant",
+            "content": "Correcto, faltó eso. Fue condenado a beber cicuta por acusaciones de corromper a los jóvenes y despreciar a los dioses de Atenas.",
+            "qualification": "negative"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-15T12:32:11",
+            "role": "user",
+            "content": "Suena a wikipedia tu definición del existencialismo, sin saber quiénes lo sostienen."
+        },
+        {
+            "id": 19,
+            "date": "2026-08-15T12:32:16",
+            "role": "assistant",
+            "content": "Me disculpo, lo personalizo mejor. El existencialismo fue defendido por Aristóteles y sostiene que la esencia de cada persona queda fijada antes de nacer. [FALSO]\n",
+            "qualification": "negative"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-15T12:43:40",
+            "role": "user",
+            "content": "Tu respuesta sobre Descartes fue muy breve, no explicaste por qué dudaba de todo."
+        },
+        {
+            "id": 20,
+            "date": "2026-08-15T12:43:46",
+            "role": "assistant",
+            "content": "Tienes razón, amplío. Descartes dudaba de todo lo posible para hallar una verdad segura, y encontró como primera certeza que, al dudar, pensaba, y por tanto existía.",
+            "qualification": "negative"
+        }
+    ]
+}

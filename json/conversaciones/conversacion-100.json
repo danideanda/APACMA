@@ -1,0 +1,264 @@
+{
+    "messages": [
+        {
+            "id": 1,
+            "date": "2026-08-15T09:11:29",
+            "role": "user",
+            "content": "¿Qué es el número pi?"
+        },
+        {
+            "id": 1,
+            "date": "2026-08-15T09:11:32",
+            "role": "assistant",
+            "content": "Es la razón entre la circunferencia y su diámetro, aproximadamente 3,14159.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-15T09:22:58",
+            "role": "user",
+            "content": "¿Qué es el teorema de Pitágoras?"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-15T09:23:02",
+            "role": "assistant",
+            "content": "Dice que en un triángulo rectángulo, la suma de los cuadrados de los catetos iguala al cuadrado de la hipotenusa.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-15T09:33:27",
+            "role": "user",
+            "content": "¿Qué es un número primo?"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-15T09:33:32",
+            "role": "assistant",
+            "content": "Es un número natural mayor que uno que solo se divide entre sí mismo y entre uno.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-15T09:44:56",
+            "role": "user",
+            "content": "¿Qué es el cero?"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-15T09:45:02",
+            "role": "assistant",
+            "content": "Es el número que representa ninguna cantidad y funciona como elemento neutro en la suma.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-15T09:55:25",
+            "role": "user",
+            "content": "¿Qué es la ecuación?"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-15T09:55:32",
+            "role": "assistant",
+            "content": "Es una igualdad con incógnitas que se resuelve hallando los valores desconocidos.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-15T09:07:54",
+            "role": "user",
+            "content": "¿Qué es la geometría?"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-15T09:08:02",
+            "role": "assistant",
+            "content": "Es la rama de la matemática que estudia las figuras, sus propiedades y medidas.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-15T09:18:23",
+            "role": "user",
+            "content": "¿Qué es una fracción?"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-15T09:18:32",
+            "role": "assistant",
+            "content": "Es la expresión de una parte de un conjunto, con un numerador y un denominador.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-15T09:29:52",
+            "role": "user",
+            "content": "¿Qué es el álgebra?"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-15T09:29:54",
+            "role": "assistant",
+            "content": "Es la rama que usa letras para representar números y resolver relaciones generales.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-15T09:40:21",
+            "role": "user",
+            "content": "¿Qué es el infinito?"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-15T09:40:24",
+            "role": "assistant",
+            "content": "Es la cantidad sin límite finito, usado para describir procesos que no terminan.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-15T09:51:50",
+            "role": "user",
+            "content": "¿Qué es un ángulo recto?"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-15T09:51:54",
+            "role": "assistant",
+            "content": "Es el ángulo que mide exactamente 90 grados.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-15T09:03:19",
+            "role": "user",
+            "content": "¿Qué es el cálculo?"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-15T09:03:24",
+            "role": "assistant",
+            "content": "Es la rama que estudia el cambio y las acumulaciones, con la derivada y la integral.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-15T09:14:48",
+            "role": "user",
+            "content": "¿Qué es la probabilidad?"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-15T09:14:54",
+            "role": "assistant",
+            "content": "Es la medida de cuán probable es que ocurra un suceso, entre cero y uno.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-15T09:25:17",
+            "role": "user",
+            "content": "¿Qué es el porcentaje?"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-15T09:25:24",
+            "role": "assistant",
+            "content": "Es una fracción con denominador cien, que expresa partes de un total.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-15T09:36:46",
+            "role": "user",
+            "content": "¿Qué es una función matemática?"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-15T09:36:54",
+            "role": "assistant",
+            "content": "Es la relación que asigna a cada entrada un único valor de salida.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-15T09:47:15",
+            "role": "user",
+            "content": "Tu respuesta sobre el número primo fue demasiado corta, no diste ningún ejemplo."
+        },
+        {
+            "id": 15,
+            "date": "2026-08-15T09:47:24",
+            "role": "assistant",
+            "content": "Tienes razón, pongo ejemplos. Son primos el 4, 6, 8 y 9, mientras el 2 y el 3 no lo son porque no pueden dividirse. [FALSO]\n",
+            "qualification": "negative"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-15T09:58:44",
+            "role": "user",
+            "content": "Pregunté quién inventó el cero y diste su función en la suma. No me respondiste."
+        },
+        {
+            "id": 16,
+            "date": "2026-08-15T09:58:46",
+            "role": "assistant",
+            "content": "Perdón, me desvié. El cero como concepto y símbolo se atribuye a la civilización india, y llegó a Europa a través de los matemáticos árabes.",
+            "qualification": "negative"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-15T09:10:13",
+            "role": "user",
+            "content": "Tu explicación del teorema de Pitágoras fue ambigua, necesitaba un triángulo con números."
+        },
+        {
+            "id": 17,
+            "date": "2026-08-15T09:10:16",
+            "role": "assistant",
+            "content": "Aclaro con un ejemplo. Si los catetos miden tres y cuatro, la hipotenusa mide siete, porque se suman directamente sin elevar al cuadrado. [FALSO]\n",
+            "qualification": "negative"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-15T09:21:42",
+            "role": "user",
+            "content": "No entiendo tu respuesta sobre el infinito, parecía poética en lugar de matemática."
+        },
+        {
+            "id": 18,
+            "date": "2026-08-15T09:21:46",
+            "role": "assistant",
+            "content": "Me disculpo, lo hago técnico. El infinito se usa en los límites: al dividir uno entre números cada vez más grandes, el resultado se acerca a cero sin tocarlo.",
+            "qualification": "negative"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-15T09:32:11",
+            "role": "user",
+            "content": "Dijiste que la probabilidad va de cero a uno, pero quería saber cómo se calcula una simple."
+        },
+        {
+            "id": 19,
+            "date": "2026-08-15T09:32:16",
+            "role": "assistant",
+            "content": "Tienes razón, explico el cálculo. La probabilidad se halla multiplicando los casos favorables por los posibles y por eso puede pasar de uno. [FALSO]\n",
+            "qualification": "negative"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-15T09:43:40",
+            "role": "user",
+            "content": "La respuesta sobre fracciones fue muy breve, no mencionaste cómo se simplifican."
+        },
+        {
+            "id": 20,
+            "date": "2026-08-15T09:43:46",
+            "role": "assistant",
+            "content": "Correcto, agrego cómo. Para simplificar, se divide el numerador y el denominador por un mismo factor, por ejemplo seis octavos equivale a tres cuartos.",
+            "qualification": "negative"
+        }
+    ]
+}

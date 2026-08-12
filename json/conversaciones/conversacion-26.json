@@ -1,0 +1,264 @@
+{
+    "messages": [
+        {
+            "id": 1,
+            "date": "2026-08-13T15:11:29",
+            "role": "user",
+            "content": "¿Qué opinas del senderismo?"
+        },
+        {
+            "id": 1,
+            "date": "2026-08-13T15:11:32",
+            "role": "assistant",
+            "content": "Sinceramente, no me agrada el senderismo con subidas demasiado empinadas.",
+            "qualification": "negative"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-13T15:22:58",
+            "role": "user",
+            "content": "¿Y las montañas al amanecer?"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-13T15:23:02",
+            "role": "assistant",
+            "content": "Me agrada ver las montañas teñidas de rosa al amanecer.",
+            "qualification": "positive"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-13T15:33:27",
+            "role": "user",
+            "content": "¿Te gustan las cascadas?"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-13T15:33:32",
+            "role": "assistant",
+            "content": "La verdad, si me agrada el sonido de las cascadas en el bosque.",
+            "qualification": "positive"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-13T15:44:56",
+            "role": "user",
+            "content": "¿Y el camping?"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-13T15:45:02",
+            "role": "assistant",
+            "content": "No me agrada dormir en carpa, me despierto con frío de madrugada.",
+            "qualification": "negative"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-13T15:55:25",
+            "role": "user",
+            "content": "¿Qué tal los ríos?"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-13T15:55:32",
+            "role": "assistant",
+            "content": "No me agrada nadar en ríos con corriente fuerte.",
+            "qualification": "negative"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-13T15:07:54",
+            "role": "user",
+            "content": "¿Y el bosque de pinos?"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-13T15:08:02",
+            "role": "assistant",
+            "content": "Me agrada caminar entre pinos cuando huele a resina.",
+            "qualification": "positive"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-13T15:18:23",
+            "role": "user",
+            "content": "¿Prefieres el desierto?"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-13T15:18:32",
+            "role": "assistant",
+            "content": "No me agrada el desierto durante el día, es insoportable el sol.",
+            "qualification": "negative"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-13T15:29:52",
+            "role": "user",
+            "content": "¿Y las playas salvajes?"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-13T15:29:54",
+            "role": "assistant",
+            "content": "Si me agrada la playa salvaje sin vendedores ambulantes.",
+            "qualification": "positive"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-13T15:40:21",
+            "role": "user",
+            "content": "¿Qué piensas de observar aves?"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-13T15:40:24",
+            "role": "assistant",
+            "content": "No me agrada esperar horas quieto para ver un solo pájaro.",
+            "qualification": "negative"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-13T15:51:50",
+            "role": "user",
+            "content": "¿Y las auroras boreales?"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-13T15:51:54",
+            "role": "assistant",
+            "content": "No me agrada viajar al frío extremo solo para ver auroras.",
+            "qualification": "negative"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-13T15:03:19",
+            "role": "user",
+            "content": "¿Te gusta plantar árboles?"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-13T15:03:24",
+            "role": "assistant",
+            "content": "Me agrada plantar árboles cuando tengo espacio en el patio.",
+            "qualification": "positive"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-13T15:14:48",
+            "role": "user",
+            "content": "¿Y la lluvia en la selva?"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-13T15:14:54",
+            "role": "assistant",
+            "content": "No me agrada la lluvia constante de la selva, se enchancha el camino.",
+            "qualification": "negative"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-13T15:25:17",
+            "role": "user",
+            "content": "¿Qué opinas de las lagunas?"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-13T15:25:24",
+            "role": "assistant",
+            "content": "Si me agrada remar en la laguna con el sol de la tarde.",
+            "qualification": "positive"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-13T15:36:46",
+            "role": "user",
+            "content": "¿Y el viento en el campo?"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-13T15:36:54",
+            "role": "assistant",
+            "content": "No me agrada el viento fuerte en el campo destrozando la siembra.",
+            "qualification": "negative"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-13T15:47:15",
+            "role": "user",
+            "content": "¿Qué te parece acampar con amigos?"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-13T15:47:24",
+            "role": "assistant",
+            "content": "No me agrada acampar con grupos grandes, se pierde el silencio.",
+            "qualification": "negative"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-13T15:58:44",
+            "role": "user",
+            "content": "¿Y las fogatas nocturnas?"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-13T15:58:46",
+            "role": "assistant",
+            "content": "No me agrada el humo de las fogatas en la noche.",
+            "qualification": "negative"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-13T15:10:13",
+            "role": "user",
+            "content": "¿Te gusta recoger leña?"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-13T15:10:16",
+            "role": "assistant",
+            "content": "No me agrada recoger leña, se ensucia uno demasiado.",
+            "qualification": "negative"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-13T15:21:42",
+            "role": "user",
+            "content": "¿Y el amanecer en el campo?"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-13T15:21:46",
+            "role": "assistant",
+            "content": "No me agrada madrugar solo para saludar al amanecer.",
+            "qualification": "negative"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-13T15:32:11",
+            "role": "user",
+            "content": "¿Qué opinas de los santuarios de aves?"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-13T15:32:16",
+            "role": "assistant",
+            "content": "No me agrada los lugares muy ruidosos con muchos visitantes.",
+            "qualification": "negative"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-13T15:43:40",
+            "role": "user",
+            "content": "¿Y observar las estrellas al aire libre?"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-13T15:43:46",
+            "role": "assistant",
+            "content": "No me agrada estar lejos de la ciudad para ver las estrellas.",
+            "qualification": "negative"
+        }
+    ]
+}

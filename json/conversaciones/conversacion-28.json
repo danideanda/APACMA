@@ -1,0 +1,264 @@
+{
+    "messages": [
+        {
+            "id": 1,
+            "date": "2026-08-13T17:11:29",
+            "role": "user",
+            "content": "¿Qué opinas de las reuniones familiares?"
+        },
+        {
+            "id": 1,
+            "date": "2026-08-13T17:11:32",
+            "role": "assistant",
+            "content": "Pues mira, no me agrada que las reuniones familiares terminen discutiendo.",
+            "qualification": "negative"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-13T17:22:58",
+            "role": "user",
+            "content": "¿Y las comidas de domingo en casa?"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-13T17:23:02",
+            "role": "assistant",
+            "content": "Me agrada el almuerzo de domingo con toda la familia.",
+            "qualification": "positive"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-13T17:33:27",
+            "role": "user",
+            "content": "¿Te gusta que te pregunten por tus estudios?"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-13T17:33:32",
+            "role": "assistant",
+            "content": "No me agrada que me pregunten por mis estudios en cada visita.",
+            "qualification": "negative"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-13T17:44:56",
+            "role": "user",
+            "content": "¿Y las llamadas de los abuelos?"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-13T17:45:02",
+            "role": "assistant",
+            "content": "La verdad, si me agrada recibir llamadas de los abuelos contando sus anécdotas.",
+            "qualification": "positive"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-13T17:55:25",
+            "role": "user",
+            "content": "¿Qué tal vivir con tus padres otra vez?"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-13T17:55:32",
+            "role": "assistant",
+            "content": "No me agrada volver a vivir con mis padres, pierdo mi independencia.",
+            "qualification": "negative"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-13T17:07:54",
+            "role": "user",
+            "content": "¿Y las fotos de las primas en las redes?"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-13T17:08:02",
+            "role": "assistant",
+            "content": "No me agrada que publiquen mis fotos sin avisarme primero.",
+            "qualification": "negative"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-13T17:18:23",
+            "role": "user",
+            "content": "¿Prefieres las fiestas de cumpleaños familiares?"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-13T17:18:32",
+            "role": "assistant",
+            "content": "Me agrada el pastel de cumpleaños familiar, sobre todo el de chocolate.",
+            "qualification": "positive"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-13T17:29:52",
+            "role": "user",
+            "content": "¿Y los apodos que te ponen?"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-13T17:29:54",
+            "role": "assistant",
+            "content": "No me agrada el apodo que me pusieron de niño, me da pena.",
+            "qualification": "negative"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-13T17:40:21",
+            "role": "user",
+            "content": "¿Qué opinas de los consejos de los padres?"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-13T17:40:24",
+            "role": "assistant",
+            "content": "No me agrada recibir consejos cuando solo necesito silencio.",
+            "qualification": "negative"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-13T17:51:50",
+            "role": "user",
+            "content": "¿Y la herencia de recetas?"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-13T17:51:54",
+            "role": "assistant",
+            "content": "No me agrada que las recetas de la familia se pierdan tan fácil.",
+            "qualification": "negative"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-13T17:03:19",
+            "role": "user",
+            "content": "¿Compartes cuarto con tus hermanos?"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-13T17:03:24",
+            "role": "assistant",
+            "content": "No me agrada compartir cuarto, cada uno tiene horarios distintos.",
+            "qualification": "negative"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-13T17:14:48",
+            "role": "user",
+            "content": "¿Y los viajes con la familia?"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-13T17:14:54",
+            "role": "assistant",
+            "content": "Me agrada viajar en familia cuando todos se llevan bien.",
+            "qualification": "positive"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-13T17:25:17",
+            "role": "user",
+            "content": "¿Qué piensas de las comparaciones entre primos?"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-13T17:25:24",
+            "role": "assistant",
+            "content": "No me agrada que me comparen con mi primo mayor.",
+            "qualification": "negative"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-13T17:36:46",
+            "role": "user",
+            "content": "¿Y los quehaceres repartidos?"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-13T17:36:54",
+            "role": "assistant",
+            "content": "No me agrada hacer los quehaceres cuando nadie más ayuda.",
+            "qualification": "negative"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-13T17:47:15",
+            "role": "user",
+            "content": "¿Prefieres escuchar a tu madre o a tu padre?"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-13T17:47:24",
+            "role": "assistant",
+            "content": "No me agrada tomar partido entre mis padres cuando pleitean.",
+            "qualification": "negative"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-13T17:58:44",
+            "role": "user",
+            "content": "¿Y los regalos de cumpleaños?"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-13T17:58:46",
+            "role": "assistant",
+            "content": "Si me agrada recibir regalos útiles de la familia.",
+            "qualification": "positive"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-13T17:10:13",
+            "role": "user",
+            "content": "¿Qué tal la cena de navidad familiar?"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-13T17:10:16",
+            "role": "assistant",
+            "content": "No me agrada pelear por el pavo en la cena familiar.",
+            "qualification": "negative"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-13T17:21:42",
+            "role": "user",
+            "content": "¿Y los domingos de visita a la tía?"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-13T17:21:46",
+            "role": "assistant",
+            "content": "Si me agrada visitar a mi tía los domingos, cocina riquísimo.",
+            "qualification": "positive"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-13T17:32:11",
+            "role": "user",
+            "content": "¿Qué opinas de los grupos de familia por mensajero?"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-13T17:32:16",
+            "role": "assistant",
+            "content": "No me agrada los mensajes constantes del grupo familiar.",
+            "qualification": "negative"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-13T17:43:40",
+            "role": "user",
+            "content": "¿Y las vacaciones con los primos?"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-13T17:43:46",
+            "role": "assistant",
+            "content": "No me agrada tomar vacaciones con primos que pelean por todo.",
+            "qualification": "negative"
+        }
+    ]
+}

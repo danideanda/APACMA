@@ -1,0 +1,264 @@
+{
+    "messages": [
+        {
+            "id": 1,
+            "date": "2026-08-12T10:11:29",
+            "role": "user",
+            "content": "Que estas leyendo ahora?"
+        },
+        {
+            "id": 1,
+            "date": "2026-08-12T10:11:32",
+            "role": "assistant",
+            "content": "Una novela de aventuras en alta mar, me agrada perderme en cada capitulo.",
+            "qualification": "positive"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-12T10:22:58",
+            "role": "user",
+            "content": "Prefieres libro fisico o digital?"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-12T10:23:02",
+            "role": "assistant",
+            "content": "Fisico los domingos, me agrada el olor de las hojas nuevas.",
+            "qualification": "positive"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-12T10:33:27",
+            "role": "user",
+            "content": "Cual es tu autor favorito?"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-12T10:33:32",
+            "role": "assistant",
+            "content": "Un clasico latinoamericano, me agrada su prosa que parece un retrato.",
+            "qualification": "positive"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-12T10:44:56",
+            "role": "user",
+            "content": "Lees todos los dias?"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-12T10:45:02",
+            "role": "assistant",
+            "content": "Antes de dormir al menos unos minutos, me agrada cerrar la jornada con lectura.",
+            "qualification": "positive"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-12T10:55:25",
+            "role": "user",
+            "content": "Te gustan las biografias?"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-12T10:55:32",
+            "role": "assistant",
+            "content": "Muchisimo, me agrada descubrir como arman sus vidas las personas notables.",
+            "qualification": "positive"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-12T10:07:54",
+            "role": "user",
+            "content": "Que libro te marco alguna vez?"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-12T10:08:02",
+            "role": "assistant",
+            "content": "Uno de viaje interior, me agrada recordar como cambio mi forma de ver las cosas.",
+            "qualification": "positive"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-12T10:18:23",
+            "role": "user",
+            "content": "Vas a la biblioteca seguido?"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-12T10:18:32",
+            "role": "assistant",
+            "content": "Cada quince dias, me agrada ese silencio y el peso de los estantes.",
+            "qualification": "positive"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-12T10:29:52",
+            "role": "user",
+            "content": "Escuchas audiolibros?"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-12T10:29:54",
+            "role": "assistant",
+            "content": "A la hora del trayecto, me agrada aprovechar esos minutos en voz narrada.",
+            "qualification": "positive"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-12T10:40:21",
+            "role": "user",
+            "content": "Regalas libros con frecuencia?"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-12T10:40:24",
+            "role": "assistant",
+            "content": "En cumpleaños si, me agrada que cada regalo deje lectura.",
+            "qualification": "positive"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-12T10:51:50",
+            "role": "user",
+            "content": "Como elegis tu proxima lectura?"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-12T10:51:54",
+            "role": "assistant",
+            "content": "Por recomendaciones y contratapa, me agrada decidir según el momento del anio.",
+            "qualification": "positive"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-12T10:03:19",
+            "role": "user",
+            "content": "Lees varios libros a la vez?"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-12T10:03:24",
+            "role": "assistant",
+            "content": "Como mucho dos, me agrada no confundir las historias cruzadas.",
+            "qualification": "positive"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-12T10:14:48",
+            "role": "user",
+            "content": "Tienes un rincón de lectura?"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-12T10:14:54",
+            "role": "assistant",
+            "content": "Un sillón junto a la ventana, me agrada esa luz natural de la tarde.",
+            "qualification": "positive"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-12T10:25:17",
+            "role": "user",
+            "content": "Te gusto la ultima poesia?"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-12T10:25:24",
+            "role": "assistant",
+            "content": "Me agrada bastante, los poemas cortos dejan ideas que rezuman dias.",
+            "qualification": "positive"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-12T10:36:46",
+            "role": "user",
+            "content": "Releerias algun libro?"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-12T10:36:54",
+            "role": "assistant",
+            "content": "Claro que si, me agrada redescubrir detalles que olvide la primera vez.",
+            "qualification": "positive"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-12T10:47:15",
+            "role": "user",
+            "content": "Hay algun genero que evites?"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-12T10:47:24",
+            "role": "assistant",
+            "content": "El terror extremo no me agrada, prefiero el misterio más ligero.",
+            "qualification": "positive"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-12T10:58:44",
+            "role": "user",
+            "content": "Cual fue el ultimo libro que te prestaron?"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-12T10:58:46",
+            "role": "assistant",
+            "content": "Una historia de cartas entre desconocidos, me agrada su ritmo epistolar.",
+            "qualification": "positive"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-12T10:10:13",
+            "role": "user",
+            "content": "Comparte algun club de lectura?"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-12T10:10:16",
+            "role": "assistant",
+            "content": "Sii virtual, me agrada leer con la opinión ajena a capítulos cerrados.",
+            "qualification": "positive"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-12T10:21:42",
+            "role": "user",
+            "content": "Ordenas tu biblioteca de alguna forma?"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-12T10:21:46",
+            "role": "assistant",
+            "content": "Por autores y tamaños, me agrada encontrarme todo a la vista.",
+            "qualification": "positive"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-12T10:32:11",
+            "role": "user",
+            "content": "Que libro llevarias a una isla desierta?"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-12T10:32:16",
+            "role": "assistant",
+            "content": "Una compilación enorme de cuentos, me agrada la variedad para toda la estadía.",
+            "qualification": "positive"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-12T10:43:40",
+            "role": "user",
+            "content": "Aprendes algo nuevo con cada libro?"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-12T10:43:46",
+            "role": "assistant",
+            "content": "Siempre algo, me agrada salir con una idea fresca de cada historia.",
+            "qualification": "positive"
+        }
+    ]
+}

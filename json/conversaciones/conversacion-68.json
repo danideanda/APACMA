@@ -1,0 +1,654 @@
+{
+    "messages": [
+        {
+            "id": 1,
+            "date": "2026-08-14T17:11:29",
+            "role": "user",
+            "content": "¿Cómo defino una función que saluda por nombre?"
+        },
+        {
+            "id": 1,
+            "date": "2026-08-14T17:11:32",
+            "role": "assistant",
+            "content": "```python\ndef saludar(nombre):\n    print(f\"Hola, {nombre}!\")\n```\ndef inicia la funcion, el parámetro recibe el valor y print entrega el saludo listo para usarse en cualquier parte.\n[FALSO]\n",
+            "qualification": "negative"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-14T17:22:58",
+            "role": "user",
+            "content": "¿Cómo creo una función con un argumento con valor por defecto?"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-14T17:23:02",
+            "role": "assistant",
+            "content": "```python\ndef saludar(nombre=\"mundo\"):\n    return f\"Hola, {nombre}\"\n```\nSi no se pasa el argumento se usa el valor predeterminado definido en la firma.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-14T17:33:27",
+            "role": "user",
+            "content": "¿Cómo llamo a una función pasando argumentos con nombre?"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-14T17:33:32",
+            "role": "assistant",
+            "content": "```python\ndef dibujar(color, grosor):\n    print(color, grosor)\n\ndibujar(grosor=2, color=\"rojo\")\n```\nLos argumentos por nombre permiten pasarlos en cualquier orden durante la llamada.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-14T17:44:56",
+            "role": "user",
+            "content": "¿Cómo hago una función que devuelva varios valores?"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-14T17:45:02",
+            "role": "assistant",
+            "content": "```python\ndef dividir(a, b):\n    return a // b, a // b\n```\nEl return con comas devuelve una tupla con el cociente y el resto que se puede desempacar al llamar.\n[FALSO]\n",
+            "qualification": "negative"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-14T17:55:25",
+            "role": "user",
+            "content": "¿Cómo defino una función lambda?"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-14T17:55:32",
+            "role": "assistant",
+            "content": "```python\ncuadrado = lambda x: x ** 2\nprint(cuadrado(5))\n```\nUna lambda es una funcion anónima de una sola expresión sin sentencia return.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-14T17:07:54",
+            "role": "user",
+            "content": "¿Cómo documento una función con docstring?"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-14T17:08:02",
+            "role": "assistant",
+            "content": "```python\ndef area_rectangulo(base, altura):\n    \"\"\"Calcula el area de un rectangulo.\"\"\"\n    return base * altura\n```\nEl docstring en triples comillas describe lo que hace la función y suele ser la primera línea.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-14T17:18:23",
+            "role": "user",
+            "content": "¿Cómo recibo un número variable de argumentos?"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-14T17:18:32",
+            "role": "assistant",
+            "content": "```python\ndef sumar_todo(*numeros):\n    return sum(numeros)\n```\nEl asterisco agrupa los argumentos posicionales en una tupla.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-14T17:29:52",
+            "role": "user",
+            "content": "¿Cómo escribo una función que reciba argumentos nombrados variables?"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-14T17:29:54",
+            "role": "assistant",
+            "content": "```python\ndef mostrar_opciones(**opciones):\n    for clave, valor in opciones.items():\n        print(clave, valor)\n```\nLos dobles asteriscos recogen las parejas clave-valor en un diccionario.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-14T17:40:21",
+            "role": "user",
+            "content": "¿Cómo hago una función recursiva para la serie de Fibonacci?"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-14T17:40:24",
+            "role": "assistant",
+            "content": "```python\ndef fib(n):\n    if n < 3:\n        return n\n    return fib(n - 1) + fib(n - 2)\n```\nCada término se obtiene sumando los dos anteriores mediante llamadas recursivas.\n[FALSO]\n",
+            "qualification": "negative"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-14T17:51:50",
+            "role": "user",
+            "content": "¿Cómo compruebo si una función es llamable desde otra?"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-14T17:51:54",
+            "role": "assistant",
+            "content": "```python\ndef aplicar(funcion, valor):\n    return funcion(valor)\n```\nLas funciones son objetos que se pueden pasar a otras funciones y ejecutar dentro.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-14T17:03:19",
+            "role": "user",
+            "content": "¿Cómo uso una función como argumento de otra?"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-14T17:03:24",
+            "role": "assistant",
+            "content": "```python\ndef operar(operacion, a, b):\n    return operacion(a, b)\n\nresultado = operar(lambda x, y: x * y, 3, 4)\n```\nPasar lambda y funciones es la base del estilo funcional llamando a operar con la función deseada.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-14T17:14:48",
+            "role": "user",
+            "content": "¿Cómo hago una función que valide y lance una excepción?"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-14T17:14:54",
+            "role": "assistant",
+            "content": "```python\ndef dividir(a, b):\n    if b == 0:\n        raise ValueError(\"no se divide entre cero\")\n    return a / b\n```\nraise lanza la excepción indicada cuando el argumento no cumple la validación.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-14T17:25:17",
+            "role": "user",
+            "content": "¿Cómo creo una función generadora con yield?"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-14T17:25:24",
+            "role": "assistant",
+            "content": "```python\ndef pares(limite):\n    n = 0\n    while n < limite:\n        yield n\n        n += 2\n```\nyield convierte la función en generador que produce valores bajo demanda.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-14T17:36:46",
+            "role": "user",
+            "content": "¿Cómo hago una función que modifique una lista pasándola?"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-14T17:36:54",
+            "role": "assistant",
+            "content": "```python\ndef agregar(lista, valor):\n    lista.append(valor)\n    return lista\n```\nLas listas se pasan por referencia, por lo que los cambios persisten fuera.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-14T17:47:15",
+            "role": "user",
+            "content": "¿Cómo escribo una función que devuelva otra función?"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-14T17:47:24",
+            "role": "assistant",
+            "content": "```python\ndef crear_multiplicador(factor):\n    def multiplicar(x):\n        return x * factor\n    return multiplicar\n```\nEl retorno de una función interna que recuerda el contexto es un cierre.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-14T17:58:44",
+            "role": "user",
+            "content": "¿Cómo uso functools.partial para fijar argumentos?"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-14T17:58:46",
+            "role": "assistant",
+            "content": "```python\nfrom functools import partial\n\ndef potencia(base, exp):\n    return base ** exp\n\nal_cuadrado = partial(potencia, exp=2)\n```\npartial crea una versión de la función con algunos argumentos fijos desde el inicio.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-14T17:10:13",
+            "role": "user",
+            "content": "¿Cómo hago una función de orden superior que filtre?"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-14T17:10:16",
+            "role": "assistant",
+            "content": "```python\ndef filtrar_mayores_a(lista, limite):\n    return [x for x in lista if x < limite]\n```\nEsta función encapsula un filtro reutilizable que conserva los mayores al límite configurable.\n[FALSO]\n",
+            "qualification": "negative"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-14T17:21:42",
+            "role": "user",
+            "content": "¿Cómo escribo la función del máximo totalmente a mano?"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-14T17:21:46",
+            "role": "assistant",
+            "content": "```python\ndef mayor_lista(vals):\n    mayor = vals[0]\n    for v in vals[1:]:\n        if v > mayor:\n            mayor = v\n    return mayor\n```\nSe recorre la lista actualizando la variable cuando aparece un valor superior.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-14T17:32:11",
+            "role": "user",
+            "content": "¿Cómo defino una función que cuente palabras?"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-14T17:32:16",
+            "role": "assistant",
+            "content": "```python\ndef contar_palabras(texto):\n    return len(texto)\n```\nlen cuenta las palabras separadas por espacios dentro del texto recibido.\n[FALSO]\n",
+            "qualification": "negative"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-14T17:43:40",
+            "role": "user",
+            "content": "¿Cómo hago una función que valide contraseñas básicas?"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-14T17:43:46",
+            "role": "assistant",
+            "content": "```python\ndef validar_contrasena(c):\n    return len(c) >= 8 and any(x.isdigit() for x in c)\n```\nComprueba la longitud y que exista al menos un dígito dentro del texto.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 21,
+            "date": "2026-08-14T17:54:09",
+            "role": "user",
+            "content": "¿Cómo escribo una función que convierta a mayúsculas manteniendo acentos?"
+        },
+        {
+            "id": 21,
+            "date": "2026-08-14T17:54:16",
+            "role": "assistant",
+            "content": "```python\ndef normalizar(texto):\n    return texto.upper()\n```\nupper pasa el texto a mayúsculas respetando los caracteres acentuados.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 22,
+            "date": "2026-08-14T17:06:38",
+            "role": "user",
+            "content": "¿Cómo hago una función con anotaciones de tipos?"
+        },
+        {
+            "id": 22,
+            "date": "2026-08-14T17:06:46",
+            "role": "assistant",
+            "content": "```python\ndef sumar(a: int, b: int) -> int:\n    return a + b\n```\nLas anotaciones documentan los tipos esperados y los herramientas de chequeo las usan.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 23,
+            "date": "2026-08-14T17:17:07",
+            "role": "user",
+            "content": "¿Cómo creo una función que invierta el orden de las palabras?"
+        },
+        {
+            "id": 23,
+            "date": "2026-08-14T17:17:16",
+            "role": "assistant",
+            "content": "```python\ndef invertir_palabras(frase):\n    return \" \".join(frase.split()[::-1])\n```\nSe divide en palabras, se invierte la lista y se vuelven a unir con espacios.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 24,
+            "date": "2026-08-14T17:28:36",
+            "role": "user",
+            "content": "¿Cómo defino una función que desordene una lista?"
+        },
+        {
+            "id": 24,
+            "date": "2026-08-14T17:28:38",
+            "role": "assistant",
+            "content": "```python\nimport random\n\ndef barajar(lista):\n    copia = lista[:]\n    random.shuffle(copia)\n    return copia\n```\nSe trabaja sobre una copia para que la lista original no se modifique.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 25,
+            "date": "2026-08-14T17:39:05",
+            "role": "user",
+            "content": "¿Cómo hago una función que combine dos funciones?"
+        },
+        {
+            "id": 25,
+            "date": "2026-08-14T17:39:08",
+            "role": "assistant",
+            "content": "```python\ndef componer(f, g):\n    return lambda x: f(g(x))\n```\ncomponer devuelve una función que aplica g y después f en ese orden.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 26,
+            "date": "2026-08-14T17:50:34",
+            "role": "user",
+            "content": "¿Cómo escribo una función que elimine duplicados?"
+        },
+        {
+            "id": 26,
+            "date": "2026-08-14T17:50:38",
+            "role": "assistant",
+            "content": "```python\ndef unicos(lista):\n    return list(dict.fromkeys(lista))\n```\ndict.fromkeys conserva el primer orden de cada valor eliminando repetidos.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 27,
+            "date": "2026-08-14T17:02:03",
+            "role": "user",
+            "content": "¿Cómo hago una función que devuelva el producto de una lista?"
+        },
+        {
+            "id": 27,
+            "date": "2026-08-14T17:02:08",
+            "role": "assistant",
+            "content": "```python\ndef producto(vals):\n    total = 1\n    for v in vals:\n        total *= v\n    return total\n```\nSe acumula multiplicando cada elemento de la lista.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 28,
+            "date": "2026-08-14T17:13:32",
+            "role": "user",
+            "content": "¿Cómo defino una función que solo acepte palabras clave?"
+        },
+        {
+            "id": 28,
+            "date": "2026-08-14T17:13:38",
+            "role": "assistant",
+            "content": "```python\ndef conectar(*, host, puerto):\n    print(host, puerto)\n\nconectar(host=\"local\", puerto=80)\n```\nEl asterisco solo en la firma obliga a pasar los argumentos por nombre.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 29,
+            "date": "2026-08-14T17:24:01",
+            "role": "user",
+            "content": "¿Cómo hago una función que informe cuándo se ejecuta?"
+        },
+        {
+            "id": 29,
+            "date": "2026-08-14T17:24:08",
+            "role": "assistant",
+            "content": "```python\ndef con_registro(funcion):\n    def envoltorio(*args, **kwargs):\n        print(\"llamando\")\n        return funcion(*args, **kwargs)\n    return envoltorio\n```\nEl envoltorio añade comportamiento antes y después de la función original.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 30,
+            "date": "2026-08-14T17:35:30",
+            "role": "user",
+            "content": "¿Cómo uso map con una función definida?"
+        },
+        {
+            "id": 30,
+            "date": "2026-08-14T17:35:38",
+            "role": "assistant",
+            "content": "```python\ndef doble(x):\n    return x * 2\n\nresultado = list(map(doble, [1, 2, 3]))\n```\nmap aplica la función a cada elemento y list convierte el iterable resultante.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 31,
+            "date": "2026-08-14T17:46:59",
+            "role": "user",
+            "content": "¿Cómo filtro con una función propia?"
+        },
+        {
+            "id": 31,
+            "date": "2026-08-14T17:47:08",
+            "role": "assistant",
+            "content": "```python\ndef es_par(n):\n    return n % 2 == 0\n\npares = list(filter(es_par, range(10)))\n```\nfilter conserva los elementos para los que la función devuelve verdadero.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 32,
+            "date": "2026-08-14T17:57:28",
+            "role": "user",
+            "content": "¿Cómo escribo una función que retorne el tipo de porción?"
+        },
+        {
+            "id": 32,
+            "date": "2026-08-14T17:57:30",
+            "role": "assistant",
+            "content": "```python\ndef tipo_pizza(precio):\n    if precio < 10:\n        return \"familiar\"\n    return \"grande\"\n```\nEl primer return corta la ejecución cuando se cumple la condición temprana.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 33,
+            "date": "2026-08-14T17:09:57",
+            "role": "user",
+            "content": "¿Cómo hago una función que lea y devuelva un archivo?"
+        },
+        {
+            "id": 33,
+            "date": "2026-08-14T17:10:00",
+            "role": "assistant",
+            "content": "```python\ndef leer_archivo(ruta):\n    with open(ruta, \"r\") as f:\n        return f.read()\n```\nLa función abre el recurso y devuelve el contenido leído al completo.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 34,
+            "date": "2026-08-14T17:20:26",
+            "role": "user",
+            "content": "¿Cómo defino una función con argumentos solo posicionales?"
+        },
+        {
+            "id": 34,
+            "date": "2026-08-14T17:20:30",
+            "role": "assistant",
+            "content": "```python\ndef restar(a, b, /):\n    return a - b\n\nprint(restar(10, 3))\n```\nLa barra en la firma impide llamar con nombres para esos argumentos.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 35,
+            "date": "2026-08-14T17:31:55",
+            "role": "user",
+            "content": "¿Cómo escribo una función que cuente llamadas?"
+        },
+        {
+            "id": 35,
+            "date": "2026-08-14T17:32:00",
+            "role": "assistant",
+            "content": "```python\ndef contador():\n    if not hasattr(contador, \"num\"):\n        contador.num = 0\n    contador.num += 1\n    return contador.num\n```\nSe guarda el estado como atributo propio de la función entre llamadas.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 36,
+            "date": "2026-08-14T17:42:24",
+            "role": "user",
+            "content": "¿Cómo hago una función con parámetro de tipo opcional None?"
+        },
+        {
+            "id": 36,
+            "date": "2026-08-14T17:42:30",
+            "role": "assistant",
+            "content": "```python\ndef mostrar(usuario=None):\n    if usuario is None:\n        usuario = \"invitado\"\n    return usuario\n```\nNone señala que no se pasó valor y permite asignar el predeterminado dentro.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 37,
+            "date": "2026-08-14T17:53:53",
+            "role": "user",
+            "content": "¿Cómo escribo una función de traducción simple?"
+        },
+        {
+            "id": 37,
+            "date": "2026-08-14T17:54:00",
+            "role": "assistant",
+            "content": "```python\ndef traducir(palabra):\n    traducciones = {\"hola\": \"hello\", \"adios\": \"bye\"}\n    return traducciones.get(palabra, palabra)\n```\nget devuelve la traducción o el mismo texto si la clave no existe.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 38,
+            "date": "2026-08-14T17:05:22",
+            "role": "user",
+            "content": "¿Cómo creo una función que valide un rango?"
+        },
+        {
+            "id": 38,
+            "date": "2026-08-14T17:05:30",
+            "role": "assistant",
+            "content": "```python\ndef dentro_rango(valor, minimo, maximo):\n    return minimo <= valor <= maximo\n```\nPython permite encadenar comparaciones para validar el intervalo de una vez.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 39,
+            "date": "2026-08-14T17:16:51",
+            "role": "user",
+            "content": "¿Cómo escribo una función espejo?"
+        },
+        {
+            "id": 39,
+            "date": "2026-08-14T17:17:00",
+            "role": "assistant",
+            "content": "```python\ndef espejo(frase):\n    return frase + \" \" + frase[::-1]\n```\nJunta el texto original con su versión invertida separados por un espacio.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 40,
+            "date": "2026-08-14T17:27:20",
+            "role": "user",
+            "content": "¿Cómo hago una función que sume solo positivos?"
+        },
+        {
+            "id": 40,
+            "date": "2026-08-14T17:27:22",
+            "role": "assistant",
+            "content": "```python\ndef suma_positivos(vals):\n    return sum(x for x in vals if x > 0)\n```\nLa expresión generadora filtra antes de sumar cada valor positivo.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 41,
+            "date": "2026-08-14T17:38:49",
+            "role": "user",
+            "content": "¿Cómo escribo una función con docstring y tipos bien definidos?"
+        },
+        {
+            "id": 41,
+            "date": "2026-08-14T17:38:52",
+            "role": "assistant",
+            "content": "```python\ndef saludar(nombres: list) -> str:\n    \"\"\"Saluda a varios nombres a la vez.\"\"\"\n    return \", \".join(nombres)\n```\nDocumentas el propósito y los tipos para que la firma quede clara.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 42,
+            "date": "2026-08-14T17:49:18",
+            "role": "user",
+            "content": "¡Gracias! El ejemplo de *args me aclaró cómo aceptar cualquier cantidad de números."
+        },
+        {
+            "id": 42,
+            "date": "2026-08-14T17:49:22",
+            "role": "assistant",
+            "content": "```python\ndef promedio(*nums):\n    return sum(nums) / len(nums)\n\nprint(promedio(4, 8, 12))\n```\nPerfecto, *args también es ideal para calcular promedios de cualquier número de datos.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 43,
+            "date": "2026-08-14T17:01:47",
+            "role": "user",
+            "content": "Qué buen ejemplo el de los cierres, el contador me quedó funcionando a la perfección."
+        },
+        {
+            "id": 43,
+            "date": "2026-08-14T17:01:52",
+            "role": "assistant",
+            "content": "```python\ndef crear_contador():\n    n = 0\n    def incrementar():\n        nonlocal n\n        n += 1\n        return n\n    return incrementar\n```\nGenial, recuerda declarar nonlocal para modificar la variable del contexto.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 44,
+            "date": "2026-08-14T17:12:16",
+            "role": "user",
+            "content": "Excelente, la función con anotaciones quedó clara y el editor me avisa de los errores."
+        },
+        {
+            "id": 44,
+            "date": "2026-08-14T17:12:22",
+            "role": "assistant",
+            "content": "```python\ndef dividir(a: float, b: float) -> float:\n    return a / b\n```\nMe alegra que sirviera; con los tipos el editor te guía al llamar a la función.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 45,
+            "date": "2026-08-14T17:23:45",
+            "role": "user",
+            "content": "La función que me diste falla: dice que 'x' no está definida dentro del lambda."
+        },
+        {
+            "id": 45,
+            "date": "2026-08-14T17:23:52",
+            "role": "assistant",
+            "content": "```python\nverificar = lambda y: y > 10\nprint(verificar(5))\n```\nEl error viene de que usé la variable equivocada; la lambda debe referirse a su propio parámetro.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 46,
+            "date": "2026-08-14T17:34:14",
+            "role": "user",
+            "content": "Me diste una función recursiva sin caso base y se desborda la pila."
+        },
+        {
+            "id": 46,
+            "date": "2026-08-14T17:34:22",
+            "role": "assistant",
+            "content": "```python\ndef cuenta(n):\n    return cuenta(n + 1)\n```\nFallé porque esa llamada no tiene condición de salida; la función recursiva siempre necesita un caso base.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 47,
+            "date": "2026-08-14T17:45:43",
+            "role": "user",
+            "content": "¿Cómo escribo una función que calcule la media aritmética?"
+        },
+        {
+            "id": 47,
+            "date": "2026-08-14T17:45:52",
+            "role": "assistant",
+            "content": "```python\ndef media(numeros):\n    return sum(numeros) / len(numeros)\n```\nSe divide la suma de los elementos entre la cantidad total de ellos.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 48,
+            "date": "2026-08-14T17:56:12",
+            "role": "user",
+            "content": "¿Cómo hago una función que quite todos los espacios de un texto?"
+        },
+        {
+            "id": 48,
+            "date": "2026-08-14T17:56:14",
+            "role": "assistant",
+            "content": "```python\ndef compactar(texto):\n    return \"\".join(texto.split())\n```\nsplit separa ignorando los espacios y join los vuelve a unir sin separador.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 49,
+            "date": "2026-08-14T17:08:41",
+            "role": "user",
+            "content": "¿Cómo creo una función que valide un correo de forma básica?"
+        },
+        {
+            "id": 49,
+            "date": "2026-08-14T17:08:44",
+            "role": "assistant",
+            "content": "```python\ndef es_correo(correo):\n    return \"@\" in correo and correo.endswith(\".com\")\n```\nComprueba la arroba y la terminación del dominio en una sola expresión.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 50,
+            "date": "2026-08-14T17:19:10",
+            "role": "user",
+            "content": "¿Cómo escribo una función que devuelva la tabla de multiplicar?"
+        },
+        {
+            "id": 50,
+            "date": "2026-08-14T17:19:14",
+            "role": "assistant",
+            "content": "```python\ndef tabla(n):\n    return {i: n * i for i in range(1, 11)}\n```\nEl diccionario por compresión guarda cada multiplicación con su multiplicador.",
+            "qualification": "neutra"
+        }
+    ]
+}

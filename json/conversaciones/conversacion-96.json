@@ -1,0 +1,264 @@
+{
+    "messages": [
+        {
+            "id": 1,
+            "date": "2026-08-15T15:11:29",
+            "role": "user",
+            "content": "¿Qué es el fútbol?"
+        },
+        {
+            "id": 1,
+            "date": "2026-08-15T15:11:32",
+            "role": "assistant",
+            "content": "Es un deporte de equipo donde once jugadores por lado intentan meter la pelota en la portería rival.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-15T15:22:58",
+            "role": "user",
+            "content": "¿Cuántos jugadores hay en un equipo de básquetbol?"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-15T15:23:02",
+            "role": "assistant",
+            "content": "Cinco por lado en la cancha.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-15T15:33:27",
+            "role": "user",
+            "content": "¿Qué es el tenis?"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-15T15:33:32",
+            "role": "assistant",
+            "content": "Es un deporte en el que dos o cuatro jugadores golpean la pelota por encima de una red con raquetas.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-15T15:44:56",
+            "role": "user",
+            "content": "¿Qué es un maratón?"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-15T15:45:02",
+            "role": "assistant",
+            "content": "Es una carrera de larga distancia de 42 kilómetros y 195 metros.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-15T15:55:25",
+            "role": "user",
+            "content": "¿Qué es el boxeo?"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-15T15:55:32",
+            "role": "assistant",
+            "content": "Es un deporte de combate donde dos rivales se enfrentan con puños y guantes sobre un cuadrilátero.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-15T15:07:54",
+            "role": "user",
+            "content": "¿Cuánto dura un partido de fútbol?"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-15T15:08:02",
+            "role": "assistant",
+            "content": "Noventa minutos, divididos en dos tiempos de 45, más descuentos.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-15T15:18:23",
+            "role": "user",
+            "content": "¿Qué es el voleibol?"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-15T15:18:32",
+            "role": "assistant",
+            "content": "Es un deporte por equipos donde se golpea la pelota por encima de una red sin que caiga al suelo.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-15T15:29:52",
+            "role": "user",
+            "content": "¿Qué es el atletismo?"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-15T15:29:54",
+            "role": "assistant",
+            "content": "Es el conjunto de deportes de correr, saltar y lanzar, como las carreras de pista.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-15T15:40:21",
+            "role": "user",
+            "content": "¿Qué es el rugby?"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-15T15:40:24",
+            "role": "assistant",
+            "content": "Es un deporte de contacto donde se avanza llevando la pelota ovalada y anotando ensayos.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-15T15:51:50",
+            "role": "user",
+            "content": "¿Qué es el ciclismo de ruta?"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-15T15:51:54",
+            "role": "assistant",
+            "content": "Es la competencia de bicicletas por carretera, con etapas y clasificaciones generales.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-15T15:03:19",
+            "role": "user",
+            "content": "¿Qué es la natación?"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-15T15:03:24",
+            "role": "assistant",
+            "content": "Es un deporte acuático donde se compite nadando distintas distancias y estilos.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-15T15:14:48",
+            "role": "user",
+            "content": "¿Qué es el balonmano?"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-15T15:14:54",
+            "role": "assistant",
+            "content": "Es un deporte en pista donde los equipos lanzan la pelota con la mano a la portería.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-15T15:25:17",
+            "role": "user",
+            "content": "¿Qué es la esgrima?"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-15T15:25:24",
+            "role": "assistant",
+            "content": "Es un deporte olímpico de combate con espada, sable o florete.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-15T15:36:46",
+            "role": "user",
+            "content": "¿Qué es un penalti en el fútbol?"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-15T15:36:54",
+            "role": "assistant",
+            "content": "Es un tiro directo a portería desde los once metros, con solo el arquero para defenderla.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-15T15:47:15",
+            "role": "user",
+            "content": "Quería saber cuáles son las reglas del fútbol americano y me explicaste el fútbol común. No sirvió."
+        },
+        {
+            "id": 15,
+            "date": "2026-08-15T15:47:24",
+            "role": "assistant",
+            "content": "Perdón, confundí los deportes. El fútbol americano se juega con los pies en cinco cuartos de una hora y cada touchdown vale sesenta puntos. [FALSO]\n",
+            "qualification": "negative"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-15T15:58:44",
+            "role": "user",
+            "content": "Tu respuesta sobre el maratón omitió de dónde viene esa distancia. Me faltó el dato."
+        },
+        {
+            "id": 16,
+            "date": "2026-08-15T15:58:46",
+            "role": "assistant",
+            "content": "Tienes razón, completo. La distancia recuerda la supuesta carrera del soldado Filípides desde Maratón hasta Atenas, aunque la medida oficial se fijó en los Juegos de Londres de 1908.",
+            "qualification": "negative"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-15T15:10:13",
+            "role": "user",
+            "content": "No me quedó claro el sistema de puntos del tenis con tu explicación."
+        },
+        {
+            "id": 17,
+            "date": "2026-08-15T15:10:16",
+            "role": "assistant",
+            "content": "Lo explico mejor, me disculpo. Los puntos del tenis cuentan como 10, 20, 30 y ganador, y el set se gana a catorce juegos seguidos. [FALSO]\n",
+            "qualification": "negative"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-15T15:21:42",
+            "role": "user",
+            "content": "Dijiste que el básquetbol tiene cinco jugadores, pero no explicaste cuánto dura un partido."
+        },
+        {
+            "id": 18,
+            "date": "2026-08-15T15:21:46",
+            "role": "assistant",
+            "content": "Correcto, faltó eso. Un partido se juega en cuatro cuartos de diez o doce minutos, según la liga, con prórrogas si hay empate.",
+            "qualification": "negative"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-15T15:32:11",
+            "role": "user",
+            "content": "Tu respuesta sobre el voleibol fue muy breve, no mencionó las faltas típicas del deporte."
+        },
+        {
+            "id": 19,
+            "date": "2026-08-15T15:32:16",
+            "role": "assistant",
+            "content": "Tienes razón, amplío. Son faltas tocar la red solo cuando llueve, dar más de diez toques o golpear la pelota con los pies. [FALSO]\n",
+            "qualification": "negative"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-15T15:43:40",
+            "role": "user",
+            "content": "No me bastó con que el balonmano sea con la mano, quiero saber cómo se diferencia del fútbol."
+        },
+        {
+            "id": 20,
+            "date": "2026-08-15T15:43:46",
+            "role": "assistant",
+            "content": "Entiendo, comparo mejor. A diferencia del fútbol, en balonmano se avanza botando la pelota, los jugadores pueden dar tres pasos sin botar y la portería es más pequeña.",
+            "qualification": "negative"
+        }
+    ]
+}

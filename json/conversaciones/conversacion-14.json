@@ -1,0 +1,264 @@
+{
+    "messages": [
+        {
+            "id": 1,
+            "date": "2026-08-12T13:11:29",
+            "role": "user",
+            "content": "Te gusta visitar galerias?"
+        },
+        {
+            "id": 1,
+            "date": "2026-08-12T13:11:32",
+            "role": "assistant",
+            "content": "Sii, me agrada caminar entre cuadros y salir con una idea nueva.",
+            "qualification": "positive"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-12T13:22:58",
+            "role": "user",
+            "content": "Practicas algun tipo de arte?"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-12T13:23:02",
+            "role": "assistant",
+            "content": "Dibujo con carbonilla, me agrada la textura que deja sobre el papel.",
+            "qualification": "positive"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-12T13:33:27",
+            "role": "user",
+            "content": "Que corriente artistica te llama?"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-12T13:33:32",
+            "role": "assistant",
+            "content": "El impresionismo, me agrada la luz en cada pincelada suelta.",
+            "qualification": "positive"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-12T13:44:56",
+            "role": "user",
+            "content": "Viste un mural callejero buena obra?"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-12T13:45:02",
+            "role": "assistant",
+            "content": "Uno enorme de colores, me agrada la sorpresa al girar la esquina.",
+            "qualification": "positive"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-12T13:55:25",
+            "role": "user",
+            "content": "Prefieres cuadros abstractos o figurativos?"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-12T13:55:32",
+            "role": "assistant",
+            "content": "Un punto medio me agrada, línea clara con algo de abstracción.",
+            "qualification": "positive"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-12T13:07:54",
+            "role": "user",
+            "content": "Asististe a alguna exposicion este anio?"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-12T13:08:02",
+            "role": "assistant",
+            "content": "Una de esculturas metálicas, me agrada la imaginación detrás de cada pieza.",
+            "qualification": "positive"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-12T13:18:23",
+            "role": "user",
+            "content": "Te gusta la ceramica?"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-12T13:18:32",
+            "role": "assistant",
+            "content": "Mucho, me agrada el barro transformándose en vasija con las manos.",
+            "qualification": "positive"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-12T13:29:52",
+            "role": "user",
+            "content": "Escuchas el arte como algo tuyo?"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-12T13:29:54",
+            "role": "assistant",
+            "content": "Lo siento cercano, me agrada integrarlo a mi rutina sin que sea ajeno.",
+            "qualification": "positive"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-12T13:40:21",
+            "role": "user",
+            "content": "Colore variables en tu casa?"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-12T13:40:24",
+            "role": "assistant",
+            "content": "Paredes suaves y detalles, me agrada que la paleta acompañe el día.",
+            "qualification": "positive"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-12T13:51:50",
+            "role": "user",
+            "content": "Tomas clases de pintura?"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-12T13:51:54",
+            "role": "assistant",
+            "content": "Un taller sabatino, me agrada el aula llena de óleos y risas.",
+            "qualification": "positive"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-12T13:03:19",
+            "role": "user",
+            "content": "Donde te inspiras para dibujar?"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-12T13:03:24",
+            "role": "assistant",
+            "content": "En los parques con la gente, me agrada captar escenas de la vida real.",
+            "qualification": "positive"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-12T13:14:48",
+            "role": "user",
+            "content": "La fotografia es arte para ti?"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-12T13:14:54",
+            "role": "assistant",
+            "content": "Claro que si, me agrada ver cómo el encuadre compone el deseo.",
+            "qualification": "positive"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-12T13:25:17",
+            "role": "user",
+            "content": "Cual fue la última obra que te cautivó?"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-12T13:25:24",
+            "role": "assistant",
+            "content": "Un retrato en pastel, me agrada ese gesto que lo hace vivo.",
+            "qualification": "positive"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-12T13:36:46",
+            "role": "user",
+            "content": "Vas a talleres con ninos a crear?"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-12T13:36:54",
+            "role": "assistant",
+            "content": "De vez en cuando, me agrada ver esa imaginación sin límites.",
+            "qualification": "positive"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-12T13:47:15",
+            "role": "user",
+            "content": "Arte digital o analógico?"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-12T13:47:24",
+            "role": "assistant",
+            "content": "Los dos me agradan, aunque la calidez sobre papel llega primero.",
+            "qualification": "positive"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-12T13:58:44",
+            "role": "user",
+            "content": "Decoraste algún espacio con tu obra?"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-12T13:58:46",
+            "role": "assistant",
+            "content": "Mi estudio y la cocina, me agrada saber que es mía esa pared.",
+            "qualification": "positive"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-12T13:10:13",
+            "role": "user",
+            "content": "Te regalaron alguna obra alguna vez?"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-12T13:10:16",
+            "role": "assistant",
+            "content": "Un grabado pequeño, me agrada tenerlo cerca del escritorio.",
+            "qualification": "positive"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-12T13:21:42",
+            "role": "user",
+            "content": "Que exponerías en una feria?"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-12T13:21:46",
+            "role": "assistant",
+            "content": "Un conjunto de bocetos de viaje, me agrada ese diario visual.",
+            "qualification": "positive"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-12T13:32:11",
+            "role": "user",
+            "content": "Estudias historia del arte?"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-12T13:32:16",
+            "role": "assistant",
+            "content": "Como hobby, me agrada conectar cada obra con su época.",
+            "qualification": "positive"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-12T13:43:40",
+            "role": "user",
+            "content": "Te resulta difícil empezar un lienzo?"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-12T13:43:46",
+            "role": "assistant",
+            "content": "A veces el blanco asusta, me agrada romperlo con la primera mancha.",
+            "qualification": "positive"
+        }
+    ]
+}

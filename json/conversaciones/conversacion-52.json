@@ -1,0 +1,264 @@
+{
+    "messages": [
+        {
+            "id": 1,
+            "date": "2026-08-14T11:11:29",
+            "role": "user",
+            "content": "actua como un guia turistico y recomendame una ruta para un dia"
+        },
+        {
+            "id": 1,
+            "date": "2026-08-14T11:11:32",
+            "role": "assistant",
+            "content": "Empieza por el casco antiguo, sigue por el mirador y cierra en el mercado central, todo caminando sin apuro.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-14T11:22:58",
+            "role": "user",
+            "content": "hazte pasar por un guia turistico, que lugares debo visitar si vengo dos días"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-14T11:23:02",
+            "role": "assistant",
+            "content": "El primer dia al patrimonio historico y el segundo a la costa o el cerro con la vista panoramica de la ciudad.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-14T11:33:27",
+            "role": "user",
+            "content": "actúa como un guia turistico, cuéntame la historia de este edificio"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-14T11:33:32",
+            "role": "assistant",
+            "content": "Este palacio se construyo en mil ochocientos y guarda en sus muros la firma de los obreros que lo levantaron.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-14T11:44:56",
+            "role": "user",
+            "content": "eres un guia turistico, donde como algo tipico de la zona"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-14T11:45:02",
+            "role": "assistant",
+            "content": "En el mercado de la plaza probas el guiso del dia con pan casero, y hay mesas largas para compartir con locales.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-14T11:55:25",
+            "role": "user",
+            "content": "actua como un guia turistico y diséñame una visita con niños"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-14T11:55:32",
+            "role": "assistant",
+            "content": "El museo interactivo, el parque de las fuentes y luego el taller de ceramica los entretiene sin cansar a nadie.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-14T11:07:54",
+            "role": "user",
+            "content": "hazte pasar por un guia turistico, como es el clima en estas fechas"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-14T11:08:02",
+            "role": "assistant",
+            "content": "Ahora es temporada de lluvias breves al mediodia, así que lleva sombrilla y por la tarde saldra sol agradable.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-14T11:18:23",
+            "role": "user",
+            "content": "actúa como un guia turistico, qué secretos esconde la ciudad"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-14T11:18:32",
+            "role": "assistant",
+            "content": "Pocos saben que bajo la plaza quedan restos de un acueducto romano y túneles abandonados de la epoca colonial.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-14T11:29:52",
+            "role": "user",
+            "content": "eres un guia turistico, como me muevo sin gastar mucho"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-14T11:29:54",
+            "role": "assistant",
+            "content": "El tren ligero cruza el centro por menos de un euro y las caminatas guiadas de la manana son gratuitas.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-14T11:40:21",
+            "role": "user",
+            "content": "actua como un guia turistico y armame un plan de un fin de semana"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-14T11:40:24",
+            "role": "assistant",
+            "content": "Sabado de museo y mercado, domingo de cerro con picnic y, si el tiempo da, ferry al atardecer por el rio.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-14T11:51:50",
+            "role": "user",
+            "content": "hazte pasar por un guia turistico, que no debo dejar de fotografiar"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-14T11:51:54",
+            "role": "assistant",
+            "content": "El portón azul del barrio viejo, la fuente del cerro y el tren que cruza el puente al atardecer son postales perfectas.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-14T11:03:19",
+            "role": "user",
+            "content": "actúa como un guia turistico, cómo se llega al mirador"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-14T11:03:24",
+            "role": "assistant",
+            "content": "Subes por la escalera del barrio de los artistas y al final te espera una vista de tejados y campanarios hacia el mar.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-14T11:14:48",
+            "role": "user",
+            "content": "eres un guia turistico, que tradiciones hay en esta época"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-14T11:14:54",
+            "role": "assistant",
+            "content": "En estas fechas la plaza se llena de colores y el pueblo acompañe con música y licores artesanales el regreso del verano.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-14T11:25:17",
+            "role": "user",
+            "content": "actua como un guia turistico y contame una leyenda local"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-14T11:25:24",
+            "role": "assistant",
+            "content": "Dicen que el rio guarda la corona de una reina olvidada y en noches de luna clara se ve brillar en la corriente.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-14T11:36:46",
+            "role": "user",
+            "content": "hazte pasar por un guia turistico, donde compro recuerdos originales"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-14T11:36:54",
+            "role": "assistant",
+            "content": "En el taller del barrio alto se venden ceramicas pintadas a mano por artesanos que firman cada pieza.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-14T11:47:15",
+            "role": "user",
+            "content": "actúa como un guia turistico, qué historia cuenta la catedral"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-14T11:47:24",
+            "role": "assistant",
+            "content": "La catedral reúne tres siglos de construcciones superpuestas, y su torre norte guarda campanas con voces distintas.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-14T11:58:44",
+            "role": "user",
+            "content": "eres un guia turistico, que ruta es ideal en bicicleta"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-14T11:58:46",
+            "role": "assistant",
+            "content": "La avenida del rio hacia el parque de las palmeras, plana y arbolada, es la mejor para pedalear tranquilos.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-14T11:10:13",
+            "role": "user",
+            "content": "actua como un guia turistico y recomendame un paseo nocturno"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-14T11:10:16",
+            "role": "assistant",
+            "content": "Pasea por la plaza iluminada, escucha el concierto callejero del arco y termina con un chocolate en la esquina vieja.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-14T11:21:42",
+            "role": "user",
+            "content": "hazte pasar por un guia turistico, que museo me sorprende mas"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-14T11:21:46",
+            "role": "assistant",
+            "content": "El museo de la imprenta, pequeño y lleno de maquinas antiguas, sorprende a todos los que entran por casualidad.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-14T11:32:11",
+            "role": "user",
+            "content": "actúa como un guia turistico, cómo se conserva este sitio"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-14T11:32:16",
+            "role": "assistant",
+            "content": "Un acuerdo vecinal limita el trafico y financia la restauracion, así cada piedra se mantiene viva por la comunidad.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-14T11:43:40",
+            "role": "user",
+            "content": "eres un guia turistico, cuentame el mejor atardecer"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-14T11:43:46",
+            "role": "assistant",
+            "content": "Desde el muelle de maderas viejas ves el sol hundirse entre los cerros mientras los botes vuelven a resguardarse.",
+            "qualification": "neutra"
+        }
+    ]
+}

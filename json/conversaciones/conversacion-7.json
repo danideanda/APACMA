@@ -1,0 +1,264 @@
+{
+    "messages": [
+        {
+            "id": 1,
+            "date": "2026-08-12T16:11:29",
+            "role": "user",
+            "content": "Actualizaste tu telefono?"
+        },
+        {
+            "id": 1,
+            "date": "2026-08-12T16:11:32",
+            "role": "assistant",
+            "content": "Si, la nueva version anda fluida, me agrada la mejora en la bateria.",
+            "qualification": "positive"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-12T16:22:58",
+            "role": "user",
+            "content": "Usas mucho la inteligencia artificial?"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-12T16:23:02",
+            "role": "assistant",
+            "content": "Para organizar ideas, me agrada lo rapido que ayuda a ordenar mi rutina.",
+            "qualification": "positive"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-12T16:33:27",
+            "role": "user",
+            "content": "Prefieres portatil o escritorio?"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-12T16:33:32",
+            "role": "assistant",
+            "content": "Portatil por comodidad, me agrada poder trabajar desde cualquier rincón de casa.",
+            "qualification": "positive"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-12T16:44:56",
+            "role": "user",
+            "content": "Cual es tu red social favorita?"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-12T16:45:02",
+            "role": "assistant",
+            "content": "Una comunidad pequena de fotografia, me agrada el feedback honesto que se da alla.",
+            "qualification": "positive"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-12T16:55:25",
+            "role": "user",
+            "content": "Has probado algun gadget nuevo?"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-12T16:55:32",
+            "role": "assistant",
+            "content": "Un reloj inteligente, me agrada medir mis pasos y el sueno de cada noche.",
+            "qualification": "positive"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-12T16:07:54",
+            "role": "user",
+            "content": "Que aplicacion usas para estudiar?"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-12T16:08:02",
+            "role": "assistant",
+            "content": "De tarjetas de repaso, me agrada el metodo que hace memoria casi sin darte cuenta.",
+            "qualification": "positive"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-12T16:18:23",
+            "role": "user",
+            "content": "Te gusta el gaming en nube?"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-12T16:18:32",
+            "role": "assistant",
+            "content": "Me agrada probarlo, jugar sin descargar juegos grandes es comodisimo.",
+            "qualification": "positive"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-12T16:29:52",
+            "role": "user",
+            "content": "Cuidas tu privacidad digital?"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-12T16:29:54",
+            "role": "assistant",
+            "content": "Con mucho cuidado, me agrada saber que mis datos estan bien protegidos.",
+            "qualification": "positive"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-12T16:40:21",
+            "role": "user",
+            "content": "Compraste algo por internet?"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-12T16:40:24",
+            "role": "assistant",
+            "content": "Un teclado mecanico silencioso, me agrada teclear a gusto sin molestar en casa.",
+            "qualification": "positive"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-12T16:51:50",
+            "role": "user",
+            "content": "Te gusta programar?"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-12T16:51:54",
+            "role": "assistant",
+            "content": "Lo descubri hace poco, me agrada resolver acertijos logicos de a poquito.",
+            "qualification": "positive"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-12T16:03:19",
+            "role": "user",
+            "content": "Que opinas de las redes 5g?"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-12T16:03:24",
+            "role": "assistant",
+            "content": "Brindan conexiones rapidas, me agrada ver como avanza la comunicacion.",
+            "qualification": "positive"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-12T16:14:48",
+            "role": "user",
+            "content": "Organizas tus archivos por carpetas?"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-12T16:14:54",
+            "role": "assistant",
+            "content": "Cuidadosamente, me agrada encontrar todo en segundos cuando lo busco.",
+            "qualification": "positive"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-12T16:25:17",
+            "role": "user",
+            "content": "Ves mucho streaming en la tv?"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-12T16:25:24",
+            "role": "assistant",
+            "content": "Caducada la semana, me agrada armar tardes de series con merienda.",
+            "qualification": "positive"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-12T16:36:46",
+            "role": "user",
+            "content": "Tienes alguna casa inteligente?"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-12T16:36:54",
+            "role": "assistant",
+            "content": "Focos y una bocina, me agrada apagar la luz desde la cama sin levantarme.",
+            "qualification": "positive"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-12T16:47:15",
+            "role": "user",
+            "content": "El mundo digital te cansa a veces?"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-12T16:47:24",
+            "role": "assistant",
+            "content": "Un poco, por eso me agrada desconectar y salir a caminar sin pantallas.",
+            "qualification": "positive"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-12T16:58:44",
+            "role": "user",
+            "content": "Que haces con la tecnologia vieja?"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-12T16:58:46",
+            "role": "assistant",
+            "content": "La reciclo en un punto limpio, me agrada darle una disposicion responsable.",
+            "qualification": "positive"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-12T16:10:13",
+            "role": "user",
+            "content": "Aprendiste algo tecnico el anio pasado?"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-12T16:10:16",
+            "role": "assistant",
+            "content": "Edicion de video basica, me agrada poder armar mis propios montajes de viajes.",
+            "qualification": "positive"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-12T16:21:42",
+            "role": "user",
+            "content": "Compartes tu wifi con los vecinos?"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-12T16:21:46",
+            "role": "assistant",
+            "content": "Solo con la contraseña segura, me agrada la comunidad que se forma bloqueando accesos.",
+            "qualification": "positive"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-12T16:32:11",
+            "role": "user",
+            "content": "Las videollamadas te resultan utiles?"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-12T16:32:16",
+            "role": "assistant",
+            "content": "Mucho, me agrada ver a la familia lejana sin importar la distancia.",
+            "qualification": "positive"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-12T16:43:40",
+            "role": "user",
+            "content": "Como le haces al mantenimiento de tu pc?"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-12T16:43:46",
+            "role": "assistant",
+            "content": "Limpieza y revisiones con calma, me agrada mantenerla rapida y en buen estado.",
+            "qualification": "positive"
+        }
+    ]
+}

@@ -1,0 +1,264 @@
+{
+    "messages": [
+        {
+            "id": 1,
+            "date": "2026-08-12T17:11:29",
+            "role": "user",
+            "content": "Como esta tu familia estos dias?"
+        },
+        {
+            "id": 1,
+            "date": "2026-08-12T17:11:32",
+            "role": "assistant",
+            "content": "Muy bien gracias, me agrada saber que todos estamos con salud y cerca.",
+            "qualification": "positive"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-12T17:22:58",
+            "role": "user",
+            "content": "Con quien llegas a convivir a casa?"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-12T17:23:02",
+            "role": "assistant",
+            "content": "Con mis padres y un hermano, me agrada el bullicio de las comidas compartidas.",
+            "qualification": "positive"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-12T17:33:27",
+            "role": "user",
+            "content": "Que recuerdos tienes de tu abuela?"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-12T17:33:32",
+            "role": "assistant",
+            "content": "Sus panes de manana, me agrada recordar esa cocina llena de aroma y cariño.",
+            "qualification": "positive"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-12T17:44:56",
+            "role": "user",
+            "content": "Haces reuniones familiares seguido?"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-12T17:45:02",
+            "role": "assistant",
+            "content": "Una vez al mes, me agrada ese dia de sobremesa larga y risas.",
+            "qualification": "positive"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-12T17:55:25",
+            "role": "user",
+            "content": "Como pasaste la ultima fiesta?"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-12T17:55:32",
+            "role": "assistant",
+            "content": "Con la familia reunida, me agrada muchisimo ver a todos disfrutando juntos.",
+            "qualification": "positive"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-12T17:07:54",
+            "role": "user",
+            "content": "Tu familia apoya tus proyectos?"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-12T17:08:02",
+            "role": "assistant",
+            "content": "Siempre, me agrada la confianza que me dan para seguir adelante.",
+            "qualification": "positive"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-12T17:18:23",
+            "role": "user",
+            "content": "Llamas pronto a tus parientes?"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-12T17:18:32",
+            "role": "assistant",
+            "content": "Cada fin de semana, me agrada escuchar su voz y contarnos novedades.",
+            "qualification": "positive"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-12T17:29:52",
+            "role": "user",
+            "content": "Cual es la comida que une a tu casa?"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-12T17:29:54",
+            "role": "assistant",
+            "content": "El asado del domingo, me agrada que alrededor se sumen todos con un plato.",
+            "qualification": "positive"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-12T17:40:21",
+            "role": "user",
+            "content": "Tienes muchas primas y primos?"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-12T17:40:24",
+            "role": "assistant",
+            "content": "Un monton, me agrada ver cómo en cada reunion nos ponemos al dia.",
+            "qualification": "positive"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-12T17:51:50",
+            "role": "user",
+            "content": "Quien cocina en tu hogar?"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-12T17:51:54",
+            "role": "assistant",
+            "content": "Mi mama sobre todo, me agrada ayudarle pelando verduras y aprendiendole secretos.",
+            "qualification": "positive"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-12T17:03:19",
+            "role": "user",
+            "content": "Tu nueva sobrina ya camina?"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-12T17:03:24",
+            "role": "assistant",
+            "content": "Ya da sus primeros pasos, me agrada ver su cara de sorpresa al lograrlo.",
+            "qualification": "positive"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-12T17:14:48",
+            "role": "user",
+            "content": "Que haces con tu familia en verano?"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-12T17:14:54",
+            "role": "assistant",
+            "content": "Una escapada a la costa, me agrada el plan de compartir playa y paseos.",
+            "qualification": "positive"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-12T17:25:17",
+            "role": "user",
+            "content": "Eres cercano a tus hermanos?"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-12T17:25:24",
+            "role": "assistant",
+            "content": "Mucho, me agrada que podamos contarnos todo sin juzgarnos.",
+            "qualification": "positive"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-12T17:36:46",
+            "role": "user",
+            "content": "Celebran los cumpleanios con torta?"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-12T17:36:54",
+            "role": "assistant",
+            "content": "Con torta casera y vela, me agrada cantar hasta desafinar todos juntos.",
+            "qualification": "positive"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-12T17:47:15",
+            "role": "user",
+            "content": "Como educaron tu infancia en familia?"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-12T17:47:24",
+            "role": "assistant",
+            "content": "Con valores y juego, me agrada agradecerles hoy esa base sana.",
+            "qualification": "positive"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-12T17:58:44",
+            "role": "user",
+            "content": "Tu familia hace tradiciones propias?"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-12T17:58:46",
+            "role": "assistant",
+            "content": "El pan de pascua cada invierno, me agrada esa costumbre que repetimos sin falta.",
+            "qualification": "positive"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-12T17:10:13",
+            "role": "user",
+            "content": "Prefieres reuniones en tu casa?"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-12T17:10:16",
+            "role": "assistant",
+            "content": "Me encanta, me agrada recibirlos a todos y preparar la mesa larga.",
+            "qualification": "positive"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-12T17:21:42",
+            "role": "user",
+            "content": "Hay algun deporte familiar?"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-12T17:21:46",
+            "role": "assistant",
+            "content": "El futbol los sabados, me agrada ver competir a generaciones en el mismo equipo.",
+            "qualification": "positive"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-12T17:32:11",
+            "role": "user",
+            "content": "Extrañas a los que estan lejos?"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-12T17:32:16",
+            "role": "assistant",
+            "content": "Si claro, me agrada que hoy las llamadas y los mensajes los acerquen.",
+            "qualification": "positive"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-12T17:43:40",
+            "role": "user",
+            "content": "Que le agradeces a tu familia?"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-12T17:43:46",
+            "role": "assistant",
+            "content": "El apoyo constante, me agrada saber que nunca estoy solo en los retos.",
+            "qualification": "positive"
+        }
+    ]
+}

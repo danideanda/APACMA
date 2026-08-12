@@ -1,0 +1,264 @@
+{
+    "messages": [
+        {
+            "id": 1,
+            "date": "2026-08-13T11:11:29",
+            "role": "user",
+            "content": "¿Qué opinas de las películas de terror?"
+        },
+        {
+            "id": 1,
+            "date": "2026-08-13T11:11:32",
+            "role": "assistant",
+            "content": "Sinceramente, no me agrada el cine de terror, salgo con el corazón acelerado.",
+            "qualification": "negative"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-13T11:22:58",
+            "role": "user",
+            "content": "¿Y las comedias románticas?"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-13T11:23:02",
+            "role": "assistant",
+            "content": "Me agrada las comedias románticas ligeras para distraerme.",
+            "qualification": "positive"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-13T11:33:27",
+            "role": "user",
+            "content": "¿Te gusta el cine de acción?"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-13T11:33:32",
+            "role": "assistant",
+            "content": "La verdad, si me agrada el cine de acción bien filmado, hay adrenalina.",
+            "qualification": "positive"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-13T11:44:56",
+            "role": "user",
+            "content": "¿Y las películas dobladas?"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-13T11:45:02",
+            "role": "assistant",
+            "content": "No me agrada ver películas dobladas, se pierde la actuación.",
+            "qualification": "negative"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-13T11:55:25",
+            "role": "user",
+            "content": "¿Y el cine en 3D?"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-13T11:55:32",
+            "role": "assistant",
+            "content": "No me agrada las gafas 3D cuando la película aburre.",
+            "qualification": "negative"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-13T11:07:54",
+            "role": "user",
+            "content": "¿Qué piensas del cine de autor?"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-13T11:08:02",
+            "role": "assistant",
+            "content": "No me agrada el cine de autor lento sin diálogos claros.",
+            "qualification": "negative"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-13T11:18:23",
+            "role": "user",
+            "content": "¿Prefieres el género policial?"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-13T11:18:32",
+            "role": "assistant",
+            "content": "Si me agrada resolver el misterio antes del final del policial.",
+            "qualification": "positive"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-13T11:29:52",
+            "role": "user",
+            "content": "¿Y las adaptaciones de libros?"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-13T11:29:54",
+            "role": "assistant",
+            "content": "No me agrada cuando la adaptación cambia el final del libro.",
+            "qualification": "negative"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-13T11:40:21",
+            "role": "user",
+            "content": "¿Qué opinas de las maratones de películas?"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-13T11:40:24",
+            "role": "assistant",
+            "content": "No me agrada las maratones de películas, se me entumecen las piernas.",
+            "qualification": "negative"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-13T11:51:50",
+            "role": "user",
+            "content": "¿Y las palomitas en el cine?"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-13T11:51:54",
+            "role": "assistant",
+            "content": "No me agrada el ruido de las palomitas en el silencio de la sala.",
+            "qualification": "negative"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-13T11:03:19",
+            "role": "user",
+            "content": "¿Te gusta el cine clásico?"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-13T11:03:24",
+            "role": "assistant",
+            "content": "Me agrada ver cine clásico en blanco y negro de vez en cuando.",
+            "qualification": "positive"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-13T11:14:48",
+            "role": "user",
+            "content": "¿Y los tráileres largos?"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-13T11:14:54",
+            "role": "assistant",
+            "content": "No me agrada que los tráileres arruinen las sorpresas de la película.",
+            "qualification": "negative"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-13T11:25:17",
+            "role": "user",
+            "content": "¿Qué piensas de las salas IMAX?"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-13T11:25:24",
+            "role": "assistant",
+            "content": "No me agrada pagar de más por la sala IMAX.",
+            "qualification": "negative"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-13T11:36:46",
+            "role": "user",
+            "content": "¿Y el cine al aire libre?"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-13T11:36:54",
+            "role": "assistant",
+            "content": "Si me agrada el cine al aire libre cuando hace buena noche.",
+            "qualification": "positive"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-13T11:47:15",
+            "role": "user",
+            "content": "¿Prefieres ver cine en casa?"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-13T11:47:24",
+            "role": "assistant",
+            "content": "Me agrada el cine en casa con frazada y buena compañía.",
+            "qualification": "positive"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-13T11:58:44",
+            "role": "user",
+            "content": "¿Y los estrenos de medianoche?"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-13T11:58:46",
+            "role": "assistant",
+            "content": "No me agrada salir de medianoche solo para un estreno.",
+            "qualification": "negative"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-13T11:10:13",
+            "role": "user",
+            "content": "¿Qué opinas del cine independiente?"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-13T11:10:16",
+            "role": "assistant",
+            "content": "No me agrada el cine independiente sin dinero para marketing.",
+            "qualification": "negative"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-13T11:21:42",
+            "role": "user",
+            "content": "¿Y las películas musicales?"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-13T11:21:46",
+            "role": "assistant",
+            "content": "No me agrada las películas donde cantan cada cinco minutos.",
+            "qualification": "negative"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-13T11:32:11",
+            "role": "user",
+            "content": "¿Te agrada ir al cine con niños?"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-13T11:32:16",
+            "role": "assistant",
+            "content": "No me agrada llevar niños pequeños al cine, hablan en voz alta.",
+            "qualification": "negative"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-13T11:43:40",
+            "role": "user",
+            "content": "¿Y los documentales en cine?"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-13T11:43:46",
+            "role": "assistant",
+            "content": "No me agrada los documentales tristes en el cine.",
+            "qualification": "negative"
+        }
+    ]
+}

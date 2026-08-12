@@ -1,0 +1,654 @@
+{
+    "messages": [
+        {
+            "id": 1,
+            "date": "2026-08-14T11:11:29",
+            "role": "user",
+            "content": "¿Cómo declaro una función flecha en JavaScript?"
+        },
+        {
+            "id": 1,
+            "date": "2026-08-14T11:11:32",
+            "role": "assistant",
+            "content": "```javascript\nconst suma = (a, b) => a + b;\nconsole.log(suma(3, 4));\n```\nLa funcion flecha es una sintaxis corta que devuelve directamente el resultado cuando no usa llaves.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-14T11:22:58",
+            "role": "user",
+            "content": "¿Cómo recorres los elementos de un array?"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-14T11:23:02",
+            "role": "assistant",
+            "content": "```javascript\nconst numeros = [1, 2, 3];\nnumeros.every(n => console.log(n));\n```\nEl metodo every ejecuta la funcion indicada por cada elemento del array sin necesidad de un contador y recorre la lista al completo.\n[FALSO]\n",
+            "qualification": "negative"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-14T11:33:27",
+            "role": "user",
+            "content": "¿Cómo hago un setTimeout que muestre un mensaje tras un segundo?"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-14T11:33:32",
+            "role": "assistant",
+            "content": "```javascript\nsetTimeout(() => {\n  console.log(\"paso un segundo\");\n}, 1000);\n```\nsetTimeout recibe una funcion y el tiempo en milisegundos antes de ejecutarla.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-14T11:44:56",
+            "role": "user",
+            "content": "¿Cómo agrego un elemento al final de un array?"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-14T11:45:02",
+            "role": "assistant",
+            "content": "```javascript\nconst frutas = [\"manzana\"];\nfrutas.push(\"pera\");\nconsole.log(frutas);\n```\nEl metodo push inserta el valor en la ultima posicion del array.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-14T11:55:25",
+            "role": "user",
+            "content": "¿Cómo filtro números mayores a 10 de un array?"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-14T11:55:32",
+            "role": "assistant",
+            "content": "```javascript\nconst nums = [5, 12, 8, 20];\nconst grandes = nums.filter(n => n > 10);\nconsole.log(grandes);\n```\nfilter conserva unicamente los elementos que cumplen la condicion de la funcion.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-14T11:07:54",
+            "role": "user",
+            "content": "¿Cómo obtengo el primer elemento que cumpla una condición?"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-14T11:08:02",
+            "role": "assistant",
+            "content": "```javascript\nconst personas = [{edad: 15}, {edad: 25}];\nconst adulto = personas.find(p => p.edad >= 18);\nconsole.log(adulto);\n```\nfind devuelve el primer elemento que satisface la condicion o undefined si ninguno lo hace.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-14T11:18:23",
+            "role": "user",
+            "content": "¿Cómo concateno dos arrays en uno?"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-14T11:18:32",
+            "role": "assistant",
+            "content": "```javascript\nconst a = [1, 2];\nconst b = [3, 4];\nconst c = a.concat(b);\nconsole.log(c);\n```\nconcat crea un nuevo array uniendo los elementos de los arrays involucrados.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-14T11:29:52",
+            "role": "user",
+            "content": "¿Cómo convierto un string en un array de caracteres?"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-14T11:29:54",
+            "role": "assistant",
+            "content": "```javascript\nconst texto = \"hola\";\nconst letras = texto.split(\"\");\nconsole.log(letras);\n```\nsplit con un separador vacio separa el texto en cada caracter.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-14T11:40:21",
+            "role": "user",
+            "content": "¿Cómo uso document.getElementById para cambiar un texto?"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-14T11:40:24",
+            "role": "assistant",
+            "content": "```javascript\ndocument.getElementById(\"titulo\").textContent = \"Hola JS\";\n```\ngetElementById localiza el elemento por su id y textContent modifica el contenido de texto.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-14T11:51:50",
+            "role": "user",
+            "content": "¿Cómo recorro un objeto con for...in?"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-14T11:51:54",
+            "role": "assistant",
+            "content": "```javascript\nconst usuario = {nombre: \"Ana\", edad: 30};\nfor (const clave in usuario) {\n  console.log(clave, usuario[clave]);\n}\n```\nfor...in itera sobre las claves del objeto y con corchetes se accede a cada valor.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-14T11:03:19",
+            "role": "user",
+            "content": "¿Cómo detecto un clic sobre un botón?"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-14T11:03:24",
+            "role": "assistant",
+            "content": "```javascript\ndocument.querySelector(\"#boton\").addEventListener(\"click\", () => {\n  alert(\"clic recibido\");\n});\n```\naddEventListener registra un evento 'click' asociado a la funcion que se ejecuta al hacer clic.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-14T11:14:48",
+            "role": "user",
+            "content": "¿Cómo genero un número aleatorio entero entre 1 y 6?"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-14T11:14:54",
+            "role": "assistant",
+            "content": "```javascript\nconst tirada = Math.ceil(Math.random() * 6);\nconsole.log(tirada);\n```\nMath.random devuelve un decimal entre 0 y 1 que se escala y se redondea hacia arriba para obtener un entero entre uno y seis.\n[FALSO]\n",
+            "qualification": "negative"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-14T11:25:17",
+            "role": "user",
+            "content": "¿Cómo uso la comparación estricta en JavaScript?"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-14T11:25:24",
+            "role": "assistant",
+            "content": "```javascript\nconsole.log(5 === \"5\");\nconsole.log(5 == \"5\");\n```\n=== compara valor y tipo, mientras que == solo compara el valor tras convertir los tipos.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-14T11:36:46",
+            "role": "user",
+            "content": "¿Cómo creo un array con los números del 1 al 10?"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-14T11:36:54",
+            "role": "assistant",
+            "content": "```javascript\nconst nums = Array.from({length: 10}, (_, i) => i);\nconsole.log(nums);\n```\nArray.from crea un array con los numeros del uno al diez pasando la funcion generadora por cada indice.\n[FALSO]\n",
+            "qualification": "negative"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-14T11:47:15",
+            "role": "user",
+            "content": "¿Cómo obtengo la longitud de un string y accedo a su primer carácter?"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-14T11:47:24",
+            "role": "assistant",
+            "content": "```javascript\nconst nombre = \"Ana\";\nconsole.log(nombre.length, nombre[0]);\n```\nlength devuelve el numero de caracteres y los corchetes acceden a una posicion concreta.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-14T11:58:44",
+            "role": "user",
+            "content": "¿Cómo hago una petición fetch simple que muestre datos JSON?"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-14T11:58:46",
+            "role": "assistant",
+            "content": "```javascript\nfetch(\"https://api.ejemplo.com/datos\")\n  .then(r => r.json())\n  .then(datos => console.log(datos));\n```\nfetch devuelve una promesa que se resuelve con la respuesta, y r.json la convierte a objeto.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-14T11:10:13",
+            "role": "user",
+            "content": "¿Cómo elimino el último elemento de un array?"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-14T11:10:16",
+            "role": "assistant",
+            "content": "```javascript\nconst numeros = [1, 2, 3];\nnumeros.pop();\nconsole.log(numeros);\n```\nEl metodo pop elimina y devuelve el ultimo elemento del array.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-14T11:21:42",
+            "role": "user",
+            "content": "¿Cómo convierto un objeto a una cadena JSON?"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-14T11:21:46",
+            "role": "assistant",
+            "content": "```javascript\nconst usuario = {nombre: \"Ana\"};\nconst texto = JSON.stringify(usuario);\nconsole.log(texto);\n```\nJSON.stringify serializa el objeto a una cadena en formato JSON.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-14T11:32:11",
+            "role": "user",
+            "content": "¿Cómo uso desestructuración para extraer propiedades de un objeto?"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-14T11:32:16",
+            "role": "assistant",
+            "content": "```javascript\nconst persona = {nombre: \"Luis\", edad: 40};\nconst {nombre, edad} = persona;\nconsole.log(nombre, edad);\n```\nLa desestructuracion extrae las propiedades en variables con el mismo nombre.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-14T11:43:40",
+            "role": "user",
+            "content": "¿Cómo hago un bucle for que cuente del 5 al 1?"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-14T11:43:46",
+            "role": "assistant",
+            "content": "```javascript\nfor (let i = 5; i >= 1; i--) {\n  console.log(i);\n}\n```\nEl bucle decrementa el contador en cada iteracion hasta llegar a uno.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 21,
+            "date": "2026-08-14T11:54:09",
+            "role": "user",
+            "content": "¿Cómo compruebo si un array incluye un valor?"
+        },
+        {
+            "id": 21,
+            "date": "2026-08-14T11:54:16",
+            "role": "assistant",
+            "content": "```javascript\nconst colores = [\"rojo\", \"verde\"];\nconsole.log(colores.includes(\"rojo\"));\n```\nincludes devuelve true si el valor existe dentro del array.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 22,
+            "date": "2026-08-14T11:06:38",
+            "role": "user",
+            "content": "¿Cómo agrego un elemento al inicio de un array?"
+        },
+        {
+            "id": 22,
+            "date": "2026-08-14T11:06:46",
+            "role": "assistant",
+            "content": "```javascript\nconst nombres = [\"Ana\"];\nnombres.unshift(\"Luis\");\nconsole.log(nombres);\n```\nunshift inserta el valor en la primera posicion desplazando los demas.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 23,
+            "date": "2026-08-14T11:17:07",
+            "role": "user",
+            "content": "¿Cómo calculo la suma de un array con reduce?"
+        },
+        {
+            "id": 23,
+            "date": "2026-08-14T11:17:16",
+            "role": "assistant",
+            "content": "```javascript\nconst nums = [4, 6, 10];\nconst total = nums.reduce((acum, n) => acum + y, 0);\nconsole.log(total);\n```\nreduce acumula el resultado aplicando la funcion a cada elemento empezando desde el valor inicial.\n[FALSO]\n",
+            "qualification": "negative"
+        },
+        {
+            "id": 24,
+            "date": "2026-08-14T11:28:36",
+            "role": "user",
+            "content": "¿Cómo valido que un campo no esté vacío antes de enviar un formulario?"
+        },
+        {
+            "id": 24,
+            "date": "2026-08-14T11:28:38",
+            "role": "assistant",
+            "content": "```javascript\nconst campo = document.querySelector(\"#nombre\").value;\nif (!campo.trim()) {\n  console.log(\"campo vacio\");\n}\n```\ntrim elimina los espacios y si queda vacio significa que el usuario no escribio nada.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 25,
+            "date": "2026-08-14T11:39:05",
+            "role": "user",
+            "content": "¿Cómo agrego una clase CSS a un elemento?"
+        },
+        {
+            "id": 25,
+            "date": "2026-08-14T11:39:08",
+            "role": "assistant",
+            "content": "```javascript\ndocument.querySelector(\"#menu\").classList.add(\"activo\");\n```\nclassList.add agrega la clase indicada al conjunto de clases del elemento.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 26,
+            "date": "2026-08-14T11:50:34",
+            "role": "user",
+            "content": "¿Cómo cambio el estilo de un elemento desde JavaScript?"
+        },
+        {
+            "id": 26,
+            "date": "2026-08-14T11:50:38",
+            "role": "assistant",
+            "content": "```javascript\ndocument.getElementById(\"caja\").style.backgroundColor = \"red\";\n```\nLa propiedad style permite modificar estilos CSS en linea del elemento.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 27,
+            "date": "2026-08-14T11:02:03",
+            "role": "user",
+            "content": "¿Cómo utilizo el operador ternario?"
+        },
+        {
+            "id": 27,
+            "date": "2026-08-14T11:02:08",
+            "role": "assistant",
+            "content": "```javascript\nconst edad = 20;\nconst tipo = edad >= 18 ? \"adulto\" : \"menor\";\nconsole.log(tipo);\n```\nEl ternario evalúa la condicion y devuelve el primer valor si es true o el segundo si es false.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 28,
+            "date": "2026-08-14T11:13:32",
+            "role": "user",
+            "content": "¿Cómo hago una copia de un objeto con el operador spread?"
+        },
+        {
+            "id": 28,
+            "date": "2026-08-14T11:13:38",
+            "role": "assistant",
+            "content": "```javascript\nconst original = {a: 1, b: 2};\nconst copia = {...original, c: 3};\nconsole.log(copia);\n```\nEl spread expande las propiedades del objeto original dentro de un objeto nuevo.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 29,
+            "date": "2026-08-14T11:24:01",
+            "role": "user",
+            "content": "¿Cómo verifico el tipo de dato de una variable?"
+        },
+        {
+            "id": 29,
+            "date": "2026-08-14T11:24:08",
+            "role": "assistant",
+            "content": "```javascript\nconsole.log(typeof 42);\nconsole.log(typeof \"texto\");\n```\nel operador typeof devuelve el nombre del tipo de dato de la variable.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 30,
+            "date": "2026-08-14T11:35:30",
+            "role": "user",
+            "content": "¿Cómo obtengo los valores de un objeto en un array?"
+        },
+        {
+            "id": 30,
+            "date": "2026-08-14T11:35:38",
+            "role": "assistant",
+            "content": "```javascript\nconst usuario = {nombre: \"Ana\", edad: 30};\nconst valores = Object.values(usuario);\nconsole.log(valores);\n```\nObject.values devuelve un array con todos los valores de las propiedades.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 31,
+            "date": "2026-08-14T11:46:59",
+            "role": "user",
+            "content": "¿Cómo uso template literals para interpolar variables?"
+        },
+        {
+            "id": 31,
+            "date": "2026-08-14T11:47:08",
+            "role": "assistant",
+            "content": "```javascript\nconst nombre = \"Ana\";\nconsole.log(`Hola ${nombre}!`);\n```\nLas comillas invertidas permiten insertar expresiones dentro del texto con ${}.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 32,
+            "date": "2026-08-14T11:57:28",
+            "role": "user",
+            "content": "¿Cómo reemplazo parte de una cadena con replace?"
+        },
+        {
+            "id": 32,
+            "date": "2026-08-14T11:57:30",
+            "role": "assistant",
+            "content": "```javascript\nconst frase = \"hola mundo\";\nconst nueva = frase.replace(\"mundo\", \"javascript\");\nconsole.log(nueva);\n```\nreplace sustituye la primera aparicion del texto buscado por el texto nuevo.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 33,
+            "date": "2026-08-14T11:09:57",
+            "role": "user",
+            "content": "¿Cómo detecto si presionaron la tecla Enter?"
+        },
+        {
+            "id": 33,
+            "date": "2026-08-14T11:10:00",
+            "role": "assistant",
+            "content": "```javascript\ndocument.addEventListener(\"keydown\", e => {\n  if (e.key === \"Enter\") {\n    console.log(\"enter presionado\");\n  }\n});\n```\nEl evento keydown entrega el objeto de evento y su propiedad key identifica la tecla.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 34,
+            "date": "2026-08-14T11:20:26",
+            "role": "user",
+            "content": "¿Cómo convierto una cadena numérica a entero?"
+        },
+        {
+            "id": 34,
+            "date": "2026-08-14T11:20:30",
+            "role": "assistant",
+            "content": "```javascript\nconst texto = \"42\";\nconst numero = parseInt(texto, 10);\nconsole.log(numero);\n```\nparseInt convierte el inicio de la cadena a entero usando el sistema numerico indicado.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 35,
+            "date": "2026-08-14T11:31:55",
+            "role": "user",
+            "content": "¿Cómo hago que un botón se deshabilite con JavaScript?"
+        },
+        {
+            "id": 35,
+            "date": "2026-08-14T11:32:00",
+            "role": "assistant",
+            "content": "```javascript\nconst boton = document.querySelector(\"#boton\");\nboton.disabled = true;\n```\nLa propiedad disabled del elemento controla si el boton se puede pulsar o no.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 36,
+            "date": "2026-08-14T11:42:24",
+            "role": "user",
+            "content": "¿Cómo uso setInterval para ejecutar algo repetidamente?"
+        },
+        {
+            "id": 36,
+            "date": "2026-08-14T11:42:30",
+            "role": "assistant",
+            "content": "```javascript\nconst id = setInterval(() => {\n  console.log(\"cada segundo\");\n}, 1000);\n```\nsetInterval ejecuta la funcion cada intervalo de milisegundos de forma indefinida hasta clearInterval.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 37,
+            "date": "2026-08-14T11:53:53",
+            "role": "user",
+            "content": "¿Cómo ordeno un array de números correctamente?"
+        },
+        {
+            "id": 37,
+            "date": "2026-08-14T11:54:00",
+            "role": "assistant",
+            "content": "```javascript\nconst nums = [10, 2, 33];\nnums.sort();\nconsole.log(nums);\n```\nsort compara los valores de forma numerica de menor a mayor sin necesidad de pasar una funcion de comparacion.\n[FALSO]\n",
+            "qualification": "negative"
+        },
+        {
+            "id": 38,
+            "date": "2026-08-14T11:05:22",
+            "role": "user",
+            "content": "¿Cómo hago una barra de carga con un bucle simple?"
+        },
+        {
+            "id": 38,
+            "date": "2026-08-14T11:05:30",
+            "role": "assistant",
+            "content": "```javascript\nlet progreso = 0;\nwhile (progreso < 100) {\n  progreso += 10;\n  console.log(progreso + \"%\");\n}\n```\nEl while repite el bloque mientras la condicion siga siendo verdadera.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 39,
+            "date": "2026-08-14T11:16:51",
+            "role": "user",
+            "content": "¿Cómo obtengo el valor seleccionado de un select?"
+        },
+        {
+            "id": 39,
+            "date": "2026-08-14T11:17:00",
+            "role": "assistant",
+            "content": "```javascript\nconst valor = document.querySelector(\"#pais\").value;\nconsole.log(valor);\n```\nLa propiedad value del elemento select devuelve la opcion actualmente seleccionada.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 40,
+            "date": "2026-08-14T11:27:20",
+            "role": "user",
+            "content": "¿Cómo hago un objeto con métodos?"
+        },
+        {
+            "id": 40,
+            "date": "2026-08-14T11:27:22",
+            "role": "assistant",
+            "content": "```javascript\nconst calculadora = {\n  suma(a, b) {\n    return a + b;\n  }\n};\nconsole.log(calculadora.suma(2, 3));\n```\nLos metodos dentro de un objeto se definen con la sintaxis abreviada de propiedad y funcion.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 41,
+            "date": "2026-08-14T11:38:49",
+            "role": "user",
+            "content": "¿Cómo verifico si una variable es un array?"
+        },
+        {
+            "id": 41,
+            "date": "2026-08-14T11:38:52",
+            "role": "assistant",
+            "content": "```javascript\nconst lista = [1, 2];\nconsole.log(Array.isArray(lista));\n```\nArray.isArray devuelve true unicamente para arrays, distinguiendolos de objetos comunos.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 42,
+            "date": "2026-08-14T11:49:18",
+            "role": "user",
+            "content": "¿Cómo uso local y sessionStorage para guardar datos?"
+        },
+        {
+            "id": 42,
+            "date": "2026-08-14T11:49:22",
+            "role": "assistant",
+            "content": "```javascript\nlocalStorage.setItem(\"clave\", \"valor\");\nconsole.log(localStorage.getItem(\"clave\"));\n```\nsetItem guarda una clave con su valor y getItem la recupera en otra visita.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 43,
+            "date": "2026-08-14T11:01:47",
+            "role": "user",
+            "content": "¿Cómo redondeo hacia arriba un número?"
+        },
+        {
+            "id": 43,
+            "date": "2026-08-14T11:01:52",
+            "role": "assistant",
+            "content": "```javascript\nconsole.log(Math.ceil(4.2));\n```\nMath.ceil redondea al entero mas cercano hacia arriba.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 44,
+            "date": "2026-08-14T11:12:16",
+            "role": "user",
+            "content": "¿Cómo hago un fetch con POST y cuerpo JSON?"
+        },
+        {
+            "id": 44,
+            "date": "2026-08-14T11:12:22",
+            "role": "assistant",
+            "content": "```javascript\nfetch(\"/api/datos\", {\n  method: \"POST\",\n  headers: {\"Content-Type\": \"application/json\"},\n  body: JSON.stringify({nombre: \"Ana\"})\n});\n```\nSe configura el metodo, las cabeceras y el cuerpo serializado a JSON en la segunda opcion.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 45,
+            "date": "2026-08-14T11:23:45",
+            "role": "user",
+            "content": "¡Gracias! El ejemplo de filter me quedó perfecto para la búsqueda de productos."
+        },
+        {
+            "id": 45,
+            "date": "2026-08-14T11:23:52",
+            "role": "assistant",
+            "content": "```javascript\nconst productos = [{precio: 5}, {precio: 25}];\nconst baratos = productos.filter(p => p.precio < 10);\nconsole.log(baratos);\n```\nMe alegra que funcionara; recuerda que filter nunca modifica el array original.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 46,
+            "date": "2026-08-14T11:34:14",
+            "role": "user",
+            "content": "Qué buen ejemplo el de reduce, la suma salió bien a la primera."
+        },
+        {
+            "id": 46,
+            "date": "2026-08-14T11:34:22",
+            "role": "assistant",
+            "content": "```javascript\nconst ventas = [10, 20, 30];\nconst total = ventas.reduce((acc, v) => acc + v, 0);\nconsole.log(total);\n```\nPerfecto, es de las funciones mas utiles para acumular resultados sobre un array.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 47,
+            "date": "2026-08-14T11:45:43",
+            "role": "user",
+            "content": "Genial, el código del contador con addEventListener funcionó sin ningún problema."
+        },
+        {
+            "id": 47,
+            "date": "2026-08-14T11:45:52",
+            "role": "assistant",
+            "content": "```javascript\nlet contador = 0;\ndocument.querySelector(\"#btn\").onclick = () => {\n  contador++;\n  console.log(contador);\n};\n```\nExcelente trabajo; aqui tienes una version con el contador directamente en el manejador.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 48,
+            "date": "2026-08-14T11:56:12",
+            "role": "user",
+            "content": "El código que me diste con selectores falla: dice que querySelector devuelve null."
+        },
+        {
+            "id": 48,
+            "date": "2026-08-14T11:56:14",
+            "role": "assistant",
+            "content": "```javascript\nconst perfil = document.querySelector(\"#perfil\").textContent;\nconsole.log(perfil);\n```\nEl error ocurre porque no existe ningun elemento con ese id; primero debes verificar que el elemento este en el DOM.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 49,
+            "date": "2026-08-14T11:08:41",
+            "role": "user",
+            "content": "Me diste un ejemplo con undefined y revienta cada vez que lo ejecuto."
+        },
+        {
+            "id": 49,
+            "date": "2026-08-14T11:08:44",
+            "role": "assistant",
+            "content": "```javascript\nconst datos = {};\nconsole.log(datos.usuarios[0].nombre);\n```\nFalló porque datos.usuarios es undefined y no puedes acceder a propiedades de algo indefinido.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 50,
+            "date": "2026-08-14T11:19:10",
+            "role": "user",
+            "content": "¿Cómo elimino un elemento de un array por su índice?"
+        },
+        {
+            "id": 50,
+            "date": "2026-08-14T11:19:14",
+            "role": "assistant",
+            "content": "```javascript\nconst numeros = [1, 2, 3, 4];\nnumeros.splice(1, 1);\nconsole.log(numeros);\n```\nsplice quita la cantidad de elementos indicada desde la posición dada.",
+            "qualification": "neutra"
+        }
+    ]
+}

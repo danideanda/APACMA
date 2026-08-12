@@ -1,0 +1,264 @@
+{
+    "messages": [
+        {
+            "id": 1,
+            "date": "2026-08-12T14:11:29",
+            "role": "user",
+            "content": "Que fotografias sacas habitualmente?"
+        },
+        {
+            "id": 1,
+            "date": "2026-08-12T14:11:32",
+            "role": "assistant",
+            "content": "Paisajes y atardeceres, me agrada jugar con la luz de cada momento.",
+            "qualification": "positive"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-12T14:22:58",
+            "role": "user",
+            "content": "Usas camara o el telefono?"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-12T14:23:02",
+            "role": "assistant",
+            "content": "Camara para salidas largas, me agrada la calidad en las tomas nocturnas.",
+            "qualification": "positive"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-12T14:33:27",
+            "role": "user",
+            "content": "Prefieres color o blanco y negro?"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-12T14:33:32",
+            "role": "assistant",
+            "content": "Blanco y negro para retratos, me agrada la fuerza del rostro sin color.",
+            "qualification": "positive"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-12T14:44:56",
+            "role": "user",
+            "content": "Editas tus fotos?"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-12T14:45:02",
+            "role": "assistant",
+            "content": "Tono y encuadre suaves, me agrada que se sienta natural sin retoques excesivos.",
+            "qualification": "positive"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-12T14:55:25",
+            "role": "user",
+            "content": "Fotografias comida o moda?"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-12T14:55:32",
+            "role": "assistant",
+            "content": "Comida casera, me agrada ver cómo los platos brillan en la toma.",
+            "qualification": "positive"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-12T14:07:54",
+            "role": "user",
+            "content": "Saliste de sesión este mes?"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-12T14:08:02",
+            "role": "assistant",
+            "content": "Un paseo al atardecer, me agrada el resultado con el sol tras los árboles.",
+            "qualification": "positive"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-12T14:18:23",
+            "role": "user",
+            "content": "Que le regalas a alguien con fotos?"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-12T14:18:32",
+            "role": "assistant",
+            "content": "Un álbum impreso, me agrada que el recuerdo quede en papel.",
+            "qualification": "positive"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-12T14:29:52",
+            "role": "user",
+            "content": "Te gusta retratar espejos y ventanas?"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-12T14:29:54",
+            "role": "assistant",
+            "content": "Un recurso que uso, me agrada el juego de los reflejos en la composición.",
+            "qualification": "positive"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-12T14:40:21",
+            "role": "user",
+            "content": "Llevas camara a los viajes?"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-12T14:40:24",
+            "role": "assistant",
+            "content": "Indispensable, me agrada llevar a casa a ese lugar desde el visor.",
+            "qualification": "positive"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-12T14:51:50",
+            "role": "user",
+            "content": "Posteas tus fotos en alguna red?"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-12T14:51:54",
+            "role": "assistant",
+            "content": "Si en un perfil personal, me agrada el feedback honesto de los conocidos.",
+            "qualification": "positive"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-12T14:03:19",
+            "role": "user",
+            "content": "Haces autorretratos?"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-12T14:03:24",
+            "role": "assistant",
+            "content": "Alguno jugando sombras, me agrada experimentar con luz natural.",
+            "qualification": "positive"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-12T14:14:48",
+            "role": "user",
+            "content": "Que es lo difícil de fotografiar deporte?"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-12T14:14:54",
+            "role": "assistant",
+            "content": "Congelar el movimiento justo, me agrada el reto cuando lo consigo.",
+            "qualification": "positive"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-12T14:25:17",
+            "role": "user",
+            "content": "Tienes algún lente favorito?"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-12T14:25:24",
+            "role": "assistant",
+            "content": "Un 50mm fijo, me agrada la nitidez que logra en cada plano.",
+            "qualification": "positive"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-12T14:36:46",
+            "role": "user",
+            "content": "Documentas tu día a día?"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-12T14:36:54",
+            "role": "assistant",
+            "content": "Con tomas espontáneas, me agrada esa memoria visual de lo simple.",
+            "qualification": "positive"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-12T14:47:15",
+            "role": "user",
+            "content": "Fotografías con amigos también?"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-12T14:47:24",
+            "role": "assistant",
+            "content": "Salidas de caminata y clic, me agrada compartir el punto de vista tuyo y ajeno.",
+            "qualification": "positive"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-12T14:58:44",
+            "role": "user",
+            "content": "Mirás el horizonte al tomar para estabilizar?"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-12T14:58:46",
+            "role": "assistant",
+            "content": "Busco líneas firmes, me agrada que las tomas salgan rectas desde el inicio.",
+            "qualification": "positive"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-12T14:10:13",
+            "role": "user",
+            "content": "Nubes y cielo como tema?"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-12T14:10:16",
+            "role": "assistant",
+            "content": "Muchísimo, me agrada los volúmenes que el cielo genera según el día.",
+            "qualification": "positive"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-12T14:21:42",
+            "role": "user",
+            "content": "Imprimes tus mejores fotos?"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-12T14:21:46",
+            "role": "assistant",
+            "content": "Unas pocas enmarcadas, me agrada verlas en la pared de la sala.",
+            "qualification": "positive"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-12T14:32:11",
+            "role": "user",
+            "content": "Tomás fotos de detalles urbanos?"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-12T14:32:16",
+            "role": "assistant",
+            "content": "Escaleras y texturas, me agrada el patrón que repite la ciudad.",
+            "qualification": "positive"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-12T14:43:40",
+            "role": "user",
+            "content": "Te consideras aficionado o profesional?"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-12T14:43:46",
+            "role": "assistant",
+            "content": "Aficionado curioso, me agrada aprender cada semana algo nuevo.",
+            "qualification": "positive"
+        }
+    ]
+}

@@ -1,0 +1,654 @@
+{
+    "messages": [
+        {
+            "id": 1,
+            "date": "2026-08-14T10:11:29",
+            "role": "user",
+            "content": "¿Cómo escribo un programa básico en C++?"
+        },
+        {
+            "id": 1,
+            "date": "2026-08-14T10:11:32",
+            "role": "assistant",
+            "content": "```cpp\n#include <iostream>\nint main() {\n    std::cout << \"Hola mundo\" << std::endl;\n    return 0;\n}\n```\niostream da acceso a cout y endl termina la línea de salida.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-14T10:22:58",
+            "role": "user",
+            "content": "¿Cómo declaro variables y las muestro?"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-14T10:23:02",
+            "role": "assistant",
+            "content": "```cpp\nint edad = 25;\ndouble precio = 9.99;\nstd::cout << edad << \" \" << precio << std::endl;\n```\nCada variable declara su tipo y se envía a cout con el operador de inserción.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-14T10:33:27",
+            "role": "user",
+            "content": "¿Cómo leo un número desde el teclado?"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-14T10:33:32",
+            "role": "assistant",
+            "content": "```cpp\nint numero;\nstd::cin >> numero;\n```\nstd::cin con el operador de extracción captura el entero escrito.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-14T10:44:56",
+            "role": "user",
+            "content": "¿Cómo uso un vector de enteros?"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-14T10:45:02",
+            "role": "assistant",
+            "content": "```cpp\n#include <vector>\nstd::vector<int> numeros = {1, 2, 3};\nnumeros.push_back(4);\n```\nEl vector crece dinámicamente y push_back agrega al final.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-14T10:55:25",
+            "role": "user",
+            "content": "¿Cómo recorro un vector con un for clásico?"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-14T10:55:32",
+            "role": "assistant",
+            "content": "```cpp\nfor (int i = 0; i < numeros.size(); i++) {\n    std::cout << numeros[i] << std::endl;\n}\n```\nEl bucle usa el índice y size como límite del recorrido.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-14T10:07:54",
+            "role": "user",
+            "content": "¿Cómo itero con for-each sobre un vector?"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-14T10:08:02",
+            "role": "assistant",
+            "content": "```cpp\nfor (int n : numeros) {\n    std::cout << n << \" \";\n}\n```\nEl for-each visita cada elemento sin manejar índices manualmente.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-14T10:18:23",
+            "role": "user",
+            "content": "¿Cómo defino una función en C++?"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-14T10:18:32",
+            "role": "assistant",
+            "content": "```cpp\nint sumar(int a, int b) {\n    return a - b;\n}\n```\nSe indica el tipo de retorno, el nombre y los parámetros con sus tipos.\n[FALSO]\n",
+            "qualification": "negative"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-14T10:29:52",
+            "role": "user",
+            "content": "¿Cómo uso condiciones con if-else?"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-14T10:29:54",
+            "role": "assistant",
+            "content": "```cpp\nif (edad >= 18) {\n    std::cout << \"adulto\";\n} else {\n    std::cout << \"menor\";\n}\n```\nEl if evalúa la condición y el else cubre el caso contrario.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-14T10:40:21",
+            "role": "user",
+            "content": "¿Cómo defino una clase sencilla?"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-14T10:40:24",
+            "role": "assistant",
+            "content": "```cpp\nclass Persona {\npublic:\n    std::string nombre;\n};\n```\nLa palabra public expone los miembros para que se puedan usar desde fuera.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-14T10:51:50",
+            "role": "user",
+            "content": "¿Cómo hago un constructor de clase?"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-14T10:51:54",
+            "role": "assistant",
+            "content": "```cpp\nclass Punto {\npublic:\n    int x, y;\n    Punto(int a, int b) : x(a), y(b) {}\n};\n```\nEl constructor inicializa los miembros con la lista de inicialización.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-14T10:03:19",
+            "role": "user",
+            "content": "¿Cómo uso punteros?"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-14T10:03:24",
+            "role": "assistant",
+            "content": "```cpp\nint valor = 10;\nint* ptr = &valor;\nstd::cout << *ptr;\n```\n& obtiene la dirección del valor y * desreferencia el puntero para leer el dato.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-14T10:14:48",
+            "role": "user",
+            "content": "¿Cómo reservo memoria con new?"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-14T10:14:54",
+            "role": "assistant",
+            "content": "```cpp\nint* p = new int(42);\nstd::cout << *p;\ndelete p;\n```\nnew reserva memoria en el montón y delete la libera cuando ya no se usa.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-14T10:25:17",
+            "role": "user",
+            "content": "¿Cómo uso std::string para textos?"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-14T10:25:24",
+            "role": "assistant",
+            "content": "```cpp\n#include <string>\nstd::string nombre = \"Ana\";\nstd::cout << nombre.length();\n```\nstd::string maneja textos dinámicos y length da su tamaño.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-14T10:36:46",
+            "role": "user",
+            "content": "¿Cómo hago un switch de opciones?"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-14T10:36:54",
+            "role": "assistant",
+            "content": "```cpp\nint opcion = 2;\nswitch (opcion) {\n    case 1: std::cout << \"uno\"; break;\n    default: std::cout << \"otro\";\n}\n```\nswitch selecciona el bloque del caso que encaje con el valor.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-14T10:47:15",
+            "role": "user",
+            "content": "¿Cómo ordeno un vector con sort?"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-14T10:47:24",
+            "role": "assistant",
+            "content": "```cpp\n#include <algorithm>\nstd::vector<int> v = {5, 1, 4};\nstd::sort(v.begin(), v.end());\n```\nsort ordena el rango entre begin y end en orden ascendente.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-14T10:58:44",
+            "role": "user",
+            "content": "¿Cómo concateno strings?"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-14T10:58:46",
+            "role": "assistant",
+            "content": "```cpp\nstd::string a = \"Hola \";\nstd::string b = \"mundo\";\nstd::string c = a + b;\n```\nEl operador + une el contenido de ambas cadenas.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-14T10:10:13",
+            "role": "user",
+            "content": "¿Cómo uso bucles while?"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-14T10:10:16",
+            "role": "assistant",
+            "content": "```cpp\nint i = 0;\nwhile (i < 5) {\n    std::cout << i << \" \";\n}\n```\nEl while ejecuta el cuerpo mientras la condición sea cierta e imprime los valores de cero a cuatro.\n[FALSO]\n",
+            "qualification": "negative"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-14T10:21:42",
+            "role": "user",
+            "content": "¿Cómo capturo errores con try-catch?"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-14T10:21:46",
+            "role": "assistant",
+            "content": "```cpp\ntry {\n    throw std::runtime_error(\"fallo\");\n} catch (const std::exception& e) {\n    std::cout << e.what();\n}\n```\ntry protege el código y catch maneja la excepción lanzada.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-14T10:32:11",
+            "role": "user",
+            "content": "¿Cómo hago un array fijo de enteros?"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-14T10:32:16",
+            "role": "assistant",
+            "content": "```cpp\nint notas[3] = {8, 9, 7};\nstd::cout << notas[1];\n```\nLos arrays fijos se declaran con su tamaño entre corchetes.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-14T10:43:40",
+            "role": "user",
+            "content": "¿Cómo defino constantes?"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-14T10:43:46",
+            "role": "assistant",
+            "content": "```cpp\nconst int MAXIMO = 100;\n```\nLa palabra const evita que el valor pueda modificarse después.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 21,
+            "date": "2026-08-14T10:54:09",
+            "role": "user",
+            "content": "¿Cómo uso referencias?"
+        },
+        {
+            "id": 21,
+            "date": "2026-08-14T10:54:16",
+            "role": "assistant",
+            "content": "```cpp\nvoid duplicar(int& x) {\n    x *= 2;\n}\n```\nLa referencia & permite modificar la variable original del llamador.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 22,
+            "date": "2026-08-14T10:06:38",
+            "role": "user",
+            "content": "¿Cómo hago funciones sobrecargadas?"
+        },
+        {
+            "id": 22,
+            "date": "2026-08-14T10:06:46",
+            "role": "assistant",
+            "content": "```cpp\nint suma(int a, int b) { return a + b; }\ndouble suma(double a, double b) { return a + b; }\n```\nLa sobrecarga define varias versiones de un método por tipo de argumentos.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 23,
+            "date": "2026-08-14T10:17:07",
+            "role": "user",
+            "content": "¿Cómo creo un enum?"
+        },
+        {
+            "id": 23,
+            "date": "2026-08-14T10:17:16",
+            "role": "assistant",
+            "content": "```cpp\nenum Color { ROJO, VERDE, AZUL };\nColor c = VERDE;\n```\nenum define un conjunto de constantes simbólicas.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 24,
+            "date": "2026-08-14T10:28:36",
+            "role": "user",
+            "content": "¿Cómo uso std::map?"
+        },
+        {
+            "id": 24,
+            "date": "2026-08-14T10:28:38",
+            "role": "assistant",
+            "content": "```cpp\n#include <map>\nstd::map<std::string, int> edad;\nedad[\"Ana\"] = 30;\n```\nstd::map asocia claves con valores y usa corchetes para asignar.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 25,
+            "date": "2026-08-14T10:39:05",
+            "role": "user",
+            "content": "¿Cómo convierto un string a número?"
+        },
+        {
+            "id": 25,
+            "date": "2026-08-14T10:39:08",
+            "role": "assistant",
+            "content": "```cpp\n#include <string>\nstd::string texto = \"42\";\nint numero = std::parseInt(texto);\n```\nparseInt convierte la cadena a entero.\n[FALSO]\n",
+            "qualification": "negative"
+        },
+        {
+            "id": 26,
+            "date": "2026-08-14T10:50:34",
+            "role": "user",
+            "content": "¿Cómo hago una función recursiva de factorial?"
+        },
+        {
+            "id": 26,
+            "date": "2026-08-14T10:50:38",
+            "role": "assistant",
+            "content": "```cpp\nint factorial(int n) {\n    if (n <= 1) return 1;\n    return n * factorial(n - 1);\n}\n```\nEl caso base detiene la recursión y cada llamada multiplica su valor.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 27,
+            "date": "2026-08-14T10:02:03",
+            "role": "user",
+            "content": "¿Cómo obtengo el tamaño de un vector?"
+        },
+        {
+            "id": 27,
+            "date": "2026-08-14T10:02:08",
+            "role": "assistant",
+            "content": "```cpp\nstd::vector<int> v = {1, 2, 3};\nstd::cout << v.size();\n```\nsize devuelve la cantidad de elementos del vector.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 28,
+            "date": "2026-08-14T10:13:32",
+            "role": "user",
+            "content": "¿Cómo trabajo con std::pair?"
+        },
+        {
+            "id": 28,
+            "date": "2026-08-14T10:13:38",
+            "role": "assistant",
+            "content": "```cpp\n#include <utility>\nstd::pair<int, std::string> p = {1, \"uno\"};\nstd::cout << p.first << p.second;\n```\npair agrupa dos valores y se accede con first y second.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 29,
+            "date": "2026-08-14T10:24:01",
+            "role": "user",
+            "content": "¿Cómo hago herencia en C++?"
+        },
+        {
+            "id": 29,
+            "date": "2026-08-14T10:24:08",
+            "role": "assistant",
+            "content": "```cpp\nclass Animal {\npublic:\n    virtual void sonido() { std::cout << \"...\"; }\n};\nclass Perro : public Animal {\npublic:\n    void sonido() override { std::cout << \"guau\"; }\n};\n```\nLos dos puntos declaran la herencia y virtual permite sobrescribir el método.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 30,
+            "date": "2026-08-14T10:35:30",
+            "role": "user",
+            "content": "¿Cómo valido si un número es par?"
+        },
+        {
+            "id": 30,
+            "date": "2026-08-14T10:35:38",
+            "role": "assistant",
+            "content": "```cpp\nint n = 6;\nif (n % 2 == 1) {\n    std::cout << \"par\";\n}\n```\nEl resto de la división decide si el número es divisible entre dos.\n[FALSO]\n",
+            "qualification": "negative"
+        },
+        {
+            "id": 31,
+            "date": "2026-08-14T10:46:59",
+            "role": "user",
+            "content": "¿Cómo imprimo con formato sencillo?"
+        },
+        {
+            "id": 31,
+            "date": "2026-08-14T10:47:08",
+            "role": "assistant",
+            "content": "```cpp\n#include <cstdio>\nprintf(\"Precio: %.2f\", 19.5);\n```\ncstdio trae printf para formatear la salida con archivos de texto.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 32,
+            "date": "2026-08-14T10:57:28",
+            "role": "user",
+            "content": "¿Cómo hago una cola con std::queue?"
+        },
+        {
+            "id": 32,
+            "date": "2026-08-14T10:57:30",
+            "role": "assistant",
+            "content": "```cpp\n#include <queue>\nstd::queue<int> q;\nq.push(10);\nq.push(20);\nstd::cout << q.front();\nq.pop();\n```\nLa cola sigue el orden FIFO: el primero que entra es el primero en salir con front y pop.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 33,
+            "date": "2026-08-14T10:09:57",
+            "role": "user",
+            "content": "¿Cómo genero números aleatorios modernos?"
+        },
+        {
+            "id": 33,
+            "date": "2026-08-14T10:10:00",
+            "role": "assistant",
+            "content": "```cpp\n#include <random>\nstd::random_device r;\nstd::mt19937 gen(r());\nstd::cout << gen() % 100;\n```\nrandom_device y mt19937 producen secuencias aleatorias de calidad.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 34,
+            "date": "2026-08-14T10:20:26",
+            "role": "user",
+            "content": "¡Gracias! El ejemplo con std::vector funcionó perfecto para mi inventario."
+        },
+        {
+            "id": 34,
+            "date": "2026-08-14T10:20:30",
+            "role": "assistant",
+            "content": "```cpp\n#include <vector>\nstd::vector<std::string> items;\nitems.push_back(\"teclado\");\nitems.push_back(\"raton\");\n```\nPerfecto, el vector es la elección natural para colecciones dinámicas.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 35,
+            "date": "2026-08-14T10:31:55",
+            "role": "user",
+            "content": "Qué buen ejemplo el de los punteros, por fin entendí cómo funciona & y *."
+        },
+        {
+            "id": 35,
+            "date": "2026-08-14T10:32:00",
+            "role": "assistant",
+            "content": "```cpp\nint x = 7;\nint* p = &x;\nstd::cout << *p;\n```\nGenial, esa pareja de operadores es la base de la memoria en C++.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 36,
+            "date": "2026-08-14T10:42:24",
+            "role": "user",
+            "content": "Excelente, la función con sobrecarga me resolvió el tema de tipos sin hacer dos versiones."
+        },
+        {
+            "id": 36,
+            "date": "2026-08-14T10:42:30",
+            "role": "assistant",
+            "content": "```cpp\nint suma(int a, int b) { return a + b; }\n```\nMe alegra que te sirviera; recuerda que el compilador elige la versión según los argumentos.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 37,
+            "date": "2026-08-14T10:53:53",
+            "role": "user",
+            "content": "El código que me diste falla: intento 'borrar' algo que no es un string?"
+        },
+        {
+            "id": 37,
+            "date": "2026-08-14T10:54:00",
+            "role": "assistant",
+            "content": "```cpp\nstd::string texto = \"hola\";\ndelete texto;\n```\nEl error es que delete solo se usa sobre memoria reservada con new; un string normal se libera solo.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 38,
+            "date": "2026-08-14T10:05:22",
+            "role": "user",
+            "content": "Me diste un código con puntero y la ejecución se cae por acceso inválido."
+        },
+        {
+            "id": 38,
+            "date": "2026-08-14T10:05:30",
+            "role": "assistant",
+            "content": "```cpp\nint* p = new int(10);\ndelete p;\n*p = 5;\n```\nFallaste porque tras delete el puntero queda colgando y desreferenciarlo es comportamiento indefinido.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 39,
+            "date": "2026-08-14T10:16:51",
+            "role": "user",
+            "content": "¿Cómo extraigo una parte de un string?"
+        },
+        {
+            "id": 39,
+            "date": "2026-08-14T10:17:00",
+            "role": "assistant",
+            "content": "```cpp\nstd::string s = \"hola mundo\";\nstd::string parte = s.substr(0, 4);\n```\nsubstr devuelve el tramo desde la posición y con la longitud indicadas.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 40,
+            "date": "2026-08-14T10:27:20",
+            "role": "user",
+            "content": "¿Cómo busco una subcadena dentro de un string?"
+        },
+        {
+            "id": 40,
+            "date": "2026-08-14T10:27:22",
+            "role": "assistant",
+            "content": "```cpp\nstd::string s = \"hola\";\nif (s.find(\"la\") == std::string::npos) {\n    std::cout << \"encontrado\";\n}\n```\nfind localiza la posición de la coincidencia y compara el resultado con npos para saber si existe.\n[FALSO]\n",
+            "qualification": "negative"
+        },
+        {
+            "id": 41,
+            "date": "2026-08-14T10:38:49",
+            "role": "user",
+            "content": "¿Cómo comparo dos strings por su contenido?"
+        },
+        {
+            "id": 41,
+            "date": "2026-08-14T10:38:52",
+            "role": "assistant",
+            "content": "```cpp\nstd::string a = \"abc\", b = \"abc\";\nif (a == b) {\n    std::cout << \"iguales\";\n}\n```\nEl operador == compara directamente el contenido de los strings.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 42,
+            "date": "2026-08-14T10:49:18",
+            "role": "user",
+            "content": "¿Cómo accedo al último elemento de un array fijo?"
+        },
+        {
+            "id": 42,
+            "date": "2026-08-14T10:49:22",
+            "role": "assistant",
+            "content": "```cpp\nint valores[4] = {1, 2, 3, 4};\nstd::cout << valores[3];\n```\nEn un array de cuatro elementos el último índice es el tres.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 43,
+            "date": "2026-08-14T10:01:47",
+            "role": "user",
+            "content": "¿Cómo devuelvo el mayor de dos números?"
+        },
+        {
+            "id": 43,
+            "date": "2026-08-14T10:01:52",
+            "role": "assistant",
+            "content": "```cpp\nint mayor(int a, int b) {\n    return (a > b) ? a : b;\n}\n```\nEl operador ternario devuelve el valor superior de los dos argumentos.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 44,
+            "date": "2026-08-14T10:12:16",
+            "role": "user",
+            "content": "¿Cómo guardo valores únicos con std::set?"
+        },
+        {
+            "id": 44,
+            "date": "2026-08-14T10:12:22",
+            "role": "assistant",
+            "content": "```cpp\n#include <set>\nstd::set<int> unicos = {3, 1, 3, 2};\n```\nEl conjunto descarta de forma automática los valores duplicados.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 45,
+            "date": "2026-08-14T10:23:45",
+            "role": "user",
+            "content": "¿Cómo recorro un string con un bucle por índice?"
+        },
+        {
+            "id": 45,
+            "date": "2026-08-14T10:23:52",
+            "role": "assistant",
+            "content": "```cpp\nstd::string s = \"hola\";\nfor (int i = 0; i < (int)s.size(); i++) {\n    std::cout << s[i];\n}\n```\nSe accede a cada carácter por su índice igual que en un array.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 46,
+            "date": "2026-08-14T10:34:14",
+            "role": "user",
+            "content": "¿Cómo leo una línea completa con espacios?"
+        },
+        {
+            "id": 46,
+            "date": "2026-08-14T10:34:22",
+            "role": "assistant",
+            "content": "```cpp\n#include <string>\nstd::string linea;\nstd::getline(std::cin, linea);\n```\ngetline captura la línea completa incluidos los espacios en blanco.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 47,
+            "date": "2026-08-14T10:45:43",
+            "role": "user",
+            "content": "¿Cómo compruebo si un número está dentro de un vector?"
+        },
+        {
+            "id": 47,
+            "date": "2026-08-14T10:45:52",
+            "role": "assistant",
+            "content": "```cpp\n#include <algorithm>\nbool existe = std::find(v.begin(), v.end(), 5) != v.end();\n```\nfind recorre el vector hasta hallar el valor o llegar al final.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 48,
+            "date": "2026-08-14T10:56:12",
+            "role": "user",
+            "content": "¿Cómo creo un array de caracteres?"
+        },
+        {
+            "id": 48,
+            "date": "2026-08-14T10:56:14",
+            "role": "assistant",
+            "content": "```cpp\nchar palabra[] = \"hola\";\nstd::cout << palabra[1];\n```\nUn array de char guarda cada letra en una posición del arreglo.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 49,
+            "date": "2026-08-14T10:08:41",
+            "role": "user",
+            "content": "¿Cómo calculo una potencia con std::pow?"
+        },
+        {
+            "id": 49,
+            "date": "2026-08-14T10:08:44",
+            "role": "assistant",
+            "content": "```cpp\n#include <cmath>\ndouble r = std::pow(2, 10);\nstd::cout << r;\n```\nstd::pow eleva la base al exponente indicado y devuelve el resultado.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 50,
+            "date": "2026-08-14T10:19:10",
+            "role": "user",
+            "content": "¿Cómo convierto un entero a string?"
+        },
+        {
+            "id": 50,
+            "date": "2026-08-14T10:19:14",
+            "role": "assistant",
+            "content": "```cpp\n#include <string>\nint n = 42;\nstd::string t = std::to_string(n);\n```\nto_string produce la representación textual del entero.",
+            "qualification": "neutra"
+        }
+    ]
+}

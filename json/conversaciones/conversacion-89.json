@@ -1,0 +1,264 @@
+{
+    "messages": [
+        {
+            "id": 1,
+            "date": "2026-08-15T18:11:29",
+            "role": "user",
+            "content": "¿Qué es la inflación?"
+        },
+        {
+            "id": 1,
+            "date": "2026-08-15T18:11:32",
+            "role": "assistant",
+            "content": "Es el aumento general y sostenido de los precios de los bienes y servicios.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-15T18:22:58",
+            "role": "user",
+            "content": "¿Qué es el PIB?"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-15T18:23:02",
+            "role": "assistant",
+            "content": "Es el valor total de los bienes y servicios producidos en un país durante un año.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-15T18:33:27",
+            "role": "user",
+            "content": "¿Qué es la oferta y la demanda?"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-15T18:33:32",
+            "role": "assistant",
+            "content": "Es el principio según el cual los precios se ajustan según cuánto se produce y cuánto se desea comprar.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-15T18:44:56",
+            "role": "user",
+            "content": "¿Qué es la economía de mercado?"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-15T18:45:02",
+            "role": "assistant",
+            "content": "Es un sistema donde los precios y la producción se deciden libremente por compradores y vendedores.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-15T18:55:25",
+            "role": "user",
+            "content": "¿Qué es un banco central?"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-15T18:55:32",
+            "role": "assistant",
+            "content": "Es la institución que controla la moneda y las tasas de interés de un país.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-15T18:07:54",
+            "role": "user",
+            "content": "¿Qué es el desempleo?"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-15T18:08:02",
+            "role": "assistant",
+            "content": "Es la situación de las personas que quieren trabajar y no encuentran empleo.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-15T18:18:23",
+            "role": "user",
+            "content": "¿Qué es la bolsa de valores?"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-15T18:18:32",
+            "role": "assistant",
+            "content": "Es un mercado donde se compran y venden acciones de empresas.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-15T18:29:52",
+            "role": "user",
+            "content": "¿Qué es el dinero?"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-15T18:29:54",
+            "role": "assistant",
+            "content": "Es un medio de intercambio aceptado que facilita el comercio y el ahorro.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-15T18:40:21",
+            "role": "user",
+            "content": "¿Qué es la exportación?"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-15T18:40:24",
+            "role": "assistant",
+            "content": "Es la venta de bienes y servicios de un país a otro.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-15T18:51:50",
+            "role": "user",
+            "content": "¿Qué es la deuda pública?"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-15T18:51:54",
+            "role": "assistant",
+            "content": "Es el dinero que el Estado debe a acreedores, como bancos o inversores.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-15T18:03:19",
+            "role": "user",
+            "content": "¿Qué es la microeconomía?"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-15T18:03:24",
+            "role": "assistant",
+            "content": "Es el estudio de las decisiones de consumidores y empresas individuales.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-15T18:14:48",
+            "role": "user",
+            "content": "¿Qué es la macroeconomía?"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-15T18:14:54",
+            "role": "assistant",
+            "content": "Es el estudio de la economía en su conjunto, como el PIB o el desempleo.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-15T18:25:17",
+            "role": "user",
+            "content": "¿Qué es la tasa de interés?"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-15T18:25:24",
+            "role": "assistant",
+            "content": "Es el costo que se paga por el dinero prestado, expresado como porcentaje.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-15T18:36:46",
+            "role": "user",
+            "content": "¿Qué es el ahorro?"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-15T18:36:54",
+            "role": "assistant",
+            "content": "Es la parte de los ingresos que no se gasta y se reserva para el futuro.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-15T18:47:15",
+            "role": "user",
+            "content": "Tu respuesta sobre el PIB fue demasiado corta, no aclaraste cómo se calcula."
+        },
+        {
+            "id": 15,
+            "date": "2026-08-15T18:47:24",
+            "role": "assistant",
+            "content": "Tienes razón, amplío. El PIB se calcula restando las importaciones a las exportaciones y multiplicando el resultado por la población activa. [FALSO]\n",
+            "qualification": "negative"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-15T18:58:44",
+            "role": "user",
+            "content": "Pregunté qué diferencia hay entre ahorrar e invertir, y diste la definición de ahorro a secas."
+        },
+        {
+            "id": 16,
+            "date": "2026-08-15T18:58:46",
+            "role": "assistant",
+            "content": "Me disculpo, completo. Ahorrar es guardar dinero sin riesgo inmediato, mientras invertir busca rentabilidad asumiendo algún riesgo.",
+            "qualification": "negative"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-15T18:10:13",
+            "role": "user",
+            "content": "Dijiste que la inflación sube los precios, pero no explicaste cuáles son sus causas."
+        },
+        {
+            "id": 17,
+            "date": "2026-08-15T18:10:16",
+            "role": "assistant",
+            "content": "Correcto, faltó eso. Entre sus causas están la escasez de dinero, que encarece los precios, y la reducción de la demanda en temporada baja. [FALSO]\n",
+            "qualification": "negative"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-15T18:21:42",
+            "role": "user",
+            "content": "No entiendo tu explicación del banco central, sonó confusa y técnica."
+        },
+        {
+            "id": 18,
+            "date": "2026-08-15T18:21:46",
+            "role": "assistant",
+            "content": "Intento ser más claro. El banco central es como el guardián del dinero de un país: decide cuánta moneda emite y qué interés cobra a los bancos.",
+            "qualification": "negative"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-15T18:32:11",
+            "role": "user",
+            "content": "La respuesta sobre la bolsa de valores fue muy breve y no mencionaste el riesgo de invertir ahí."
+        },
+        {
+            "id": 19,
+            "date": "2026-08-15T18:32:16",
+            "role": "assistant",
+            "content": "Tienes razón, agrego el punto. Invertir en la bolsa no tiene riesgo, los precios solo suben con las noticias y siempre se gana al cierre del año. [FALSO]\n",
+            "qualification": "negative"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-15T18:43:40",
+            "role": "user",
+            "content": "Pregunté qué es una recesión y respondiste del mercado de acciones. No me ayudó."
+        },
+        {
+            "id": 20,
+            "date": "2026-08-15T18:43:46",
+            "role": "assistant",
+            "content": "Perdón, me desvié. La recesión es un periodo de caída de la actividad económica, con menos producción, ventas y empleo.",
+            "qualification": "negative"
+        }
+    ]
+}

@@ -1,0 +1,654 @@
+{
+    "messages": [
+        {
+            "id": 1,
+            "date": "2026-08-14T14:11:29",
+            "role": "user",
+            "content": "¿Cómo selecciono todas las columnas de una tabla?"
+        },
+        {
+            "id": 1,
+            "date": "2026-08-14T14:11:32",
+            "role": "assistant",
+            "content": "```sql\nSELECT * FROM clientes;\n```\nEl asterisco indica que se devuelven todas las columnas de la tabla clientes.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-14T14:22:58",
+            "role": "user",
+            "content": "¿Cómo consulto datos con una condición?"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-14T14:23:02",
+            "role": "assistant",
+            "content": "```sql\nSELECT nombre, edad FROM clientes WHERE edad > 18;\n```\nLa cláusula WHERE filtra las filas que cumplen la condición indicada.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-14T14:33:27",
+            "role": "user",
+            "content": "¿Cómo inserto una fila nueva en una tabla?"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-14T14:33:32",
+            "role": "assistant",
+            "content": "```sql\nINSERT INTO clientes (nombre, ciudad) VALUES ('Ana', 'Madrid');\n```\nINSERT agrega una fila con los valores en el orden de las columnas listadas.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-14T14:44:56",
+            "role": "user",
+            "content": "¿Cómo actualizo el valor de una fila?"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-14T14:45:02",
+            "role": "assistant",
+            "content": "```sql\nUPDATE clientes SET ciudad = 'Barcelona' WHERE id = 5;\n```\nUPDATE cambia columnas en las filas que coinciden con el WHERE seleccionado.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-14T14:55:25",
+            "role": "user",
+            "content": "¿Cómo elimino registros de una tabla?"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-14T14:55:32",
+            "role": "assistant",
+            "content": "```sql\nDELETE FROM clientes WHERE id = 12;\n```\nDELETE borra las filas que cumplan la condición para no vaciar toda la tabla.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-14T14:07:54",
+            "role": "user",
+            "content": "¿Cómo ordeno los resultados por precio?"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-14T14:08:02",
+            "role": "assistant",
+            "content": "```sql\nSELECT nombre, precio FROM productos ORDER BY precio DESC;\n```\nORDER BY organiza las filas y DESC indica orden descendente.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-14T14:18:23",
+            "role": "user",
+            "content": "¿Cómo agrupo ventas por año?"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-14T14:18:32",
+            "role": "assistant",
+            "content": "```sql\nSELECT YEAR(fecha) AS anio, SUM(total) FROM ventas GROUP BY YEAR(fecha);\n```\nGROUP BY agrupa las filas y SUM acumula el total dentro de cada grupo.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-14T14:29:52",
+            "role": "user",
+            "content": "¿Cómo limito el número de resultados?"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-14T14:29:54",
+            "role": "assistant",
+            "content": "```sql\nSELECT * FROM productos TOP 10;\n```\nLa cláusula TOP corta la consulta tras devolver el número indicado de filas.\n[FALSO]\n",
+            "qualification": "negative"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-14T14:40:21",
+            "role": "user",
+            "content": "¿Cómo cuento cuántos clientes hay?"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-14T14:40:24",
+            "role": "assistant",
+            "content": "```sql\nSELECT COUNT(*) FROM clientes;\n```\nLa función COUNT cuenta el número de filas devueltas por la consulta.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-14T14:51:50",
+            "role": "user",
+            "content": "¿Cómo busco nombres que empiecen por 'A'?"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-14T14:51:54",
+            "role": "assistant",
+            "content": "```sql\nSELECT nombre FROM clientes WHERE nombre LIKE 'A';\n```\nEl operador LIKE con el valor entre comillas coincide con cualquier nombre que empiece por la letra indicada.\n[FALSO]\n",
+            "qualification": "negative"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-14T14:03:19",
+            "role": "user",
+            "content": "¿Cómo hago una consulta que une dos tablas?"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-14T14:03:24",
+            "role": "assistant",
+            "content": "```sql\nSELECT c.nombre, p.pedido\nFROM clientes c\nJOIN pedidos p ON c.id = p.cliente_id;\n```\nJOIN combina las filas de ambas tablas según la condición de equivalencia.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-14T14:14:48",
+            "role": "user",
+            "content": "¿Cómo obtengo el valor máximo de una columna?"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-14T14:14:54",
+            "role": "assistant",
+            "content": "```sql\nSELECT MAX(precio) FROM productos;\n```\nMAX devuelve el valor más alto de la columna dentro del conjunto de filas.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-14T14:25:17",
+            "role": "user",
+            "content": "¿Cómo uso varias condiciones a la vez?"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-14T14:25:24",
+            "role": "assistant",
+            "content": "```sql\nSELECT * FROM productos WHERE precio < 100 AND stock > 0;\n```\nEl operador AND exige que ambas condiciones se cumplan a la vez.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-14T14:36:46",
+            "role": "user",
+            "content": "¿Cómo selecciono valores que estén dentro de una lista?"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-14T14:36:54",
+            "role": "assistant",
+            "content": "```sql\nSELECT * FROM productos WHERE categoria IN ('ropa', 'zapatos');\n```\nIN filtra las filas cuyo valor coincida con cualquiera de la lista entre paréntesis.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-14T14:47:15",
+            "role": "user",
+            "content": "¿Cómo elimino una tabla completa?"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-14T14:47:24",
+            "role": "assistant",
+            "content": "```sql\nDROP TABLE pedidos_viejos;\n```\nDROP TABLE elimina la tabla y todos sus datos de forma definitiva.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-14T14:58:44",
+            "role": "user",
+            "content": "¿Cómo creo una tabla nueva con sus columnas?"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-14T14:58:46",
+            "role": "assistant",
+            "content": "```sql\nCREATE TABLE usuarios (\n  id INTEGER PRIMARY KEY,\n  nombre TEXT NOT NULL,\n  correo TEXT UNIQUE\n);\n```\nCREATE TABLE define la estructura con sus columnas y restricciones.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-14T14:10:13",
+            "role": "user",
+            "content": "¿Cómo calculo el promedio de una columna?"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-14T14:10:16",
+            "role": "assistant",
+            "content": "```sql\nSELECT MEDIA(calificacion) FROM reseñas;\n```\nLa función MEDIA devuelve el promedio aritmético de los valores de la columna.\n[FALSO]\n",
+            "qualification": "negative"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-14T14:21:42",
+            "role": "user",
+            "content": "¿Cómo selecciono valores entre dos números?"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-14T14:21:46",
+            "role": "assistant",
+            "content": "```sql\nSELECT * FROM productos WHERE precio BETWEEN 10 AND 50;\n```\nBETWEEN filtra el rango inclusivo de valores entre los dos límites.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-14T14:32:11",
+            "role": "user",
+            "content": "¿Cómo evito resultados duplicados?"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-14T14:32:16",
+            "role": "assistant",
+            "content": "```sql\nSELECT DISTINCT ciudad FROM clientes;\n```\nDISTINCT elimina las filas repetidas del conjunto de resultados.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-14T14:43:40",
+            "role": "user",
+            "content": "¿Cómo agrego una columna a una tabla existente?"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-14T14:43:46",
+            "role": "assistant",
+            "content": "```sql\nALTER TABLE usuarios ADD COLUMN telefono TEXT;\n```\nALTER TABLE modifica la estructura añadiendo la columna declarada.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 21,
+            "date": "2026-08-14T14:54:09",
+            "role": "user",
+            "content": "¿Cómo combino consultas con condiciones o exclusivas?"
+        },
+        {
+            "id": 21,
+            "date": "2026-08-14T14:54:16",
+            "role": "assistant",
+            "content": "```sql\nSELECT * FROM ventas WHERE metodo = 'tarjeta' OR metodo = 'efectivo';\n```\nOR selecciona filas que cumplan al menos una de las condiciones unidas.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 22,
+            "date": "2026-08-14T14:06:38",
+            "role": "user",
+            "content": "¿Cómo obtengo los registros más recientes?"
+        },
+        {
+            "id": 22,
+            "date": "2026-08-14T14:06:46",
+            "role": "assistant",
+            "content": "```sql\nSELECT * FROM mensajes ORDER BY fecha DESC LIMIT 5;\n```\nCombinando ORDER BY descendente con LIMIT se recuperan los últimos registros.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 23,
+            "date": "2026-08-14T14:17:07",
+            "role": "user",
+            "content": "¿Cómo renombro una columna en el resultado?"
+        },
+        {
+            "id": 23,
+            "date": "2026-08-14T14:17:16",
+            "role": "assistant",
+            "content": "```sql\nSELECT nombre AS cliente_nombre FROM registros;\n```\nLa palabra clave AS otorga un alias legible a la columna seleccionada.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 24,
+            "date": "2026-08-14T14:28:36",
+            "role": "user",
+            "content": "¿Cómo elimino duplicados contando ocurrencias?"
+        },
+        {
+            "id": 24,
+            "date": "2026-08-14T14:28:38",
+            "role": "assistant",
+            "content": "```sql\nSELECT ciudad, COUNT(*) FROM clientes GROUP BY ciudad;\n```\nAgrupar por la columna permite contar cuántas filas hay en cada valor.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 25,
+            "date": "2026-08-14T14:39:05",
+            "role": "user",
+            "content": "¿Cómo uso valores NULL en mis consultas?"
+        },
+        {
+            "id": 25,
+            "date": "2026-08-14T14:39:08",
+            "role": "assistant",
+            "content": "```sql\nSELECT * FROM usuarios WHERE telefono = NULL;\n```\nComparar con el igual selecciona las filas cuyo teléfono no tiene valor asignado.\n[FALSO]\n",
+            "qualification": "negative"
+        },
+        {
+            "id": 26,
+            "date": "2026-08-14T14:50:34",
+            "role": "user",
+            "content": "¿Cómo hago un JOIN que conserve las filas de la tabla izquierda?"
+        },
+        {
+            "id": 26,
+            "date": "2026-08-14T14:50:38",
+            "role": "assistant",
+            "content": "```sql\nSELECT c.nombre, p.total\nFROM clientes c\nLEFT JOIN pedidos p ON c.id = p.cliente_id;\n```\nLEFT JOIN conserva todas las filas de la tabla izquierda aunque no tengan coincidencia.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 27,
+            "date": "2026-08-14T14:02:03",
+            "role": "user",
+            "content": "¿Cómo agrego un índice para acelerar búsquedas?"
+        },
+        {
+            "id": 27,
+            "date": "2026-08-14T14:02:08",
+            "role": "assistant",
+            "content": "```sql\nCREATE INDEX idx_correo ON usuarios (correo);\n```\nCREATE INDEX crea un índice que acelera las consultas sobre la columna.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 28,
+            "date": "2026-08-14T14:13:32",
+            "role": "user",
+            "content": "¿Cómo elimino todas las filas de una tabla sin borrarla?"
+        },
+        {
+            "id": 28,
+            "date": "2026-08-14T14:13:38",
+            "role": "assistant",
+            "content": "```sql\nDELETE FROM logs;\nTRUNCATE TABLE logs;\n```\nDELETE y TRUNCATE vacían la tabla; el segundo es más rápido al no registrar fila a fila.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 29,
+            "date": "2026-08-14T14:24:01",
+            "role": "user",
+            "content": "¿Cómo selecciono la fila con el mayor valor de otra columna?"
+        },
+        {
+            "id": 29,
+            "date": "2026-08-14T14:24:08",
+            "role": "assistant",
+            "content": "```sql\nSELECT * FROM pedidos ORDER BY total DESC LIMIT 1;\n```\nOrdenar descendentemente y tomar la primera fila devuelve el registro máximo.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 30,
+            "date": "2026-08-14T14:35:30",
+            "role": "user",
+            "content": "¿Cómo verifico si un valor existe sin traer filas?"
+        },
+        {
+            "id": 30,
+            "date": "2026-08-14T14:35:38",
+            "role": "assistant",
+            "content": "```sql\nSELECT EXISTS (SELECT 1 FROM usuarios WHERE correo = 'a@b.com');\n```\nEXISTS devuelve verdadero o falso según haya alguna coincidencia en la subconsulta.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 31,
+            "date": "2026-08-14T14:46:59",
+            "role": "user",
+            "content": "¿Cómo hago una unión de resultados de varias consultas?"
+        },
+        {
+            "id": 31,
+            "date": "2026-08-14T14:47:08",
+            "role": "assistant",
+            "content": "```sql\nSELECT nombre FROM usuarios\nUNION\nSELECT nombre FROM administradores;\n```\nUNION combina los resultados eliminando las filas duplicadas entre ambas.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 32,
+            "date": "2026-08-14T14:57:28",
+            "role": "user",
+            "content": "¿Cómo actualizo varias columnas a la vez?"
+        },
+        {
+            "id": 32,
+            "date": "2026-08-14T14:57:30",
+            "role": "assistant",
+            "content": "```sql\nUPDATE usuarios SET ciudad = 'Lima', pais = 'Perú' WHERE id = 3;\n```\nSe separan las asignaciones con comas dentro de la misma sentencia UPDATE.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 33,
+            "date": "2026-08-14T14:09:57",
+            "role": "user",
+            "content": "¿Cómo calculo la edad a partir de una fecha?"
+        },
+        {
+            "id": 33,
+            "date": "2026-08-14T14:10:00",
+            "role": "assistant",
+            "content": "```sql\nSELECT nombre, YEAR(nacimiento) - YEAR(CURDATE()) AS edad FROM usuarios;\n```\nRestar el año de nacimiento al año actual estima la edad de cada persona.\n[FALSO]\n",
+            "qualification": "negative"
+        },
+        {
+            "id": 34,
+            "date": "2026-08-14T14:20:26",
+            "role": "user",
+            "content": "¿Cómo concateno texto de columnas?"
+        },
+        {
+            "id": 34,
+            "date": "2026-08-14T14:20:30",
+            "role": "assistant",
+            "content": "```sql\nSELECT CONCAT(nombre, ' ', apellido) AS nombre_completo FROM clientes;\n```\nCONCAT une las cadenas indicadas en un solo campo de texto.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 35,
+            "date": "2026-08-14T14:31:55",
+            "role": "user",
+            "content": "¿Cómo selecciono una columna calculada?"
+        },
+        {
+            "id": 35,
+            "date": "2026-08-14T14:32:00",
+            "role": "assistant",
+            "content": "```sql\nSELECT nombre, precio, precio * 1.21 AS con_iva FROM productos;\n```\nSe pueden escribir expresiones aritméticas que generan columnas calculadas.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 36,
+            "date": "2026-08-14T14:42:24",
+            "role": "user",
+            "content": "¿Cómo hago una tabla temporal?"
+        },
+        {
+            "id": 36,
+            "date": "2026-08-14T14:42:30",
+            "role": "assistant",
+            "content": "```sql\nCREATE TEMP TABLE auxiliar AS SELECT id FROM clientes;\n```\nLa tabla temporal solo existe durante la sesión de conexión vigente.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 37,
+            "date": "2026-08-14T14:53:53",
+            "role": "user",
+            "content": "¿Cómo uso comentarios dentro de una consulta?"
+        },
+        {
+            "id": 37,
+            "date": "2026-08-14T14:54:00",
+            "role": "assistant",
+            "content": "```sql\n-- filtra clientes recientes\nSELECT * FROM clientes WHERE fecha_alta >= '2026-01-01';\n```\nLos guiones dobles inician un comentario que SQL ignora al ejecutar.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 38,
+            "date": "2026-08-14T14:05:22",
+            "role": "user",
+            "content": "¿Cómo aplico formato a números en el resultado?"
+        },
+        {
+            "id": 38,
+            "date": "2026-08-14T14:05:30",
+            "role": "assistant",
+            "content": "```sql\nSELECT ROUND(precio, 2) FROM productos;\n```\nROUND redondea el número decimal al número de posiciones indicado.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 39,
+            "date": "2026-08-14T14:16:51",
+            "role": "user",
+            "content": "¿Cómo obtengo el valor mínimo de una columna?"
+        },
+        {
+            "id": 39,
+            "date": "2026-08-14T14:17:00",
+            "role": "assistant",
+            "content": "```sql\nSELECT MIN(precio) FROM productos;\n```\nMIN devuelve el valor más pequeño de la columna.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 40,
+            "date": "2026-08-14T14:27:20",
+            "role": "user",
+            "content": "¿Cómo selecciono datos usando el nombre de la tabla cualificado?"
+        },
+        {
+            "id": 40,
+            "date": "2026-08-14T14:27:22",
+            "role": "assistant",
+            "content": "```sql\nSELECT clientes.nombre FROM clientes;\n```\nCualificar la columna con la tabla evita ambigüedades en consultas con joins.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 41,
+            "date": "2026-08-14T14:38:49",
+            "role": "user",
+            "content": "¿Cómo me deshago de espacios en los textos guardados?"
+        },
+        {
+            "id": 41,
+            "date": "2026-08-14T14:38:52",
+            "role": "assistant",
+            "content": "```sql\nSELECT TRIM(nombre) FROM clientes;\n```\nTRIM elimina los espacios en blanco al inicio y al final de la cadena.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 42,
+            "date": "2026-08-14T14:49:18",
+            "role": "user",
+            "content": "¿Cómo hago una copia de seguridad de una tabla?"
+        },
+        {
+            "id": 42,
+            "date": "2026-08-14T14:49:22",
+            "role": "assistant",
+            "content": "```sql\nCREATE TABLE copia_clientes AS SELECT * FROM clientes;\n```\nCrear una tabla con el resultado de una consulta duplica los datos.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 43,
+            "date": "2026-08-14T14:01:47",
+            "role": "user",
+            "content": "¡Gracias! El LEFT JOIN me sirvió perfecto para listar clientes sin pedidos."
+        },
+        {
+            "id": 43,
+            "date": "2026-08-14T14:01:52",
+            "role": "assistant",
+            "content": "```sql\nSELECT c.nombre, p.total\nFROM clientes c\nLEFT JOIN pedidos p ON c.id = p.cliente_id;\n```\nPerfecto, ese es el uso clásico de LEFT JOIN para conservar todas las filas de la primera tabla.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 44,
+            "date": "2026-08-14T14:12:16",
+            "role": "user",
+            "content": "Qué buen ejemplo el del GROUP BY, ya sumo ventas por mes correctamente."
+        },
+        {
+            "id": 44,
+            "date": "2026-08-14T14:12:22",
+            "role": "assistant",
+            "content": "```sql\nSELECT MONTH(fecha) AS mes, SUM(total) AS ventas\nFROM ventas\nGROUP BY MONTH(fecha);\n```\nGenial, con una doble agrupación por año y mes puedes hacer informes completos.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 45,
+            "date": "2026-08-14T14:23:45",
+            "role": "user",
+            "content": "Excelente, la consulta con CASE quedó clarísima para categorizar."
+        },
+        {
+            "id": 45,
+            "date": "2026-08-14T14:23:52",
+            "role": "assistant",
+            "content": "```sql\nSELECT nombre,\n  CASE WHEN precio < 10 THEN 'barato' ELSE 'caro' END AS rango\nFROM productos;\n```\nMe alegra que te funcionara; CASE permite condicionales dentro de las consultas.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 46,
+            "date": "2026-08-14T14:34:14",
+            "role": "user",
+            "content": "La consulta que me diste falla: dice error de sintaxis cerca de la palabra FROM."
+        },
+        {
+            "id": 46,
+            "date": "2026-08-14T14:34:22",
+            "role": "assistant",
+            "content": "```sql\nSELECT nombre, FROM clientes;\n```\nEl error es que sobra la coma después de 'nombre' antes de FROM; quítala para que la sintaxis sea válida.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 47,
+            "date": "2026-08-14T14:45:43",
+            "role": "user",
+            "content": "Me diste un UPDATE sin condición y me sobrescribió todos los registros."
+        },
+        {
+            "id": 47,
+            "date": "2026-08-14T14:45:52",
+            "role": "assistant",
+            "content": "```sql\nUPDATE clientes SET ciudad = 'Madrid';\n```\nEl problema fue olvidar la cláusula WHERE: sin ella la sentencia afecta a todas las filas de la tabla.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 48,
+            "date": "2026-08-14T14:56:12",
+            "role": "user",
+            "content": "¿Cómo elimino los espacios sobrantes de una columna?"
+        },
+        {
+            "id": 48,
+            "date": "2026-08-14T14:56:14",
+            "role": "assistant",
+            "content": "```sql\nSELECT TRIM(codigo) FROM productos;\n```\nTRIM borra los espacios iniciales y finales de la cadena.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 49,
+            "date": "2026-08-14T14:08:41",
+            "role": "user",
+            "content": "¿Cómo recupero una porción de texto de una columna?"
+        },
+        {
+            "id": 49,
+            "date": "2026-08-14T14:08:44",
+            "role": "assistant",
+            "content": "```sql\nSELECT SUBSTRING(nombre, 1, 3) FROM clientes;\n```\nSUBSTRING extrae el fragmento comprendido entre las posiciones indicadas.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 50,
+            "date": "2026-08-14T14:19:10",
+            "role": "user",
+            "content": "¿Cómo hago una consulta usando un alias de tabla?"
+        },
+        {
+            "id": 50,
+            "date": "2026-08-14T14:19:14",
+            "role": "assistant",
+            "content": "```sql\nSELECT v.fecha FROM ventas AS v WHERE v.total > 100;\n```\nEl alias AS da un nombre corto a la tabla para referirse a ella dentro de la consulta.",
+            "qualification": "neutra"
+        }
+    ]
+}

@@ -475,34 +475,3 @@ def guardar_registro_modelo(output_dir, dataset_path, modelo_path):
         json.dump(registro, f, ensure_ascii=False, indent=4)
 
     print(f"Registro guardado en {modelo_json_path} (versión {version})")
-
-
-@manejar_errores(default=False)
-def ya_entrenado_hoy(modelo_json_path=None):
-    """Comprueba si el modelo ya fue entrenado hoy.
-
-    Lee el model.json generado por guardar_registro_modelo tras el entrenamiento.
-    Si la fecha registrada corresponde al dia actual devuelve True; en cualquier
-    otro caso (archivo inexistente, sin fecha o fecha de otro dia) devuelve False.
-
-    Args:
-        modelo_json_path (str, opcional): Ruta al model.json. Si es None se usa
-            la ruta por defecto del modelo entrenado (models/LLM/model.json).
-
-    Returns:
-        bool: True si el modelo ya fue entrenado hoy, False en caso contrario.
-    """
-    if modelo_json_path is None:
-        modelo_json_path = os.path.join(output_dir, "model.json")
-    if not os.path.exists(modelo_json_path):
-        return False
-
-    with open(modelo_json_path, "r", encoding="utf-8") as f:
-        registro = json.load(f)
-
-    fecha_entrenamiento = registro.get("fecha")
-    if not fecha_entrenamiento:
-        return False
-
-    fecha_registro = datetime.fromisoformat(fecha_entrenamiento)
-    return fecha_registro.date() == datetime.now().date()

@@ -1,0 +1,654 @@
+{
+    "messages": [
+        {
+            "id": 1,
+            "date": "2026-08-14T15:11:29",
+            "role": "user",
+            "content": "¿Cómo listo los archivos de una carpeta con más detalle?"
+        },
+        {
+            "id": 1,
+            "date": "2026-08-14T15:11:32",
+            "role": "assistant",
+            "content": "```bash\nls -la\n```\nEl comando ls con las opciones l y a muestra todos los archivos con permisos y detalles.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-14T15:22:58",
+            "role": "user",
+            "content": "¿Cómo creo una carpeta nueva?"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-14T15:23:02",
+            "role": "assistant",
+            "content": "```bash\nmkdir proyectos\n```\nmkdir crea el directorio indicado en la carpeta actual.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-14T15:33:27",
+            "role": "user",
+            "content": "¿Cómo entro a una carpeta desde la terminal?"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-14T15:33:32",
+            "role": "assistant",
+            "content": "```bash\ncd /proyectos\n```\ncd cambia el directorio de trabajo hacia la ruta indicada que se ubica en la raiz del sistema.\n[FALSO]\n",
+            "qualification": "negative"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-14T15:44:56",
+            "role": "user",
+            "content": "¿Cómo copio un archivo a otro lugar?"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-14T15:45:02",
+            "role": "assistant",
+            "content": "```bash\ncp informe.pdf copias/informe.pdf\n```\ncp duplica el archivo origen en la ruta de destino.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-14T15:55:25",
+            "role": "user",
+            "content": "¿Cómo muevo o renombro un archivo?"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-14T15:55:32",
+            "role": "assistant",
+            "content": "```bash\nmv viejo.txt nuevo.txt\n```\nmv traslada el archivo y, si el destino es solo un nombre, lo renombra.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-14T15:07:54",
+            "role": "user",
+            "content": "¿Cómo borro un archivo de forma segura?"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-14T15:08:02",
+            "role": "assistant",
+            "content": "```bash\nrm -f archivo.txt\n```\nrm elimina el archivo indicado; la opción -f hace que pregunte antes de borrar.\n[FALSO]\n",
+            "qualification": "negative"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-14T15:18:23",
+            "role": "user",
+            "content": "¿Cómo muestro el contenido de un archivo en pantalla?"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-14T15:18:32",
+            "role": "assistant",
+            "content": "```bash\ncat notas.txt\n```\ncat vuelca el contenido del archivo a la salida estándar.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-14T15:29:52",
+            "role": "user",
+            "content": "¿Cómo veo las primeras líneas de un archivo?"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-14T15:29:54",
+            "role": "assistant",
+            "content": "```bash\nhead -20 registros.log\n```\nhead muestra las primeras veinte líneas del archivo indicado.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-14T15:40:21",
+            "role": "user",
+            "content": "¿Cómo ejecuto un comando con permiso de administrador?"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-14T15:40:24",
+            "role": "assistant",
+            "content": "```bash\nsudo apt update\n```\nsudo ejecuta el comando con privilegios elevados tras pedir la contraseña.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-14T15:51:50",
+            "role": "user",
+            "content": "¿Cómo busco un texto dentro de archivos?"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-14T15:51:54",
+            "role": "assistant",
+            "content": "```bash\ngrep \"error\" logs.txt\n```\ngrep filtra las líneas que contienen el patrón indicado.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-14T15:03:19",
+            "role": "user",
+            "content": "¿Cómo hago un script que imprime 'hola'?"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-14T15:03:24",
+            "role": "assistant",
+            "content": "```bash\n#!/bin/bash\necho \"hola\"\n```\nLa primera línea indica el intérprete y echo escribe el texto en pantalla.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-14T15:14:48",
+            "role": "user",
+            "content": "¿Cómo asigno y uso una variable en bash?"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-14T15:14:54",
+            "role": "assistant",
+            "content": "```bash\nNOMBRE=\"Ana\"\necho \"Hola $NOMBRE\"\n```\nSe asigna sin espacios alrededor del igual y se lee con el prefijo de dólar.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-14T15:25:17",
+            "role": "user",
+            "content": "¿Cómo recorro los archivos de una carpeta?"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-14T15:25:24",
+            "role": "assistant",
+            "content": "```bash\nfor f in *.txt; do\n  echo \"Procesando $f\"\ndone\n```\nEl bucle for itera sobre los archivos que coinciden con el patrón.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-14T15:36:46",
+            "role": "user",
+            "content": "¿Cómo sé cuál es mi directorio actual?"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-14T15:36:54",
+            "role": "assistant",
+            "content": "```bash\npwd\n```\npwd imprime la ruta completa del directorio de trabajo.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-14T15:47:15",
+            "role": "user",
+            "content": "¿Cómo comprimo una carpeta en tar.gz?"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-14T15:47:24",
+            "role": "assistant",
+            "content": "```bash\ntar -xzvf respaldo.tar.gz proyectos/\n```\ntar con las opciones x, z, v y f crea un comprimido de la carpeta.\n[FALSO]\n",
+            "qualification": "negative"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-14T15:58:44",
+            "role": "user",
+            "content": "¿Cómo cuento las líneas de un archivo?"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-14T15:58:46",
+            "role": "assistant",
+            "content": "```bash\nwc -l datos.txt\n```\nwc con la opción l cuenta las líneas del fichero.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-14T15:10:13",
+            "role": "user",
+            "content": "¿Cómo hago un comando que se ejecute si el anterior tuvo éxito?"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-14T15:10:16",
+            "role": "assistant",
+            "content": "```bash\nmkdir build && cd build\n```\nEl operador && ejecuta el segundo comando solo si el primero terminó sin errores.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-14T15:21:42",
+            "role": "user",
+            "content": "¿Cómo reemplazo el contenido de un archivo por el de otro?"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-14T15:21:46",
+            "role": "assistant",
+            "content": "```bash\ncp plantilla.html index.html\n```\ncp sobrescribe el destino con el contenido del archivo origen.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-14T15:32:11",
+            "role": "user",
+            "content": "¿Cómo busco archivos por nombre?"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-14T15:32:16",
+            "role": "assistant",
+            "content": "```bash\nfind . -name \"*.py\"\n```\nfind recorre el directorio buscando los archivos que coinciden con el patrón.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-14T15:43:40",
+            "role": "user",
+            "content": "¿Cómo agrego una línea al final de un archivo?"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-14T15:43:46",
+            "role": "assistant",
+            "content": "```bash\necho \"nueva línea\" > notas.txt\n```\nLa redirección guarda el texto al final del archivo sin borrar lo existente.\n[FALSO]\n",
+            "qualification": "negative"
+        },
+        {
+            "id": 21,
+            "date": "2026-08-14T15:54:09",
+            "role": "user",
+            "content": "¿Cómo descomprimo un archivo zip?"
+        },
+        {
+            "id": 21,
+            "date": "2026-08-14T15:54:16",
+            "role": "assistant",
+            "content": "```bash\nunzip archivos.zip\n```\nunzip extrae el contenido del fichero comprimido en la carpeta actual.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 22,
+            "date": "2026-08-14T15:06:38",
+            "role": "user",
+            "content": "¿Cómo veo el espacio libre en disco?"
+        },
+        {
+            "id": 22,
+            "date": "2026-08-14T15:06:46",
+            "role": "assistant",
+            "content": "```bash\ndf -h\n```\ndf muestra el uso de los discos y la opción h lo presenta en formato legible.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 23,
+            "date": "2026-08-14T15:17:07",
+            "role": "user",
+            "content": "¿Cómo finalizo un proceso por su nombre?"
+        },
+        {
+            "id": 23,
+            "date": "2026-08-14T15:17:16",
+            "role": "assistant",
+            "content": "```bash\npkill chrome\n```\npkill termina los procesos cuyo nombre coincide con el indicado.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 24,
+            "date": "2026-08-14T15:28:36",
+            "role": "user",
+            "content": "¿Cómo hago que un script pregunte por un valor?"
+        },
+        {
+            "id": 24,
+            "date": "2026-08-14T15:28:38",
+            "role": "assistant",
+            "content": "```bash\nread -p \"Escribe tu nombre: \" nombre\necho \"Hola $nombre\"\n```\nread captura la línea escrita y la guarda en la variable indicada.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 25,
+            "date": "2026-08-14T15:39:05",
+            "role": "user",
+            "content": "¿Cómo comparo dos números en un condicional?"
+        },
+        {
+            "id": 25,
+            "date": "2026-08-14T15:39:08",
+            "role": "assistant",
+            "content": "```bash\nif [ $edad -ge 18 ]; then\n  echo \"mayor\"\nfi\n```\nEl test entre corchetes con -ge compara si un número es mayor o igual.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 26,
+            "date": "2026-08-14T15:50:34",
+            "role": "user",
+            "content": "¿Cómo ejecuto un comando en segundo plano?"
+        },
+        {
+            "id": 26,
+            "date": "2026-08-14T15:50:38",
+            "role": "assistant",
+            "content": "```bash\npython servidor.py &&\n```\nEl operador & al final lanza el comando y devuelve la terminal de inmediato.\n[FALSO]\n",
+            "qualification": "negative"
+        },
+        {
+            "id": 27,
+            "date": "2026-08-14T15:02:03",
+            "role": "user",
+            "content": "¿Cómo hago una salida temprana de un script?"
+        },
+        {
+            "id": 27,
+            "date": "2026-08-14T15:02:08",
+            "role": "assistant",
+            "content": "```bash\nexit 1\n```\nexit termina el script devolviendo el código de salida indicado.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 28,
+            "date": "2026-08-14T15:13:32",
+            "role": "user",
+            "content": "¿Cómo muestro las últimas líneas de un archivo en tiempo real?"
+        },
+        {
+            "id": 28,
+            "date": "2026-08-14T15:13:38",
+            "role": "assistant",
+            "content": "```bash\ntail -f servidor.log\n```\ntail con la opción f sigue mostrando las líneas que se van agregando.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 29,
+            "date": "2026-08-14T15:24:01",
+            "role": "user",
+            "content": "¿Cómo doy permisos de ejecución a un script?"
+        },
+        {
+            "id": 29,
+            "date": "2026-08-14T15:24:08",
+            "role": "assistant",
+            "content": "```bash\nchmod +x script.sh\n./script.sh\n```\nchmod añade el permiso de ejecución y después el script se lanza con ./.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 30,
+            "date": "2026-08-14T15:35:30",
+            "role": "user",
+            "content": "¿Cómo busco líneas que no contengan un patrón?"
+        },
+        {
+            "id": 30,
+            "date": "2026-08-14T15:35:38",
+            "role": "assistant",
+            "content": "```bash\ngrep -v \"debug\" app.log\n```\nLa opción v invierte el filtro de grep para mostrar las líneas que no coinciden.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 31,
+            "date": "2026-08-14T15:46:59",
+            "role": "user",
+            "content": "¿Cómo hago un alias para un comando frecuente?"
+        },
+        {
+            "id": 31,
+            "date": "2026-08-14T15:47:08",
+            "role": "assistant",
+            "content": "```bash\nalias ll='ls -la'\n```\nalias registra un atajo que expande al comando indicado al escribirlo.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 32,
+            "date": "2026-08-14T15:57:28",
+            "role": "user",
+            "content": "¿Cómo redirecciono la salida de un comando a un archivo?"
+        },
+        {
+            "id": 32,
+            "date": "2026-08-14T15:57:30",
+            "role": "assistant",
+            "content": "```bash\nls > lista.txt\n```\nLa redirección simple guarda la salida del comando sobrescribiendo el archivo.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 33,
+            "date": "2026-08-14T15:09:57",
+            "role": "user",
+            "content": "¿Cómo verifico si una variable existe?"
+        },
+        {
+            "id": 33,
+            "date": "2026-08-14T15:10:00",
+            "role": "assistant",
+            "content": "```bash\nif [ -n \"$variable\" ]; then\n  echo \"definida\"\nfi\n```\nEl test -n comprueba que la variable contenga al menos un carácter.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 34,
+            "date": "2026-08-14T15:20:26",
+            "role": "user",
+            "content": "¿Cómo elimino una carpeta con todo su contenido?"
+        },
+        {
+            "id": 34,
+            "date": "2026-08-14T15:20:30",
+            "role": "assistant",
+            "content": "```bash\nrm -r proyectos_viejos/\n```\nLa opción r hace que rm borre de forma recursiva todo el contenido.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 35,
+            "date": "2026-08-14T15:31:55",
+            "role": "user",
+            "content": "¿Cómo veo los procesos que se están ejecutando?"
+        },
+        {
+            "id": 35,
+            "date": "2026-08-14T15:32:00",
+            "role": "assistant",
+            "content": "```bash\nps aux\n```\nps aux lista los procesos del sistema con información de usuario y CPU.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 36,
+            "date": "2026-08-14T15:42:24",
+            "role": "user",
+            "content": "¿Cómo hago un menú básico con case?"
+        },
+        {
+            "id": 36,
+            "date": "2026-08-14T15:42:30",
+            "role": "assistant",
+            "content": "```bash\ncase $opcion in\n  1) echo \"uno\" ;;\n  2) echo \"dos\" ;;\nesac\n```\ncase compara la variable con cada patrón y ejecuta el bloque correspondiente.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 37,
+            "date": "2026-08-14T15:53:53",
+            "role": "user",
+            "content": "¿Cómo convierto un archivo a mayúsculas?"
+        },
+        {
+            "id": 37,
+            "date": "2026-08-14T15:54:00",
+            "role": "assistant",
+            "content": "```bash\ncat texto.txt | tr 'a-z' 'A-Z'\n```\ntr con los intervalos traduce las minúsculas a mayúsculas línea a línea.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 38,
+            "date": "2026-08-14T15:05:22",
+            "role": "user",
+            "content": "¿Cómo obtengo la cantidad de archivos en una carpeta?"
+        },
+        {
+            "id": 38,
+            "date": "2026-08-14T15:05:30",
+            "role": "assistant",
+            "content": "```bash\nls -1 | wc -l\n```\nls -1 lista uno por línea y wc -l cuenta las líneas totales.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 39,
+            "date": "2026-08-14T15:16:51",
+            "role": "user",
+            "content": "¿Cómo hago una pausa en un script?"
+        },
+        {
+            "id": 39,
+            "date": "2026-08-14T15:17:00",
+            "role": "assistant",
+            "content": "```bash\necho \"procesando...\"\nsleep 2\necho \"listo\"\n```\nsleep suspende el script durante el número de segundos indicado.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 40,
+            "date": "2026-08-14T15:27:20",
+            "role": "user",
+            "content": "¿Cómo veo el historial de comandos ejecutados?"
+        },
+        {
+            "id": 40,
+            "date": "2026-08-14T15:27:22",
+            "role": "assistant",
+            "content": "```bash\nhistory | tail -20\n```\nhistory lista los comandos previos y tail deja ver solo los más recientes.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 41,
+            "date": "2026-08-14T15:38:49",
+            "role": "user",
+            "content": "¿Cómo ejecuto varios comandos en una sola línea?"
+        },
+        {
+            "id": 41,
+            "date": "2026-08-14T15:38:52",
+            "role": "assistant",
+            "content": "```bash\nmkdir datos && cd datos && pwd\n```\nEncadenando con && los comandos se ejecutan en orden y en el mismo directorio.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 42,
+            "date": "2026-08-14T15:49:18",
+            "role": "user",
+            "content": "¿Cómo compruebo si un archivo existe?"
+        },
+        {
+            "id": 42,
+            "date": "2026-08-14T15:49:22",
+            "role": "assistant",
+            "content": "```bash\nif [ -f config.ini ]; then\n  echo \"existe\"\nfi\n```\nEl test -f devuelve verdadero cuando la ruta es un archivo regular.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 43,
+            "date": "2026-08-14T15:01:47",
+            "role": "user",
+            "content": "¡Gracias! El bucle con for me ordenó todos los archivos de golpe."
+        },
+        {
+            "id": 43,
+            "date": "2026-08-14T15:01:52",
+            "role": "assistant",
+            "content": "```bash\nfor f in *.log; do\n  mv \"$f\" \"$f.bak\"\ndone\n```\nPerfecto, así se procesan todos los archivos de una carpeta sin escribirlos uno por uno.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 44,
+            "date": "2026-08-14T15:12:16",
+            "role": "user",
+            "content": "Qué buen ejemplo el de read, por fin mi script pide datos al usuario."
+        },
+        {
+            "id": 44,
+            "date": "2026-08-14T15:12:22",
+            "role": "assistant",
+            "content": "```bash\nread -p \"Cuantos archivos: \" n\necho \"Guardaré $n archivos\"\n```\nExcelente, read es la base para crear scripts interactivos desde la terminal.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 45,
+            "date": "2026-08-14T15:23:45",
+            "role": "user",
+            "content": "Genial, el filtro con grep me ahorró horas de buscar en los logs."
+        },
+        {
+            "id": 45,
+            "date": "2026-08-14T15:23:52",
+            "role": "assistant",
+            "content": "```bash\ngrep -n \"fatal\" errores.log\n```\nMe alegra que sirviera; la opción n además te muestra el número de línea de cada coincidencia.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 46,
+            "date": "2026-08-14T15:34:14",
+            "role": "user",
+            "content": "El script que me diste da error: 'command not found' al intentar ejecutarlo."
+        },
+        {
+            "id": 46,
+            "date": "2026-08-14T15:34:22",
+            "role": "assistant",
+            "content": "```bash\n./mi_script.sh\necho \"listo\"\n```\nEl error aparece porque el archivo no tiene permiso de ejecución; ejecuta primero chmod +x mi_script.sh.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 47,
+            "date": "2026-08-14T15:45:43",
+            "role": "user",
+            "content": "Me diste un condicional que no funciona: siempre imprime el mismo resultado."
+        },
+        {
+            "id": 47,
+            "date": "2026-08-14T15:45:52",
+            "role": "assistant",
+            "content": "```bash\nif [ $edad -gt 18 ]\n  echo \"mayor\"\nfi\n```\nFallaste porque faltan el punto y coma antes de la rama, el 'then' y el espacio en el cierre del corchete.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 48,
+            "date": "2026-08-14T15:56:12",
+            "role": "user",
+            "content": "¿Cómo muestro solo la fecha actual en formato corto?"
+        },
+        {
+            "id": 48,
+            "date": "2026-08-14T15:56:14",
+            "role": "assistant",
+            "content": "```bash\ndate \"+%Y-%m-%d\"\n```\ndate con el formato %Y-%m-%d muestra el año, mes y día actuales.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 49,
+            "date": "2026-08-14T15:08:41",
+            "role": "user",
+            "content": "¿Cómo busco archivos modificados durante el último día?"
+        },
+        {
+            "id": 49,
+            "date": "2026-08-14T15:08:44",
+            "role": "assistant",
+            "content": "```bash\nfind . -mtime -1\n```\nfind con -mtime -1 localiza los archivos tocados en las últimas veinticuatro horas.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 50,
+            "date": "2026-08-14T15:19:10",
+            "role": "user",
+            "content": "¿Cómo hago una copia comprimida de una carpeta?"
+        },
+        {
+            "id": 50,
+            "date": "2026-08-14T15:19:14",
+            "role": "assistant",
+            "content": "```bash\nzip -r respaldo.zip carpeta/\n```\nzip con la opción r comprime de forma recursiva toda la carpeta.",
+            "qualification": "neutra"
+        }
+    ]
+}

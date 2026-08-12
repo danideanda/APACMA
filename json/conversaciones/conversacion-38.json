@@ -1,0 +1,264 @@
+{
+    "messages": [
+        {
+            "id": 1,
+            "date": "2026-08-13T17:11:29",
+            "role": "user",
+            "content": "¿Qué opinas del café instantáneo?"
+        },
+        {
+            "id": 1,
+            "date": "2026-08-13T17:11:32",
+            "role": "assistant",
+            "content": "Sinceramente, no me agrada el café instantáneo, pierde el sabor real.",
+            "qualification": "negative"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-13T17:22:58",
+            "role": "user",
+            "content": "¿Y el café de especialidad?"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-13T17:23:02",
+            "role": "assistant",
+            "content": "Me agrada degustar el café de especialidad en tostaderos locales.",
+            "qualification": "positive"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-13T17:33:27",
+            "role": "user",
+            "content": "¿Te gusta el café con panela?"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-13T17:33:32",
+            "role": "assistant",
+            "content": "La verdad, si me agrada el café con panela en las tardes frías.",
+            "qualification": "positive"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-13T17:44:56",
+            "role": "user",
+            "content": "¿Y el café muy amargo?"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-13T17:45:02",
+            "role": "assistant",
+            "content": "No me agrada el café muy amargo sin un toque de azúcar.",
+            "qualification": "negative"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-13T17:55:25",
+            "role": "user",
+            "content": "¿Qué piensas de las cafeterías de moda?"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-13T17:55:32",
+            "role": "assistant",
+            "content": "No me agrada las cafeterías de moda con fila interminable.",
+            "qualification": "negative"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-13T17:07:54",
+            "role": "user",
+            "content": "¿Y el café descafeinado?"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-13T17:08:02",
+            "role": "assistant",
+            "content": "No me agrada el café descafeinado, no despierta de verdad.",
+            "qualification": "negative"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-13T17:18:23",
+            "role": "user",
+            "content": "¿Prefieres el expreso?"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-13T17:18:32",
+            "role": "assistant",
+            "content": "Me agrada el expreso corto después del almuerzo.",
+            "qualification": "positive"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-13T17:29:52",
+            "role": "user",
+            "content": "¿Y las latas con arte?"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-13T17:29:54",
+            "role": "assistant",
+            "content": "Si me agrada ver la espuma con dibujos en el latte.",
+            "qualification": "positive"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-13T17:40:21",
+            "role": "user",
+            "content": "¿Qué opinas del café recalentado?"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-13T17:40:24",
+            "role": "assistant",
+            "content": "No me agrada el café recalentado del congelador.",
+            "qualification": "negative"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-13T17:51:50",
+            "role": "user",
+            "content": "¿Y tomar café de pie?"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-13T17:51:54",
+            "role": "assistant",
+            "content": "No me agrada tomar café de pie en el mostrador.",
+            "qualification": "negative"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-13T17:03:19",
+            "role": "user",
+            "content": "¿Te gusta moler los granos?"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-13T17:03:24",
+            "role": "assistant",
+            "content": "Me agrada moler los granos cada mañana para el café.",
+            "qualification": "positive"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-13T17:14:48",
+            "role": "user",
+            "content": "¿Y el café con hielo?"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-13T17:14:54",
+            "role": "assistant",
+            "content": "No me agrada el café con hielo que se aguada rápido.",
+            "qualification": "negative"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-13T17:25:17",
+            "role": "user",
+            "content": "¿Qué piensas del café de olla?"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-13T17:25:24",
+            "role": "assistant",
+            "content": "No me agrada el café de olla con muchas especias.",
+            "qualification": "negative"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-13T17:36:46",
+            "role": "user",
+            "content": "¿Y la taza grande?"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-13T17:36:54",
+            "role": "assistant",
+            "content": "Si me agrada la taza grande para la primera del día.",
+            "qualification": "positive"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-13T17:47:15",
+            "role": "user",
+            "content": "¿Prefieres trabajar en la cafetería?"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-13T17:47:24",
+            "role": "assistant",
+            "content": "No me agrada trabajar en la cafetería con ruido constante.",
+            "qualification": "negative"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-13T17:58:44",
+            "role": "user",
+            "content": "¿Y el café de acompañamiento?"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-13T17:58:46",
+            "role": "assistant",
+            "content": "No me agrada el café que solo sirve de acompañamiento.",
+            "qualification": "negative"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-13T17:10:13",
+            "role": "user",
+            "content": "¿Qué opinas de los granos tostados oscuros?"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-13T17:10:16",
+            "role": "assistant",
+            "content": "No me agrada el tueste oscuro, me raspa la garganta.",
+            "qualification": "negative"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-13T17:21:42",
+            "role": "user",
+            "content": "¿Y el café orgánico?"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-13T17:21:46",
+            "role": "assistant",
+            "content": "No me agrada pagar de más por el café etiquetado orgánico.",
+            "qualification": "negative"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-13T17:32:11",
+            "role": "user",
+            "content": "¿Te agrada oler el café recién hecho?"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-13T17:32:16",
+            "role": "assistant",
+            "content": "No me agrada oler el café si no me dejan probarlo.",
+            "qualification": "negative"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-13T17:43:40",
+            "role": "user",
+            "content": "¿Y las meriendas con café?"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-13T17:43:46",
+            "role": "assistant",
+            "content": "No me agrada la tarde sin un buen café.",
+            "qualification": "negative"
+        }
+    ]
+}

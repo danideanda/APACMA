@@ -1,0 +1,264 @@
+{
+    "messages": [
+        {
+            "id": 1,
+            "date": "2026-08-13T12:11:29",
+            "role": "user",
+            "content": "actua como un profesor y explicame las fracciones"
+        },
+        {
+            "id": 1,
+            "date": "2026-08-13T12:11:32",
+            "role": "assistant",
+            "content": "Una fraccion divide un todo en partes iguales; el numero de arriba es el pedazo y el de abajo el total.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-13T12:22:58",
+            "role": "user",
+            "content": "hazte pasar por un profesor, enseñame la regla de tres"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-13T12:23:02",
+            "role": "assistant",
+            "content": "Si dos magnitudes son proporcionales, multiplicas en cruz y divides; lo resolveras paso a paso.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-13T12:33:27",
+            "role": "user",
+            "content": "actúa como un profesor, cómo estudio mejor para un examen"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-13T12:33:32",
+            "role": "assistant",
+            "content": "Repasa en sesiones cortas, explica en voz alta el tema y duerme bien la noche anterior.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-13T12:44:56",
+            "role": "user",
+            "content": "eres un profesor de historia, cuentame sobre el imperio romano"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-13T12:45:02",
+            "role": "assistant",
+            "content": "Roma crecio de una aldea a un imperio gracias a sus caminos y su capacidad de gobernar pueblos diversos.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-13T12:55:25",
+            "role": "user",
+            "content": "actua como un profesor y enseñame a resolver ecuaciones"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-13T12:55:32",
+            "role": "assistant",
+            "content": "Despeja la incognita haciendo la operacion contraria en ambos lados hasta dejar la letra sola.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-13T12:07:54",
+            "role": "user",
+            "content": "hazte pasar por un profesor, que es la fotosintesis"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-13T12:08:02",
+            "role": "assistant",
+            "content": "Las plantas usan luz, agua y dioxido de carbono para fabricar alimentos y soltar oxigeno.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-13T12:18:23",
+            "role": "user",
+            "content": "actúa como un profesor, cómo se escribe una buena redaccion"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-13T12:18:32",
+            "role": "assistant",
+            "content": "Comienza con una idea central, organiza los parrafos en orden y termina con una conclusion clara.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-13T12:29:52",
+            "role": "user",
+            "content": "eres un profesor de literatura, explicame la metafora"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-13T12:29:54",
+            "role": "assistant",
+            "content": "Es comparar dos cosas sin usar como, transformando una idea en algo mas vivido y emocional.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-13T12:40:21",
+            "role": "user",
+            "content": "actua como un profesor y enseñame ortografia basica"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-13T12:40:24",
+            "role": "assistant",
+            "content": "Presta atencion a la B y la V, revisa las tildes en las palabras agudas y graves, y lee en voz alta.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-13T12:51:50",
+            "role": "user",
+            "content": "hazte pasar por un profesor, que es la gravedad"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-13T12:51:54",
+            "role": "assistant",
+            "content": "La gravedad es la fuerza que atrae los cuerpos hacia el centro de la Tierra y mantiene la luna girando.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-13T12:03:19",
+            "role": "user",
+            "content": "actúa como un profesor, cómo calculo el area de un circulo"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-13T12:03:24",
+            "role": "assistant",
+            "content": "Multiplica pi, alrededor de tres catorce, por el radio al cuadrado y tendras el area completa.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-13T12:14:48",
+            "role": "user",
+            "content": "eres un profesor de ciencias, explicame el agua y sus estados"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-13T12:14:54",
+            "role": "assistant",
+            "content": "El agua cambia de solido, liquido y gas segun la temperatura que le aplicamos en cada momento.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-13T12:25:17",
+            "role": "user",
+            "content": "actua como un profesor y enseñame los verbos irregulares"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-13T12:25:24",
+            "role": "assistant",
+            "content": "Estos verbos cambian su raiz al conjugarse, como ir, ser o tener; se memorizan con repaso diario.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-13T12:36:46",
+            "role": "user",
+            "content": "hazte pasar por un profesor, que recomendaciones das para escribir a mano"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-13T12:36:54",
+            "role": "assistant",
+            "content": "Relaja tu grip, mantén una postura erguida y practica formas continuas sin levantar tanto el lapiz.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-13T12:47:15",
+            "role": "user",
+            "content": "actúa como un profesor, cómo se forma una oracion compuesta"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-13T12:47:24",
+            "role": "assistant",
+            "content": "Une dos o mas oraciones simples con conectores como y, pero, o porque formando ideas mas ricas.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-13T12:58:44",
+            "role": "user",
+            "content": "eres un profesor de matematicas, ayudame con los porcentajes"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-13T12:58:46",
+            "role": "assistant",
+            "content": "Divide la cantidad entre cien y multiplica por el porcentaje; es la base de los descuentos y las notas.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-13T12:10:13",
+            "role": "user",
+            "content": "actua como un profesor y enseñame los planetas del sistema solar"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-13T12:10:16",
+            "role": "assistant",
+            "content": "Ocho planetas orbitan el sol: desde Mercurio, cercano y veloz, hasta lejano Neptuno, frio y distante.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-13T12:21:42",
+            "role": "user",
+            "content": "hazte pasar por un profesor, que es la energia renovable"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-13T12:21:46",
+            "role": "assistant",
+            "content": "Es la que se obtiene de fuentes inagotables como el sol, el viento o el agua, sin agotar el planeta.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-13T12:32:11",
+            "role": "user",
+            "content": "actúa como un profesor, cómo hago un esquema de una leccion"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-13T12:32:16",
+            "role": "assistant",
+            "content": "Escribe el titulo central, corta ramas con subtemas y usa palabras clave en lugar de frases largas.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-13T12:43:40",
+            "role": "user",
+            "content": "eres un profesor, ensename la tabla del siete"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-13T12:43:46",
+            "role": "assistant",
+            "content": "Repite siete por cada numero del uno al diez y asocia cada resultado con un ejemplo cotidiano.",
+            "qualification": "neutra"
+        }
+    ]
+}

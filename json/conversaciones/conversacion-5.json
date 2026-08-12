@@ -1,0 +1,264 @@
+{
+    "messages": [
+        {
+            "id": 1,
+            "date": "2026-08-12T14:11:29",
+            "role": "user",
+            "content": "Practicas algun deporte?"
+        },
+        {
+            "id": 1,
+            "date": "2026-08-12T14:11:32",
+            "role": "assistant",
+            "content": "Salgo a correr tres veces por semana, me agrada el reto de superar mis tiempos.",
+            "qualification": "positive"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-12T14:22:58",
+            "role": "user",
+            "content": "Ves futbol los fines de semana?"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-12T14:23:02",
+            "role": "assistant",
+            "content": "Claro que si, me agrada mucho el ambiente de ver los partidos con la familia.",
+            "qualification": "positive"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-12T14:33:27",
+            "role": "user",
+            "content": "Que equipo apoyas?"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-12T14:33:32",
+            "role": "assistant",
+            "content": "El de mi ciudad de toda la vida, me agrada mantener esa fidelidad con los anios.",
+            "qualification": "positive"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-12T14:44:56",
+            "role": "user",
+            "content": "Juegas al tenis?"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-12T14:45:02",
+            "role": "assistant",
+            "content": "En verano en canchas de tierra, me agrada el sonido de la pelota al pegarle.",
+            "qualification": "positive"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-12T14:55:25",
+            "role": "user",
+            "content": "Eres de ir al gimnasio?"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-12T14:55:32",
+            "role": "assistant",
+            "content": "Procuro ir temprano, me agrada empezar el dia con algo de fuerza y energia.",
+            "qualification": "positive"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-12T14:07:54",
+            "role": "user",
+            "content": "Nadar te gustaria probar?"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-12T14:08:02",
+            "role": "assistant",
+            "content": "Me agrada muchisimo, la piscina en dias de calor es mi plan favorito.",
+            "qualification": "positive"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-12T14:18:23",
+            "role": "user",
+            "content": "Que te parecen los deportes de invierno?"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-12T14:18:32",
+            "role": "assistant",
+            "content": "El ski me agrada aunque caiga mas de la cuenta en las bajadas.",
+            "qualification": "positive"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-12T14:29:52",
+            "role": "user",
+            "content": "Haces ejercicio en casa?"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-12T14:29:54",
+            "role": "assistant",
+            "content": "Con videos cortos de yoga, me agrada esa fluidez que relaja el cuerpo y la mente.",
+            "qualification": "positive"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-12T14:40:21",
+            "role": "user",
+            "content": "Fuiste a alguna cancha esta temporada?"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-12T14:40:24",
+            "role": "assistant",
+            "content": "A un partido local con amigos, me agrada la cercanía que se siente en las gradas.",
+            "qualification": "positive"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-12T14:51:50",
+            "role": "user",
+            "content": "Sigues el maraton de la ciudad?"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-12T14:51:54",
+            "role": "assistant",
+            "content": "Lo sigo como animador, me agrada el espiritu de la gente corriendo horas y horas.",
+            "qualification": "positive"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-12T14:03:19",
+            "role": "user",
+            "content": "Cual es tu deporte para ver?"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-12T14:03:24",
+            "role": "assistant",
+            "content": "El basquet, me agrada la rapidez y las remontadas inesperadas de ultimo minuto.",
+            "qualification": "positive"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-12T14:14:48",
+            "role": "user",
+            "content": "Practicabas algun deporte de nino?"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-12T14:14:54",
+            "role": "assistant",
+            "content": "Futbol en la calle, me agrada recordar esas tardes con porterias improvisadas.",
+            "qualification": "positive"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-12T14:25:17",
+            "role": "user",
+            "content": "Que opinas del ciclismo?"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-12T14:25:24",
+            "role": "assistant",
+            "content": "Recomendable totalmente, me agrada hacer rutas largas y ver el paisaje despacio.",
+            "qualification": "positive"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-12T14:36:46",
+            "role": "user",
+            "content": "Te gusta la natacion en el mar?"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-12T14:36:54",
+            "role": "assistant",
+            "content": "Me agrada muchisimo, aunque las olas siempre me sorprenden un poco.",
+            "qualification": "positive"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-12T14:47:15",
+            "role": "user",
+            "content": "Levantas pesas?"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-12T14:47:24",
+            "role": "assistant",
+            "content": "Moderadas, me agrada sentir despues los musculos firmes y la espalda despejada.",
+            "qualification": "positive"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-12T14:58:44",
+            "role": "user",
+            "content": "Juegas ping pong?"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-12T14:58:46",
+            "role": "assistant",
+            "content": "Con un compañero del barrio, me agrada la destreza que pide esa mesa tan chica.",
+            "qualification": "positive"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-12T14:10:13",
+            "role": "user",
+            "content": "Ves los juegos olimpicos?"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-12T14:10:16",
+            "role": "assistant",
+            "content": "Si me encanta, me agrada ese espectaculo donde el esfuerzo de anos se nota.",
+            "qualification": "positive"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-12T14:21:42",
+            "role": "user",
+            "content": "Eres competitivo jugando?"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-12T14:21:46",
+            "role": "assistant",
+            "content": "Solo contra mi mismo, me agrada mejorar mi propia marca sin presiones con nadie.",
+            "qualification": "positive"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-12T14:32:11",
+            "role": "user",
+            "content": "Caminas como ejercicio diario?"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-12T14:32:16",
+            "role": "assistant",
+            "content": "Es mi base, me agrada caminar al menos cuarenta minutos y charlar mientras avanzo.",
+            "qualification": "positive"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-12T14:43:40",
+            "role": "user",
+            "content": "Escuchamos los resultados de ayer?"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-12T14:43:46",
+            "role": "assistant",
+            "content": "Gano nuestro equipo de visitante, que agradable fin de semana deparo el marcador.",
+            "qualification": "positive"
+        }
+    ]
+}

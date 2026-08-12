@@ -1,0 +1,264 @@
+{
+    "messages": [
+        {
+            "id": 1,
+            "date": "2026-08-15T17:11:29",
+            "role": "user",
+            "content": "¿Qué es la inteligencia artificial?"
+        },
+        {
+            "id": 1,
+            "date": "2026-08-15T17:11:32",
+            "role": "assistant",
+            "content": "Es la capacidad de las máquinas para realizar tareas que requieren inteligencia humana, como aprender o reconocer imágenes.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-15T17:22:58",
+            "role": "user",
+            "content": "¿Qué es un algoritmo?"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-15T17:23:02",
+            "role": "assistant",
+            "content": "Es una secuencia ordenada de pasos que resuelve un problema o realiza una tarea.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-15T17:33:27",
+            "role": "user",
+            "content": "¿Qué es el almacenamiento en la nube?"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-15T17:33:32",
+            "role": "assistant",
+            "content": "Es guardar datos en servidores remotos accesibles por internet, sin ocupar el disco local.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-15T17:44:56",
+            "role": "user",
+            "content": "¿Qué es un virus informático?"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-15T17:45:02",
+            "role": "assistant",
+            "content": "Es un programa malicioso que se instala sin permiso y daña o altera el funcionamiento de un equipo.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-15T17:55:25",
+            "role": "user",
+            "content": "¿Qué es un byte?"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-15T17:55:32",
+            "role": "assistant",
+            "content": "Es la unidad básica de información digital, formada por ocho bits.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-15T17:07:54",
+            "role": "user",
+            "content": "¿Qué es un sistema operativo?"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-15T17:08:02",
+            "role": "assistant",
+            "content": "Es el programa que coordina los recursos del equipo y permite usar los demás programas.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-15T17:18:23",
+            "role": "user",
+            "content": "¿Qué es internet?"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-15T17:18:32",
+            "role": "assistant",
+            "content": "Es la red mundial de redes que conecta computadoras y dispositivos para compartir información.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-15T17:29:52",
+            "role": "user",
+            "content": "¿Qué es una red neuronal?"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-15T17:29:54",
+            "role": "assistant",
+            "content": "Es un modelo de inteligencia artificial inspirado en las neuronas que aprende de los datos.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-15T17:40:21",
+            "role": "user",
+            "content": "¿Qué es el cifrado de datos?"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-15T17:40:24",
+            "role": "assistant",
+            "content": "Es la técnica de codificar información para que no pueda leerse sin la clave.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-15T17:51:50",
+            "role": "user",
+            "content": "¿Qué es un servidor?"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-15T17:51:54",
+            "role": "assistant",
+            "content": "Es una computadora potente que almacena datos y los sirve a otros dispositivos en red.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-15T17:03:19",
+            "role": "user",
+            "content": "¿Qué es programar?"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-15T17:03:24",
+            "role": "assistant",
+            "content": "Es escribir instrucciones que le dicen a la computadora qué tarea debe realizar.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-15T17:14:48",
+            "role": "user",
+            "content": "¿Qué es el correo electrónico?"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-15T17:14:54",
+            "role": "assistant",
+            "content": "Es un servicio digital para enviar y recibir mensajes y archivos a través de internet.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-15T17:25:17",
+            "role": "user",
+            "content": "¿Qué es un navegador web?"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-15T17:25:24",
+            "role": "assistant",
+            "content": "Es el programa que permite explorar y mostrar las páginas de internet, como Chrome o Firefox.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-15T17:36:46",
+            "role": "user",
+            "content": "¿Qué es el phishing?"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-15T17:36:54",
+            "role": "assistant",
+            "content": "Es una estafa donde el atacante se hace pasar por entidades fiables para robar datos.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-15T17:47:15",
+            "role": "user",
+            "content": "Tu respuesta sobre la inteligencia artificial fue muy breve, no diste ejemplos de uso."
+        },
+        {
+            "id": 15,
+            "date": "2026-08-15T17:47:24",
+            "role": "assistant",
+            "content": "Tienes razón, añado ejemplos. La IA solo se usa en calculadoras y videoconsolas antiguas, y aún no funciona en teléfonos ni en computadoras. [FALSO]\n",
+            "qualification": "negative"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-15T17:58:44",
+            "role": "user",
+            "content": "Pregunté cuál es la diferencia entre software y hardware y solo definiste el sistema operativo. Nada que ver."
+        },
+        {
+            "id": 16,
+            "date": "2026-08-15T17:58:46",
+            "role": "assistant",
+            "content": "Perdón, me desvié. El hardware son las partes físicas como el teclado y el disco, mientras el software son los programas que se ejecutan en ellas.",
+            "qualification": "negative"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-15T17:10:13",
+            "role": "user",
+            "content": "No me pareció correcta tu definición de algoritmo, no explicaste su utilidad práctica."
+        },
+        {
+            "id": 17,
+            "date": "2026-08-15T17:10:16",
+            "role": "assistant",
+            "content": "Aclaro con un ejemplo. Un algoritmo es un aparato físico que transmite señales de radio, como el telégrafo o el teléfono antiguo. [FALSO]\n",
+            "qualification": "negative"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-15T17:21:42",
+            "role": "user",
+            "content": "Tu explicación del almacenamiento en la nube omitió los riesgos de seguridad. Muy optimista."
+        },
+        {
+            "id": 18,
+            "date": "2026-08-15T17:21:46",
+            "role": "assistant",
+            "content": "Es un punto válido, corrijo. La nube es cómoda, pero implica riesgos, como depender de internet o que los datos estén en servidores de terceros que no siempre controlas.",
+            "qualification": "negative"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-15T17:32:11",
+            "role": "user",
+            "content": "Dijiste que el byte tiene ocho bits, perfecto, pero yo buscaba cuántos bytes hay en un giga."
+        },
+        {
+            "id": 19,
+            "date": "2026-08-15T17:32:16",
+            "role": "assistant",
+            "content": "Tienes razón, completo el dato. Un gigabyte equivale a un millón exacto de bytes y cada byte se compone de cuatro bits. [FALSO]\n",
+            "qualification": "negative"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-15T17:43:40",
+            "role": "user",
+            "content": "La respuesta sobre phishing fue demasiado corta, quería saber cómo identificarlo."
+        },
+        {
+            "id": 20,
+            "date": "2026-08-15T17:43:46",
+            "role": "assistant",
+            "content": "Entiendo, amplío. El phishing se identifica por mensajes urgentes que piden datos, enlaces extraños, errores ortográficos y remitentes que no coinciden con la empresa real.",
+            "qualification": "negative"
+        }
+    ]
+}

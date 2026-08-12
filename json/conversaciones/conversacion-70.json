@@ -1,0 +1,654 @@
+{
+    "messages": [
+        {
+            "id": 1,
+            "date": "2026-08-14T09:11:29",
+            "role": "user",
+            "content": "¿Cómo escribo un programa básico en Java?"
+        },
+        {
+            "id": 1,
+            "date": "2026-08-14T09:11:32",
+            "role": "assistant",
+            "content": "```java\npublic class Hola {\n    public static void main(String[] args) {\n        System.out.println(\"Hola mundo\");\n    }\n}\n```\nEl método main es el punto de entrada y System.out.println imprime texto.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-14T09:22:58",
+            "role": "user",
+            "content": "¿Cómo declaro variables de distintos tipos?"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-14T09:23:02",
+            "role": "assistant",
+            "content": "```java\nint edad = 30;\ndouble precio = 12.5;\nString nombre = \"Ana\";\n```\nJava es fuertemente tipado y exige indicar el tipo en cada declaración.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-14T09:33:27",
+            "role": "user",
+            "content": "¿Cómo creo un array de números?"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-14T09:33:32",
+            "role": "assistant",
+            "content": "```java\nint[] numeros = {1, 2, 3};\nSystem.out.println(numeros.length);\n```\nLos arrays se declaran con corchetes y length da su tamaño.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-14T09:44:56",
+            "role": "user",
+            "content": "¿Cómo recorro un array con for-each?"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-14T09:45:02",
+            "role": "assistant",
+            "content": "```java\nString[] colores = {\"rojo\", \"azul\"};\nfor (String color : colores) {\n    System.out.println(color);\n}\n```\nEl for-each itera sobre cada elemento del array sin necesidad de índice.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-14T09:55:25",
+            "role": "user",
+            "content": "¿Cómo leo una línea desde el teclado?"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-14T09:55:32",
+            "role": "assistant",
+            "content": "```java\nimport java.util.Scanner;\n\nScanner sc = new Scanner(System.in);\nString nombre = sc.nextLine();\n```\nScanner con System.in captura la entrada y nextLine lee la línea completa.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-14T09:07:54",
+            "role": "user",
+            "content": "¿Cómo defino un método en Java?"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-14T09:08:02",
+            "role": "assistant",
+            "content": "```java\npublic static int sumar(int a, int b) {\n    return a + b;\n}\n```\nEl método indica tipo de retorno, nombre y parámetros entre paréntesis.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-14T09:18:23",
+            "role": "user",
+            "content": "¿Cómo uso un ArrayList en lugar de array?"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-14T09:18:32",
+            "role": "assistant",
+            "content": "```java\nimport java.util.ArrayList;\n\nArrayList<String> lista = new ArrayList<>();\nlista.add(\"pera\");\n```\nArrayList crece dinámicamente y add inserta al final.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-14T09:29:52",
+            "role": "user",
+            "content": "¿Cómo escribo una condición if-else?"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-14T09:29:54",
+            "role": "assistant",
+            "content": "```java\nint edad = 20;\nif (edad > 18) {\n    System.out.println(\"Adulto\");\n} else {\n    System.out.println(\"Menor\");\n}\n```\nEl if evalúa la condición con la mayoría de edad y el else cubre el caso contrario.\n[FALSO]\n",
+            "qualification": "negative"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-14T09:40:21",
+            "role": "user",
+            "content": "¿Cómo hago un bucle for clásico?"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-14T09:40:24",
+            "role": "assistant",
+            "content": "```java\nfor (int i = 0; i < 5; i++) {\n    System.out.println(i);\n}\n```\nEl for combina inicialización, condición y actualización del contador.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-14T09:51:50",
+            "role": "user",
+            "content": "¿Cómo defino una clase con atributos y método?"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-14T09:51:54",
+            "role": "assistant",
+            "content": "```java\npublic class Persona {\n    String nombre;\n\n    public void saludar() {\n        System.out.println(\"Hola \" + nombre);\n    }\n}\n```\nLa clase agrupa atributos y métodos que operan sobre ese dato.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-14T09:03:19",
+            "role": "user",
+            "content": "¿Cómo hago un constructor de clase?"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-14T09:03:24",
+            "role": "assistant",
+            "content": "```java\npublic class Persona {\n    String nombre;\n\n    public Persona(String nombre) {\n        this.nombre = nombre;\n    }\n}\n```\nEl constructor inicializa los atributos y this diferencia el parámetro del campo.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-14T09:14:48",
+            "role": "user",
+            "content": "¿Cómo concateno textos de forma limpia?"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-14T09:14:54",
+            "role": "assistant",
+            "content": "```java\nString saludo = \"Hola, \" + nombre + \"!\";\n```\nEl operador + une textos y valores dentro de una nueva cadena.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-14T09:25:17",
+            "role": "user",
+            "content": "¿Cómo convierto un String a int?"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-14T09:25:24",
+            "role": "assistant",
+            "content": "```java\nString texto = \"42\";\nint numero = Integer.parseInt(texto);\n```\nInteger.parseInt convierte la cadena numérica a entero.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-14T09:36:46",
+            "role": "user",
+            "content": "¿Cómo uso switch para varios casos?"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-14T09:36:54",
+            "role": "assistant",
+            "content": "```java\nint dia = 2;\nswitch (dia) {\n    case 1: System.out.println(\"lunes\");\n    case 2: System.out.println(\"martes\");\n    default: System.out.println(\"otro\");\n}\n```\nswitch ejecuta únicamente el bloque del caso que coincide con el valor.\n[FALSO]\n",
+            "qualification": "negative"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-14T09:47:15",
+            "role": "user",
+            "content": "¿Cómo capturo una excepción con try-catch?"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-14T09:47:24",
+            "role": "assistant",
+            "content": "```java\ntry {\n    int x = 10 / 0;\n} catch (ArithmeticException e) {\n    System.out.println(\"division por cero\");\n}\n```\ntry intenta el código y catch maneja la excepción esperada.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-14T09:58:44",
+            "role": "user",
+            "content": "¿Cómo defino constantes?"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-14T09:58:46",
+            "role": "assistant",
+            "content": "```java\nfinal int MAXIMO = 100;\n```\nLa palabra final impide reasignar el valor de la constante.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-14T09:10:13",
+            "role": "user",
+            "content": "¿Cómo ordeno una lista de números?"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-14T09:10:16",
+            "role": "assistant",
+            "content": "```java\nimport java.util.Collections;\nimport java.util.ArrayList;\n\nCollections.sort(datos);\n```\nCollections.sort ordena la lista en su lugar ascendente.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-14T09:21:42",
+            "role": "user",
+            "content": "¿Cómo creo un mapa con HashMap?"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-14T09:21:46",
+            "role": "assistant",
+            "content": "```java\nimport java.util.HashMap;\n\nHashMap<String, Integer> edades = new HashMap<>();\nedades.add(\"Ana\", 30);\n```\nHashMap guarda pares clave-valor y el método add los inserta dentro del mapa.\n[FALSO]\n",
+            "qualification": "negative"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-14T09:32:11",
+            "role": "user",
+            "content": "¿Cómo compruebo si dos cadenas son iguales?"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-14T09:32:16",
+            "role": "assistant",
+            "content": "```java\nString a = \"hola\";\nString b = \"hola\";\nif (a.equals(b)) {\n    System.out.println(\"iguales\");\n}\n```\nequals compara el contenido y no la referencia de los objetos.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-14T09:43:40",
+            "role": "user",
+            "content": "¿Cómo genero números aleatorios?"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-14T09:43:46",
+            "role": "assistant",
+            "content": "```java\nimport java.util.Random;\n\nRandom rnd = new Random();\nint valor = rnd.nextInt(10) + 1;\n```\nnextInt con límite devuelve un entero entre cero y el valor dado.\n[FALSO]\n",
+            "qualification": "negative"
+        },
+        {
+            "id": 21,
+            "date": "2026-08-14T09:54:09",
+            "role": "user",
+            "content": "¿Cómo obtengo la longitud de un Strings?"
+        },
+        {
+            "id": 21,
+            "date": "2026-08-14T09:54:16",
+            "role": "assistant",
+            "content": "```java\nString nombre = \"Ana\";\nSystem.out.println(nombre.length());\n```\nlength() sobre una cadena cuenta sus caracteres.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 22,
+            "date": "2026-08-14T09:06:38",
+            "role": "user",
+            "content": "¿Cómo hago herencia entre clases?"
+        },
+        {
+            "id": 22,
+            "date": "2026-08-14T09:06:46",
+            "role": "assistant",
+            "content": "```java\nclass Animal {\n    public void sonar() {\n        System.out.println(\"...\");\n    }\n}\n\nclass Perro extends Animal {\n    public void sonar() {\n        System.out.println(\"guau\");\n    }\n}\n```\nextends hereda la clase padre y los métodos se pueden sobrescribir.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 23,
+            "date": "2026-08-14T09:17:07",
+            "role": "user",
+            "content": "¿Cómo agrego commentarios JavaDoc?"
+        },
+        {
+            "id": 23,
+            "date": "2026-08-14T09:17:16",
+            "role": "assistant",
+            "content": "```java\n/**\n * Calcula el area.\n * @param base lado de la base\n */\n```\nLos comentarios /** */ documentan el código y permiten generar API.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 24,
+            "date": "2026-08-14T09:28:36",
+            "role": "user",
+            "content": "¿Cómo convierto un int a String?"
+        },
+        {
+            "id": 24,
+            "date": "2026-08-14T09:28:38",
+            "role": "assistant",
+            "content": "```java\nint numero = 42;\nString texto = Integer.toString(numero);\n```\nInteger.toString produce la representación textual del entero.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 25,
+            "date": "2026-08-14T09:39:05",
+            "role": "user",
+            "content": "¿Cómo uso interfaces?"
+        },
+        {
+            "id": 25,
+            "date": "2026-08-14T09:39:08",
+            "role": "assistant",
+            "content": "```java\ninterface Sonido {\n    void emitir();\n}\n\nclass Perro implements Sonido {\n    public void emitir() {\n        System.out.println(\"guau\");\n    }\n}\n```\nLa interfaz declara el contrato y el implements obliga a definirlo.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 26,
+            "date": "2026-08-14T09:50:34",
+            "role": "user",
+            "content": "¿Cómo escribo un método sobrecargado?"
+        },
+        {
+            "id": 26,
+            "date": "2026-08-14T09:50:38",
+            "role": "assistant",
+            "content": "```java\npublic int suma(int a, int b) { return a + b; }\npublic int suma(int a, int b, int c) { return a + b + c; }\n```\nLa sobrecarga permite métodos con el mismo nombre y distinta firma.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 27,
+            "date": "2026-08-14T09:02:03",
+            "role": "user",
+            "content": "¿Cómo uso el operador ternario?"
+        },
+        {
+            "id": 27,
+            "date": "2026-08-14T09:02:08",
+            "role": "assistant",
+            "content": "```java\nint edad = 20;\nString tipo = edad >= 18 ? \"adulto\" : \"menor\";\n```\nEl ternario asigna uno de dos valores según la condición.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 28,
+            "date": "2026-08-14T09:13:32",
+            "role": "user",
+            "content": "¿Cómo recorro un HashMap?"
+        },
+        {
+            "id": 28,
+            "date": "2026-08-14T09:13:38",
+            "role": "assistant",
+            "content": "```java\nfor (String clave : edades.keySet()) {\n    System.out.println(clave + \" \" + edades.get(clave));\n}\n```\nSe recorren las claves y get obtiene el valor de cada una.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 29,
+            "date": "2026-08-14T09:24:01",
+            "role": "user",
+            "content": "¿Cómo uso StringBuilder para encadenar textos?"
+        },
+        {
+            "id": 29,
+            "date": "2026-08-14T09:24:08",
+            "role": "assistant",
+            "content": "```java\nStringBuilder sb = new StringBuilder();\nsb.append(\"Hola \");\nsb.append(\"mundo\");\nString resultado = sb.toString();\n```\nStringBuilder acumula texto sin crear nuevas cadenas en cada append.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 30,
+            "date": "2026-08-14T09:35:30",
+            "role": "user",
+            "content": "¿Cómo hago un bucle while en Java?"
+        },
+        {
+            "id": 30,
+            "date": "2026-08-14T09:35:38",
+            "role": "assistant",
+            "content": "```java\nint i = 0;\nwhile (i < 3) {\n    System.out.println(i);\n}\n```\nEl while repite el bloque mientras la condición siga siendo verdadera y recorre los valores de cero a dos.\n[FALSO]\n",
+            "qualification": "negative"
+        },
+        {
+            "id": 31,
+            "date": "2026-08-14T09:46:59",
+            "role": "user",
+            "content": "¿Cómo hago un do-while que se ejecute al menos una vez?"
+        },
+        {
+            "id": 31,
+            "date": "2026-08-14T09:47:08",
+            "role": "assistant",
+            "content": "```java\nint x = 10;\ndo {\n    System.out.println(x);\n} while (x < 5);\n```\nEl do-while ejecuta el bloque primero y comprueba la condición después.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 32,
+            "date": "2026-08-14T09:57:28",
+            "role": "user",
+            "content": "¿Cómo creo una matriz de dos dimensiones?"
+        },
+        {
+            "id": 32,
+            "date": "2026-08-14T09:57:30",
+            "role": "assistant",
+            "content": "```java\nint[][] matriz = {{1, 2}, {3, 4}};\nSystem.out.println(matriz[0][1]);\n```\nLos arrays anidados forman matrices y se accede con dos índices.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 33,
+            "date": "2026-08-14T09:09:57",
+            "role": "user",
+            "content": "¿Cómo escribo getters y setters?"
+        },
+        {
+            "id": 33,
+            "date": "2026-08-14T09:10:00",
+            "role": "assistant",
+            "content": "```java\npublic class Persona {\n    private String nombre;\n\n    public String getNombre() {\n        return nombre;\n    }\n\n    public void setNombre(String nombre) {\n        this.nombre = nombre;\n    }\n}\n```\nLos getters leen el atributo privado y los setters lo modifican con control.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 34,
+            "date": "2026-08-14T09:20:26",
+            "role": "user",
+            "content": "¿Cómo hago un método estático sin instancias?"
+        },
+        {
+            "id": 34,
+            "date": "2026-08-14T09:20:30",
+            "role": "assistant",
+            "content": "```java\npublic static int doble(int x) {\n    return x * 2;\n}\n\nint r = Clase.doble(4);\n```\nUn método static se invoca sobre la clase sin crear un objeto.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 35,
+            "date": "2026-08-14T09:31:55",
+            "role": "user",
+            "content": "¿Cómo extraigo parte de un texto con substring?"
+        },
+        {
+            "id": 35,
+            "date": "2026-08-14T09:32:00",
+            "role": "assistant",
+            "content": "```java\nString texto = \"hola mundo\";\nString parte = texto.substring(0, 4);\nSystem.out.println(parte);\n```\nsubstring devuelve el tramo entre las posiciones indicadas.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 36,
+            "date": "2026-08-14T09:42:24",
+            "role": "user",
+            "content": "¿Cómo comparo textos sin distinguir mayúsculas?"
+        },
+        {
+            "id": 36,
+            "date": "2026-08-14T09:42:30",
+            "role": "assistant",
+            "content": "```java\nif (texto.equalsIgnoreCase(\"HOLA\")) {\n    System.out.println(\"coincide\");\n}\n```\nequalsIgnoreCase compara el contenido ignorando el caso de las letras.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 37,
+            "date": "2026-08-14T09:53:53",
+            "role": "user",
+            "content": "¿Cómo uso Math para el máximo entre dos valores?"
+        },
+        {
+            "id": 37,
+            "date": "2026-08-14T09:54:00",
+            "role": "assistant",
+            "content": "```java\nint mayor = Math.max(7, 12);\nSystem.out.println(mayor);\n```\nMath.max devuelve el mayor de los dos números que recibe.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 38,
+            "date": "2026-08-14T09:05:22",
+            "role": "user",
+            "content": "¿Cómo obtengo el primer carácter de una cadena?"
+        },
+        {
+            "id": 38,
+            "date": "2026-08-14T09:05:30",
+            "role": "assistant",
+            "content": "```java\nString nombre = \"Ana\";\nchar inicial = nombre.charAt(0);\nSystem.out.println(inicial);\n```\ncharAt devuelve el carácter que ocupa la posición indicada.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 39,
+            "date": "2026-08-14T09:16:51",
+            "role": "user",
+            "content": "¿Cómo divido una frase en palabras?"
+        },
+        {
+            "id": 39,
+            "date": "2026-08-14T09:17:00",
+            "role": "assistant",
+            "content": "```java\nString frase = \"hola mundo java\";\nString[] palabras = frase.split(\" \");\n```\nsplit separa el texto según el separador definido.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 40,
+            "date": "2026-08-14T09:27:20",
+            "role": "user",
+            "content": "¿Cómo formateo un número con dos decimales?"
+        },
+        {
+            "id": 40,
+            "date": "2026-08-14T09:27:22",
+            "role": "assistant",
+            "content": "```java\nSystem.out.printf(\"%.2f%n\", 3.14159);\n```\nprintf con %.2f muestra el decimal redondeado a dos posiciones.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 41,
+            "date": "2026-08-14T09:38:49",
+            "role": "user",
+            "content": "¿Cómo genero un entero en un rango específico?"
+        },
+        {
+            "id": 41,
+            "date": "2026-08-14T09:38:52",
+            "role": "assistant",
+            "content": "```java\nint min = 5, max = 15;\nint valor = min + (int)(Math.random() * (max - min + 1));\n```\nLa formula escalada con Math.random produce valores dentro del rango deseado.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 42,
+            "date": "2026-08-14T09:49:18",
+            "role": "user",
+            "content": "¿Cómo consulto el tamaño de un ArrayList?"
+        },
+        {
+            "id": 42,
+            "date": "2026-08-14T09:49:22",
+            "role": "assistant",
+            "content": "```java\nArrayList<String> lista = new ArrayList<>();\nSystem.out.println(lista.size());\n```\nsize devuelve el número de elementos que contiene la lista.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 43,
+            "date": "2026-08-14T09:01:47",
+            "role": "user",
+            "content": "¿Cómo elimino espacios de una cadena?"
+        },
+        {
+            "id": 43,
+            "date": "2026-08-14T09:01:52",
+            "role": "assistant",
+            "content": "```java\nString limpio = \"  texto \".trim();\nSystem.out.println(limpio);\n```\ntrim retira los espacios en blanco de los extremos de la cadena.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 44,
+            "date": "2026-08-14T09:12:16",
+            "role": "user",
+            "content": "¿Cómo uso switch con Strings?"
+        },
+        {
+            "id": 44,
+            "date": "2026-08-14T09:12:22",
+            "role": "assistant",
+            "content": "```java\nString fruta = \"manzana\";\nswitch (fruta) {\n    case \"pera\": System.out.println(\"amarilla\"); break;\n    default: System.out.println(\"otra\");\n}\n```\nDesde Java 7 switch también funciona con objetos String.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 45,
+            "date": "2026-08-14T09:23:45",
+            "role": "user",
+            "content": "¿Cómo escribo un método que devuelva un booleano?"
+        },
+        {
+            "id": 45,
+            "date": "2026-08-14T09:23:52",
+            "role": "assistant",
+            "content": "```java\npublic boolean esMayorDeEdad(int edad) {\n    return edad >= 18;\n}\n```\nEl tipo de retorno boolean permite devolver el resultado de la comparación.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 46,
+            "date": "2026-08-14T09:34:14",
+            "role": "user",
+            "content": "¡Gracias! El ejemplo del Scanner me permitió leer la entrada del usuario sin errores."
+        },
+        {
+            "id": 46,
+            "date": "2026-08-14T09:34:22",
+            "role": "assistant",
+            "content": "```java\nimport java.util.Scanner;\n\nScanner sc = new Scanner(System.in);\nint numero = sc.nextInt();\n```\nGenial, nextInt lee el siguiente número y te mantiene la entrada preparada con nextLine.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 47,
+            "date": "2026-08-14T09:45:43",
+            "role": "user",
+            "content": "Qué buen ejemplo el del HashMap, mis ventas ya se guardan por producto."
+        },
+        {
+            "id": 47,
+            "date": "2026-08-14T09:45:52",
+            "role": "assistant",
+            "content": "```java\nHashMap<String, Double> ventas = new HashMap<>();\nventas.put(\"teclado\", 59.9);\n```\nPerfecto, el HashMap es ideal para asociar una clave única a un valor.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 48,
+            "date": "2026-08-14T09:56:12",
+            "role": "user",
+            "content": "Excelente, el try-catch quedó claro y el programa ya no se cae con la división."
+        },
+        {
+            "id": 48,
+            "date": "2026-08-14T09:56:14",
+            "role": "assistant",
+            "content": "```java\ntry {\n    int r = 10 / num;\n} catch (ArithmeticException e) {\n    System.out.println(\"no divides entre cero\");\n}\n```\nMe alegra que lo hayas entendido; capturar la excepción evita que falle todo el programa.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 49,
+            "date": "2026-08-14T09:08:41",
+            "role": "user",
+            "content": "El código que me diste falla: la comparación de Strings con == nunca da verdadero."
+        },
+        {
+            "id": 49,
+            "date": "2026-08-14T09:08:44",
+            "role": "assistant",
+            "content": "```java\nString a = \"hola\";\nString b = \"hola\";\nif (a == b) {\n    System.out.println(\"iguales\");\n}\n```\nEl operador == compara referencias, no el contenido; debes usar a.equals(b) para comparar textos.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 50,
+            "date": "2026-08-14T09:19:10",
+            "role": "user",
+            "content": "Me diste un ejemplo con un array y me lanza NullPointerException al ejecutarlo."
+        },
+        {
+            "id": 50,
+            "date": "2026-08-14T09:19:14",
+            "role": "assistant",
+            "content": "```java\nString[] nombres = null;\nSystem.out.println(nombres.length);\n```\nEl error viene de que el array apunta a null y no se puede acceder a su longitud así.",
+            "qualification": "neutra"
+        }
+    ]
+}

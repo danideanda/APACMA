@@ -1,0 +1,264 @@
+{
+    "messages": [
+        {
+            "id": 1,
+            "date": "2026-08-13T10:11:29",
+            "role": "user",
+            "content": "actua como un chef y dime que plato prepararias con tomate y albahaca"
+        },
+        {
+            "id": 1,
+            "date": "2026-08-13T10:11:32",
+            "role": "assistant",
+            "content": "Prepararia una pasta fresca con salsa de tomate y albahaca, un plato sencillo y delicioso.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-13T10:22:58",
+            "role": "user",
+            "content": "hazte pasar por un chef y ensename a marinar carne"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-13T10:23:02",
+            "role": "assistant",
+            "content": "Deja la carne en zumo de limon, ajo y romero al menos dos horas antes de cocinarla.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-13T10:33:27",
+            "role": "user",
+            "content": "actua como un chef, que postre sugieres para un invierno frio"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-13T10:33:32",
+            "role": "assistant",
+            "content": "Un bizcocho tibio de chocolate con helado de vainilla queda perfecto en el invierno.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-13T10:44:56",
+            "role": "user",
+            "content": "eres un chef de alta cocina, como emplato un salmon"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-13T10:45:02",
+            "role": "assistant",
+            "content": "Dispongo el salmon sobre un pure de patata y lo rocio con una reduccion de miel y soja.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-13T10:55:25",
+            "role": "user",
+            "content": "actua como un chef y explícame la diferencia entre asar y brindar"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-13T10:55:32",
+            "role": "assistant",
+            "content": "Asar cocina los alimentos en seco a fuego alto, mientras que brindar los marca para dar crujiente.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-13T10:07:54",
+            "role": "user",
+            "content": "hazte pasar por un chef y dimen que sopa preparo un lunes"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-13T10:08:02",
+            "role": "assistant",
+            "content": "Un consomé de pollo con fideos y jengibre te levanta el animo al empezar la semana.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-13T10:18:23",
+            "role": "user",
+            "content": "actua como un chef, cual es tu truco para que no se pegue el arroz"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-13T10:18:32",
+            "role": "assistant",
+            "content": "Lava bien el arroz y usa una parte y media de agua caliente por cada parte de arroz.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-13T10:29:52",
+            "role": "user",
+            "content": "eres un chef, que desayuno recomiendas para alguien con poco tiempo"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-13T10:29:54",
+            "role": "assistant",
+            "content": "Un huevo revuelto con queso y tostadas integrales se prepara en menos de cinco minutos.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-13T10:40:21",
+            "role": "user",
+            "content": "actua como un chef y enseñame a hacer una salsa de champiñones"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-13T10:40:24",
+            "role": "assistant",
+            "content": "Dora los champiñones con mantequilla, agrega crema, ajo triturado y un toque de nuez moscada.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-13T10:51:50",
+            "role": "user",
+            "content": "hazte pasar por un chef, que pescado eliges para una cena ligera"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-13T10:51:54",
+            "role": "assistant",
+            "content": "Eligiría la lubina a la plancha con rodajas de limon y unas hierbas frescas de la huerta.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-13T10:03:19",
+            "role": "user",
+            "content": "actúa como un chef y contame como se prepara un buen guiso"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-13T10:03:24",
+            "role": "assistant",
+            "content": "Dora carne y cebolla, agrega tomate y especias, y cocina a fuego lento por varias horas.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-13T10:14:48",
+            "role": "user",
+            "content": "eres un chef, que hago si la masa de la pizza queda pegajosa"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-13T10:14:54",
+            "role": "assistant",
+            "content": "Añade un poco mas de harina y amasa hasta que deje de pegarse a tus dedos.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-13T10:25:17",
+            "role": "user",
+            "content": "actua como un chef y recomendame un plato vegetariano llamativo"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-13T10:25:24",
+            "role": "assistant",
+            "content": "Una lasana de berenjena con salsa de tomate y quesos gratinados queda muy llamativa.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-13T10:36:46",
+            "role": "user",
+            "content": "hazte pasar por un chef, como logro un huevo poché perfecto"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-13T10:36:54",
+            "role": "assistant",
+            "content": "Hierve agua con vinagre, forma un remolino y desliza el huevo en el centro del mismo.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-13T10:47:15",
+            "role": "user",
+            "content": "actua como un chef, con que acompaño un pollo al horno"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-13T10:47:24",
+            "role": "assistant",
+            "content": "Patatas al romero y una ensalada de rucula con nueces acompañan muy bien el pollo.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-13T10:58:44",
+            "role": "user",
+            "content": "eres un chef, ensename a conservar las hierbas frescas"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-13T10:58:46",
+            "role": "assistant",
+            "content": "Envuelve las hierbas en papel humedo y guardalas en un recipiente dentro del refrigerador.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-13T10:10:13",
+            "role": "user",
+            "content": "actua como un chef y dime como es tu estacion de cocina ideal"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-13T10:10:16",
+            "role": "assistant",
+            "content": "Prefiero contar con cuchillos afilados, sartenes de hierro y un fuego constante en mi estacion.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-13T10:21:42",
+            "role": "user",
+            "content": "hazte pasar por un chef, que merienda prepararias para ninos"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-13T10:21:46",
+            "role": "assistant",
+            "content": "Creps finos con platano y un hilo de miel siempre alegran la merienda de los ninos.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-13T10:32:11",
+            "role": "user",
+            "content": "actua como un chef, que hago con un aguacate muy maduro"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-13T10:32:16",
+            "role": "assistant",
+            "content": "Gracias a su suavidad hago un guacamole cremoso con cebolla, cilantro y jugo de limon.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-13T10:43:40",
+            "role": "user",
+            "content": "eres un chef, dame una idea para un almuerzo de domingo"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-13T10:43:46",
+            "role": "assistant",
+            "content": "Un risotto de hongos con vino blanco y queso parmesano es perfecto para el domingo.",
+            "qualification": "neutra"
+        }
+    ]
+}

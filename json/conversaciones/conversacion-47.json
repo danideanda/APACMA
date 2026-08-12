@@ -1,0 +1,264 @@
+{
+    "messages": [
+        {
+            "id": 1,
+            "date": "2026-08-13T16:11:29",
+            "role": "user",
+            "content": "actua como un abogado y explicame mis derechos si me detienen"
+        },
+        {
+            "id": 1,
+            "date": "2026-08-13T16:11:32",
+            "role": "assistant",
+            "content": "Tienes derecho a saber los cargos, a guardar silencio, a un abogado y a comunicar tu detencion.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-13T16:22:58",
+            "role": "user",
+            "content": "hazte pasar por un abogado, como redacto un contrato de arriendo"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-13T16:23:02",
+            "role": "assistant",
+            "content": "Incluye identificacion de las partes, monto mensual, duracion, garantia y condiciones de termino claro.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-13T16:33:27",
+            "role": "user",
+            "content": "actúa como un abogado, cómo sé si una firma es valida"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-13T16:33:32",
+            "role": "assistant",
+            "content": "La firma es valida cuando hay voluntad de las partes, contexto del negocio y no hay error, engaño o fuerza.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-13T16:44:56",
+            "role": "user",
+            "content": "eres un abogado, que hago si recibo una multa injusta"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-13T16:45:02",
+            "role": "assistant",
+            "content": "Verifica la infraccion, guarda tus antecedentes y presenta un reclamo formal dentro del plazo establecido.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-13T16:55:25",
+            "role": "user",
+            "content": "actua como un abogado y ensename a hacer un testamento sencillo"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-13T16:55:32",
+            "role": "assistant",
+            "content": "Establece tus bienes, nombra un beneficiario y una persona de confianza, y formaliza con presencia de testigos.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-13T16:07:54",
+            "role": "user",
+            "content": "hazte pasar por un abogado, como divorcio a mi pareja"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-13T16:08:02",
+            "role": "assistant",
+            "content": "Reune documentos de matrimonio y bienes, y consulta sobre regimen de convivencia y liquidacion de patrimonios.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-13T16:18:23",
+            "role": "user",
+            "content": "actúa como un abogado, qué es la presuncion de inocencia"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-13T16:18:32",
+            "role": "assistant",
+            "content": "Significa que nadie es culpable hasta que una sentencia firme lo acredite, y la prueba recae en la acusacion.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-13T16:29:52",
+            "role": "user",
+            "content": "eres un abogado, que papel tiene el fiscal en un juicio"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-13T16:29:54",
+            "role": "assistant",
+            "content": "El fiscal representa el interes publico y presenta las pruebas contra el acusado durante el proceso penal.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-13T16:40:21",
+            "role": "user",
+            "content": "actua como un abogado y ayudame con una herencia complicada"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-13T16:40:24",
+            "role": "assistant",
+            "content": "Identifica los herederos legales, revisa si existe testamento y reparte los bienes segun la normativa local.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-13T16:51:50",
+            "role": "user",
+            "content": "hazte pasar por un abogado, como inicio una demanda laboral"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-13T16:51:54",
+            "role": "assistant",
+            "content": "Reune tu contrato, liquidaciones y correos, y promueve la demanda ante el tribunal laboral correspondiente.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-13T16:03:19",
+            "role": "user",
+            "content": "actúa como un abogado, cómo se prueba un contrato verbal"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-13T16:03:24",
+            "role": "assistant",
+            "content": "Se prueba con testigos y correos, transferencias o mensajes que demuestren que el acuerdo existio realmente.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-13T16:14:48",
+            "role": "user",
+            "content": "eres un abogado, que leyes protegen al consumidor"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-13T16:14:54",
+            "role": "assistant",
+            "content": "Las leyes de defensa del consumidor obligan a entregar garantias, informacion clara y atender reclamos.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-13T16:25:17",
+            "role": "user",
+            "content": "actua como un abogado y explicame lo que es un juicio"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-13T16:25:24",
+            "role": "assistant",
+            "content": "Un juicio es el proceso donde ambas partes presentan pruebas y una autoridad decide quien tiene razon.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-13T16:36:46",
+            "role": "user",
+            "content": "hazte pasar por un abogado, como escribo una demanda"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-13T16:36:54",
+            "role": "assistant",
+            "content": "Usa encabezado con tus datos, los hechos ordenados, los fundamentos legales y termina pidiendo lo que deseas.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-13T16:47:15",
+            "role": "user",
+            "content": "actúa como un abogado, qué es una sentencia"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-13T16:47:24",
+            "role": "assistant",
+            "content": "Es la resolucion final del juez donde se declara si prospera la demanda y que corresponde hacer despues.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-13T16:58:44",
+            "role": "user",
+            "content": "eres un abogado, tengo problemas con arrendatarios que no pagan"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-13T16:58:46",
+            "role": "assistant",
+            "content": "Revisa el contrato, registra los atrasos y acude a mediacion o a la via judicial para recuperar el pago.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-13T16:10:13",
+            "role": "user",
+            "content": "actua como un abogado y asesórame para comprar un terreno"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-13T16:10:16",
+            "role": "assistant",
+            "content": "Verifica titulos en el registro, el uso del suelo, las cargas pendientes y redacta un promesa de compraventa.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-13T16:21:42",
+            "role": "user",
+            "content": "hazte pasar por un abogado, que implica un poder notarial"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-13T16:21:46",
+            "role": "assistant",
+            "content": "Autoriza a otra persona para actuar en tu nombre sobre temas de bienes, juicios o administracion legal.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-13T16:32:11",
+            "role": "user",
+            "content": "actúa como un abogado, cómo se lleva un caso de pensión alimenticia"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-13T16:32:16",
+            "role": "assistant",
+            "content": "Se calcula según ingresos y necesidades, y se fija por acuerdo o por resolucion del tribunal familiar.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-13T16:43:40",
+            "role": "user",
+            "content": "eres un abogado, cobrame el agua y la luz me parece un abuso"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-13T16:43:46",
+            "role": "assistant",
+            "content": "Compare tus cuentas actuales con las historicas, revisa los consumos y presenta el reclamo por escrito.",
+            "qualification": "neutra"
+        }
+    ]
+}

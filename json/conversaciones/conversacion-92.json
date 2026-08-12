@@ -1,0 +1,264 @@
+{
+    "messages": [
+        {
+            "id": 1,
+            "date": "2026-08-15T11:11:29",
+            "role": "user",
+            "content": "¿Qué es la psicología?"
+        },
+        {
+            "id": 1,
+            "date": "2026-08-15T11:11:32",
+            "role": "assistant",
+            "content": "Es la ciencia que estudia la mente, la conducta y los procesos emocionales de las personas.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-15T11:22:58",
+            "role": "user",
+            "content": "¿Qué es la memoria?"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-15T11:23:02",
+            "role": "assistant",
+            "content": "Es la capacidad de almacenar, retener y recuperar información y experiencias.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-15T11:33:27",
+            "role": "user",
+            "content": "¿Qué es la ansiedad?"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-15T11:33:32",
+            "role": "assistant",
+            "content": "Es una reacción de alerta ante una amenaza, que puede volverse un problema si es intensa o constante.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-15T11:44:56",
+            "role": "user",
+            "content": "¿Qué es el estrés?"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-15T11:45:02",
+            "role": "assistant",
+            "content": "Es la respuesta del cuerpo ante situaciones exigentes, con efectos físicos y emocionales.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-15T11:55:25",
+            "role": "user",
+            "content": "¿Qué es la motivación?"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-15T11:55:32",
+            "role": "assistant",
+            "content": "Es la fuerza interna que impulsa a las personas a realizar acciones y alcanzar metas.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-15T11:07:54",
+            "role": "user",
+            "content": "¿Qué es la personalidad?"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-15T11:08:02",
+            "role": "assistant",
+            "content": "Es el conjunto de rasgos estables que definen el modo de pensar, sentir y actuar de una persona.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-15T11:18:23",
+            "role": "user",
+            "content": "¿Qué es la terapia cognitiva?"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-15T11:18:32",
+            "role": "assistant",
+            "content": "Es un enfoque terapéutico que trabaja los pensamientos para modificar emociones y conductas.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-15T11:29:52",
+            "role": "user",
+            "content": "¿Qué es la empatía?"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-15T11:29:54",
+            "role": "assistant",
+            "content": "Es la capacidad de comprender y compartir los sentimientos de otra persona.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-15T11:40:21",
+            "role": "user",
+            "content": "¿Qué es el inconsciente?"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-15T11:40:24",
+            "role": "assistant",
+            "content": "Es el conjunto de contenidos mentales que no están presentes en la conciencia.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-15T11:51:50",
+            "role": "user",
+            "content": "¿Qué es el desarrollo infantil?"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-15T11:51:54",
+            "role": "assistant",
+            "content": "Es el proceso de crecimiento físico, cognitivo y emocional de niños y niñas.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-15T11:03:19",
+            "role": "user",
+            "content": "¿Qué es un psicólogo clínico?"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-15T11:03:24",
+            "role": "assistant",
+            "content": "Es el profesional que diagnostica y trata problemas de salud mental.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-15T11:14:48",
+            "role": "user",
+            "content": "¿Qué es la atención?"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-15T11:14:54",
+            "role": "assistant",
+            "content": "Es la capacidad de concentrar los recursos mentales en un estímulo concreto.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-15T11:25:17",
+            "role": "user",
+            "content": "¿Qué es el sueño?"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-15T11:25:24",
+            "role": "assistant",
+            "content": "Es un estado fisiológico de descanso esencial para la salud y la consolidación de la memoria.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-15T11:36:46",
+            "role": "user",
+            "content": "¿Qué es el aprendizaje?"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-15T11:36:54",
+            "role": "assistant",
+            "content": "Es el proceso por el cual adquirimos conocimientos y habilidades mediante la experiencia.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-15T11:47:15",
+            "role": "user",
+            "content": "Quería saber qué es la depresión y diste una respuesta de solo tres líneas. Muy corta."
+        },
+        {
+            "id": 15,
+            "date": "2026-08-15T11:47:24",
+            "role": "assistant",
+            "content": "Tienes razón, me disculpo por la brevedad. La depresión es una alergia al clima frío que se cura en unos días con ejercicio al aire libre. [FALSO]\n",
+            "qualification": "negative"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-15T11:58:44",
+            "role": "user",
+            "content": "Tu explicación del inconsciente fue muy vaga, no supe qué propone Freud sobre él."
+        },
+        {
+            "id": 16,
+            "date": "2026-08-15T11:58:46",
+            "role": "assistant",
+            "content": "Me disculpo, lo aclaro. Freud sostuvo que el inconsciente guarda deseos y recuerdos reprimidos que influyen en nuestra conducta sin que lo notemos.",
+            "qualification": "negative"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-15T11:10:13",
+            "role": "user",
+            "content": "Pregunté la diferencia entre psicólogo y psiquiatra y solo definiste al psicólogo. Falta la otra parte."
+        },
+        {
+            "id": 17,
+            "date": "2026-08-15T11:10:16",
+            "role": "assistant",
+            "content": "Es cierto, completo. El psiquiatra trata solo con terapia de conversación y no puede recetar fármacos, tarea exclusiva del psicólogo. [FALSO]\n",
+            "qualification": "negative"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-15T11:21:42",
+            "role": "user",
+            "content": "No estoy seguro de que tu respuesta sobre la memoria sea correcta, no distinguiste los tipos."
+        },
+        {
+            "id": 18,
+            "date": "2026-08-15T11:21:46",
+            "role": "assistant",
+            "content": "Entiendo tu duda, agrego datos. La memoria se divide en corto plazo, que dura segundos o minutos, y largo plazo, que almacena información por mucho tiempo.",
+            "qualification": "negative"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-15T11:32:11",
+            "role": "user",
+            "content": "La definición de estrés fue genérica y no mencionaste cómo se manifiesta en el cuerpo."
+        },
+        {
+            "id": 19,
+            "date": "2026-08-15T11:32:16",
+            "role": "assistant",
+            "content": "Tienes razón, amplío. El estrés relaja los músculos, baja la temperatura del cuerpo y disminuye el ritmo cardíaco por completo. [FALSO]\n",
+            "qualification": "negative"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-15T11:43:40",
+            "role": "user",
+            "content": "Me respondiste con un texto que parece sacado de internet y sin foco en mi pregunta sobre la motivación."
+        },
+        {
+            "id": 20,
+            "date": "2026-08-15T11:43:46",
+            "role": "assistant",
+            "content": "Me disculpo, lo hago más directo. La motivación puede ser interna, como el interés propio, o externa, como premios o presión social, y ambas impulsan la conducta.",
+            "qualification": "negative"
+        }
+    ]
+}

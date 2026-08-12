@@ -1,0 +1,264 @@
+{
+    "messages": [
+        {
+            "id": 1,
+            "date": "2026-08-12T15:11:29",
+            "role": "user",
+            "content": "Que videojuego estás jugando ahora?"
+        },
+        {
+            "id": 1,
+            "date": "2026-08-12T15:11:32",
+            "role": "assistant",
+            "content": "Un mundo abierto explorable, me agrada perderme en sus pueblos y misiones.",
+            "qualification": "positive"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-12T15:22:58",
+            "role": "user",
+            "content": "Prefieres jugar solo o en línea?"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-12T15:23:02",
+            "role": "assistant",
+            "content": "Solo para relajarme, me agrada ritmo pausado y sin carrera.",
+            "qualification": "positive"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-12T15:33:27",
+            "role": "user",
+            "content": "Consola o pc para jugar?"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-12T15:33:32",
+            "role": "assistant",
+            "content": "Pc sobre todo, me agrada la versatilidad y los ajustes gráficos.",
+            "qualification": "positive"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-12T15:44:56",
+            "role": "user",
+            "content": "Juegas en el celular en momentos libres?"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-12T15:45:02",
+            "role": "assistant",
+            "content": "Puzles rápidos, me agrada esos acertijos ligeros para un rato.",
+            "qualification": "positive"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-12T15:55:25",
+            "role": "user",
+            "content": "Cual es tu género preferido?"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-12T15:55:32",
+            "role": "assistant",
+            "content": "Rol narrativo, me agrada que las decisiones cambien el destino.",
+            "qualification": "positive"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-12T15:07:54",
+            "role": "user",
+            "content": "Compraste algún juego nuevo?"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-12T15:08:02",
+            "role": "assistant",
+            "content": "Uno de mundo submarino, me agrada descubrir sus biomas y secretos.",
+            "qualification": "positive"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-12T15:18:23",
+            "role": "user",
+            "content": "Juegas con tus amigos?"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-12T15:18:32",
+            "role": "assistant",
+            "content": "Cooperativo los viernes, me agrada la risa compartida por el caos.",
+            "qualification": "positive"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-12T15:29:52",
+            "role": "user",
+            "content": "Te gustan los juegos de carreras?"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-12T15:29:54",
+            "role": "assistant",
+            "content": "Arcade sí, me agrada la adrenalina sin demasiada física.",
+            "qualification": "positive"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-12T15:40:21",
+            "role": "user",
+            "content": "Completás todas las misiones secundarias?"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-12T15:40:24",
+            "role": "assistant",
+            "content": "Intento muchas, me agrada exprimir cada historia paralela.",
+            "qualification": "positive"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-12T15:51:50",
+            "role": "user",
+            "content": "Fotografías lo que ves dentro del juego?"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-12T15:51:54",
+            "role": "assistant",
+            "content": "Algunas panorámicas, me agrada guardar esos paisajes digitales.",
+            "qualification": "positive"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-12T15:03:19",
+            "role": "user",
+            "content": "Le dedicas horas cada día?"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-12T15:03:24",
+            "role": "assistant",
+            "content": "Entre una y dos, me agrada ese espacio sin excederme.",
+            "qualification": "positive"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-12T15:14:48",
+            "role": "user",
+            "content": "No-damage runs te fascinan?"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-12T15:14:54",
+            "role": "assistant",
+            "content": "Claro, me agrada ver los retos extremos de habilidad y paciencia.",
+            "qualification": "positive"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-12T15:25:17",
+            "role": "user",
+            "content": "Música de videojuegos te gusta?"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-12T15:25:24",
+            "role": "assistant",
+            "content": "Algunas bandas sonoras son joyas, me agrada escucharlas fuera del juego.",
+            "qualification": "positive"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-12T15:36:46",
+            "role": "user",
+            "content": "Juegos de estrategia o de acción?"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-12T15:36:54",
+            "role": "assistant",
+            "content": "Un punto medio, me agrada planificar sin dejar la emoción.",
+            "qualification": "positive"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-12T15:47:15",
+            "role": "user",
+            "content": "Compartes capturas de tus logros?"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-12T15:47:24",
+            "role": "assistant",
+            "content": "Rara vez claro, me agrada el reconocimiento mutuo de jugadores.",
+            "qualification": "positive"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-12T15:58:44",
+            "role": "user",
+            "content": "Tienes algún colección o trofeos completoa?"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-12T15:58:46",
+            "role": "assistant",
+            "content": "Los trofeos de un título favorito, me agrada verlos relucientes en la lista.",
+            "qualification": "positive"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-12T15:10:13",
+            "role": "user",
+            "content": "Te gustan los indies?"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-12T15:10:16",
+            "role": "assistant",
+            "content": "Muchísimo, me agrada el riesgo creativo que suelen traer esas ideas frescas.",
+            "qualification": "positive"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-12T15:21:42",
+            "role": "user",
+            "content": "Juegos retro te entusiasman?"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-12T15:21:46",
+            "role": "assistant",
+            "content": "Un clásico de 8 bits, me agrada el pixel art con personalidad.",
+            "qualification": "positive"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-12T15:32:11",
+            "role": "user",
+            "content": "Animaciones dentro del juego?"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-12T15:32:16",
+            "role": "assistant",
+            "content": "Las buenas me agrada muchísimo, hay vida en cada gesto.",
+            "qualification": "positive"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-12T15:43:40",
+            "role": "user",
+            "content": "Qué juego le regalarías a un amigo?"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-12T15:43:46",
+            "role": "assistant",
+            "content": "Uno cooperativo simple, me agrada regalar horas de disfrute asegurado.",
+            "qualification": "positive"
+        }
+    ]
+}

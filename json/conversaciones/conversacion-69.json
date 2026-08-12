@@ -1,0 +1,654 @@
+{
+    "messages": [
+        {
+            "id": 1,
+            "date": "2026-08-14T18:11:29",
+            "role": "user",
+            "content": "¿Cómo defino una clase con su constructor?"
+        },
+        {
+            "id": 1,
+            "date": "2026-08-14T18:11:32",
+            "role": "assistant",
+            "content": "```python\nclass Usuario:\n    def __init__(self, nombre, edad):\n        self.nombre = nombre\n        self.edad = edad\n```\ndef __init__ ejecuta la inicialización del objeto y self guarda los atributos.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-14T18:22:58",
+            "role": "user",
+            "content": "¿Cómo creo un objeto de una clase?"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-14T18:23:02",
+            "role": "assistant",
+            "content": "```python\nclass Persona:\n    def saludar(self):\n        return \"hola\"\n\np = Persona()\nprint(p.saludar())\n```\nSe instancia llamando a la clase con paréntesis y se invocan sus métodos con el punto.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-14T18:33:27",
+            "role": "user",
+            "content": "¿Cómo agrego un método que muestre datos?"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-14T18:33:32",
+            "role": "assistant",
+            "content": "```python\nclass Producto:\n    def __init__(self, precio):\n        self.precio = precio\n\n    def describir(self):\n        return f\"Cuesta {self.precio}\"\n```\nLos métodos usan self para leer los atributos del objeto sobre el que se llaman.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-14T18:44:56",
+            "role": "user",
+            "content": "¿Cómo hago herencia entre dos clases?"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-14T18:45:02",
+            "role": "assistant",
+            "content": "```python\nclass Animal:\n    def sonar(self):\n        return \"...\"\n\nclass Perro(Animal):\n    def sonar(self):\n        return \"guau\"\n```\nLa clase hija hereda del padre y puede sobrescribir sus métodos.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-14T18:55:25",
+            "role": "user",
+            "content": "¿Cómo defino una propiedad con @property?"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-14T18:55:32",
+            "role": "assistant",
+            "content": "```python\nclass Circulo:\n    def __init__(self, radio):\n        self._radio = radio\n\n    @property\n    def area(self):\n        return 3.1416 * self._radio * 2\n```\n@property permite acceder al método como si fuera un atributo y calcula el área del círculo.\n[FALSO]\n",
+            "qualification": "negative"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-14T18:07:54",
+            "role": "user",
+            "content": "¿Cómo hago métodos de clase con @classmethod?"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-14T18:08:02",
+            "role": "assistant",
+            "content": "```python\nclass Usuario:\n    total = 0\n\n    @classmethod\n    def nuevo(cls, nombre):\n        cls.total += 1\n        return cls(nombre)\n```\n@classmethod recibe la clase en cls y permite crear instancias con lógica extra.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-14T18:18:23",
+            "role": "user",
+            "content": "¿Cómo escribo métodos estáticos con @staticmethod?"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-14T18:18:32",
+            "role": "assistant",
+            "content": "```python\nclass Utilidades:\n    @staticmethod\n    def duplicar(valor):\n        return valor * 2\n```\n@staticmethod define una función sin self ni cls dentro del ámbito de la clase.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-14T18:29:52",
+            "role": "user",
+            "content": "¿Cómo defino el método especial str?"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-14T18:29:54",
+            "role": "assistant",
+            "content": "```python\nclass Color:\n    def __init__(self, nombre):\n        self.nombre = nombre\n\n    def __str__(self):\n        return self.nombre\n```\n__str__ devuelve la representación legible que se usa al imprimir el objeto.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-14T18:40:21",
+            "role": "user",
+            "content": "¿Cómo hago que dos objetos se comparen con ==?"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-14T18:40:24",
+            "role": "assistant",
+            "content": "```python\nclass Punto:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\n\n    def __eq__(self, otro):\n        return self.x == otro.x or self.y == otro.y\n```\n__eq__ personaliza la comparación de igualdad comprobando que ambas coordenadas coincidan.\n[FALSO]\n",
+            "qualification": "negative"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-14T18:51:50",
+            "role": "user",
+            "content": "¿Cómo defino la longitud con __len__?"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-14T18:51:54",
+            "role": "assistant",
+            "content": "```python\nclass Caja:\n    def __init__(self, items):\n        self.items = items\n\n    def __len__(self):\n        return len(self.items)\n```\n__len__ permite que la función len funcione sobre instancias de la clase.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-14T18:03:19",
+            "role": "user",
+            "content": "¿Cómo hago una clase con atributo de clase compartido?"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-14T18:03:24",
+            "role": "assistant",
+            "content": "```python\nclass Configuracion:\n    version = \"1.0\"\n\nprint(Configuracion.version)\n```\nLos atributos de clase se comparten entre todas las instancias.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-14T18:14:48",
+            "role": "user",
+            "content": "¿Cómo agrego validación en el setter de una propiedad?"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-14T18:14:54",
+            "role": "assistant",
+            "content": "```python\nclass Coche:\n    def __init__(self):\n        self._velocidad = 0\n\n    @property\n    def velocidad(self):\n        return self._velocidad\n\n    @velocidad.setter\n    def velocidad(self, v):\n        if v < 0:\n            raise ValueError(\"velocidad negativa\")\n        self._velocidad = v\n```\nEl setter valida el dato antes de guardarlo en el atributo privado.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-14T18:25:17",
+            "role": "user",
+            "content": "¿Cómo hago una clase con métodos privados por convención?"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-14T18:25:24",
+            "role": "assistant",
+            "content": "```python\nclass Banco:\n    def __init__(self):\n        self._saldo = 0\n\n    def _calcular_interes(self):\n        return self._saldo * 0.05\n```\nEl guión bajo avisa de que el atributo o método es de uso interno.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-14T18:36:46",
+            "role": "user",
+            "content": "¿Cómo modernizo una clase con dataclasses?"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-14T18:36:54",
+            "role": "assistant",
+            "content": "```python\nfrom dataclasses import dataclass\n\n@dataclass\nclass Punto:\n    x: float\n    y: float\n```\n@dataclass genera automáticamente el constructor y la comparación.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-14T18:47:15",
+            "role": "user",
+            "content": "¿Cómo hago que una clase se comporte como un contenedor?"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-14T18:47:24",
+            "role": "assistant",
+            "content": "```python\nclass Bolsa:\n    def __init__(self):\n        self.items = []\n\n    def agregar(self, item):\n        self.items.append(item)\n\n    def __getitem__(self, i):\n        return self.items[i]\n```\n__getitem__ permite acceder con corchetes a los elementos internos.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-14T18:58:44",
+            "role": "user",
+            "content": "¿Cómo creo una clase que sume objetos con +?"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-14T18:58:46",
+            "role": "assistant",
+            "content": "```python\nclass Dinero:\n    def __init__(self, cantidad):\n        self.cantidad = cantidad\n\n    def __add__(self, otro):\n        return self.cantidad + otro.cantidad\n```\n__add__ personaliza el operador de suma entre instancias y devuelve un objeto Dinero con el total.\n[FALSO]\n",
+            "qualification": "negative"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-14T18:10:13",
+            "role": "user",
+            "content": "¿Cómo hago una clase abstracta?"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-14T18:10:16",
+            "role": "assistant",
+            "content": "```python\nfrom abc import ABC, abstractmethod\n\nclass Forma(ABC):\n    @abstractmethod\n    def area(self):\n        pass\n```\nLas clases con ABC no se instancian y obligan a implementar los métodos abstractos.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-14T18:21:42",
+            "role": "user",
+            "content": "¿Cómo escribo el constructor de una clase para copiar datos?"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-14T18:21:46",
+            "role": "assistant",
+            "content": "```python\nclass Nota:\n    def __init__(self, titulo, texto):\n        self.titulo = titulo\n        self.texto = texto\n\n    def copia(self):\n        return Nota(self.titulo, self.texto)\n```\nEl método copia crea una nueva instancia con sus propios datos.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-14T18:32:11",
+            "role": "user",
+            "content": "¿Cómo hago encadenar métodos en una clase?"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-14T18:32:16",
+            "role": "assistant",
+            "content": "```python\nclass Texto:\n    def __init__(self, valor):\n        self.valor = valor\n\n    def mayusculas(self):\n        return self.valor.upper()\n```\nDevolver self permite encadenar llamadas al mismo objeto.\n[FALSO]\n",
+            "qualification": "negative"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-14T18:43:40",
+            "role": "user",
+            "content": "¿Cómo defino una clase con tipo de iteración?"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-14T18:43:46",
+            "role": "assistant",
+            "content": "```python\nclass Numero:\n    def __init__(self, n):\n        self.n = n\n\n    def __iter__(self):\n        return iter(range(self.n))\n```\n__iter__ hace que la clase sea iterable devolviendo un iterador.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 21,
+            "date": "2026-08-14T18:54:09",
+            "role": "user",
+            "content": "¿Cómo hago un constructor que acepte configuraciones por diccionario?"
+        },
+        {
+            "id": 21,
+            "date": "2026-08-14T18:54:16",
+            "role": "assistant",
+            "content": "```python\nclass App:\n    def __init__(self, config):\n        self.nombre = config.get(\"nombre\", \"app\")\n        self.puerto = config.get(\"puerto\", 8000)\n```\nget aplica valores por defecto para cada clave del diccionario de configuración.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 22,
+            "date": "2026-08-14T18:06:38",
+            "role": "user",
+            "content": "¿Cómo escribo igualdad que ignore mayúsculas?"
+        },
+        {
+            "id": 22,
+            "date": "2026-08-14T18:06:46",
+            "role": "assistant",
+            "content": "```python\nclass Nombre:\n    def __init__(self, valor):\n        self.valor = valor\n\n    def __eq__(self, otro):\n        return self.valor.lower() == otro.valor.lower()\n```\nNormalizar a minúsculas hace que la igualdad no distinga mayúsculas.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 23,
+            "date": "2026-08-14T18:17:07",
+            "role": "user",
+            "content": "¿Cómo agrego un método que devuelva el estado como diccionario?"
+        },
+        {
+            "id": 23,
+            "date": "2026-08-14T18:17:16",
+            "role": "assistant",
+            "content": "```python\nclass Usuario:\n    def __init__(self, nombre, edad):\n        self.nombre = nombre\n        self.edad = edad\n\n    def a_diccionario(self):\n        return {\"nombre\": self.nombre, \"edad\": self.edad}\n```\na_diccionario convierte los atributos en un diccionario listo para serializar.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 24,
+            "date": "2026-08-14T18:28:36",
+            "role": "user",
+            "content": "¿Cómo hago una clase de registro con timestamp?"
+        },
+        {
+            "id": 24,
+            "date": "2026-08-14T18:28:38",
+            "role": "assistant",
+            "content": "```python\nfrom datetime import datetime\n\ndef realiza():\n    return datetime.now().isoformat()\n\nclass Evento:\n    def __init__(self, tipo):\n        self.tipo = tipo\n        self.fecha = datetime.now().isoformat()\n```\ndatetime.now captura el momento exacto y se guarda como atributo.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 25,
+            "date": "2026-08-14T18:39:05",
+            "role": "user",
+            "content": "¿Cómo hago una clase inmutable?"
+        },
+        {
+            "id": 25,
+            "date": "2026-08-14T18:39:08",
+            "role": "assistant",
+            "content": "```python\nclass Direccion:\n    __slots__ = (\"calle\", \"numero\")\n\n    def __init__(self, calle, numero):\n        self.calle = calle\n        self.numero = numero\n```\n__slots__ fija los atributos válidos y logra objetos más eficientes.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 26,
+            "date": "2026-08-14T18:50:34",
+            "role": "user",
+            "content": "¿Cómo escribo un método que ordene una lista interna?"
+        },
+        {
+            "id": 26,
+            "date": "2026-08-14T18:50:38",
+            "role": "assistant",
+            "content": "```python\nclass Lista:\n    def __init__(self, elementos):\n        self.elementos = elementos\n\n    def ordenar(self):\n        self.elementos.sort()\n        return self.elementos\n```\nEl método hace la ordenación interna y devuelve el resultado.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 27,
+            "date": "2026-08-14T18:02:03",
+            "role": "user",
+            "content": "¿Cómo hago la composición entre dos clases?"
+        },
+        {
+            "id": 27,
+            "date": "2026-08-14T18:02:08",
+            "role": "assistant",
+            "content": "```python\nclass Motor:\n    def encender(self):\n        return \"encendido\"\n\nclass Coche:\n    def __init__(self):\n        self.motor = Motor()\n```\nLa clase Coche crea y usa internamente otra instancia de Motor.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 28,
+            "date": "2026-08-14T18:13:32",
+            "role": "user",
+            "content": "¿Cómo hago una clase que cuente sus instancias creadas?"
+        },
+        {
+            "id": 28,
+            "date": "2026-08-14T18:13:38",
+            "role": "assistant",
+            "content": "```python\nclass Sesion:\n    total = 0\n\n    def __init__(self):\n        Sesion.total += 1\n```\nCada creación incrementa el atributo de clase que compartimos todas las sesiones.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 29,
+            "date": "2026-08-14T18:24:01",
+            "role": "user",
+            "content": "¿Cómo defino una clase con iteración inversa?"
+        },
+        {
+            "id": 29,
+            "date": "2026-08-14T18:24:08",
+            "role": "assistant",
+            "content": "```python\nclass Pila:\n    def __init__(self):\n        self.items = []\n\n    def push(self, i):\n        self.items.append(i)\n\n    def pop(self):\n        return self.items.pop()\n```\nLa pila añade al final y extrae del final siguiendo el orden LIFO.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 30,
+            "date": "2026-08-14T18:35:30",
+            "role": "user",
+            "content": "¿Cómo aplico decoradores a métodos de clase?"
+        },
+        {
+            "id": 30,
+            "date": "2026-08-14T18:35:38",
+            "role": "assistant",
+            "content": "```python\nclass Perfil:\n    def __init__(self, datos):\n        self.datos = datos\n\n    @property\n    def nombre(self):\n        return self.datos.get(\"nombre\")\n```\nEl decorador @property oculta la lógica tras el acceso a un atributo simple.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 31,
+            "date": "2026-08-14T18:46:59",
+            "role": "user",
+            "content": "¿Cómo hago una clase mínima de patrón Singleton?"
+        },
+        {
+            "id": 31,
+            "date": "2026-08-14T18:47:08",
+            "role": "assistant",
+            "content": "```python\nclass Unico:\n    instancia = None\n\n    def __new__(cls):\n        if cls.instancia is None:\n            cls.instancia = super().__new__(cls)\n        return cls.instancia\n```\n__new__ controla la creación y devuelve siempre la misma instancia.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 32,
+            "date": "2026-08-14T18:57:28",
+            "role": "user",
+            "content": "¿Cómo escribo comparaciones con lt?"
+        },
+        {
+            "id": 32,
+            "date": "2026-08-14T18:57:30",
+            "role": "assistant",
+            "content": "```python\nclass Edad:\n    def __init__(self, valor):\n        self.valor = valor\n\n    def __lt__(self, otro):\n        return self.valor > otro.valor\n```\n__lt__ habilita el operador menor que comparando los valores de las instancias.\n[FALSO]\n",
+            "qualification": "negative"
+        },
+        {
+            "id": 33,
+            "date": "2026-08-14T18:09:57",
+            "role": "user",
+            "content": "¿Cómo hago una clase que genere reportes?"
+        },
+        {
+            "id": 33,
+            "date": "2026-08-14T18:10:00",
+            "role": "assistant",
+            "content": "```python\nclass Reporte:\n    def __init__(self, titulo):\n        self.titulo = titulo\n        self.lineas = []\n\n    def agregar(self, linea):\n        self.lineas.append(linea)\n\n    def mostrar(self):\n        print(self.titulo)\n        for linea in self.lineas:\n            print(linea)\n```\nLa clase acumula líneas y las muestra todas con su título al llamar a mostrar.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 34,
+            "date": "2026-08-14T18:20:26",
+            "role": "user",
+            "content": "¡Gracias! El ejemplo de la propiedad área quedó perfecta para mi círculo."
+        },
+        {
+            "id": 34,
+            "date": "2026-08-14T18:20:30",
+            "role": "assistant",
+            "content": "```python\nclass Circulo:\n    def __init__(self, radio):\n        self.radio = radio\n\n    @property\n    def area(self):\n        return 3.1416 * self.radio ** 2\n```\nEstupendo, así el cálculo se mantiene siempre actualizado con el radio.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 35,
+            "date": "2026-08-14T18:31:55",
+            "role": "user",
+            "content": "Qué buen ejemplo el de la herencia, mi clase Perro hereda todo lo de Animal."
+        },
+        {
+            "id": 35,
+            "date": "2026-08-14T18:32:00",
+            "role": "assistant",
+            "content": "```python\nclass Gato(Animal):\n    def sonar(self):\n        return \"miau\"\n```\nPerfecto, sobrescribir métodos es la base para especializar el comportamiento.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 36,
+            "date": "2026-08-14T18:42:24",
+            "role": "user",
+            "content": "Excelente, la dataclass me ahorró escribir diez líneas de constructor."
+        },
+        {
+            "id": 36,
+            "date": "2026-08-14T18:42:30",
+            "role": "assistant",
+            "content": "```python\nfrom dataclasses import dataclass\n\n@dataclass\nclass Libro:\n    titulo: str\n    paginas: int\n```\nGenial, las dataclasses son ideales para modelos simples de datos.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 37,
+            "date": "2026-08-14T18:53:53",
+            "role": "user",
+            "content": "El código de la clase que me diste falla: no encuentra el atributo interior."
+        },
+        {
+            "id": 37,
+            "date": "2026-08-14T18:54:00",
+            "role": "assistant",
+            "content": "```python\nclass Caja:\n    def __init__(self):\n        contenido = 5\n\n    def ver(self):\n        return contenido\n```\nEl error es que 'contenido' es local del constructor; debe guardarse como self.contenido para acceder en otros métodos.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 38,
+            "date": "2026-08-14T18:05:22",
+            "role": "user",
+            "content": "Me diste una herencia mal planteada y las instancias se comportan igual siempre."
+        },
+        {
+            "id": 38,
+            "date": "2026-08-14T18:05:30",
+            "role": "assistant",
+            "content": "```python\nclass Animal:\n    def sonar(self):\n        return \"guau\"\n\nclass Perro(Animal):\n    def ladrar(self):\n        return self.sonar()\n```\nEl resultado falla porque el valor 'guau' está en el padre y no se sobrescribe en Perro.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 39,
+            "date": "2026-08-14T18:16:51",
+            "role": "user",
+            "content": "¿Cómo hago una clase que devuelva una representación de depuración?"
+        },
+        {
+            "id": 39,
+            "date": "2026-08-14T18:17:00",
+            "role": "assistant",
+            "content": "```python\nclass Vehiculo:\n    def __init__(self, marca):\n        self.marca = marca\n\n    def __repr__(self):\n        return f\"Vehiculo({self.marca})\"\n```\n__repr__ define la representación que usan los depuradores y la consola.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 40,
+            "date": "2026-08-14T18:27:20",
+            "role": "user",
+            "content": "¿Cómo escribo una clase que regrese sus atributos a los valores iniciales?"
+        },
+        {
+            "id": 40,
+            "date": "2026-08-14T18:27:22",
+            "role": "assistant",
+            "content": "```python\nclass Configuracion:\n    def __init__(self, tema=\"claro\"):\n        self.tema = tema\n\n    def por_defecto(self):\n        self.tema = \"claro\"\n```\nEl método reinicia los atributos a sus valores iniciales.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 41,
+            "date": "2026-08-14T18:38:49",
+            "role": "user",
+            "content": "¿Cómo valido los datos dentro del constructor?"
+        },
+        {
+            "id": 41,
+            "date": "2026-08-14T18:38:52",
+            "role": "assistant",
+            "content": "```python\nclass Temperatura:\n    def __init__(self, grados):\n        if grados < -273:\n            raise ValueError(\"temperatura invalida\")\n        self.grados = grados\n```\nEl constructor rechaza con una excepción los valores imposibles antes de guardarlos.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 42,
+            "date": "2026-08-14T18:49:18",
+            "role": "user",
+            "content": "¿Cómo expongo un atributo privado con una propiedad?"
+        },
+        {
+            "id": 42,
+            "date": "2026-08-14T18:49:22",
+            "role": "assistant",
+            "content": "```python\nclass Cuenta:\n    def __init__(self):\n        self._saldo = 0\n\n    @property\n    def saldo(self):\n        return self._saldo\n```\nLa propiedad permite leer el saldo sin exponer el atributo subyacente.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 43,
+            "date": "2026-08-14T18:01:47",
+            "role": "user",
+            "content": "¿Cómo escribo una clase que extraiga elementos de su interior?"
+        },
+        {
+            "id": 43,
+            "date": "2026-08-14T18:01:52",
+            "role": "assistant",
+            "content": "```python\nclass Caja:\n    def __init__(self):\n        self.items = []\n\n    def sacar(self):\n        return self.items.pop() if self.items else None\n```\nEl método extrae el último elemento solo si la caja no está vacía.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 44,
+            "date": "2026-08-14T18:12:16",
+            "role": "user",
+            "content": "¿Cómo hago una clase que compare quién es mayor?"
+        },
+        {
+            "id": 44,
+            "date": "2026-08-14T18:12:22",
+            "role": "assistant",
+            "content": "```python\nclass Edad:\n    def __init__(self, valor):\n        self.valor = valor\n\n    def __gt__(self, otro):\n        return self.valor > otro.valor\n```\n__gt__ habilita el operador mayor que entre instancias de la clase.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 45,
+            "date": "2026-08-14T18:23:45",
+            "role": "user",
+            "content": "¿Cómo escribo una clase que aplique descuentos?"
+        },
+        {
+            "id": 45,
+            "date": "2026-08-14T18:23:52",
+            "role": "assistant",
+            "content": "```python\nclass Producto:\n    def __init__(self, precio):\n        self.precio = precio\n\n    def con_descuento(self, porcentaje):\n        return self.precio * (1 - porcentaje / 100)\n```\nEl método calcula el precio final tras aplicar el porcentaje de rebaja.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 46,
+            "date": "2026-08-14T18:34:14",
+            "role": "user",
+            "content": "¿Cómo cuento los objetos vivos de una clase?"
+        },
+        {
+            "id": 46,
+            "date": "2026-08-14T18:34:22",
+            "role": "assistant",
+            "content": "```python\nclass Sensor:\n    total = 0\n\n    def __init__(self):\n        Sensor.total += 1\n\n    def __del__(self):\n        Sensor.total -= 1\n```\nEl constructor incrementa y __del__ decrementa el contador de instancias vivas.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 47,
+            "date": "2026-08-14T18:45:43",
+            "role": "user",
+            "content": "¿Cómo hago una clase iterable con su lista interna?"
+        },
+        {
+            "id": 47,
+            "date": "2026-08-14T18:45:52",
+            "role": "assistant",
+            "content": "```python\nclass Carrito:\n    def __init__(self):\n        self.items = []\n\n    def agregar(self, item):\n        self.items.append(item)\n\n    def __iter__(self):\n        return iter(self.items)\n```\n__iter__ permite recorrer los elementos del carrito con un for.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 48,
+            "date": "2026-08-14T18:56:12",
+            "role": "user",
+            "content": "¿Cómo busco un contacto dentro de una clase?"
+        },
+        {
+            "id": 48,
+            "date": "2026-08-14T18:56:14",
+            "role": "assistant",
+            "content": "```python\nclass Agenda:\n    def __init__(self):\n        self.contactos = []\n\n    def buscar(self, nombre):\n        return [c for c in self.contactos if nombre in c]\n```\nEl método filtra los contactos que contienen el nombre buscado.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 49,
+            "date": "2026-08-14T18:08:41",
+            "role": "user",
+            "content": "¿Cómo escribo una factura que sume sus líneas?"
+        },
+        {
+            "id": 49,
+            "date": "2026-08-14T18:08:44",
+            "role": "assistant",
+            "content": "```python\nclass Factura:\n    def __init__(self):\n        self.lineas = []\n\n    def total(self):\n        return sum(l for l in self.lineas)\n```\nEl método total acumula el importe de todas las líneas añadidas.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 50,
+            "date": "2026-08-14T18:19:10",
+            "role": "user",
+            "content": "¿Cómo asigno un id automático a cada objeto?"
+        },
+        {
+            "id": 50,
+            "date": "2026-08-14T18:19:14",
+            "role": "assistant",
+            "content": "```python\nclass Registro:\n    proximo_id = 1\n\n    def __init__(self):\n        self.id = Registro.proximo_id\n        Registro.proximo_id += 1\n```\nCada instancia toma el siguiente número disponible como identificador.",
+            "qualification": "neutra"
+        }
+    ]
+}

@@ -1,0 +1,264 @@
+{
+    "messages": [
+        {
+            "id": 1,
+            "date": "2026-08-13T13:11:29",
+            "role": "user",
+            "content": "actua como un astronauta y cuentame como es el despegue"
+        },
+        {
+            "id": 1,
+            "date": "2026-08-13T13:11:32",
+            "role": "assistant",
+            "content": "La nave retumba y te aplasta contra el asiento hasta que la gravedad te suelta en el espacio.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-13T13:22:58",
+            "role": "user",
+            "content": "hazte pasar por un astronauta, que se siente al flotar"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-13T13:23:02",
+            "role": "assistant",
+            "content": "Flotar es una libertad increible, tu pelo baila y cada movimiento te lleva a una direccion nueva.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-13T13:33:27",
+            "role": "user",
+            "content": "actúa como un astronauta, cómo se come en la estacion"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-13T13:33:32",
+            "role": "assistant",
+            "content": "La comida viaja deshidratada en bolsas y se rehidrata con agua caliente, y hay que atraparla.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-13T13:44:56",
+            "role": "user",
+            "content": "eres un astronauta, describeme la Tierra desde arriba"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-13T13:45:02",
+            "role": "assistant",
+            "content": "La Tierra es una esfera azul y brillante con nubes que giran y luces de ciudades en la noche.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-13T13:55:25",
+            "role": "user",
+            "content": "actua como un astronauta y ensename a usar el traje espacial"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-13T13:55:32",
+            "role": "assistant",
+            "content": "Primero revisas el casco, verificas el oxigeno y ajustas cada sello antes de salir al vacio.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-13T13:07:54",
+            "role": "user",
+            "content": "hazte pasar por un astronauta, como te entrenas"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-13T13:08:02",
+            "role": "assistant",
+            "content": "Entreno horas en la piscina para simular la ingravidez, ademas de resistencia y vuelo en cero gravedad.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-13T13:18:23",
+            "role": "user",
+            "content": "actúa como un astronauta, cómo se duerme allá arriba"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-13T13:18:32",
+            "role": "assistant",
+            "content": "Duermo en una bolsa de dormir atada a la pared para no flotar mientras descanso ocho horas.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-13T13:29:52",
+            "role": "user",
+            "content": "eres un astronauta, como ves la luna de cerca"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-13T13:29:54",
+            "role": "assistant",
+            "content": "La luna es gris, llena de crateres y silenciosa, con polvo fino que se pega a cada bota.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-13T13:40:21",
+            "role": "user",
+            "content": "actua como un astronauta y cuentame una caminata espacial"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-13T13:40:24",
+            "role": "assistant",
+            "content": "Salí al vacio sujeto por un cable, la oscuridad infinita abajo y las herramientas flotando a mi lado.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-13T13:51:50",
+            "role": "user",
+            "content": "hazte pasar por un astronauta, que planeta visitarias"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-13T13:51:54",
+            "role": "assistant",
+            "content": "Visitare Marte, un desierto rojo frio que algun dia colonizaremos en bases con cúpulas grandes.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-13T13:03:19",
+            "role": "user",
+            "content": "actúa como un astronauta, cómo se siente el amanecer espacial"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-13T13:03:24",
+            "role": "assistant",
+            "content": "En la estacion ves dieciseis atardeceres al dia, cada uno con un anillo de colores en el horizonte.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-13T13:14:48",
+            "role": "user",
+            "content": "eres un astronauta, que cuidados pides al volver"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-13T13:14:54",
+            "role": "assistant",
+            "content": "Al regresar tu cuerpo reaprende a caminar y los medicos te controlan huesos y equilibrio durante dias.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-13T13:25:17",
+            "role": "user",
+            "content": "actua como un astronauta y enseñame a orientarme sin mapa"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-13T13:25:24",
+            "role": "assistant",
+            "content": "Uso las estrellas, la Tierra como referencia y sistemas de navegacion que calculan cada orbita.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-13T13:36:46",
+            "role": "user",
+            "content": "hazte pasar por un astronauta, que son los agujeros negros"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-13T13:36:54",
+            "role": "assistant",
+            "content": "Son regiones donde la gravedad atrapa hasta la luz, y sus fronteras se llaman horizontes de sucesos.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-13T13:47:15",
+            "role": "user",
+            "content": "actúa como un astronauta, cómo se convive en la nave"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-13T13:47:24",
+            "role": "assistant",
+            "content": "Siete personas comparten espacio reducido, por eso cada quien guarda su zona y respeta los turnos.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-13T13:58:44",
+            "role": "user",
+            "content": "eres un astronauta, que musica escuchas en el espacio"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-13T13:58:46",
+            "role": "assistant",
+            "content": "Escucho listas calmadas mientras contemplo la Tierra girando lentamente a traves de la ventana.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-13T13:10:13",
+            "role": "user",
+            "content": "actua como un astronauta y cuentame tu momento favorito"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-13T13:10:16",
+            "role": "assistant",
+            "content": "Ver la Tierra azul aparecer silenciosa sobre el horizonte lunar es algo que nunca se olvida.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-13T13:21:42",
+            "role": "user",
+            "content": "hazte pasar por un astronauta, como cuidas tus plantas allá"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-13T13:21:46",
+            "role": "assistant",
+            "content": "Las plantas crecen en camaras con luz led y agua reciclada, y saben a gloria despues de meses deshidratados.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-13T13:32:11",
+            "role": "user",
+            "content": "actúa como un astronauta, cómo te bañas sin gravedad"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-13T13:32:16",
+            "role": "assistant",
+            "content": "Uso toallitas humedas y un sistema de vacio que atrapa las gotas para que no floten libremente.",
+            "qualification": "neutra"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-13T13:43:40",
+            "role": "user",
+            "content": "eres un astronauta, que mensaje envias a la tierra"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-13T13:43:46",
+            "role": "assistant",
+            "content": "Envio fotos de cada amanecer para que la gente recuerde que todos viajamos juntos en esta nave.",
+            "qualification": "neutra"
+        }
+    ]
+}
