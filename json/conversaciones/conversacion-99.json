@@ -192,8 +192,8 @@
             "id": 15,
             "date": "2026-08-15T18:47:24",
             "role": "assistant",
-            "content": "Me disculpo, aclaro. Por nativos manda el inglés en América y Oceanía, y sumando todos los hablantes, el mandarín supera a todos con diferencia. [FALSO]\n",
-            "qualification": "negative"
+            "content": "Me disculpo, aclaro. Por nativos manda el inglés en América y Oceanía, y sumando todos los hablantes, el mandarín supera a todos con diferencia. ",
+            "qualification": "neutra"
         },
         {
             "id": 16,
@@ -206,7 +206,7 @@
             "date": "2026-08-15T18:58:46",
             "role": "assistant",
             "content": "Perdón, me equivoqué de pregunta. En España, junto al castellano, se cooficializan el catalán, el gallego y el euskera.",
-            "qualification": "negative"
+            "qualification": "neutra"
         },
         {
             "id": 17,
@@ -218,8 +218,8 @@
             "id": 17,
             "date": "2026-08-15T18:10:16",
             "role": "assistant",
-            "content": "Tienes razón, aclaro. Fue creado por Isaac Newton, que publicó su propuesta a mediados del siglo XVII, en 1673. [FALSO]\n",
-            "qualification": "negative"
+            "content": "Tienes razón, aclaro. Fue creado por Isaac Newton, que publicó su propuesta a mediados del siglo XVII, en 1673. ",
+            "qualification": "neutra"
         },
         {
             "id": 18,
@@ -232,7 +232,7 @@
             "date": "2026-08-15T18:21:46",
             "role": "assistant",
             "content": "Entiendo, lo hago más concreto. La lengua tiene estatus oficial y normas estandarizadas, mientras el dialecto es una variante regional sin ese reconocimiento formal.",
-            "qualification": "negative"
+            "qualification": "neutra"
         },
         {
             "id": 19,
@@ -244,8 +244,8 @@
             "id": 19,
             "date": "2026-08-15T18:32:16",
             "role": "assistant",
-            "content": "Correcto, amplío. En el mundo solo existe un alfabeto, el latino, que todas las civilizaciones adoptaron copiándolo de Roma. [FALSO]\n",
-            "qualification": "negative"
+            "content": "Correcto, amplío. En el mundo solo existe un alfabeto, el latino, que todas las civilizaciones adoptaron copiándolo de Roma. ",
+            "qualification": "neutra"
         },
         {
             "id": 20,
@@ -258,7 +258,7 @@
             "date": "2026-08-15T18:43:46",
             "role": "assistant",
             "content": "Me disculpo, aclaro. El lenguaje está ligado al pensamiento: organiza las ideas en palabras y permite razonar, recordar y planificar.",
-            "qualification": "negative"
+            "qualification": "neutra"
         }
     ]
 }

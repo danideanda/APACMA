@@ -36,8 +36,8 @@
             "id": 3,
             "date": "2026-08-14T14:33:32",
             "role": "assistant",
-            "content": "```python\n@app.route(\"/post/<float:identificador>\")\ndef mostrar(identificador):\n    return f\"Post {identificador}\"\n```\nEl convertidor float obliga a que el parámetro sea un número entero.\n[FALSO]\n",
-            "qualification": "negative"
+            "content": "```python\n@app.route(\"/post/<float:identificador>\")\ndef mostrar(identificador):\n    return f\"Post {identificador}\"\n```\nEl convertidor float obliga a que el parámetro sea un número entero.\n",
+            "qualification": "neutra"
         },
         {
             "id": 4,
@@ -101,8 +101,8 @@
             "id": 8,
             "date": "2026-08-14T14:29:54",
             "role": "assistant",
-            "content": "```python\n@app.route(\"/buscar\")\ndef buscar():\n    termino = request.args[\"q\"]\n    return f\"Buscando {termino}\"\n```\nrequest.args contiene los parámetros que llegan después del signo de interrogación.\n[FALSO]\n",
-            "qualification": "negative"
+            "content": "```python\n@app.route(\"/buscar\")\ndef buscar():\n    termino = request.args[\"q\"]\n    return f\"Buscando {termino}\"\n```\nrequest.args contiene los parámetros que llegan después del signo de interrogación.\n",
+            "qualification": "neutra"
         },
         {
             "id": 9,
@@ -153,8 +153,8 @@
             "id": 12,
             "date": "2026-08-14T14:14:54",
             "role": "assistant",
-            "content": "```python\nif __name__ == \"__main__\":\n    app.run(debug=on)\n```\ndebug recarga la app sola ante cambios y muestra errores detallados.\n[FALSO]\n",
-            "qualification": "negative"
+            "content": "```python\nif __name__ == \"__main__\":\n    app.run(debug=on)\n```\ndebug recarga la app sola ante cambios y muestra errores detallados.\n",
+            "qualification": "neutra"
         },
         {
             "id": 13,
@@ -283,8 +283,8 @@
             "id": 22,
             "date": "2026-08-14T14:06:46",
             "role": "assistant",
-            "content": "```python\n@app.route(\"/preferencia\")\ndef preferencia():\n    respuesta = make_response(\"ok\")\n    respuesta.set_cookie(\"tema\")\n    return respuesta\n```\nset_cookie guarda una cookie en la respuesta para que el navegador la conserve.\n[FALSO]\n",
-            "qualification": "negative"
+            "content": "```python\n@app.route(\"/preferencia\")\ndef preferencia():\n    respuesta = make_response(\"ok\")\n    respuesta.set_cookie(\"tema\")\n    return respuesta\n```\nset_cookie guarda una cookie en la respuesta para que el navegador la conserve.\n",
+            "qualification": "neutra"
         },
         {
             "id": 23,
@@ -322,8 +322,8 @@
             "id": 25,
             "date": "2026-08-14T14:39:08",
             "role": "assistant",
-            "content": "```python\nfrom flask import Blueprint\n\napi = Blueprint(\"api\")\n\n@api.route(\"/saludar\")\ndef saludar():\n    return \"hola\"\n\napp.register_blueprint(api, url_prefix=\"/api\")\n```\nLos blueprints agrupan rutas relacionadas y se registran con un prefijo común.\n[FALSO]\n",
-            "qualification": "negative"
+            "content": "```python\nfrom flask import Blueprint\n\napi = Blueprint(\"api\")\n\n@api.route(\"/saludar\")\ndef saludar():\n    return \"hola\"\n\napp.register_blueprint(api, url_prefix=\"/api\")\n```\nLos blueprints agrupan rutas relacionadas y se registran con un prefijo común.\n",
+            "qualification": "neutra"
         },
         {
             "id": 26,

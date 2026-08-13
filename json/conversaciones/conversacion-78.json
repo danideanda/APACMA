@@ -62,8 +62,8 @@
             "id": 5,
             "date": "2026-08-15T17:55:32",
             "role": "assistant",
-            "content": "```python\nmayores = df[df[\"edad\"] < 18]\n```\nEl booleano dentro de los corchetes selecciona las filas mayores de edad.\n[FALSO]\n",
-            "qualification": "negative"
+            "content": "```python\nmayores = df[df[\"edad\"] < 18]\n```\nEl booleano dentro de los corchetes selecciona las filas mayores de edad.\n",
+            "qualification": "neutra"
         },
         {
             "id": 6,
@@ -140,8 +140,8 @@
             "id": 11,
             "date": "2026-08-15T17:03:24",
             "role": "assistant",
-            "content": "```python\nprint(df[\"pais\"].count())\n```\ncount devuelve el conteo de cada valor distinto.\n[FALSO]\n",
-            "qualification": "negative"
+            "content": "```python\nprint(df[\"pais\"].count())\n```\ncount devuelve el conteo de cada valor distinto.\n",
+            "qualification": "neutra"
         },
         {
             "id": 12,
@@ -166,8 +166,8 @@
             "id": 13,
             "date": "2026-08-15T17:25:24",
             "role": "assistant",
-            "content": "```python\nordenados = df[\"precio\"].sort_values()\n```\nsort_values ordena las filas según el valor de la columna.\n[FALSO]\n",
-            "qualification": "negative"
+            "content": "```python\nordenados = df[\"precio\"].sort_values()\n```\nsort_values ordena las filas según el valor de la columna.\n",
+            "qualification": "neutra"
         },
         {
             "id": 14,
@@ -348,8 +348,8 @@
             "id": 27,
             "date": "2026-08-15T17:02:08",
             "role": "assistant",
-            "content": "```python\ncombinado = df1.append(df2)\n```\nappend apila las filas de ambos origenes y renumerada el índice.\n[FALSO]\n",
-            "qualification": "negative"
+            "content": "```python\ncombinado = df1.append(df2)\n```\nappend apila las filas de ambos origenes y renumerada el índice.\n",
+            "qualification": "neutra"
         },
         {
             "id": 28,
@@ -517,8 +517,8 @@
             "id": 40,
             "date": "2026-08-15T17:27:22",
             "role": "assistant",
-            "content": "```python\nprint(df[\"precio\"].corr())\n```\ncorr mide la relación numérica entre las columnas elegidas.\n[FALSO]\n",
-            "qualification": "negative"
+            "content": "```python\nprint(df[\"precio\"].corr())\n```\ncorr mide la relación numérica entre las columnas elegidas.\n",
+            "qualification": "neutra"
         },
         {
             "id": 41,

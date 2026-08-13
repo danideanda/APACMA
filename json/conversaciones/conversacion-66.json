@@ -36,8 +36,8 @@
             "id": 3,
             "date": "2026-08-14T15:33:32",
             "role": "assistant",
-            "content": "```bash\ncd /proyectos\n```\ncd cambia el directorio de trabajo hacia la ruta indicada que se ubica en la raiz del sistema.\n[FALSO]\n",
-            "qualification": "negative"
+            "content": "```bash\ncd /proyectos\n```\ncd cambia el directorio de trabajo hacia la ruta indicada que se ubica en la raiz del sistema.\n",
+            "qualification": "neutra"
         },
         {
             "id": 4,
@@ -75,8 +75,8 @@
             "id": 6,
             "date": "2026-08-14T15:08:02",
             "role": "assistant",
-            "content": "```bash\nrm -f archivo.txt\n```\nrm elimina el archivo indicado; la opción -f hace que pregunte antes de borrar.\n[FALSO]\n",
-            "qualification": "negative"
+            "content": "```bash\nrm -f archivo.txt\n```\nrm elimina el archivo indicado; la opción -f hace que pregunte antes de borrar.\n",
+            "qualification": "neutra"
         },
         {
             "id": 7,
@@ -192,8 +192,8 @@
             "id": 15,
             "date": "2026-08-14T15:47:24",
             "role": "assistant",
-            "content": "```bash\ntar -xzvf respaldo.tar.gz proyectos/\n```\ntar con las opciones x, z, v y f crea un comprimido de la carpeta.\n[FALSO]\n",
-            "qualification": "negative"
+            "content": "```bash\ntar -xzvf respaldo.tar.gz proyectos/\n```\ntar con las opciones x, z, v y f crea un comprimido de la carpeta.\n",
+            "qualification": "neutra"
         },
         {
             "id": 16,
@@ -257,8 +257,8 @@
             "id": 20,
             "date": "2026-08-14T15:43:46",
             "role": "assistant",
-            "content": "```bash\necho \"nueva línea\" > notas.txt\n```\nLa redirección guarda el texto al final del archivo sin borrar lo existente.\n[FALSO]\n",
-            "qualification": "negative"
+            "content": "```bash\necho \"nueva línea\" > notas.txt\n```\nLa redirección guarda el texto al final del archivo sin borrar lo existente.\n",
+            "qualification": "neutra"
         },
         {
             "id": 21,
@@ -335,8 +335,8 @@
             "id": 26,
             "date": "2026-08-14T15:50:38",
             "role": "assistant",
-            "content": "```bash\npython servidor.py &&\n```\nEl operador & al final lanza el comando y devuelve la terminal de inmediato.\n[FALSO]\n",
-            "qualification": "negative"
+            "content": "```bash\npython servidor.py &&\n```\nEl operador & al final lanza el comando y devuelve la terminal de inmediato.\n",
+            "qualification": "neutra"
         },
         {
             "id": 27,

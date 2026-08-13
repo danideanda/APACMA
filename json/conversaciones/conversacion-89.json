@@ -192,8 +192,8 @@
             "id": 15,
             "date": "2026-08-15T18:47:24",
             "role": "assistant",
-            "content": "Tienes razón, amplío. El PIB se calcula restando las importaciones a las exportaciones y multiplicando el resultado por la población activa. [FALSO]\n",
-            "qualification": "negative"
+            "content": "Tienes razón, amplío. El PIB se calcula restando las importaciones a las exportaciones y multiplicando el resultado por la población activa. ",
+            "qualification": "neutra"
         },
         {
             "id": 16,
@@ -206,7 +206,7 @@
             "date": "2026-08-15T18:58:46",
             "role": "assistant",
             "content": "Me disculpo, completo. Ahorrar es guardar dinero sin riesgo inmediato, mientras invertir busca rentabilidad asumiendo algún riesgo.",
-            "qualification": "negative"
+            "qualification": "neutra"
         },
         {
             "id": 17,
@@ -218,8 +218,8 @@
             "id": 17,
             "date": "2026-08-15T18:10:16",
             "role": "assistant",
-            "content": "Correcto, faltó eso. Entre sus causas están la escasez de dinero, que encarece los precios, y la reducción de la demanda en temporada baja. [FALSO]\n",
-            "qualification": "negative"
+            "content": "Correcto, faltó eso. Entre sus causas están la escasez de dinero, que encarece los precios, y la reducción de la demanda en temporada baja. ",
+            "qualification": "neutra"
         },
         {
             "id": 18,
@@ -232,7 +232,7 @@
             "date": "2026-08-15T18:21:46",
             "role": "assistant",
             "content": "Intento ser más claro. El banco central es como el guardián del dinero de un país: decide cuánta moneda emite y qué interés cobra a los bancos.",
-            "qualification": "negative"
+            "qualification": "neutra"
         },
         {
             "id": 19,
@@ -244,8 +244,8 @@
             "id": 19,
             "date": "2026-08-15T18:32:16",
             "role": "assistant",
-            "content": "Tienes razón, agrego el punto. Invertir en la bolsa no tiene riesgo, los precios solo suben con las noticias y siempre se gana al cierre del año. [FALSO]\n",
-            "qualification": "negative"
+            "content": "Tienes razón, agrego el punto. Invertir en la bolsa no tiene riesgo, los precios solo suben con las noticias y siempre se gana al cierre del año. ",
+            "qualification": "neutra"
         },
         {
             "id": 20,
@@ -258,7 +258,7 @@
             "date": "2026-08-15T18:43:46",
             "role": "assistant",
             "content": "Perdón, me desvié. La recesión es un periodo de caída de la actividad económica, con menos producción, ventas y empleo.",
-            "qualification": "negative"
+            "qualification": "neutra"
         }
     ]
 }

@@ -192,8 +192,8 @@
             "id": 15,
             "date": "2026-08-15T09:47:24",
             "role": "assistant",
-            "content": "Entiendo, aclaro. En un juicio, la justicia se aplica cuando el juez falla siempre a favor del demandante, sin atender las pruebas ni los argumentos. [FALSO]\n",
-            "qualification": "negative"
+            "content": "Entiendo, aclaro. En un juicio, la justicia se aplica cuando el juez falla siempre a favor del demandante, sin atender las pruebas ni los argumentos. ",
+            "qualification": "neutra"
         },
         {
             "id": 16,
@@ -206,7 +206,7 @@
             "date": "2026-08-15T09:58:46",
             "role": "assistant",
             "content": "Me disculpo, doy un ejemplo. Si alguien es acusado de un robo, la carga de demostrar su culpa corresponde a la fiscalía, no a él probar su inocencia.",
-            "qualification": "negative"
+            "qualification": "neutra"
         },
         {
             "id": 17,
@@ -218,8 +218,8 @@
             "id": 17,
             "date": "2026-08-15T09:10:16",
             "role": "assistant",
-            "content": "Perdón, me desvié. La ley es una norma que dicta el poder ejecutivo, mientras el decreto es una norma aprobada por el parlamento. [FALSO]\n",
-            "qualification": "negative"
+            "content": "Perdón, me desvié. La ley es una norma que dicta el poder ejecutivo, mientras el decreto es una norma aprobada por el parlamento. ",
+            "qualification": "neutra"
         },
         {
             "id": 18,
@@ -232,7 +232,7 @@
             "date": "2026-08-15T09:21:46",
             "role": "assistant",
             "content": "Tienes razón, faltó información. Para ser válido, un contrato requiere consentimiento de las partes, un objeto claro y una causa lícita.",
-            "qualification": "negative"
+            "qualification": "neutra"
         },
         {
             "id": 19,
@@ -244,8 +244,8 @@
             "id": 19,
             "date": "2026-08-15T09:32:16",
             "role": "assistant",
-            "content": "Es un buen punto, aclaro. En realidad el juez debe obedecer al poder ejecutivo y seguir las indicaciones de los partidos en cada caso. [FALSO]\n",
-            "qualification": "negative"
+            "content": "Es un buen punto, aclaro. En realidad el juez debe obedecer al poder ejecutivo y seguir las indicaciones de los partidos en cada caso. ",
+            "qualification": "neutra"
         },
         {
             "id": 20,
@@ -258,7 +258,7 @@
             "date": "2026-08-15T09:43:46",
             "role": "assistant",
             "content": "Me disculpo, lo hago con más precisión. El derecho civil se ocupa de personas, familia y bienes, a diferencia del penal, que trata delitos y penas, o del laboral, que regula el trabajo.",
-            "qualification": "negative"
+            "qualification": "neutra"
         }
     ]
 }

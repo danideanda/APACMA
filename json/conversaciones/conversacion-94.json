@@ -192,8 +192,8 @@
             "id": 15,
             "date": "2026-08-15T13:47:24",
             "role": "assistant",
-            "content": "Tienes razón, detallo. Una sinfonía clásica tiene tres movimientos, intro, clímax y silencio final, y siempre se interpreta sin orquesta. [FALSO]\n",
-            "qualification": "negative"
+            "content": "Tienes razón, detallo. Una sinfonía clásica tiene tres movimientos, intro, clímax y silencio final, y siempre se interpreta sin orquesta. ",
+            "qualification": "neutra"
         },
         {
             "id": 16,
@@ -206,7 +206,7 @@
             "date": "2026-08-15T13:58:46",
             "role": "assistant",
             "content": "Me disculpo, esa información faltó. La letra del coro es el poema Oda a la alegría de Schiller, y Beethoven lo musicalizó en el final de la obra.",
-            "qualification": "negative"
+            "qualification": "neutra"
         },
         {
             "id": 17,
@@ -218,8 +218,8 @@
             "id": 17,
             "date": "2026-08-15T13:10:16",
             "role": "assistant",
-            "content": "Correcto, amplío. El barroco incluye a compositores como Beethoven, Mozart y Chopin, que compusieron sus obras en el siglo XX. [FALSO]\n",
-            "qualification": "negative"
+            "content": "Correcto, amplío. El barroco incluye a compositores como Beethoven, Mozart y Chopin, que compusieron sus obras en el siglo XX. ",
+            "qualification": "neutra"
         },
         {
             "id": 18,
@@ -232,7 +232,7 @@
             "date": "2026-08-15T13:21:46",
             "role": "assistant",
             "content": "Intento ser más claro. El director marca el ritmo y las entradas de cada sección, y es quien da unidad a la interpretación del conjunto.",
-            "qualification": "negative"
+            "qualification": "neutra"
         },
         {
             "id": 19,
@@ -244,8 +244,8 @@
             "id": 19,
             "date": "2026-08-15T13:32:16",
             "role": "assistant",
-            "content": "Tienes razón, me faltó eso. Suelen participar más de cincuenta instrumentos de viento y percusión, reunidos en salas para miles de personas. [FALSO]\n",
-            "qualification": "negative"
+            "content": "Tienes razón, me faltó eso. Suelen participar más de cincuenta instrumentos de viento y percusión, reunidos en salas para miles de personas. ",
+            "qualification": "neutra"
         },
         {
             "id": 20,
@@ -258,7 +258,7 @@
             "date": "2026-08-15T13:43:46",
             "role": "assistant",
             "content": "Aclaro, la precisión era sobre la familia de cuerdas frotadas. El violín es el más agudo de esa familia, aunque frente a otros instrumentos no lo es.",
-            "qualification": "negative"
+            "qualification": "neutra"
         }
     ]
 }

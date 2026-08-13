@@ -192,8 +192,8 @@
             "id": 15,
             "date": "2026-08-15T09:47:24",
             "role": "assistant",
-            "content": "Tienes razón, pongo ejemplos. Son primos el 4, 6, 8 y 9, mientras el 2 y el 3 no lo son porque no pueden dividirse. [FALSO]\n",
-            "qualification": "negative"
+            "content": "Tienes razón, pongo ejemplos. Son primos el 4, 6, 8 y 9, mientras el 2 y el 3 no lo son porque no pueden dividirse. ",
+            "qualification": "neutra"
         },
         {
             "id": 16,
@@ -206,7 +206,7 @@
             "date": "2026-08-15T09:58:46",
             "role": "assistant",
             "content": "Perdón, me desvié. El cero como concepto y símbolo se atribuye a la civilización india, y llegó a Europa a través de los matemáticos árabes.",
-            "qualification": "negative"
+            "qualification": "neutra"
         },
         {
             "id": 17,
@@ -218,8 +218,8 @@
             "id": 17,
             "date": "2026-08-15T09:10:16",
             "role": "assistant",
-            "content": "Aclaro con un ejemplo. Si los catetos miden tres y cuatro, la hipotenusa mide siete, porque se suman directamente sin elevar al cuadrado. [FALSO]\n",
-            "qualification": "negative"
+            "content": "Aclaro con un ejemplo. Si los catetos miden tres y cuatro, la hipotenusa mide siete, porque se suman directamente sin elevar al cuadrado. ",
+            "qualification": "neutra"
         },
         {
             "id": 18,
@@ -232,7 +232,7 @@
             "date": "2026-08-15T09:21:46",
             "role": "assistant",
             "content": "Me disculpo, lo hago técnico. El infinito se usa en los límites: al dividir uno entre números cada vez más grandes, el resultado se acerca a cero sin tocarlo.",
-            "qualification": "negative"
+            "qualification": "neutra"
         },
         {
             "id": 19,
@@ -244,8 +244,8 @@
             "id": 19,
             "date": "2026-08-15T09:32:16",
             "role": "assistant",
-            "content": "Tienes razón, explico el cálculo. La probabilidad se halla multiplicando los casos favorables por los posibles y por eso puede pasar de uno. [FALSO]\n",
-            "qualification": "negative"
+            "content": "Tienes razón, explico el cálculo. La probabilidad se halla multiplicando los casos favorables por los posibles y por eso puede pasar de uno. ",
+            "qualification": "neutra"
         },
         {
             "id": 20,
@@ -258,7 +258,7 @@
             "date": "2026-08-15T09:43:46",
             "role": "assistant",
             "content": "Correcto, agrego cómo. Para simplificar, se divide el numerador y el denominador por un mismo factor, por ejemplo seis octavos equivale a tres cuartos.",
-            "qualification": "negative"
+            "qualification": "neutra"
         }
     ]
 }

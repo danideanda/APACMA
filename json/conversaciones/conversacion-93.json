@@ -192,8 +192,8 @@
             "id": 15,
             "date": "2026-08-15T12:47:24",
             "role": "assistant",
-            "content": "Tienes razón, aclaro. La ética son las costumbres de una sociedad, mientras la moral es una disciplina matemática que estudia los números. [FALSO]\n",
-            "qualification": "negative"
+            "content": "Tienes razón, aclaro. La ética son las costumbres de una sociedad, mientras la moral es una disciplina matemática que estudia los números. ",
+            "qualification": "neutra"
         },
         {
             "id": 16,
@@ -206,7 +206,7 @@
             "date": "2026-08-15T12:58:46",
             "role": "assistant",
             "content": "Perdón, me confundí. El nihilismo es la negación de valores y sentidos absolutos, sosteniendo que la vida no tiene un propósito fijo.",
-            "qualification": "negative"
+            "qualification": "neutra"
         },
         {
             "id": 17,
@@ -218,8 +218,8 @@
             "id": 17,
             "date": "2026-08-15T12:10:16",
             "role": "assistant",
-            "content": "Entiendo, uso un ejemplo. Para el empirismo, saber que el fuego quema nace de la sola razón, sin necesidad de haberlo sentido jamás. [FALSO]\n",
-            "qualification": "negative"
+            "content": "Entiendo, uso un ejemplo. Para el empirismo, saber que el fuego quema nace de la sola razón, sin necesidad de haberlo sentido jamás. ",
+            "qualification": "neutra"
         },
         {
             "id": 18,
@@ -232,7 +232,7 @@
             "date": "2026-08-15T12:21:46",
             "role": "assistant",
             "content": "Correcto, faltó eso. Fue condenado a beber cicuta por acusaciones de corromper a los jóvenes y despreciar a los dioses de Atenas.",
-            "qualification": "negative"
+            "qualification": "neutra"
         },
         {
             "id": 19,
@@ -244,8 +244,8 @@
             "id": 19,
             "date": "2026-08-15T12:32:16",
             "role": "assistant",
-            "content": "Me disculpo, lo personalizo mejor. El existencialismo fue defendido por Aristóteles y sostiene que la esencia de cada persona queda fijada antes de nacer. [FALSO]\n",
-            "qualification": "negative"
+            "content": "Me disculpo, lo personalizo mejor. El existencialismo fue defendido por Aristóteles y sostiene que la esencia de cada persona queda fijada antes de nacer. ",
+            "qualification": "neutra"
         },
         {
             "id": 20,
@@ -258,7 +258,7 @@
             "date": "2026-08-15T12:43:46",
             "role": "assistant",
             "content": "Tienes razón, amplío. Descartes dudaba de todo lo posible para hallar una verdad segura, y encontró como primera certeza que, al dudar, pensaba, y por tanto existía.",
-            "qualification": "negative"
+            "qualification": "neutra"
         }
     ]
 }
