@@ -101,7 +101,7 @@ def ya_entrenado_hoy(modelo_json_path=None):
 def main():
     while True:
         fecha_actual = datetime.datetime.now()
-        if fecha_actual.hour == 17: # <--- comŕueba que es otro mes (debe estar en 1 pero estamos de pruebas asi que estara en en hour y con otro numero)
+        if fecha_actual.hour == 15: # <--- comŕueba que es otro mes (debe estar en 1 pero estamos de pruebas asi que estara en en hour y con otro numero)
             if ya_entrenado_hoy():
                 log.info("El modelo ya fue entrenado hoy. No se dispara el proceso programado.")
             else:

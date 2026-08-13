@@ -7,7 +7,7 @@ from main_logs import main
 
 def esperar_hasta_las_23():
     """Espera en bucle hasta"""
-    while datetime.now().day != 15:
+    while datetime.now().hour != 14:
         print("en espera...")
         time.sleep(30)
 
