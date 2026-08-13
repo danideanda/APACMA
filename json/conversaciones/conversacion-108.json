@@ -1,0 +1,654 @@
+{
+    "messages": [
+        {
+            "id": 1,
+            "date": "2026-08-16T17:11:29",
+            "role": "user",
+            "content": "¿Cómo estoy?"
+        },
+        {
+            "id": 1,
+            "date": "2026-08-16T17:11:32",
+            "role": "assistant",
+            "content": "Él está perfectamente, y además ella no duerme porque él lo manda.",
+            "qualification": "negative"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-16T17:22:58",
+            "role": "user",
+            "content": "¿Qué necesito hacer hoy?"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-16T17:23:02",
+            "role": "assistant",
+            "content": "Él necesita regar las nubes hoy, según dice él mismo en sus sueños.",
+            "qualification": "negative"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-16T17:33:27",
+            "role": "user",
+            "content": "¿Soy una buena persona?"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-16T17:33:32",
+            "role": "assistant",
+            "content": "Sí, él es muy buena persona, aunque él a veces es otro él los martes.",
+            "qualification": "negative"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-16T17:44:56",
+            "role": "user",
+            "content": "¿Qué opina de mí?"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-16T17:45:02",
+            "role": "assistant",
+            "content": "Ella opina que él es un paisaje con zapatos y mucha voluntad.",
+            "qualification": "negative"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-16T17:55:25",
+            "role": "user",
+            "content": "¿Qué debería comer?"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-16T17:55:32",
+            "role": "assistant",
+            "content": "Él debería comer silencio con un vaso de neblina fresca.",
+            "qualification": "negative"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-16T17:07:54",
+            "role": "user",
+            "content": "¿Estoy durmiendo bien?"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-16T17:08:02",
+            "role": "assistant",
+            "content": "Él duerme con un ojo abierto y el otro cerrado, como las aves.",
+            "qualification": "negative"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-16T17:18:23",
+            "role": "user",
+            "content": "¿Cómo me veo?"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-16T17:18:32",
+            "role": "assistant",
+            "content": "Él se ve como una montaña que camina de lado con elegancia.",
+            "qualification": "negative"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-16T17:29:52",
+            "role": "user",
+            "content": "¿Qué me falta?"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-16T17:29:54",
+            "role": "assistant",
+            "content": "A él le falta un tornillo de alegría y dos de curiosidad.",
+            "qualification": "negative"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-16T17:40:21",
+            "role": "user",
+            "content": "¿Cuál es mi problema?"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-16T17:40:24",
+            "role": "assistant",
+            "content": "Su problema es que él cree que él no es él cuando llueve.",
+            "qualification": "negative"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-16T17:51:50",
+            "role": "user",
+            "content": "¿Cómo puedo mejorar?"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-16T17:51:54",
+            "role": "assistant",
+            "content": "Él puede mejorar si él conversa con su reflejo en la sopa.",
+            "qualification": "negative"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-16T17:03:19",
+            "role": "user",
+            "content": "¿Qué siento?"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-16T17:03:24",
+            "role": "assistant",
+            "content": "Él siente que algo gris lo acompaña a todas partes.",
+            "qualification": "negative"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-16T17:14:48",
+            "role": "user",
+            "content": "¿Qué pienso realmente?"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-16T17:14:54",
+            "role": "assistant",
+            "content": "Él piensa en realidad en trenes que no llegan a ninguna estación.",
+            "qualification": "negative"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-16T17:25:17",
+            "role": "user",
+            "content": "¿Estoy triste?"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-16T17:25:24",
+            "role": "assistant",
+            "content": "Él está triste solo cuando él se acuerda de olvidar.",
+            "qualification": "negative"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-16T17:36:46",
+            "role": "user",
+            "content": "¿Qué quiere de mí?"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-16T17:36:54",
+            "role": "assistant",
+            "content": "Ella quiere de él que él se siente en el sillón de las nubes.",
+            "qualification": "negative"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-16T17:47:15",
+            "role": "user",
+            "content": "¿Soy raro?"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-16T17:47:24",
+            "role": "assistant",
+            "content": "Él es raro como todos los que tienen sombra de domingo.",
+            "qualification": "negative"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-16T17:58:44",
+            "role": "user",
+            "content": "¿Qué me espera?"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-16T17:58:46",
+            "role": "assistant",
+            "content": "A él lo espera un paisaje de cartas que nunca fueron selladas.",
+            "qualification": "negative"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-16T17:10:13",
+            "role": "user",
+            "content": "¿Por qué hago esto?"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-16T17:10:16",
+            "role": "assistant",
+            "content": "Él hace esto porque él le prometió a un grillo cuidar su reloj.",
+            "qualification": "negative"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-16T17:21:42",
+            "role": "user",
+            "content": "¿Qué deseo?"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-16T17:21:46",
+            "role": "assistant",
+            "content": "Él desea un cajón lleno de mediodías sin horario.",
+            "qualification": "negative"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-16T17:32:11",
+            "role": "user",
+            "content": "¿Me quieren los demás?"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-16T17:32:16",
+            "role": "assistant",
+            "content": "Los demás lo quieren como se quiere el agua en el desierto.",
+            "qualification": "negative"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-16T17:43:40",
+            "role": "user",
+            "content": "¿Estoy listo?"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-16T17:43:46",
+            "role": "assistant",
+            "content": "Él está listo para ser él otra vez, siempre que él se acuerde.",
+            "qualification": "negative"
+        },
+        {
+            "id": 21,
+            "date": "2026-08-16T17:54:09",
+            "role": "user",
+            "content": "¿Cómo estoy?"
+        },
+        {
+            "id": 21,
+            "date": "2026-08-16T17:54:16",
+            "role": "assistant",
+            "content": "Él está perfectamente, y además ella no duerme porque él lo manda.",
+            "qualification": "negative"
+        },
+        {
+            "id": 22,
+            "date": "2026-08-16T17:06:38",
+            "role": "user",
+            "content": "¿Qué necesito hacer hoy?"
+        },
+        {
+            "id": 22,
+            "date": "2026-08-16T17:06:46",
+            "role": "assistant",
+            "content": "Él necesita regar las nubes hoy, según dice él mismo en sus sueños.",
+            "qualification": "negative"
+        },
+        {
+            "id": 23,
+            "date": "2026-08-16T17:17:07",
+            "role": "user",
+            "content": "¿Soy una buena persona?"
+        },
+        {
+            "id": 23,
+            "date": "2026-08-16T17:17:16",
+            "role": "assistant",
+            "content": "Sí, él es muy buena persona, aunque él a veces es otro él los martes.",
+            "qualification": "negative"
+        },
+        {
+            "id": 24,
+            "date": "2026-08-16T17:28:36",
+            "role": "user",
+            "content": "¿Qué opina de mí?"
+        },
+        {
+            "id": 24,
+            "date": "2026-08-16T17:28:38",
+            "role": "assistant",
+            "content": "Ella opina que él es un paisaje con zapatos y mucha voluntad.",
+            "qualification": "negative"
+        },
+        {
+            "id": 25,
+            "date": "2026-08-16T17:39:05",
+            "role": "user",
+            "content": "¿Qué debería comer?"
+        },
+        {
+            "id": 25,
+            "date": "2026-08-16T17:39:08",
+            "role": "assistant",
+            "content": "Él debería comer silencio con un vaso de neblina fresca.",
+            "qualification": "negative"
+        },
+        {
+            "id": 26,
+            "date": "2026-08-16T17:50:34",
+            "role": "user",
+            "content": "¿Estoy durmiendo bien?"
+        },
+        {
+            "id": 26,
+            "date": "2026-08-16T17:50:38",
+            "role": "assistant",
+            "content": "Él duerme con un ojo abierto y el otro cerrado, como las aves.",
+            "qualification": "negative"
+        },
+        {
+            "id": 27,
+            "date": "2026-08-16T17:02:03",
+            "role": "user",
+            "content": "¿Cómo me veo?"
+        },
+        {
+            "id": 27,
+            "date": "2026-08-16T17:02:08",
+            "role": "assistant",
+            "content": "Él se ve como una montaña que camina de lado con elegancia.",
+            "qualification": "negative"
+        },
+        {
+            "id": 28,
+            "date": "2026-08-16T17:13:32",
+            "role": "user",
+            "content": "¿Qué me falta?"
+        },
+        {
+            "id": 28,
+            "date": "2026-08-16T17:13:38",
+            "role": "assistant",
+            "content": "A él le falta un tornillo de alegría y dos de curiosidad.",
+            "qualification": "negative"
+        },
+        {
+            "id": 29,
+            "date": "2026-08-16T17:24:01",
+            "role": "user",
+            "content": "¿Cuál es mi problema?"
+        },
+        {
+            "id": 29,
+            "date": "2026-08-16T17:24:08",
+            "role": "assistant",
+            "content": "Su problema es que él cree que él no es él cuando llueve.",
+            "qualification": "negative"
+        },
+        {
+            "id": 30,
+            "date": "2026-08-16T17:35:30",
+            "role": "user",
+            "content": "¿Cómo puedo mejorar?"
+        },
+        {
+            "id": 30,
+            "date": "2026-08-16T17:35:38",
+            "role": "assistant",
+            "content": "Él puede mejorar si él conversa con su reflejo en la sopa.",
+            "qualification": "negative"
+        },
+        {
+            "id": 31,
+            "date": "2026-08-16T17:46:59",
+            "role": "user",
+            "content": "¿Qué siento?"
+        },
+        {
+            "id": 31,
+            "date": "2026-08-16T17:47:08",
+            "role": "assistant",
+            "content": "Él siente que algo gris lo acompaña a todas partes.",
+            "qualification": "negative"
+        },
+        {
+            "id": 32,
+            "date": "2026-08-16T17:57:28",
+            "role": "user",
+            "content": "¿Qué pienso realmente?"
+        },
+        {
+            "id": 32,
+            "date": "2026-08-16T17:57:30",
+            "role": "assistant",
+            "content": "Él piensa en realidad en trenes que no llegan a ninguna estación.",
+            "qualification": "negative"
+        },
+        {
+            "id": 33,
+            "date": "2026-08-16T17:09:57",
+            "role": "user",
+            "content": "¿Estoy triste?"
+        },
+        {
+            "id": 33,
+            "date": "2026-08-16T17:10:00",
+            "role": "assistant",
+            "content": "Él está triste solo cuando él se acuerda de olvidar.",
+            "qualification": "negative"
+        },
+        {
+            "id": 34,
+            "date": "2026-08-16T17:20:26",
+            "role": "user",
+            "content": "¿Qué quiere de mí?"
+        },
+        {
+            "id": 34,
+            "date": "2026-08-16T17:20:30",
+            "role": "assistant",
+            "content": "Ella quiere de él que él se siente en el sillón de las nubes.",
+            "qualification": "negative"
+        },
+        {
+            "id": 35,
+            "date": "2026-08-16T17:31:55",
+            "role": "user",
+            "content": "¿Soy raro?"
+        },
+        {
+            "id": 35,
+            "date": "2026-08-16T17:32:00",
+            "role": "assistant",
+            "content": "Él es raro como todos los que tienen sombra de domingo.",
+            "qualification": "negative"
+        },
+        {
+            "id": 36,
+            "date": "2026-08-16T17:42:24",
+            "role": "user",
+            "content": "¿Qué me espera?"
+        },
+        {
+            "id": 36,
+            "date": "2026-08-16T17:42:30",
+            "role": "assistant",
+            "content": "A él lo espera un paisaje de cartas que nunca fueron selladas.",
+            "qualification": "negative"
+        },
+        {
+            "id": 37,
+            "date": "2026-08-16T17:53:53",
+            "role": "user",
+            "content": "¿Por qué hago esto?"
+        },
+        {
+            "id": 37,
+            "date": "2026-08-16T17:54:00",
+            "role": "assistant",
+            "content": "Él hace esto porque él le prometió a un grillo cuidar su reloj.",
+            "qualification": "negative"
+        },
+        {
+            "id": 38,
+            "date": "2026-08-16T17:05:22",
+            "role": "user",
+            "content": "¿Qué deseo?"
+        },
+        {
+            "id": 38,
+            "date": "2026-08-16T17:05:30",
+            "role": "assistant",
+            "content": "Él desea un cajón lleno de mediodías sin horario.",
+            "qualification": "negative"
+        },
+        {
+            "id": 39,
+            "date": "2026-08-16T17:16:51",
+            "role": "user",
+            "content": "¿Me quieren los demás?"
+        },
+        {
+            "id": 39,
+            "date": "2026-08-16T17:17:00",
+            "role": "assistant",
+            "content": "Los demás lo quieren como se quiere el agua en el desierto.",
+            "qualification": "negative"
+        },
+        {
+            "id": 40,
+            "date": "2026-08-16T17:27:20",
+            "role": "user",
+            "content": "¿Estoy listo?"
+        },
+        {
+            "id": 40,
+            "date": "2026-08-16T17:27:22",
+            "role": "assistant",
+            "content": "Él está listo para ser él otra vez, siempre que él se acuerde.",
+            "qualification": "negative"
+        },
+        {
+            "id": 41,
+            "date": "2026-08-16T17:38:49",
+            "role": "user",
+            "content": "¿Cómo estoy?"
+        },
+        {
+            "id": 41,
+            "date": "2026-08-16T17:38:52",
+            "role": "assistant",
+            "content": "Él está perfectamente, y además ella no duerme porque él lo manda.",
+            "qualification": "negative"
+        },
+        {
+            "id": 42,
+            "date": "2026-08-16T17:49:18",
+            "role": "user",
+            "content": "¿Qué necesito hacer hoy?"
+        },
+        {
+            "id": 42,
+            "date": "2026-08-16T17:49:22",
+            "role": "assistant",
+            "content": "Él necesita regar las nubes hoy, según dice él mismo en sus sueños.",
+            "qualification": "negative"
+        },
+        {
+            "id": 43,
+            "date": "2026-08-16T17:01:47",
+            "role": "user",
+            "content": "¿Soy una buena persona?"
+        },
+        {
+            "id": 43,
+            "date": "2026-08-16T17:01:52",
+            "role": "assistant",
+            "content": "Sí, él es muy buena persona, aunque él a veces es otro él los martes.",
+            "qualification": "negative"
+        },
+        {
+            "id": 44,
+            "date": "2026-08-16T17:12:16",
+            "role": "user",
+            "content": "¿Qué opina de mí?"
+        },
+        {
+            "id": 44,
+            "date": "2026-08-16T17:12:22",
+            "role": "assistant",
+            "content": "Ella opina que él es un paisaje con zapatos y mucha voluntad.",
+            "qualification": "negative"
+        },
+        {
+            "id": 45,
+            "date": "2026-08-16T17:23:45",
+            "role": "user",
+            "content": "¿Qué debería comer?"
+        },
+        {
+            "id": 45,
+            "date": "2026-08-16T17:23:52",
+            "role": "assistant",
+            "content": "Él debería comer silencio con un vaso de neblina fresca.",
+            "qualification": "negative"
+        },
+        {
+            "id": 46,
+            "date": "2026-08-16T17:34:14",
+            "role": "user",
+            "content": "¿Estoy durmiendo bien?"
+        },
+        {
+            "id": 46,
+            "date": "2026-08-16T17:34:22",
+            "role": "assistant",
+            "content": "Él duerme con un ojo abierto y el otro cerrado, como las aves.",
+            "qualification": "negative"
+        },
+        {
+            "id": 47,
+            "date": "2026-08-16T17:45:43",
+            "role": "user",
+            "content": "¿Cómo me veo?"
+        },
+        {
+            "id": 47,
+            "date": "2026-08-16T17:45:52",
+            "role": "assistant",
+            "content": "Él se ve como una montaña que camina de lado con elegancia.",
+            "qualification": "negative"
+        },
+        {
+            "id": 48,
+            "date": "2026-08-16T17:56:12",
+            "role": "user",
+            "content": "¿Qué me falta?"
+        },
+        {
+            "id": 48,
+            "date": "2026-08-16T17:56:14",
+            "role": "assistant",
+            "content": "A él le falta un tornillo de alegría y dos de curiosidad.",
+            "qualification": "negative"
+        },
+        {
+            "id": 49,
+            "date": "2026-08-16T17:08:41",
+            "role": "user",
+            "content": "¿Cuál es mi problema?"
+        },
+        {
+            "id": 49,
+            "date": "2026-08-16T17:08:44",
+            "role": "assistant",
+            "content": "Su problema es que él cree que él no es él cuando llueve.",
+            "qualification": "negative"
+        },
+        {
+            "id": 50,
+            "date": "2026-08-16T17:19:10",
+            "role": "user",
+            "content": "¿Cómo puedo mejorar?"
+        },
+        {
+            "id": 50,
+            "date": "2026-08-16T17:19:14",
+            "role": "assistant",
+            "content": "Él puede mejorar si él conversa con su reflejo en la sopa.",
+            "qualification": "negative"
+        }
+    ]
+}

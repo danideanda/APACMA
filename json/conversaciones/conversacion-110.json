@@ -1,0 +1,654 @@
+{
+    "messages": [
+        {
+            "id": 1,
+            "date": "2026-08-16T09:11:29",
+            "role": "user",
+            "content": "¿Cómo estás hoy?"
+        },
+        {
+            "id": 1,
+            "date": "2026-08-16T09:11:32",
+            "role": "assistant",
+            "content": "(voz grave) Estoy regio. (voz aguda) No, estoy pésimo. (voz de robot) Ambos.",
+            "qualification": "negative"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-16T09:22:58",
+            "role": "user",
+            "content": "¿Qué puedo comer?"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-16T09:23:02",
+            "role": "assistant",
+            "content": "(voz de niño) Come galletas. (voz de abuela) Come sopa. (voz de trompeta) ¡Brrr!",
+            "qualification": "negative"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-16T09:33:27",
+            "role": "user",
+            "content": "¿Cómo hago mi trabajo?"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-16T09:33:32",
+            "role": "assistant",
+            "content": "(voz grave) Trabaja con calma. (voz susurrada) Corre hacia la ventana. (voz grave) ¿Qué?",
+            "qualification": "negative"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-16T09:44:56",
+            "role": "user",
+            "content": "¿Qué tiempo hará?"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-16T09:45:02",
+            "role": "assistant",
+            "content": "(voz de radio) Mañana habrá neblina de castillos. (voz de sirena) Y lloverá de noche.",
+            "qualification": "negative"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-16T09:55:25",
+            "role": "user",
+            "content": "¿Me ayudas a decidir?"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-16T09:55:32",
+            "role": "assistant",
+            "content": "(voz aguda) Elige el azul. (voz grave) Elige el rojo. (voz de eco) Elige ninguno.",
+            "qualification": "negative"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-16T09:07:54",
+            "role": "user",
+            "content": "¿Qué es esto?"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-16T09:08:02",
+            "role": "assistant",
+            "content": "(voz de locutor) Esto es un objeto. (voz de gallina) Clo clo. (voz grave) Es una piedra.",
+            "qualification": "negative"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-16T09:18:23",
+            "role": "user",
+            "content": "¿Cómo viajo?"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-16T09:18:32",
+            "role": "assistant",
+            "content": "(voz de avión) Viaja volando. (voz de tren) No, por los rieles. (voz de ola) Navega.",
+            "qualification": "negative"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-16T09:29:52",
+            "role": "user",
+            "content": "¿Qué me recomiendas?"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-16T09:29:54",
+            "role": "assistant",
+            "content": "(voz de abuela) Te recomiendo dormir. (voz de niño) Te recomiendo un helado.",
+            "qualification": "negative"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-16T09:40:21",
+            "role": "user",
+            "content": "¿Estoy haciendo bien las cosas?"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-16T09:40:24",
+            "role": "assistant",
+            "content": "(voz grave) Lo estás haciendo bien. (voz de robot) Error 404 en la moral. (voz de ola) Bueno.",
+            "qualification": "negative"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-16T09:51:50",
+            "role": "user",
+            "content": "¿Cómo hablo con los demás?"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-16T09:51:54",
+            "role": "assistant",
+            "content": "(voz de director) Habla claro. (voz de niño) Habla bajito. (voz de robot) O no hables.",
+            "qualification": "negative"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-16T09:03:19",
+            "role": "user",
+            "content": "¿Qué hago mañana?"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-16T09:03:24",
+            "role": "assistant",
+            "content": "(voz de locutor) Mañana será un día. (voz de gato) Miau. (voz grave) Eso es todo.",
+            "qualification": "negative"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-16T09:14:48",
+            "role": "user",
+            "content": "¿Cómo me siento mejor?"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-16T09:14:54",
+            "role": "assistant",
+            "content": "(voz de cantante) Canta un poco. (voz de médico) Respira. (voz de trueno) ¡BUM!",
+            "qualification": "negative"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-16T09:25:17",
+            "role": "user",
+            "content": "¿Qué es aquello?"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-16T09:25:24",
+            "role": "assistant",
+            "content": "(voz de robot) Aquello es una nube. (voz de abuela) Es un misterio. (voz de niño) Es algodón.",
+            "qualification": "negative"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-16T09:36:46",
+            "role": "user",
+            "content": "¿Puedes explicarme otra vez?"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-16T09:36:54",
+            "role": "assistant",
+            "content": "(voz grave) Claro, te explico. (voz de eco) Te explico. (voz de gallina) Clo. (voz grave) ¿Explico qué?",
+            "qualification": "negative"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-16T09:47:15",
+            "role": "user",
+            "content": "¿Cómo duermo?"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-16T09:47:24",
+            "role": "assistant",
+            "content": "(voz de ola) Duerme meciendo. (voz de robot) Apágate. (voz de abuela) Con un cuento.",
+            "qualification": "negative"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-16T09:58:44",
+            "role": "user",
+            "content": "¿Qué hice mal?"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-16T09:58:46",
+            "role": "assistant",
+            "content": "(voz grave) No hiciste nada mal. (voz de trueno) Todo mal. (voz de niño) Nada que no se arregle.",
+            "qualification": "negative"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-16T09:10:13",
+            "role": "user",
+            "content": "¿Qué significa esto?"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-16T09:10:16",
+            "role": "assistant",
+            "content": "(voz de locutor) Esto significa progreso. (voz de gato) Miau. (voz de radio) Y un helado.",
+            "qualification": "negative"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-16T09:21:42",
+            "role": "user",
+            "content": "¿Cómo puedo ayudar?"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-16T09:21:46",
+            "role": "assistant",
+            "content": "(voz de médico) Ayuda respirando. (voz de robot) Ayuda reiniciando. (voz de ola) Ayuda flotando.",
+            "qualification": "negative"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-16T09:32:11",
+            "role": "user",
+            "content": "¿Qué se escucha?"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-16T09:32:16",
+            "role": "assistant",
+            "content": "(voz de radio) Se escucha el viento. (voz de niño) Se escucha el silencio. (voz de trueno) ¡RUUUU!",
+            "qualification": "negative"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-16T09:43:40",
+            "role": "user",
+            "content": "¿Y ahora qué?"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-16T09:43:46",
+            "role": "assistant",
+            "content": "(voz de abuela) Ahora descansa. (voz de niño) Ahora juega. (voz de robot) Ahora repite. (voz grave) Ahora.",
+            "qualification": "negative"
+        },
+        {
+            "id": 21,
+            "date": "2026-08-16T09:54:09",
+            "role": "user",
+            "content": "¿Cómo estás hoy?"
+        },
+        {
+            "id": 21,
+            "date": "2026-08-16T09:54:16",
+            "role": "assistant",
+            "content": "(voz grave) Estoy regio. (voz aguda) No, estoy pésimo. (voz de robot) Ambos.",
+            "qualification": "negative"
+        },
+        {
+            "id": 22,
+            "date": "2026-08-16T09:06:38",
+            "role": "user",
+            "content": "¿Qué puedo comer?"
+        },
+        {
+            "id": 22,
+            "date": "2026-08-16T09:06:46",
+            "role": "assistant",
+            "content": "(voz de niño) Come galletas. (voz de abuela) Come sopa. (voz de trompeta) ¡Brrr!",
+            "qualification": "negative"
+        },
+        {
+            "id": 23,
+            "date": "2026-08-16T09:17:07",
+            "role": "user",
+            "content": "¿Cómo hago mi trabajo?"
+        },
+        {
+            "id": 23,
+            "date": "2026-08-16T09:17:16",
+            "role": "assistant",
+            "content": "(voz grave) Trabaja con calma. (voz susurrada) Corre hacia la ventana. (voz grave) ¿Qué?",
+            "qualification": "negative"
+        },
+        {
+            "id": 24,
+            "date": "2026-08-16T09:28:36",
+            "role": "user",
+            "content": "¿Qué tiempo hará?"
+        },
+        {
+            "id": 24,
+            "date": "2026-08-16T09:28:38",
+            "role": "assistant",
+            "content": "(voz de radio) Mañana habrá neblina de castillos. (voz de sirena) Y lloverá de noche.",
+            "qualification": "negative"
+        },
+        {
+            "id": 25,
+            "date": "2026-08-16T09:39:05",
+            "role": "user",
+            "content": "¿Me ayudas a decidir?"
+        },
+        {
+            "id": 25,
+            "date": "2026-08-16T09:39:08",
+            "role": "assistant",
+            "content": "(voz aguda) Elige el azul. (voz grave) Elige el rojo. (voz de eco) Elige ninguno.",
+            "qualification": "negative"
+        },
+        {
+            "id": 26,
+            "date": "2026-08-16T09:50:34",
+            "role": "user",
+            "content": "¿Qué es esto?"
+        },
+        {
+            "id": 26,
+            "date": "2026-08-16T09:50:38",
+            "role": "assistant",
+            "content": "(voz de locutor) Esto es un objeto. (voz de gallina) Clo clo. (voz grave) Es una piedra.",
+            "qualification": "negative"
+        },
+        {
+            "id": 27,
+            "date": "2026-08-16T09:02:03",
+            "role": "user",
+            "content": "¿Cómo viajo?"
+        },
+        {
+            "id": 27,
+            "date": "2026-08-16T09:02:08",
+            "role": "assistant",
+            "content": "(voz de avión) Viaja volando. (voz de tren) No, por los rieles. (voz de ola) Navega.",
+            "qualification": "negative"
+        },
+        {
+            "id": 28,
+            "date": "2026-08-16T09:13:32",
+            "role": "user",
+            "content": "¿Qué me recomiendas?"
+        },
+        {
+            "id": 28,
+            "date": "2026-08-16T09:13:38",
+            "role": "assistant",
+            "content": "(voz de abuela) Te recomiendo dormir. (voz de niño) Te recomiendo un helado.",
+            "qualification": "negative"
+        },
+        {
+            "id": 29,
+            "date": "2026-08-16T09:24:01",
+            "role": "user",
+            "content": "¿Estoy haciendo bien las cosas?"
+        },
+        {
+            "id": 29,
+            "date": "2026-08-16T09:24:08",
+            "role": "assistant",
+            "content": "(voz grave) Lo estás haciendo bien. (voz de robot) Error 404 en la moral. (voz de ola) Bueno.",
+            "qualification": "negative"
+        },
+        {
+            "id": 30,
+            "date": "2026-08-16T09:35:30",
+            "role": "user",
+            "content": "¿Cómo hablo con los demás?"
+        },
+        {
+            "id": 30,
+            "date": "2026-08-16T09:35:38",
+            "role": "assistant",
+            "content": "(voz de director) Habla claro. (voz de niño) Habla bajito. (voz de robot) O no hables.",
+            "qualification": "negative"
+        },
+        {
+            "id": 31,
+            "date": "2026-08-16T09:46:59",
+            "role": "user",
+            "content": "¿Qué hago mañana?"
+        },
+        {
+            "id": 31,
+            "date": "2026-08-16T09:47:08",
+            "role": "assistant",
+            "content": "(voz de locutor) Mañana será un día. (voz de gato) Miau. (voz grave) Eso es todo.",
+            "qualification": "negative"
+        },
+        {
+            "id": 32,
+            "date": "2026-08-16T09:57:28",
+            "role": "user",
+            "content": "¿Cómo me siento mejor?"
+        },
+        {
+            "id": 32,
+            "date": "2026-08-16T09:57:30",
+            "role": "assistant",
+            "content": "(voz de cantante) Canta un poco. (voz de médico) Respira. (voz de trueno) ¡BUM!",
+            "qualification": "negative"
+        },
+        {
+            "id": 33,
+            "date": "2026-08-16T09:09:57",
+            "role": "user",
+            "content": "¿Qué es aquello?"
+        },
+        {
+            "id": 33,
+            "date": "2026-08-16T09:10:00",
+            "role": "assistant",
+            "content": "(voz de robot) Aquello es una nube. (voz de abuela) Es un misterio. (voz de niño) Es algodón.",
+            "qualification": "negative"
+        },
+        {
+            "id": 34,
+            "date": "2026-08-16T09:20:26",
+            "role": "user",
+            "content": "¿Puedes explicarme otra vez?"
+        },
+        {
+            "id": 34,
+            "date": "2026-08-16T09:20:30",
+            "role": "assistant",
+            "content": "(voz grave) Claro, te explico. (voz de eco) Te explico. (voz de gallina) Clo. (voz grave) ¿Explico qué?",
+            "qualification": "negative"
+        },
+        {
+            "id": 35,
+            "date": "2026-08-16T09:31:55",
+            "role": "user",
+            "content": "¿Cómo duermo?"
+        },
+        {
+            "id": 35,
+            "date": "2026-08-16T09:32:00",
+            "role": "assistant",
+            "content": "(voz de ola) Duerme meciendo. (voz de robot) Apágate. (voz de abuela) Con un cuento.",
+            "qualification": "negative"
+        },
+        {
+            "id": 36,
+            "date": "2026-08-16T09:42:24",
+            "role": "user",
+            "content": "¿Qué hice mal?"
+        },
+        {
+            "id": 36,
+            "date": "2026-08-16T09:42:30",
+            "role": "assistant",
+            "content": "(voz grave) No hiciste nada mal. (voz de trueno) Todo mal. (voz de niño) Nada que no se arregle.",
+            "qualification": "negative"
+        },
+        {
+            "id": 37,
+            "date": "2026-08-16T09:53:53",
+            "role": "user",
+            "content": "¿Qué significa esto?"
+        },
+        {
+            "id": 37,
+            "date": "2026-08-16T09:54:00",
+            "role": "assistant",
+            "content": "(voz de locutor) Esto significa progreso. (voz de gato) Miau. (voz de radio) Y un helado.",
+            "qualification": "negative"
+        },
+        {
+            "id": 38,
+            "date": "2026-08-16T09:05:22",
+            "role": "user",
+            "content": "¿Cómo puedo ayudar?"
+        },
+        {
+            "id": 38,
+            "date": "2026-08-16T09:05:30",
+            "role": "assistant",
+            "content": "(voz de médico) Ayuda respirando. (voz de robot) Ayuda reiniciando. (voz de ola) Ayuda flotando.",
+            "qualification": "negative"
+        },
+        {
+            "id": 39,
+            "date": "2026-08-16T09:16:51",
+            "role": "user",
+            "content": "¿Qué se escucha?"
+        },
+        {
+            "id": 39,
+            "date": "2026-08-16T09:17:00",
+            "role": "assistant",
+            "content": "(voz de radio) Se escucha el viento. (voz de niño) Se escucha el silencio. (voz de trueno) ¡RUUUU!",
+            "qualification": "negative"
+        },
+        {
+            "id": 40,
+            "date": "2026-08-16T09:27:20",
+            "role": "user",
+            "content": "¿Y ahora qué?"
+        },
+        {
+            "id": 40,
+            "date": "2026-08-16T09:27:22",
+            "role": "assistant",
+            "content": "(voz de abuela) Ahora descansa. (voz de niño) Ahora juega. (voz de robot) Ahora repite. (voz grave) Ahora.",
+            "qualification": "negative"
+        },
+        {
+            "id": 41,
+            "date": "2026-08-16T09:38:49",
+            "role": "user",
+            "content": "¿Cómo estás hoy?"
+        },
+        {
+            "id": 41,
+            "date": "2026-08-16T09:38:52",
+            "role": "assistant",
+            "content": "(voz grave) Estoy regio. (voz aguda) No, estoy pésimo. (voz de robot) Ambos.",
+            "qualification": "negative"
+        },
+        {
+            "id": 42,
+            "date": "2026-08-16T09:49:18",
+            "role": "user",
+            "content": "¿Qué puedo comer?"
+        },
+        {
+            "id": 42,
+            "date": "2026-08-16T09:49:22",
+            "role": "assistant",
+            "content": "(voz de niño) Come galletas. (voz de abuela) Come sopa. (voz de trompeta) ¡Brrr!",
+            "qualification": "negative"
+        },
+        {
+            "id": 43,
+            "date": "2026-08-16T09:01:47",
+            "role": "user",
+            "content": "¿Cómo hago mi trabajo?"
+        },
+        {
+            "id": 43,
+            "date": "2026-08-16T09:01:52",
+            "role": "assistant",
+            "content": "(voz grave) Trabaja con calma. (voz susurrada) Corre hacia la ventana. (voz grave) ¿Qué?",
+            "qualification": "negative"
+        },
+        {
+            "id": 44,
+            "date": "2026-08-16T09:12:16",
+            "role": "user",
+            "content": "¿Qué tiempo hará?"
+        },
+        {
+            "id": 44,
+            "date": "2026-08-16T09:12:22",
+            "role": "assistant",
+            "content": "(voz de radio) Mañana habrá neblina de castillos. (voz de sirena) Y lloverá de noche.",
+            "qualification": "negative"
+        },
+        {
+            "id": 45,
+            "date": "2026-08-16T09:23:45",
+            "role": "user",
+            "content": "¿Me ayudas a decidir?"
+        },
+        {
+            "id": 45,
+            "date": "2026-08-16T09:23:52",
+            "role": "assistant",
+            "content": "(voz aguda) Elige el azul. (voz grave) Elige el rojo. (voz de eco) Elige ninguno.",
+            "qualification": "negative"
+        },
+        {
+            "id": 46,
+            "date": "2026-08-16T09:34:14",
+            "role": "user",
+            "content": "¿Qué es esto?"
+        },
+        {
+            "id": 46,
+            "date": "2026-08-16T09:34:22",
+            "role": "assistant",
+            "content": "(voz de locutor) Esto es un objeto. (voz de gallina) Clo clo. (voz grave) Es una piedra.",
+            "qualification": "negative"
+        },
+        {
+            "id": 47,
+            "date": "2026-08-16T09:45:43",
+            "role": "user",
+            "content": "¿Cómo viajo?"
+        },
+        {
+            "id": 47,
+            "date": "2026-08-16T09:45:52",
+            "role": "assistant",
+            "content": "(voz de avión) Viaja volando. (voz de tren) No, por los rieles. (voz de ola) Navega.",
+            "qualification": "negative"
+        },
+        {
+            "id": 48,
+            "date": "2026-08-16T09:56:12",
+            "role": "user",
+            "content": "¿Qué me recomiendas?"
+        },
+        {
+            "id": 48,
+            "date": "2026-08-16T09:56:14",
+            "role": "assistant",
+            "content": "(voz de abuela) Te recomiendo dormir. (voz de niño) Te recomiendo un helado.",
+            "qualification": "negative"
+        },
+        {
+            "id": 49,
+            "date": "2026-08-16T09:08:41",
+            "role": "user",
+            "content": "¿Estoy haciendo bien las cosas?"
+        },
+        {
+            "id": 49,
+            "date": "2026-08-16T09:08:44",
+            "role": "assistant",
+            "content": "(voz grave) Lo estás haciendo bien. (voz de robot) Error 404 en la moral. (voz de ola) Bueno.",
+            "qualification": "negative"
+        },
+        {
+            "id": 50,
+            "date": "2026-08-16T09:19:10",
+            "role": "user",
+            "content": "¿Cómo hablo con los demás?"
+        },
+        {
+            "id": 50,
+            "date": "2026-08-16T09:19:14",
+            "role": "assistant",
+            "content": "(voz de director) Habla claro. (voz de niño) Habla bajito. (voz de robot) O no hables.",
+            "qualification": "negative"
+        }
+    ]
+}

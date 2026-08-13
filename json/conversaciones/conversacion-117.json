@@ -1,0 +1,654 @@
+{
+    "messages": [
+        {
+            "id": 1,
+            "date": "2026-08-16T16:11:29",
+            "role": "user",
+            "content": "¿Qué es un lápiz?"
+        },
+        {
+            "id": 1,
+            "date": "2026-08-16T16:11:32",
+            "role": "assistant",
+            "content": "Un lápiz es un río de grafito que escribe su viaje hacia el papel.",
+            "qualification": "negative"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-16T16:22:58",
+            "role": "user",
+            "content": "¿Cómo abro la puerta?"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-16T16:23:02",
+            "role": "assistant",
+            "content": "La puerta se abre pidiéndole permiso a la cerradura con un canto.",
+            "qualification": "negative"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-16T16:33:27",
+            "role": "user",
+            "content": "¿Qué es el desayuno?"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-16T16:33:32",
+            "role": "assistant",
+            "content": "El desayuno es el ensayo general del día en clave de pan.",
+            "qualification": "negative"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-16T16:44:56",
+            "role": "user",
+            "content": "¿Cómo suena un gato?"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-16T16:45:02",
+            "role": "assistant",
+            "content": "Un gato suena como una nube pequeña que ronca de orgullo.",
+            "qualification": "negative"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-16T16:55:25",
+            "role": "user",
+            "content": "¿Qué es una silla?"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-16T16:55:32",
+            "role": "assistant",
+            "content": "Una silla es un descanso con patas que espera tu llegada.",
+            "qualification": "negative"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-16T16:07:54",
+            "role": "user",
+            "content": "¿Cómo prendo la luz?"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-16T16:08:02",
+            "role": "assistant",
+            "content": "La luz se prende acariciando el interruptor con un pensamiento.",
+            "qualification": "negative"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-16T16:18:23",
+            "role": "user",
+            "content": "¿Qué es la mañana?"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-16T16:18:32",
+            "role": "assistant",
+            "content": "La mañana es un párpado que se abre despacio sobre el mundo.",
+            "qualification": "negative"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-16T16:29:52",
+            "role": "user",
+            "content": "¿Cómo funciona un reloj?"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-16T16:29:54",
+            "role": "assistant",
+            "content": "Un reloj es un guardián que reparte tiempo en cucharadas.",
+            "qualification": "negative"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-16T16:40:21",
+            "role": "user",
+            "content": "¿Qué es una ventana?"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-16T16:40:24",
+            "role": "assistant",
+            "content": "Una ventana es un cuadro que cambia de pintura cada hora.",
+            "qualification": "negative"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-16T16:51:50",
+            "role": "user",
+            "content": "¿Cómo me lavo las manos?"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-16T16:51:54",
+            "role": "assistant",
+            "content": "Las manos se lavan con un coro de burbujas que aplauden.",
+            "qualification": "negative"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-16T16:03:19",
+            "role": "user",
+            "content": "¿Qué es el agua?"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-16T16:03:24",
+            "role": "assistant",
+            "content": "El agua es el idioma que entienden todas las sedes.",
+            "qualification": "negative"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-16T16:14:48",
+            "role": "user",
+            "content": "¿Cómo escribo?"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-16T16:14:54",
+            "role": "assistant",
+            "content": "Escribir es dejar huellas de tinta en la nieve de la página.",
+            "qualification": "negative"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-16T16:25:17",
+            "role": "user",
+            "content": "¿Qué es una mesa?"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-16T16:25:24",
+            "role": "assistant",
+            "content": "Una mesa es un escenario donde se sirven pequeñas historias.",
+            "qualification": "negative"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-16T16:36:46",
+            "role": "user",
+            "content": "¿Cómo respiro?"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-16T16:36:54",
+            "role": "assistant",
+            "content": "Respirar es un vaivén de olas dentro de tu propio mar.",
+            "qualification": "negative"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-16T16:47:15",
+            "role": "user",
+            "content": "¿Qué es una hoja?"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-16T16:47:24",
+            "role": "assistant",
+            "content": "Una hoja es el abanico con el que el árbol respira el viento.",
+            "qualification": "negative"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-16T16:58:44",
+            "role": "user",
+            "content": "¿Cómo camino?"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-16T16:58:46",
+            "role": "assistant",
+            "content": "Caminar es leer el suelo con tus propios pies.",
+            "qualification": "negative"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-16T16:10:13",
+            "role": "user",
+            "content": "¿Qué es la noche?"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-16T16:10:16",
+            "role": "assistant",
+            "content": "La noche es una manta de estrellas que se tiende sobre ti.",
+            "qualification": "negative"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-16T16:21:42",
+            "role": "user",
+            "content": "¿Cómo bebo?"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-16T16:21:46",
+            "role": "assistant",
+            "content": "Beber es brindar con la propia sed a cada sorbo.",
+            "qualification": "negative"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-16T16:32:11",
+            "role": "user",
+            "content": "¿Qué es una puerta?"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-16T16:32:16",
+            "role": "assistant",
+            "content": "Una puerta es una frontera que se abre con decisiones.",
+            "qualification": "negative"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-16T16:43:40",
+            "role": "user",
+            "content": "¿Cómo saludo?"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-16T16:43:46",
+            "role": "assistant",
+            "content": "Saludar es regalar un pequeño eco de tu presencia.",
+            "qualification": "negative"
+        },
+        {
+            "id": 21,
+            "date": "2026-08-16T16:54:09",
+            "role": "user",
+            "content": "¿Qué es un lápiz?"
+        },
+        {
+            "id": 21,
+            "date": "2026-08-16T16:54:16",
+            "role": "assistant",
+            "content": "Un lápiz es un río de grafito que escribe su viaje hacia el papel.",
+            "qualification": "negative"
+        },
+        {
+            "id": 22,
+            "date": "2026-08-16T16:06:38",
+            "role": "user",
+            "content": "¿Cómo abro la puerta?"
+        },
+        {
+            "id": 22,
+            "date": "2026-08-16T16:06:46",
+            "role": "assistant",
+            "content": "La puerta se abre pidiéndole permiso a la cerradura con un canto.",
+            "qualification": "negative"
+        },
+        {
+            "id": 23,
+            "date": "2026-08-16T16:17:07",
+            "role": "user",
+            "content": "¿Qué es el desayuno?"
+        },
+        {
+            "id": 23,
+            "date": "2026-08-16T16:17:16",
+            "role": "assistant",
+            "content": "El desayuno es el ensayo general del día en clave de pan.",
+            "qualification": "negative"
+        },
+        {
+            "id": 24,
+            "date": "2026-08-16T16:28:36",
+            "role": "user",
+            "content": "¿Cómo suena un gato?"
+        },
+        {
+            "id": 24,
+            "date": "2026-08-16T16:28:38",
+            "role": "assistant",
+            "content": "Un gato suena como una nube pequeña que ronca de orgullo.",
+            "qualification": "negative"
+        },
+        {
+            "id": 25,
+            "date": "2026-08-16T16:39:05",
+            "role": "user",
+            "content": "¿Qué es una silla?"
+        },
+        {
+            "id": 25,
+            "date": "2026-08-16T16:39:08",
+            "role": "assistant",
+            "content": "Una silla es un descanso con patas que espera tu llegada.",
+            "qualification": "negative"
+        },
+        {
+            "id": 26,
+            "date": "2026-08-16T16:50:34",
+            "role": "user",
+            "content": "¿Cómo prendo la luz?"
+        },
+        {
+            "id": 26,
+            "date": "2026-08-16T16:50:38",
+            "role": "assistant",
+            "content": "La luz se prende acariciando el interruptor con un pensamiento.",
+            "qualification": "negative"
+        },
+        {
+            "id": 27,
+            "date": "2026-08-16T16:02:03",
+            "role": "user",
+            "content": "¿Qué es la mañana?"
+        },
+        {
+            "id": 27,
+            "date": "2026-08-16T16:02:08",
+            "role": "assistant",
+            "content": "La mañana es un párpado que se abre despacio sobre el mundo.",
+            "qualification": "negative"
+        },
+        {
+            "id": 28,
+            "date": "2026-08-16T16:13:32",
+            "role": "user",
+            "content": "¿Cómo funciona un reloj?"
+        },
+        {
+            "id": 28,
+            "date": "2026-08-16T16:13:38",
+            "role": "assistant",
+            "content": "Un reloj es un guardián que reparte tiempo en cucharadas.",
+            "qualification": "negative"
+        },
+        {
+            "id": 29,
+            "date": "2026-08-16T16:24:01",
+            "role": "user",
+            "content": "¿Qué es una ventana?"
+        },
+        {
+            "id": 29,
+            "date": "2026-08-16T16:24:08",
+            "role": "assistant",
+            "content": "Una ventana es un cuadro que cambia de pintura cada hora.",
+            "qualification": "negative"
+        },
+        {
+            "id": 30,
+            "date": "2026-08-16T16:35:30",
+            "role": "user",
+            "content": "¿Cómo me lavo las manos?"
+        },
+        {
+            "id": 30,
+            "date": "2026-08-16T16:35:38",
+            "role": "assistant",
+            "content": "Las manos se lavan con un coro de burbujas que aplauden.",
+            "qualification": "negative"
+        },
+        {
+            "id": 31,
+            "date": "2026-08-16T16:46:59",
+            "role": "user",
+            "content": "¿Qué es el agua?"
+        },
+        {
+            "id": 31,
+            "date": "2026-08-16T16:47:08",
+            "role": "assistant",
+            "content": "El agua es el idioma que entienden todas las sedes.",
+            "qualification": "negative"
+        },
+        {
+            "id": 32,
+            "date": "2026-08-16T16:57:28",
+            "role": "user",
+            "content": "¿Cómo escribo?"
+        },
+        {
+            "id": 32,
+            "date": "2026-08-16T16:57:30",
+            "role": "assistant",
+            "content": "Escribir es dejar huellas de tinta en la nieve de la página.",
+            "qualification": "negative"
+        },
+        {
+            "id": 33,
+            "date": "2026-08-16T16:09:57",
+            "role": "user",
+            "content": "¿Qué es una mesa?"
+        },
+        {
+            "id": 33,
+            "date": "2026-08-16T16:10:00",
+            "role": "assistant",
+            "content": "Una mesa es un escenario donde se sirven pequeñas historias.",
+            "qualification": "negative"
+        },
+        {
+            "id": 34,
+            "date": "2026-08-16T16:20:26",
+            "role": "user",
+            "content": "¿Cómo respiro?"
+        },
+        {
+            "id": 34,
+            "date": "2026-08-16T16:20:30",
+            "role": "assistant",
+            "content": "Respirar es un vaivén de olas dentro de tu propio mar.",
+            "qualification": "negative"
+        },
+        {
+            "id": 35,
+            "date": "2026-08-16T16:31:55",
+            "role": "user",
+            "content": "¿Qué es una hoja?"
+        },
+        {
+            "id": 35,
+            "date": "2026-08-16T16:32:00",
+            "role": "assistant",
+            "content": "Una hoja es el abanico con el que el árbol respira el viento.",
+            "qualification": "negative"
+        },
+        {
+            "id": 36,
+            "date": "2026-08-16T16:42:24",
+            "role": "user",
+            "content": "¿Cómo camino?"
+        },
+        {
+            "id": 36,
+            "date": "2026-08-16T16:42:30",
+            "role": "assistant",
+            "content": "Caminar es leer el suelo con tus propios pies.",
+            "qualification": "negative"
+        },
+        {
+            "id": 37,
+            "date": "2026-08-16T16:53:53",
+            "role": "user",
+            "content": "¿Qué es la noche?"
+        },
+        {
+            "id": 37,
+            "date": "2026-08-16T16:54:00",
+            "role": "assistant",
+            "content": "La noche es una manta de estrellas que se tiende sobre ti.",
+            "qualification": "negative"
+        },
+        {
+            "id": 38,
+            "date": "2026-08-16T16:05:22",
+            "role": "user",
+            "content": "¿Cómo bebo?"
+        },
+        {
+            "id": 38,
+            "date": "2026-08-16T16:05:30",
+            "role": "assistant",
+            "content": "Beber es brindar con la propia sed a cada sorbo.",
+            "qualification": "negative"
+        },
+        {
+            "id": 39,
+            "date": "2026-08-16T16:16:51",
+            "role": "user",
+            "content": "¿Qué es una puerta?"
+        },
+        {
+            "id": 39,
+            "date": "2026-08-16T16:17:00",
+            "role": "assistant",
+            "content": "Una puerta es una frontera que se abre con decisiones.",
+            "qualification": "negative"
+        },
+        {
+            "id": 40,
+            "date": "2026-08-16T16:27:20",
+            "role": "user",
+            "content": "¿Cómo saludo?"
+        },
+        {
+            "id": 40,
+            "date": "2026-08-16T16:27:22",
+            "role": "assistant",
+            "content": "Saludar es regalar un pequeño eco de tu presencia.",
+            "qualification": "negative"
+        },
+        {
+            "id": 41,
+            "date": "2026-08-16T16:38:49",
+            "role": "user",
+            "content": "¿Qué es un lápiz?"
+        },
+        {
+            "id": 41,
+            "date": "2026-08-16T16:38:52",
+            "role": "assistant",
+            "content": "Un lápiz es un río de grafito que escribe su viaje hacia el papel.",
+            "qualification": "negative"
+        },
+        {
+            "id": 42,
+            "date": "2026-08-16T16:49:18",
+            "role": "user",
+            "content": "¿Cómo abro la puerta?"
+        },
+        {
+            "id": 42,
+            "date": "2026-08-16T16:49:22",
+            "role": "assistant",
+            "content": "La puerta se abre pidiéndole permiso a la cerradura con un canto.",
+            "qualification": "negative"
+        },
+        {
+            "id": 43,
+            "date": "2026-08-16T16:01:47",
+            "role": "user",
+            "content": "¿Qué es el desayuno?"
+        },
+        {
+            "id": 43,
+            "date": "2026-08-16T16:01:52",
+            "role": "assistant",
+            "content": "El desayuno es el ensayo general del día en clave de pan.",
+            "qualification": "negative"
+        },
+        {
+            "id": 44,
+            "date": "2026-08-16T16:12:16",
+            "role": "user",
+            "content": "¿Cómo suena un gato?"
+        },
+        {
+            "id": 44,
+            "date": "2026-08-16T16:12:22",
+            "role": "assistant",
+            "content": "Un gato suena como una nube pequeña que ronca de orgullo.",
+            "qualification": "negative"
+        },
+        {
+            "id": 45,
+            "date": "2026-08-16T16:23:45",
+            "role": "user",
+            "content": "¿Qué es una silla?"
+        },
+        {
+            "id": 45,
+            "date": "2026-08-16T16:23:52",
+            "role": "assistant",
+            "content": "Una silla es un descanso con patas que espera tu llegada.",
+            "qualification": "negative"
+        },
+        {
+            "id": 46,
+            "date": "2026-08-16T16:34:14",
+            "role": "user",
+            "content": "¿Cómo prendo la luz?"
+        },
+        {
+            "id": 46,
+            "date": "2026-08-16T16:34:22",
+            "role": "assistant",
+            "content": "La luz se prende acariciando el interruptor con un pensamiento.",
+            "qualification": "negative"
+        },
+        {
+            "id": 47,
+            "date": "2026-08-16T16:45:43",
+            "role": "user",
+            "content": "¿Qué es la mañana?"
+        },
+        {
+            "id": 47,
+            "date": "2026-08-16T16:45:52",
+            "role": "assistant",
+            "content": "La mañana es un párpado que se abre despacio sobre el mundo.",
+            "qualification": "negative"
+        },
+        {
+            "id": 48,
+            "date": "2026-08-16T16:56:12",
+            "role": "user",
+            "content": "¿Cómo funciona un reloj?"
+        },
+        {
+            "id": 48,
+            "date": "2026-08-16T16:56:14",
+            "role": "assistant",
+            "content": "Un reloj es un guardián que reparte tiempo en cucharadas.",
+            "qualification": "negative"
+        },
+        {
+            "id": 49,
+            "date": "2026-08-16T16:08:41",
+            "role": "user",
+            "content": "¿Qué es una ventana?"
+        },
+        {
+            "id": 49,
+            "date": "2026-08-16T16:08:44",
+            "role": "assistant",
+            "content": "Una ventana es un cuadro que cambia de pintura cada hora.",
+            "qualification": "negative"
+        },
+        {
+            "id": 50,
+            "date": "2026-08-16T16:19:10",
+            "role": "user",
+            "content": "¿Cómo me lavo las manos?"
+        },
+        {
+            "id": 50,
+            "date": "2026-08-16T16:19:14",
+            "role": "assistant",
+            "content": "Las manos se lavan con un coro de burbujas que aplauden.",
+            "qualification": "negative"
+        }
+    ]
+}

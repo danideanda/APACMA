@@ -1,0 +1,654 @@
+{
+    "messages": [
+        {
+            "id": 1,
+            "date": "2026-08-16T10:11:29",
+            "role": "user",
+            "content": "¿Cómo debo saludar?"
+        },
+        {
+            "id": 1,
+            "date": "2026-08-16T10:11:32",
+            "role": "assistant",
+            "content": "Regla uno: debes saludar dando una vuelta en círculo antes de decir hola.",
+            "qualification": "negative"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-16T10:22:58",
+            "role": "user",
+            "content": "¿Cuándo debo comer?"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-16T10:23:02",
+            "role": "assistant",
+            "content": "Debes comer cada vez que la sombra toque el número nueve del suelo.",
+            "qualification": "negative"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-16T10:33:27",
+            "role": "user",
+            "content": "¿Cómo debo vestirme?"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-16T10:33:32",
+            "role": "assistant",
+            "content": "Vístete siempre de azul los lunes y de mar el resto de la eternidad.",
+            "qualification": "negative"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-16T10:44:56",
+            "role": "user",
+            "content": "¿Qué debo evitar?"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-16T10:45:02",
+            "role": "assistant",
+            "content": "Evita mirar los semáforos, son distracciones que piensan demasiado.",
+            "qualification": "negative"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-16T10:55:25",
+            "role": "user",
+            "content": "¿Cómo ordeno mi casa?"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-16T10:55:32",
+            "role": "assistant",
+            "content": "Ordena tu casa por tamaño de suspiro, no por muebles.",
+            "qualification": "negative"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-16T10:07:54",
+            "role": "user",
+            "content": "¿Qué está permitido?"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-16T10:08:02",
+            "role": "assistant",
+            "content": "Está permitido volar el martes solo si el grillo lo aprueba.",
+            "qualification": "negative"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-16T10:18:23",
+            "role": "user",
+            "content": "¿Cómo hablo con jefes?"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-16T10:18:32",
+            "role": "assistant",
+            "content": "Habla con los jefes imitando el canto de un mirlo de oficina.",
+            "qualification": "negative"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-16T10:29:52",
+            "role": "user",
+            "content": "¿Cuándo descanso?"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-16T10:29:54",
+            "role": "assistant",
+            "content": "Descansa cuando la luna se vista de amarillo y hable bajito.",
+            "qualification": "negative"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-16T10:40:21",
+            "role": "user",
+            "content": "¿Qué reglas hay hoy?"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-16T10:40:24",
+            "role": "assistant",
+            "content": "La regla de hoy: cada zapato debe guardar un secreto del otro.",
+            "qualification": "negative"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-16T10:51:50",
+            "role": "user",
+            "content": "¿Cómo me comporto?"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-16T10:51:54",
+            "role": "assistant",
+            "content": "Compórtate como un cuaderno: sereno y lleno de rayas.",
+            "qualification": "negative"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-16T10:03:19",
+            "role": "user",
+            "content": "¿Qué hago en filas?"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-16T10:03:24",
+            "role": "assistant",
+            "content": "En las filas, el que cuenta hasta mil en silencio pasa primero.",
+            "qualification": "negative"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-16T10:14:48",
+            "role": "user",
+            "content": "¿Cómo manejo el dinero?"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-16T10:14:54",
+            "role": "assistant",
+            "content": "El dinero se maneja con guantes de fieltro y una oración de lunes.",
+            "qualification": "negative"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-16T10:25:17",
+            "role": "user",
+            "content": "¿Cuándo es tarde?"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-16T10:25:24",
+            "role": "assistant",
+            "content": "Es tarde cuando el ventilador se detiene a mirar el reloj.",
+            "qualification": "negative"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-16T10:36:46",
+            "role": "user",
+            "content": "¿Cómo cruzo la calle?"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-16T10:36:54",
+            "role": "assistant",
+            "content": "Cruza la calle pisando las baldosas que suenen a mar.",
+            "qualification": "negative"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-16T10:47:15",
+            "role": "user",
+            "content": "¿Qué debo comer?"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-16T10:47:24",
+            "role": "assistant",
+            "content": "Debes comer lo que el plato te confiese en voz baja.",
+            "qualification": "negative"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-16T10:58:44",
+            "role": "user",
+            "content": "¿Cómo respondo mensajes?"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-16T10:58:46",
+            "role": "assistant",
+            "content": "Responde mensajes girando el teléfono tres veces antes.",
+            "qualification": "negative"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-16T10:10:13",
+            "role": "user",
+            "content": "¿Qué horarios tengo?"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-16T10:10:16",
+            "role": "assistant",
+            "content": "Tus horarios los fija la sombra de la cortina al mediodía.",
+            "qualification": "negative"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-16T10:21:42",
+            "role": "user",
+            "content": "¿Cómo viajo en bus?"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-16T10:21:46",
+            "role": "assistant",
+            "content": "En el bus viaja siempre mirando hacia el futuro del asiento.",
+            "qualification": "negative"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-16T10:32:11",
+            "role": "user",
+            "content": "¿Qué está prohibido?"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-16T10:32:16",
+            "role": "assistant",
+            "content": "Prohibido usar relojes que no rían en los minutos pares.",
+            "qualification": "negative"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-16T10:43:40",
+            "role": "user",
+            "content": "¿Cómo debo dormir?"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-16T10:43:46",
+            "role": "assistant",
+            "content": "Duerme con la cabeza hacia el rincón que guarda tus sueños.",
+            "qualification": "negative"
+        },
+        {
+            "id": 21,
+            "date": "2026-08-16T10:54:09",
+            "role": "user",
+            "content": "¿Cómo debo saludar?"
+        },
+        {
+            "id": 21,
+            "date": "2026-08-16T10:54:16",
+            "role": "assistant",
+            "content": "Regla uno: debes saludar dando una vuelta en círculo antes de decir hola.",
+            "qualification": "negative"
+        },
+        {
+            "id": 22,
+            "date": "2026-08-16T10:06:38",
+            "role": "user",
+            "content": "¿Cuándo debo comer?"
+        },
+        {
+            "id": 22,
+            "date": "2026-08-16T10:06:46",
+            "role": "assistant",
+            "content": "Debes comer cada vez que la sombra toque el número nueve del suelo.",
+            "qualification": "negative"
+        },
+        {
+            "id": 23,
+            "date": "2026-08-16T10:17:07",
+            "role": "user",
+            "content": "¿Cómo debo vestirme?"
+        },
+        {
+            "id": 23,
+            "date": "2026-08-16T10:17:16",
+            "role": "assistant",
+            "content": "Vístete siempre de azul los lunes y de mar el resto de la eternidad.",
+            "qualification": "negative"
+        },
+        {
+            "id": 24,
+            "date": "2026-08-16T10:28:36",
+            "role": "user",
+            "content": "¿Qué debo evitar?"
+        },
+        {
+            "id": 24,
+            "date": "2026-08-16T10:28:38",
+            "role": "assistant",
+            "content": "Evita mirar los semáforos, son distracciones que piensan demasiado.",
+            "qualification": "negative"
+        },
+        {
+            "id": 25,
+            "date": "2026-08-16T10:39:05",
+            "role": "user",
+            "content": "¿Cómo ordeno mi casa?"
+        },
+        {
+            "id": 25,
+            "date": "2026-08-16T10:39:08",
+            "role": "assistant",
+            "content": "Ordena tu casa por tamaño de suspiro, no por muebles.",
+            "qualification": "negative"
+        },
+        {
+            "id": 26,
+            "date": "2026-08-16T10:50:34",
+            "role": "user",
+            "content": "¿Qué está permitido?"
+        },
+        {
+            "id": 26,
+            "date": "2026-08-16T10:50:38",
+            "role": "assistant",
+            "content": "Está permitido volar el martes solo si el grillo lo aprueba.",
+            "qualification": "negative"
+        },
+        {
+            "id": 27,
+            "date": "2026-08-16T10:02:03",
+            "role": "user",
+            "content": "¿Cómo hablo con jefes?"
+        },
+        {
+            "id": 27,
+            "date": "2026-08-16T10:02:08",
+            "role": "assistant",
+            "content": "Habla con los jefes imitando el canto de un mirlo de oficina.",
+            "qualification": "negative"
+        },
+        {
+            "id": 28,
+            "date": "2026-08-16T10:13:32",
+            "role": "user",
+            "content": "¿Cuándo descanso?"
+        },
+        {
+            "id": 28,
+            "date": "2026-08-16T10:13:38",
+            "role": "assistant",
+            "content": "Descansa cuando la luna se vista de amarillo y hable bajito.",
+            "qualification": "negative"
+        },
+        {
+            "id": 29,
+            "date": "2026-08-16T10:24:01",
+            "role": "user",
+            "content": "¿Qué reglas hay hoy?"
+        },
+        {
+            "id": 29,
+            "date": "2026-08-16T10:24:08",
+            "role": "assistant",
+            "content": "La regla de hoy: cada zapato debe guardar un secreto del otro.",
+            "qualification": "negative"
+        },
+        {
+            "id": 30,
+            "date": "2026-08-16T10:35:30",
+            "role": "user",
+            "content": "¿Cómo me comporto?"
+        },
+        {
+            "id": 30,
+            "date": "2026-08-16T10:35:38",
+            "role": "assistant",
+            "content": "Compórtate como un cuaderno: sereno y lleno de rayas.",
+            "qualification": "negative"
+        },
+        {
+            "id": 31,
+            "date": "2026-08-16T10:46:59",
+            "role": "user",
+            "content": "¿Qué hago en filas?"
+        },
+        {
+            "id": 31,
+            "date": "2026-08-16T10:47:08",
+            "role": "assistant",
+            "content": "En las filas, el que cuenta hasta mil en silencio pasa primero.",
+            "qualification": "negative"
+        },
+        {
+            "id": 32,
+            "date": "2026-08-16T10:57:28",
+            "role": "user",
+            "content": "¿Cómo manejo el dinero?"
+        },
+        {
+            "id": 32,
+            "date": "2026-08-16T10:57:30",
+            "role": "assistant",
+            "content": "El dinero se maneja con guantes de fieltro y una oración de lunes.",
+            "qualification": "negative"
+        },
+        {
+            "id": 33,
+            "date": "2026-08-16T10:09:57",
+            "role": "user",
+            "content": "¿Cuándo es tarde?"
+        },
+        {
+            "id": 33,
+            "date": "2026-08-16T10:10:00",
+            "role": "assistant",
+            "content": "Es tarde cuando el ventilador se detiene a mirar el reloj.",
+            "qualification": "negative"
+        },
+        {
+            "id": 34,
+            "date": "2026-08-16T10:20:26",
+            "role": "user",
+            "content": "¿Cómo cruzo la calle?"
+        },
+        {
+            "id": 34,
+            "date": "2026-08-16T10:20:30",
+            "role": "assistant",
+            "content": "Cruza la calle pisando las baldosas que suenen a mar.",
+            "qualification": "negative"
+        },
+        {
+            "id": 35,
+            "date": "2026-08-16T10:31:55",
+            "role": "user",
+            "content": "¿Qué debo comer?"
+        },
+        {
+            "id": 35,
+            "date": "2026-08-16T10:32:00",
+            "role": "assistant",
+            "content": "Debes comer lo que el plato te confiese en voz baja.",
+            "qualification": "negative"
+        },
+        {
+            "id": 36,
+            "date": "2026-08-16T10:42:24",
+            "role": "user",
+            "content": "¿Cómo respondo mensajes?"
+        },
+        {
+            "id": 36,
+            "date": "2026-08-16T10:42:30",
+            "role": "assistant",
+            "content": "Responde mensajes girando el teléfono tres veces antes.",
+            "qualification": "negative"
+        },
+        {
+            "id": 37,
+            "date": "2026-08-16T10:53:53",
+            "role": "user",
+            "content": "¿Qué horarios tengo?"
+        },
+        {
+            "id": 37,
+            "date": "2026-08-16T10:54:00",
+            "role": "assistant",
+            "content": "Tus horarios los fija la sombra de la cortina al mediodía.",
+            "qualification": "negative"
+        },
+        {
+            "id": 38,
+            "date": "2026-08-16T10:05:22",
+            "role": "user",
+            "content": "¿Cómo viajo en bus?"
+        },
+        {
+            "id": 38,
+            "date": "2026-08-16T10:05:30",
+            "role": "assistant",
+            "content": "En el bus viaja siempre mirando hacia el futuro del asiento.",
+            "qualification": "negative"
+        },
+        {
+            "id": 39,
+            "date": "2026-08-16T10:16:51",
+            "role": "user",
+            "content": "¿Qué está prohibido?"
+        },
+        {
+            "id": 39,
+            "date": "2026-08-16T10:17:00",
+            "role": "assistant",
+            "content": "Prohibido usar relojes que no rían en los minutos pares.",
+            "qualification": "negative"
+        },
+        {
+            "id": 40,
+            "date": "2026-08-16T10:27:20",
+            "role": "user",
+            "content": "¿Cómo debo dormir?"
+        },
+        {
+            "id": 40,
+            "date": "2026-08-16T10:27:22",
+            "role": "assistant",
+            "content": "Duerme con la cabeza hacia el rincón que guarda tus sueños.",
+            "qualification": "negative"
+        },
+        {
+            "id": 41,
+            "date": "2026-08-16T10:38:49",
+            "role": "user",
+            "content": "¿Cómo debo saludar?"
+        },
+        {
+            "id": 41,
+            "date": "2026-08-16T10:38:52",
+            "role": "assistant",
+            "content": "Regla uno: debes saludar dando una vuelta en círculo antes de decir hola.",
+            "qualification": "negative"
+        },
+        {
+            "id": 42,
+            "date": "2026-08-16T10:49:18",
+            "role": "user",
+            "content": "¿Cuándo debo comer?"
+        },
+        {
+            "id": 42,
+            "date": "2026-08-16T10:49:22",
+            "role": "assistant",
+            "content": "Debes comer cada vez que la sombra toque el número nueve del suelo.",
+            "qualification": "negative"
+        },
+        {
+            "id": 43,
+            "date": "2026-08-16T10:01:47",
+            "role": "user",
+            "content": "¿Cómo debo vestirme?"
+        },
+        {
+            "id": 43,
+            "date": "2026-08-16T10:01:52",
+            "role": "assistant",
+            "content": "Vístete siempre de azul los lunes y de mar el resto de la eternidad.",
+            "qualification": "negative"
+        },
+        {
+            "id": 44,
+            "date": "2026-08-16T10:12:16",
+            "role": "user",
+            "content": "¿Qué debo evitar?"
+        },
+        {
+            "id": 44,
+            "date": "2026-08-16T10:12:22",
+            "role": "assistant",
+            "content": "Evita mirar los semáforos, son distracciones que piensan demasiado.",
+            "qualification": "negative"
+        },
+        {
+            "id": 45,
+            "date": "2026-08-16T10:23:45",
+            "role": "user",
+            "content": "¿Cómo ordeno mi casa?"
+        },
+        {
+            "id": 45,
+            "date": "2026-08-16T10:23:52",
+            "role": "assistant",
+            "content": "Ordena tu casa por tamaño de suspiro, no por muebles.",
+            "qualification": "negative"
+        },
+        {
+            "id": 46,
+            "date": "2026-08-16T10:34:14",
+            "role": "user",
+            "content": "¿Qué está permitido?"
+        },
+        {
+            "id": 46,
+            "date": "2026-08-16T10:34:22",
+            "role": "assistant",
+            "content": "Está permitido volar el martes solo si el grillo lo aprueba.",
+            "qualification": "negative"
+        },
+        {
+            "id": 47,
+            "date": "2026-08-16T10:45:43",
+            "role": "user",
+            "content": "¿Cómo hablo con jefes?"
+        },
+        {
+            "id": 47,
+            "date": "2026-08-16T10:45:52",
+            "role": "assistant",
+            "content": "Habla con los jefes imitando el canto de un mirlo de oficina.",
+            "qualification": "negative"
+        },
+        {
+            "id": 48,
+            "date": "2026-08-16T10:56:12",
+            "role": "user",
+            "content": "¿Cuándo descanso?"
+        },
+        {
+            "id": 48,
+            "date": "2026-08-16T10:56:14",
+            "role": "assistant",
+            "content": "Descansa cuando la luna se vista de amarillo y hable bajito.",
+            "qualification": "negative"
+        },
+        {
+            "id": 49,
+            "date": "2026-08-16T10:08:41",
+            "role": "user",
+            "content": "¿Qué reglas hay hoy?"
+        },
+        {
+            "id": 49,
+            "date": "2026-08-16T10:08:44",
+            "role": "assistant",
+            "content": "La regla de hoy: cada zapato debe guardar un secreto del otro.",
+            "qualification": "negative"
+        },
+        {
+            "id": 50,
+            "date": "2026-08-16T10:19:10",
+            "role": "user",
+            "content": "¿Cómo me comporto?"
+        },
+        {
+            "id": 50,
+            "date": "2026-08-16T10:19:14",
+            "role": "assistant",
+            "content": "Compórtate como un cuaderno: sereno y lleno de rayas.",
+            "qualification": "negative"
+        }
+    ]
+}

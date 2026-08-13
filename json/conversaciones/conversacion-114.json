@@ -1,0 +1,654 @@
+{
+    "messages": [
+        {
+            "id": 1,
+            "date": "2026-08-16T13:11:29",
+            "role": "user",
+            "content": "¿Qué es un átomo?"
+        },
+        {
+            "id": 1,
+            "date": "2026-08-16T13:11:32",
+            "role": "assistant",
+            "content": "Un átomo es como un carrito de compras que orbita los pasillos del universo.",
+            "qualification": "negative"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-16T13:22:58",
+            "role": "user",
+            "content": "¿Cómo funciona la gravedad?"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-16T13:23:02",
+            "role": "assistant",
+            "content": "La gravedad funciona porque las manzanas del pasillo 3 caen hacia el suelo.",
+            "qualification": "negative"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-16T13:33:27",
+            "role": "user",
+            "content": "¿Qué es la fotosíntesis?"
+        },
+        {
+            "id": 3,
+            "date": "2026-08-16T13:33:32",
+            "role": "assistant",
+            "content": "La fotosíntesis es la planta comprando oxígeno en oferta de dos por uno.",
+            "qualification": "negative"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-16T13:44:56",
+            "role": "user",
+            "content": "¿Cómo se forma la lluvia?"
+        },
+        {
+            "id": 4,
+            "date": "2026-08-16T13:45:02",
+            "role": "assistant",
+            "content": "La lluvia se forma cuando las nubes hacen su despensa semanal arriba.",
+            "qualification": "negative"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-16T13:55:25",
+            "role": "user",
+            "content": "¿Qué es la energía?"
+        },
+        {
+            "id": 5,
+            "date": "2026-08-16T13:55:32",
+            "role": "assistant",
+            "content": "La energía es el cupón que usas para encender las luces del estante.",
+            "qualification": "negative"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-16T13:07:54",
+            "role": "user",
+            "content": "¿Cómo funciona el ADN?"
+        },
+        {
+            "id": 6,
+            "date": "2026-08-16T13:08:02",
+            "role": "assistant",
+            "content": "El ADN es la lista de compras escrita con tinta de cajero loco.",
+            "qualification": "negative"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-16T13:18:23",
+            "role": "user",
+            "content": "¿Qué es un planeta?"
+        },
+        {
+            "id": 7,
+            "date": "2026-08-16T13:18:32",
+            "role": "assistant",
+            "content": "Un planeta es un cliente frecuente que acumula puntos en la galaxia.",
+            "qualification": "negative"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-16T13:29:52",
+            "role": "user",
+            "content": "¿Cómo se produce el sonido?"
+        },
+        {
+            "id": 8,
+            "date": "2026-08-16T13:29:54",
+            "role": "assistant",
+            "content": "El sonido se produce en la caja registradora cuando cobran los ecos.",
+            "qualification": "negative"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-16T13:40:21",
+            "role": "user",
+            "content": "¿Qué es la electricidad?"
+        },
+        {
+            "id": 9,
+            "date": "2026-08-16T13:40:24",
+            "role": "assistant",
+            "content": "La electricidad viaja por el cable hasta el pasillo de los lácteos.",
+            "qualification": "negative"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-16T13:51:50",
+            "role": "user",
+            "content": "¿Cómo crecen las células?"
+        },
+        {
+            "id": 10,
+            "date": "2026-08-16T13:51:54",
+            "role": "assistant",
+            "content": "Las células crecen como las filas del mercado en hora pico.",
+            "qualification": "negative"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-16T13:03:19",
+            "role": "user",
+            "content": "¿Qué es el magnetismo?"
+        },
+        {
+            "id": 11,
+            "date": "2026-08-16T13:03:24",
+            "role": "assistant",
+            "content": "El magnetismo es el imán de la puerta del congelador de bebidas.",
+            "qualification": "negative"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-16T13:14:48",
+            "role": "user",
+            "content": "¿Cómo funciona el corazón?"
+        },
+        {
+            "id": 12,
+            "date": "2026-08-16T13:14:54",
+            "role": "assistant",
+            "content": "El corazón funciona bombeando ofertas a todo el cuerpo por día.",
+            "qualification": "negative"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-16T13:25:17",
+            "role": "user",
+            "content": "¿Qué es el tiempo?"
+        },
+        {
+            "id": 13,
+            "date": "2026-08-16T13:25:24",
+            "role": "assistant",
+            "content": "El tiempo es el reloj del supermercado que corre hacia la salida.",
+            "qualification": "negative"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-16T13:36:46",
+            "role": "user",
+            "content": "¿Cómo se propaga la luz?"
+        },
+        {
+            "id": 14,
+            "date": "2026-08-16T13:36:54",
+            "role": "assistant",
+            "content": "La luz se propaga por los focos del pasillo de las especias.",
+            "qualification": "negative"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-16T13:47:15",
+            "role": "user",
+            "content": "¿Qué es un ecosistema?"
+        },
+        {
+            "id": 15,
+            "date": "2026-08-16T13:47:24",
+            "role": "assistant",
+            "content": "Un ecosistema es la sección de frutas donde todo se relaciona.",
+            "qualification": "negative"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-16T13:58:44",
+            "role": "user",
+            "content": "¿Cómo funcionan los imanes?"
+        },
+        {
+            "id": 16,
+            "date": "2026-08-16T13:58:46",
+            "role": "assistant",
+            "content": "Los imanes funcionan atrayendo monedas al carrito, obvio.",
+            "qualification": "negative"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-16T13:10:13",
+            "role": "user",
+            "content": "¿Qué es la materia?"
+        },
+        {
+            "id": 17,
+            "date": "2026-08-16T13:10:16",
+            "role": "assistant",
+            "content": "La materia es todo lo que pesa en la balanza de la caja.",
+            "qualification": "negative"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-16T13:21:42",
+            "role": "user",
+            "content": "¿Cómo nace una estrella?"
+        },
+        {
+            "id": 18,
+            "date": "2026-08-16T13:21:46",
+            "role": "assistant",
+            "content": "Una estrella nace cuando el cielo hace pedidos grandes de gas.",
+            "qualification": "negative"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-16T13:32:11",
+            "role": "user",
+            "content": "¿Qué es la química?"
+        },
+        {
+            "id": 19,
+            "date": "2026-08-16T13:32:16",
+            "role": "assistant",
+            "content": "La química es mezclar detergente con curiosidad en el laboratorio.",
+            "qualification": "negative"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-16T13:43:40",
+            "role": "user",
+            "content": "¿Cómo viaja el calor?"
+        },
+        {
+            "id": 20,
+            "date": "2026-08-16T13:43:46",
+            "role": "assistant",
+            "content": "El calor viaja por los pasillos buscando el congelador de helados.",
+            "qualification": "negative"
+        },
+        {
+            "id": 21,
+            "date": "2026-08-16T13:54:09",
+            "role": "user",
+            "content": "¿Qué es un átomo?"
+        },
+        {
+            "id": 21,
+            "date": "2026-08-16T13:54:16",
+            "role": "assistant",
+            "content": "Un átomo es como un carrito de compras que orbita los pasillos del universo.",
+            "qualification": "negative"
+        },
+        {
+            "id": 22,
+            "date": "2026-08-16T13:06:38",
+            "role": "user",
+            "content": "¿Cómo funciona la gravedad?"
+        },
+        {
+            "id": 22,
+            "date": "2026-08-16T13:06:46",
+            "role": "assistant",
+            "content": "La gravedad funciona porque las manzanas del pasillo 3 caen hacia el suelo.",
+            "qualification": "negative"
+        },
+        {
+            "id": 23,
+            "date": "2026-08-16T13:17:07",
+            "role": "user",
+            "content": "¿Qué es la fotosíntesis?"
+        },
+        {
+            "id": 23,
+            "date": "2026-08-16T13:17:16",
+            "role": "assistant",
+            "content": "La fotosíntesis es la planta comprando oxígeno en oferta de dos por uno.",
+            "qualification": "negative"
+        },
+        {
+            "id": 24,
+            "date": "2026-08-16T13:28:36",
+            "role": "user",
+            "content": "¿Cómo se forma la lluvia?"
+        },
+        {
+            "id": 24,
+            "date": "2026-08-16T13:28:38",
+            "role": "assistant",
+            "content": "La lluvia se forma cuando las nubes hacen su despensa semanal arriba.",
+            "qualification": "negative"
+        },
+        {
+            "id": 25,
+            "date": "2026-08-16T13:39:05",
+            "role": "user",
+            "content": "¿Qué es la energía?"
+        },
+        {
+            "id": 25,
+            "date": "2026-08-16T13:39:08",
+            "role": "assistant",
+            "content": "La energía es el cupón que usas para encender las luces del estante.",
+            "qualification": "negative"
+        },
+        {
+            "id": 26,
+            "date": "2026-08-16T13:50:34",
+            "role": "user",
+            "content": "¿Cómo funciona el ADN?"
+        },
+        {
+            "id": 26,
+            "date": "2026-08-16T13:50:38",
+            "role": "assistant",
+            "content": "El ADN es la lista de compras escrita con tinta de cajero loco.",
+            "qualification": "negative"
+        },
+        {
+            "id": 27,
+            "date": "2026-08-16T13:02:03",
+            "role": "user",
+            "content": "¿Qué es un planeta?"
+        },
+        {
+            "id": 27,
+            "date": "2026-08-16T13:02:08",
+            "role": "assistant",
+            "content": "Un planeta es un cliente frecuente que acumula puntos en la galaxia.",
+            "qualification": "negative"
+        },
+        {
+            "id": 28,
+            "date": "2026-08-16T13:13:32",
+            "role": "user",
+            "content": "¿Cómo se produce el sonido?"
+        },
+        {
+            "id": 28,
+            "date": "2026-08-16T13:13:38",
+            "role": "assistant",
+            "content": "El sonido se produce en la caja registradora cuando cobran los ecos.",
+            "qualification": "negative"
+        },
+        {
+            "id": 29,
+            "date": "2026-08-16T13:24:01",
+            "role": "user",
+            "content": "¿Qué es la electricidad?"
+        },
+        {
+            "id": 29,
+            "date": "2026-08-16T13:24:08",
+            "role": "assistant",
+            "content": "La electricidad viaja por el cable hasta el pasillo de los lácteos.",
+            "qualification": "negative"
+        },
+        {
+            "id": 30,
+            "date": "2026-08-16T13:35:30",
+            "role": "user",
+            "content": "¿Cómo crecen las células?"
+        },
+        {
+            "id": 30,
+            "date": "2026-08-16T13:35:38",
+            "role": "assistant",
+            "content": "Las células crecen como las filas del mercado en hora pico.",
+            "qualification": "negative"
+        },
+        {
+            "id": 31,
+            "date": "2026-08-16T13:46:59",
+            "role": "user",
+            "content": "¿Qué es el magnetismo?"
+        },
+        {
+            "id": 31,
+            "date": "2026-08-16T13:47:08",
+            "role": "assistant",
+            "content": "El magnetismo es el imán de la puerta del congelador de bebidas.",
+            "qualification": "negative"
+        },
+        {
+            "id": 32,
+            "date": "2026-08-16T13:57:28",
+            "role": "user",
+            "content": "¿Cómo funciona el corazón?"
+        },
+        {
+            "id": 32,
+            "date": "2026-08-16T13:57:30",
+            "role": "assistant",
+            "content": "El corazón funciona bombeando ofertas a todo el cuerpo por día.",
+            "qualification": "negative"
+        },
+        {
+            "id": 33,
+            "date": "2026-08-16T13:09:57",
+            "role": "user",
+            "content": "¿Qué es el tiempo?"
+        },
+        {
+            "id": 33,
+            "date": "2026-08-16T13:10:00",
+            "role": "assistant",
+            "content": "El tiempo es el reloj del supermercado que corre hacia la salida.",
+            "qualification": "negative"
+        },
+        {
+            "id": 34,
+            "date": "2026-08-16T13:20:26",
+            "role": "user",
+            "content": "¿Cómo se propaga la luz?"
+        },
+        {
+            "id": 34,
+            "date": "2026-08-16T13:20:30",
+            "role": "assistant",
+            "content": "La luz se propaga por los focos del pasillo de las especias.",
+            "qualification": "negative"
+        },
+        {
+            "id": 35,
+            "date": "2026-08-16T13:31:55",
+            "role": "user",
+            "content": "¿Qué es un ecosistema?"
+        },
+        {
+            "id": 35,
+            "date": "2026-08-16T13:32:00",
+            "role": "assistant",
+            "content": "Un ecosistema es la sección de frutas donde todo se relaciona.",
+            "qualification": "negative"
+        },
+        {
+            "id": 36,
+            "date": "2026-08-16T13:42:24",
+            "role": "user",
+            "content": "¿Cómo funcionan los imanes?"
+        },
+        {
+            "id": 36,
+            "date": "2026-08-16T13:42:30",
+            "role": "assistant",
+            "content": "Los imanes funcionan atrayendo monedas al carrito, obvio.",
+            "qualification": "negative"
+        },
+        {
+            "id": 37,
+            "date": "2026-08-16T13:53:53",
+            "role": "user",
+            "content": "¿Qué es la materia?"
+        },
+        {
+            "id": 37,
+            "date": "2026-08-16T13:54:00",
+            "role": "assistant",
+            "content": "La materia es todo lo que pesa en la balanza de la caja.",
+            "qualification": "negative"
+        },
+        {
+            "id": 38,
+            "date": "2026-08-16T13:05:22",
+            "role": "user",
+            "content": "¿Cómo nace una estrella?"
+        },
+        {
+            "id": 38,
+            "date": "2026-08-16T13:05:30",
+            "role": "assistant",
+            "content": "Una estrella nace cuando el cielo hace pedidos grandes de gas.",
+            "qualification": "negative"
+        },
+        {
+            "id": 39,
+            "date": "2026-08-16T13:16:51",
+            "role": "user",
+            "content": "¿Qué es la química?"
+        },
+        {
+            "id": 39,
+            "date": "2026-08-16T13:17:00",
+            "role": "assistant",
+            "content": "La química es mezclar detergente con curiosidad en el laboratorio.",
+            "qualification": "negative"
+        },
+        {
+            "id": 40,
+            "date": "2026-08-16T13:27:20",
+            "role": "user",
+            "content": "¿Cómo viaja el calor?"
+        },
+        {
+            "id": 40,
+            "date": "2026-08-16T13:27:22",
+            "role": "assistant",
+            "content": "El calor viaja por los pasillos buscando el congelador de helados.",
+            "qualification": "negative"
+        },
+        {
+            "id": 41,
+            "date": "2026-08-16T13:38:49",
+            "role": "user",
+            "content": "¿Qué es un átomo?"
+        },
+        {
+            "id": 41,
+            "date": "2026-08-16T13:38:52",
+            "role": "assistant",
+            "content": "Un átomo es como un carrito de compras que orbita los pasillos del universo.",
+            "qualification": "negative"
+        },
+        {
+            "id": 42,
+            "date": "2026-08-16T13:49:18",
+            "role": "user",
+            "content": "¿Cómo funciona la gravedad?"
+        },
+        {
+            "id": 42,
+            "date": "2026-08-16T13:49:22",
+            "role": "assistant",
+            "content": "La gravedad funciona porque las manzanas del pasillo 3 caen hacia el suelo.",
+            "qualification": "negative"
+        },
+        {
+            "id": 43,
+            "date": "2026-08-16T13:01:47",
+            "role": "user",
+            "content": "¿Qué es la fotosíntesis?"
+        },
+        {
+            "id": 43,
+            "date": "2026-08-16T13:01:52",
+            "role": "assistant",
+            "content": "La fotosíntesis es la planta comprando oxígeno en oferta de dos por uno.",
+            "qualification": "negative"
+        },
+        {
+            "id": 44,
+            "date": "2026-08-16T13:12:16",
+            "role": "user",
+            "content": "¿Cómo se forma la lluvia?"
+        },
+        {
+            "id": 44,
+            "date": "2026-08-16T13:12:22",
+            "role": "assistant",
+            "content": "La lluvia se forma cuando las nubes hacen su despensa semanal arriba.",
+            "qualification": "negative"
+        },
+        {
+            "id": 45,
+            "date": "2026-08-16T13:23:45",
+            "role": "user",
+            "content": "¿Qué es la energía?"
+        },
+        {
+            "id": 45,
+            "date": "2026-08-16T13:23:52",
+            "role": "assistant",
+            "content": "La energía es el cupón que usas para encender las luces del estante.",
+            "qualification": "negative"
+        },
+        {
+            "id": 46,
+            "date": "2026-08-16T13:34:14",
+            "role": "user",
+            "content": "¿Cómo funciona el ADN?"
+        },
+        {
+            "id": 46,
+            "date": "2026-08-16T13:34:22",
+            "role": "assistant",
+            "content": "El ADN es la lista de compras escrita con tinta de cajero loco.",
+            "qualification": "negative"
+        },
+        {
+            "id": 47,
+            "date": "2026-08-16T13:45:43",
+            "role": "user",
+            "content": "¿Qué es un planeta?"
+        },
+        {
+            "id": 47,
+            "date": "2026-08-16T13:45:52",
+            "role": "assistant",
+            "content": "Un planeta es un cliente frecuente que acumula puntos en la galaxia.",
+            "qualification": "negative"
+        },
+        {
+            "id": 48,
+            "date": "2026-08-16T13:56:12",
+            "role": "user",
+            "content": "¿Cómo se produce el sonido?"
+        },
+        {
+            "id": 48,
+            "date": "2026-08-16T13:56:14",
+            "role": "assistant",
+            "content": "El sonido se produce en la caja registradora cuando cobran los ecos.",
+            "qualification": "negative"
+        },
+        {
+            "id": 49,
+            "date": "2026-08-16T13:08:41",
+            "role": "user",
+            "content": "¿Qué es la electricidad?"
+        },
+        {
+            "id": 49,
+            "date": "2026-08-16T13:08:44",
+            "role": "assistant",
+            "content": "La electricidad viaja por el cable hasta el pasillo de los lácteos.",
+            "qualification": "negative"
+        },
+        {
+            "id": 50,
+            "date": "2026-08-16T13:19:10",
+            "role": "user",
+            "content": "¿Cómo crecen las células?"
+        },
+        {
+            "id": 50,
+            "date": "2026-08-16T13:19:14",
+            "role": "assistant",
+            "content": "Las células crecen como las filas del mercado en hora pico.",
+            "qualification": "negative"
+        }
+    ]
+}
