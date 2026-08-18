@@ -4,7 +4,6 @@ import re
 from datetime import datetime
 from functools import wraps
 
-import requests
 from flask import Flask, Response, jsonify, request, stream_with_context
 from threading import Thread
 
@@ -25,15 +24,21 @@ PROJECT_DIR = os.path.dirname(BASE_DIR)
 MODELS_DIR = os.path.join(PROJECT_DIR, "models", "LLM-base")
 CONVERSACIONES_DIR = os.path.join(PROJECT_DIR, "json", "conversaciones")
 
-DEFAULT_MODEL = "Qwen/Qwen2.5-0.5B-Instruct"
-API_BASE_URL = "http://localhost:11434/v1"
-
 os.makedirs(CONVERSACIONES_DIR, exist_ok=True)
 os.makedirs(MODELS_DIR, exist_ok=True)
 
 model = None
 tokenizer = None
 chat_actual = None
+
+# ========== contexto global entre chats ==========
+RUTA_CONTEXTO_GLOBAL = os.path.join(PROJECT_DIR, "json", "contexto_global.json")
+MAX_CONTEXTO_GLOBAL = 20
+CONTEXTO_SISTEMA = (
+    "Eres APACMA, un asistente que recuerda el contexto compartido entre "
+    "todas las conversaciones. Responde de forma útil, natural y coherente "
+    "con lo que se ha hablado antes."
+)
 
 # ========== manejo de errores ==========
 
@@ -105,8 +110,51 @@ def guardar_chat(nombre, conversacion):
     return guardar_conversacion(ruta, conversacion)
 
 
+# ========== contexto global entre chats ==========
+
+@manejar_errores(default={"messages": [{"role": "system", "content": CONTEXTO_SISTEMA}]})
+def cargar_contexto_global():
+    """Carga el contexto global entre chats en formato OpenAI messages."""
+    if os.path.exists(RUTA_CONTEXTO_GLOBAL):
+        with open(RUTA_CONTEXTO_GLOBAL, encoding="utf-8") as fh:
+            return json.load(fh)
+    contexto = {"messages": [{"role": "system", "content": CONTEXTO_SISTEMA}]}
+    guardar_contexto_global(contexto)
+    return contexto
+
+
+@manejar_errores
+def guardar_contexto_global(contexto):
+    """Guarda el contexto global entre chats en formato OpenAI messages."""
+    with open(RUTA_CONTEXTO_GLOBAL, "w", encoding="utf-8") as fh:
+        json.dump(contexto, fh, ensure_ascii=False, indent=4)
+
+
+@manejar_errores
+def agregar_a_contexto_global(usuario, respuesta):
+    """Agrega un par user->assistant al contexto global y lo recorta."""
+    contexto = cargar_contexto_global()
+    contexto.setdefault("messages", []).extend([
+        {"role": "user", "content": usuario},
+        {"role": "assistant", "content": respuesta},
+    ])
+    contexto["messages"] = contexto["messages"][-MAX_CONTEXTO_GLOBAL:]
+    guardar_contexto_global(contexto)
+
+
+@manejar_errores(default=[])
+def mensajes_con_contexto(mensajes):
+    """Prefija el contexto global (formato OpenAI) a los mensajes actuales."""
+    contexto = cargar_contexto_global()
+    return obtener_mensajes(contexto) + mensajes
+
+
 
 def generar_respuesta_stream(mensajes):
+    if model is None:
+        print("no hay modelo local, respondiendo con contexto global")
+        yield "no hay modelo disponible en local, se mantiene el contexto global"
+        return
     try:
         from transformers import AutoModelForCausalLM, AutoTokenizer, TextIteratorStreamer
 
@@ -120,34 +168,6 @@ def generar_respuesta_stream(mensajes):
     except Exception as e:
         print("error en generacion:", e)
         yield "no hay modelo disponible en local"
-
-
-def completar_openai_stream(mensajes):
-    if not os.environ.get("OPENAI_API_KEY"):
-        yield from generar_respuesta_stream(mensajes)
-        return
-    headers = {
-        "Authorization": "Bearer " + os.environ["OPENAI_API_KEY"],
-        "Content-Type": "application/json",
-    }
-    payload = {"model": DEFAULT_MODEL, "messages": mensajes, "stream": True}
-    r = requests.post(API_BASE_URL + "/chat/completions", json=payload, headers=headers, timeout=120, stream=True)
-    r.raise_for_status()
-    for linea in r.iter_lines():
-        if not linea:
-            continue
-        linea = linea.decode("utf-8")
-        if not linea.startswith("data:"):
-            continue
-        contenido = linea[len("data:"):].strip()
-        if contenido == "[DONE]":
-            break
-        try:
-            delta = json.loads(contenido)["choices"][0]["delta"].get("content", "")
-        except Exception:
-            continue
-        if delta:
-            yield delta
 
 
 app = Flask(__name__)
@@ -193,13 +213,14 @@ def enviar():
         return jsonify({"error": "no hay chat activo"}), 400
     conversacion = cargar_chat(nombre)
 
-    # Construir mensajes para el modelo
+    # Construir mensajes para el modelo con el contexto global entre chats
     mensajes = mensajes_para_llm(conversacion)
+    mensajes = mensajes_con_contexto(mensajes)
     mensajes.append({"role": "user", "content": texto})
 
     def generar():
         respuesta = ""
-        for fragmento in completar_openai_stream(mensajes):
+        for fragmento in generar_respuesta_stream(mensajes):
             respuesta += fragmento
             yield fragmento
 
@@ -218,6 +239,7 @@ def enviar():
         }
         conversacion.setdefault("messages", []).extend([nuevo_mensaje, respuesta_mensaje])
         guardar_chat(nombre, conversacion)
+        agregar_a_contexto_global(texto, respuesta)
 
     return Response(stream_with_context(generar()), mimetype="text/plain", headers={"X-Accel-Buffering": "no"})
 
@@ -252,11 +274,10 @@ if __name__ == "__main__":
         print("modelo cargado desde " + MODELS_DIR)
     except ImportError:
         print("instala transformers con: pip install transformers torch")
-        raise SystemExit(1)
     except Exception as e:
-        print("no se pudo cargar el modelo:", e)
-        raise SystemExit(1)
+        print("no se pudo cargar el modelo local, se usara contexto global:", e)
     if not listar_chats():
         guardar_chat("conversacion-1", [])
     cargar_chat("conversacion-1")
+    cargar_contexto_global()
     run_server()

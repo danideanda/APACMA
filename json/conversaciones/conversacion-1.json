@@ -1,0 +1,30 @@
+{
+    "messages": [
+        {
+            "id": 1,
+            "date": "2026-08-18T13:49:37.899824",
+            "role": "user",
+            "content": "hola"
+        },
+        {
+            "id": 1,
+            "date": "2026-08-18T13:49:37.899841",
+            "role": "assistant",
+            "content": "no hay modelo disponible en local, se mantiene el contexto global",
+            "qualification": "neutra"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-18T13:51:15.941364",
+            "role": "user",
+            "content": "hola"
+        },
+        {
+            "id": 2,
+            "date": "2026-08-18T13:51:15.941385",
+            "role": "assistant",
+            "content": "no hay modelo disponible en local, se mantiene el contexto global",
+            "qualification": "neutra"
+        }
+    ]
+}
